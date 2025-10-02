@@ -25,7 +25,6 @@ export const ClientWork = () => {
             impact="Reduced product knowledge retrieval time by 85%, established clear AI implementation roadmap for C-suite, and fostered organizational culture of technological innovation."
             quote="The strategic clarity and practical implementation framework provided has transformed our leadership's approach to AI integration. What once seemed complex is now actionable."
             image={corporateImage}
-            pricing="$8,500 - $15,000"
             metrics={[
               "85% reduction in internal knowledge retrieval time",
               "3 custom GPT solutions deployed across departments",
@@ -40,7 +39,6 @@ export const ClientWork = () => {
             impact="Achieved 12+ hours per week in administrative time savings, enhanced care coordination accuracy by 40%, and significantly reduced operational stress and error rates across the organization."
             quote="This implementation represents practical healthcare innovation at its finest. The workflow automation has fundamentally improved our care delivery capacity and staff wellbeing."
             image={healthcareImage}
-            pricing="$6,000 - $12,000"
             metrics={[
               "12+ hours weekly time savings per staff member",
               "40% improvement in care documentation accuracy",
@@ -76,7 +74,6 @@ export const ClientWork = () => {
             impact="Established thriving community of 50+ young women actively exploring STEM careers, with 90% of participants reporting increased confidence in technology fields and sustained engagement in ongoing mentorship programs."
             quote="This program demonstrated that technology education can be both accessible and personally relevant. It fundamentally changed how I view my potential in STEM fields."
             image={stemImage}
-            pricing="$3,500 - $7,000"
             metrics={[
               "50+ active community members established",
               "90% participant confidence increase in tech",
@@ -91,7 +88,6 @@ export const ClientWork = () => {
             impact="Successfully introduced AI concepts to 40+ participants across age ranges 12-65, generating cross-generational dialogue on technology adoption and sparking organizational interest in expanded digital literacy initiatives."
             quote="The ability to make complex technology accessible to such a diverse audience—from children to executives—demonstrated exceptional communication skill and strategic understanding."
             image={workshopImage}
-            pricing="$4,000 - $8,000"
             metrics={[
               "40+ participants from 4 generations engaged",
               "95% satisfaction rate across all age groups",
