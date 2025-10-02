@@ -12,15 +12,15 @@ interface ServiceCardProps {
 export const ServiceCard = ({ icon, title, description, className }: ServiceCardProps) => {
   return (
     <Card className={cn(
-      "group hover:scale-105 transition-all duration-300 bg-gradient-card border-border shadow-soft hover:shadow-elegant",
+      "group hover:shadow-elegant transition-all duration-300 bg-card border-border shadow-soft h-full",
       className
     )}>
-      <CardContent className="p-8 text-center">
-        <div className="mb-4 flex justify-center text-primary group-hover:animate-float">
+      <CardContent className="p-8 h-full flex flex-col">
+        <div className="mb-6 flex justify-center text-primary transition-transform duration-300 group-hover:scale-110">
           {icon}
         </div>
-        <h3 className="text-xl font-semibold mb-3 text-foreground">{title}</h3>
-        <p className="text-muted-foreground leading-relaxed">{description}</p>
+        <h3 className="text-xl font-semibold mb-4 text-foreground">{title}</h3>
+        <p className="text-muted-foreground leading-relaxed text-sm">{description}</p>
       </CardContent>
     </Card>
   );
