@@ -19,24 +19,28 @@ export const WhatIOffer = () => {
             icon={<Brain className="w-12 h-12" />}
             title="Life OS Coaching"
             description="Build your personalized Life Operating System with Notion dashboards, reflection systems, and digital habits that actually stick."
+            example="E.g., 2-hour sessions turning chaos into clarity for high school students"
           />
           
           <ServiceCard
             icon={<Sparkles className="w-12 h-12" />}
             title="Custom GPT Design"
             description="Create powerful custom GPTs tailored to your workflow — from study helpers to business automation."
+            example="E.g., Free course GPT for UNSW peers, Makinex product knowledge bot"
           />
           
           <ServiceCard
             icon={<Code className="w-12 h-12" />}
             title="Digital Confidence"
             description="Master AI literacy and productivity tools. No tech jargon, just practical skills that empower."
+            example="E.g., DDD workshops for Girls in STEM, executive AI literacy coaching"
           />
           
           <ServiceCard
             icon={<TrendingUp className="w-12 h-12" />}
             title="Business Mentoring"
             description="Strategic guidance for young entrepreneurs and professionals navigating AI and digital transformation."
+            example="E.g., AI strategy for Crepdog Club, workflow automation for NDIS CEO"
           />
         </div>
       </div>

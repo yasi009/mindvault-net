@@ -37,7 +37,7 @@ export const Hero = () => {
             <ArrowRight className="w-5 h-5" />
           </Button>
           <Button variant="soft" size="xl">
-            Explore Free Tools
+            Book 1:1 Coaching
           </Button>
         </div>
       </div>
