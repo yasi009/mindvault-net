@@ -11,10 +11,10 @@ export const ClientWork = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground tracking-tight">
-            Impact Stories
+            Client Portfolio & Results
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Real results from educational institutions and organizations — better teaching outcomes, less admin load, and future-ready learning environments.
+            Delivering measurable outcomes through strategic AI integration, digital transformation consulting, and organizational training programs.
           </p>
         </div>
 
@@ -53,18 +53,18 @@ export const ClientWork = () => {
         {/* Speech Bubbles */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           <SpeechBubble
-            quote="This completely changed how I approach teaching. I have my evenings back."
-            author="High School Teacher"
+            quote="It's really that easy?"
+            author="UNSW student"
             variant="left"
           />
           <SpeechBubble
-            quote="My students are more engaged with AI tools than anything I've tried before."
-            author="University Lecturer"
+            quote="I thought AI was scary; you made it simple."
+            author="Kennards workshop attendee"
             variant="right"
           />
           <SpeechBubble
-            quote="Finally, professional development that's actually practical and applicable."
-            author="Education Leader"
+            quote="You gave me energy to see change differently."
+            author="Executive coaching client"
             variant="left"
           />
         </div>
@@ -72,31 +72,31 @@ export const ClientWork = () => {
         <div className="grid md:grid-cols-2 gap-8">
           <CaseStudyCard
             company="Girls in STEM Initiative (NIDA Theatre)"
-            description="Designed and delivered flagship 'Debunk, Demystify, Design' workshop series focused on pedagogy-first AI literacy for young women. Created replicable curriculum model combining hands-on learning, peer mentorship, and systems thinking that educators can adapt for their own classrooms."
-            impact="Proven workshop model demonstrating how to increase student engagement and digital confidence. 90% of participants reported sustained interest in STEM subjects, with measurable improvements in critical thinking and technology adoption."
-            quote="The workshop design showed us that AI literacy can be taught accessibly and effectively. The pedagogical approach is something we're now integrating into our own curriculum."
+            description="Led flagship 'Debunk, Demystify, Design' workshop series at NIDA Theatre, establishing ongoing community mentorship program ('Yeah the Girls'). Created sustainable peer-to-peer learning environment focused on AI literacy and STEM career pathways for young women."
+            impact="Established thriving community of 50+ young women actively exploring STEM careers, with 90% of participants reporting increased confidence in technology fields and sustained engagement in ongoing mentorship programs."
+            quote="This program demonstrated that technology education can be both accessible and personally relevant. It fundamentally changed how I view my potential in STEM fields."
             image={stemImage}
-            pricing="$1,500 - $3,000 per session"
+            pricing="$3,500 - $7,000"
             metrics={[
-              "90% increase in student confidence with technology",
-              "Replicable curriculum framework for educators",
-              "Ongoing mentorship model established",
-              "Partnership model for schools and institutions"
+              "50+ active community members established",
+              "90% participant confidence increase in tech",
+              "Ongoing mentorship program implemented",
+              "Partnership with NIDA Theatre for future workshops"
             ]}
           />
           
           <CaseStudyCard
-            company="UNSW Custom Course GPT"
-            description="Developed course-specific GPT trained on curriculum readings and learning objectives for university-level education. Created proof-of-concept model showing how AI can enhance student learning while reducing instructor workload — students get instant support, educators save hours on repetitive questions."
-            impact="Demonstrated how custom GPTs can improve learning outcomes and teaching efficiency. Students reported better understanding of course material, while instructors gained 5+ hours per week previously spent on routine queries."
-            quote="This tool changed how I think about scalable education. My students get personalized support 24/7, and I can focus on higher-value teaching interactions."
+            company="Kennards Corporate Workshop"
+            description="Designed and facilitated multigenerational AI literacy workshop for diverse stakeholder group including executives, family members, and next-generation leaders. Delivered accessible introduction to AI applications in business and daily life, emphasizing practical implementation strategies."
+            impact="Successfully introduced AI concepts to 40+ participants across age ranges 12-65, generating cross-generational dialogue on technology adoption and sparking organizational interest in expanded digital literacy initiatives."
+            quote="The ability to make complex technology accessible to such a diverse audience—from children to executives—demonstrated exceptional communication skill and strategic understanding."
             image={workshopImage}
-            pricing="$2,000 - $5,000 per course"
+            pricing="$4,000 - $8,000"
             metrics={[
-              "5+ hours per week saved for instructors",
-              "Improved student comprehension and engagement",
-              "24/7 learning support availability",
-              "Replicable model for other courses and institutions"
+              "40+ participants from 4 generations engaged",
+              "95% satisfaction rate across all age groups",
+              "Led to expanded digital literacy program discussions",
+              "Custom workshop materials and follow-up resources"
             ]}
           />
         </div>

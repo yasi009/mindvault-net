@@ -6,23 +6,20 @@ export const Workshops = () => {
     {
       icon: <Sparkles className="w-8 h-8" />,
       title: "Girls in STEM (NIDA Theatre)",
-      description: "Pedagogy-first workshop model demonstrating best practices for teaching AI literacy to young women. Proven curriculum design increasing student engagement and digital confidence.",
-      community: "Replicable for schools",
-      pricing: "$1,500–$3,000"
+      description: "Flagship 'Debunk, Demystify, Design' workshop creating a safe sisterhood for young women exploring AI and tech.",
+      community: "Yeah the Girls"
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "High School PD Sessions",
-      description: "Professional development workshops for teachers on integrating AI literacy, Life OS design, and custom GPTs into curriculum. Hands-on, practical, and immediately applicable.",
-      community: "ISRA & partner schools",
-      pricing: "$2,000–$4,000"
+      title: "High School Communities",
+      description: "Interactive sessions teaching students how to build Life OS systems and custom GPTs for study and personal growth.",
+      community: "ISRA & local schools"
     },
     {
       icon: <GraduationCap className="w-8 h-8" />,
-      title: "University Faculty Training",
-      description: "Advanced workshops for lecturers and learning designers on creating custom course GPTs, reducing admin load, and enhancing student outcomes through AI integration.",
-      community: "UNSW & other institutions",
-      pricing: "$2,500–$5,000"
+      title: "University Classes",
+      description: "AI literacy workshops for UNSW peers, helping students integrate productivity tools and custom GPTs into their coursework.",
+      community: "UNSW & beyond"
     }
   ];
 
@@ -31,10 +28,10 @@ export const Workshops = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Professional Development Programs
+            Workshops & Community
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Proven workshop models that improve teaching outcomes and build educator confidence with AI and digital tools.
+            Building confidence, curiosity, and tech fluency — one workshop at a time.
           </p>
         </div>
 
@@ -47,13 +44,8 @@ export const Workshops = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-foreground">{workshop.title}</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">{workshop.description}</p>
-                <div className="flex flex-col gap-2">
-                  <div className="inline-block bg-primary/10 px-3 py-1 rounded-full self-start">
-                    <span className="text-sm text-primary font-semibold">{workshop.pricing}</span>
-                  </div>
-                  <div className="inline-block bg-secondary/20 px-3 py-1 rounded-full self-start">
-                    <span className="text-sm text-secondary-foreground font-medium">{workshop.community}</span>
-                  </div>
+                <div className="inline-block bg-secondary/20 px-3 py-1 rounded-full">
+                  <span className="text-sm text-secondary-foreground font-medium">{workshop.community}</span>
                 </div>
               </CardContent>
             </Card>
