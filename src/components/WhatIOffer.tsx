@@ -7,36 +7,36 @@ export const WhatIOffer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground tracking-tight">
-            What We Offer
+            Services & Expertise
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Professional development and consulting services for educators ready to embrace AI and digital transformation
+            Comprehensive solutions for individuals and organizations seeking digital transformation
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <ServiceCard
             icon={<Brain className="w-12 h-12" />}
-            title="PD Workshops for Staff"
-            description="Interactive professional development sessions on AI literacy, digital confidence, and classroom integration. Designed for teachers, lecturers, and education leaders. $1,500–$3,000 per session."
+            title="Life Operating System Design"
+            description="Develop personalized digital frameworks using Notion, automation tools, and systematic workflows that enhance productivity and decision-making capabilities."
           />
           
           <ServiceCard
             icon={<Sparkles className="w-12 h-12" />}
-            title="Custom Classroom GPTs"
-            description="Course-specific AI assistants trained on your curriculum. Help students 24/7 while saving educators hours on repetitive questions. $2,000–$5,000 per course."
+            title="Custom GPT Development"
+            description="Design and implement specialized AI assistants tailored to your unique requirements—from research tools to business process automation."
           />
           
           <ServiceCard
             icon={<Code className="w-12 h-12" />}
-            title="Life OS for Educators"
-            description="Ready-to-use templates and training to help teachers manage workload, reduce admin time, and optimize their teaching workflows. $500–$1,500 per package."
+            title="AI Literacy Training"
+            description="Comprehensive workshops and coaching on AI tools, prompt engineering, and digital productivity—delivered in accessible, practical formats."
           />
           
           <ServiceCard
             icon={<TrendingUp className="w-12 h-12" />}
             title="Strategic Consulting"
-            description="Advisory services for schools and institutions on digital maturity, AI adoption roadmaps, and curriculum integration. Ongoing retainers available. $1–3k/month."
+            description="One-on-one guidance for professionals and organizations navigating digital transformation, AI integration, and productivity optimization."
           />
         </div>
       </div>
