@@ -6,20 +6,20 @@ export const FreeTools = () => {
   const tools = [
     {
       icon: <Download className="w-8 h-8" />,
-      title: "Life OS Template",
-      description: "Complete Notion dashboard for goals, habits, reflection, and daily systems.",
+      title: "Life OS for Educators Template",
+      description: "Ready-to-use Notion dashboard designed for teachers to manage lessons, admin tasks, and professional goals efficiently.",
       cta: "Download Free"
     },
     {
       icon: <Bot className="w-8 h-8" />,
-      title: "Course-Specific GPTs",
-      description: "Custom GPTs built for UNSW students — study helpers, assignment guides, and more.",
-      cta: "Access GPTs"
+      title: "Sample Classroom GPT",
+      description: "Try a demo custom GPT to see how AI can support student learning and save you hours on repetitive questions.",
+      cta: "Try Demo GPT"
     },
     {
       icon: <BookOpen className="w-8 h-8" />,
-      title: "Study Tools & Guides",
-      description: "Free resources on productivity, AI literacy, and building your digital confidence.",
+      title: "AI Literacy Guides",
+      description: "Free curriculum resources, workshop frameworks, and professional development materials for integrating AI into teaching.",
       cta: "Explore Resources"
     }
   ];
@@ -29,10 +29,10 @@ export const FreeTools = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Free Tools & Resources
+            Tools for Teachers
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Everything you need to start building your future — no strings attached.
+            Free resources to help educators get started with AI literacy and digital transformation — no strings attached.
           </p>
         </div>
 
