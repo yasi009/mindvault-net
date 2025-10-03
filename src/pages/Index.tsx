@@ -5,18 +5,23 @@ import { WhatIOffer } from "@/components/WhatIOffer";
 import { Workshops } from "@/components/Workshops";
 import { FreeTools } from "@/components/FreeTools";
 import { Footer } from "@/components/Footer";
+import { AudienceSelector } from "@/components/AudienceSelector";
+import { AudienceProvider } from "@/contexts/AudienceContext";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Hero />
-      <ClientWork />
-      <About />
-      <WhatIOffer />
-      <Workshops />
-      <FreeTools />
-      <Footer />
-    </div>
+    <AudienceProvider>
+      <div className="min-h-screen">
+        <Hero />
+        <AudienceSelector />
+        <ClientWork />
+        <About />
+        <WhatIOffer />
+        <Workshops />
+        <FreeTools />
+        <Footer />
+      </div>
+    </AudienceProvider>
   );
 };
 

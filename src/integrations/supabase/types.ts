@@ -14,6 +14,30 @@ export type Database = {
   }
   public: {
     Tables: {
+      consultation_bookings: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          name: string
+          purpose: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          name: string
+          purpose: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          name?: string
+          purpose?: string
+        }
+        Relationships: []
+      }
       tool_signups: {
         Row: {
           created_at: string
