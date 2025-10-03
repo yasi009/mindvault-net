@@ -95,7 +95,7 @@ export const Footer = () => {
                 <a href="#" className="text-background/70 hover:text-background transition-colors">
                   <Mail className="w-6 h-6" />
                 </a>
-                <a href="#" className="text-background/70 hover:text-background transition-colors">
+                <a href="https://www.linkedin.com/in/yaseerah-hassan-66a51b249" target="_blank" rel="noopener noreferrer" className="text-background/70 hover:text-background transition-colors">
                   <Linkedin className="w-6 h-6" />
                 </a>
                 <a href="#" className="text-background/70 hover:text-background transition-colors">
