@@ -6,21 +6,21 @@ export const FreeTools = () => {
   const tools = [
     {
       icon: <Download className="w-8 h-8" />,
-      title: "Student Life OS (Notion)",
-      description: "Rituals, trackers, weekly review templates — your personal operating system.",
+      title: "Life OS for Educators Template",
+      description: "Ready-to-use Notion dashboard designed for teachers to manage lessons, admin tasks, and professional goals efficiently.",
       cta: "Download Free"
     },
     {
       icon: <Bot className="w-8 h-8" />,
-      title: "AI Study GPT (course example)",
-      description: "Quiz yourself, summarise readings, plan study sessions with your own AI buddy.",
-      cta: "Get Your GPT"
+      title: "Sample Classroom GPT",
+      description: "Try a demo custom GPT to see how AI can support student learning and save you hours on repetitive questions.",
+      cta: "Try Demo GPT"
     },
     {
       icon: <BookOpen className="w-8 h-8" />,
-      title: "Reflection Prompts",
-      description: "Identity, values, focus resets — short exercises to build clarity.",
-      cta: "Download Prompts"
+      title: "AI Literacy Guides",
+      description: "Free curriculum resources, workshop frameworks, and professional development materials for integrating AI into teaching.",
+      cta: "Explore Resources"
     }
   ];
 
@@ -29,10 +29,10 @@ export const FreeTools = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Free Tools for Students
+            Tools for Teachers
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Download the starter kit and get moving today.
+            Free resources to help educators get started with AI literacy and digital transformation — no strings attached.
           </p>
         </div>
 
@@ -52,10 +52,6 @@ export const FreeTools = () => {
             </Card>
           ))}
         </div>
-        
-        <p className="text-center text-sm text-muted-foreground mt-8 max-w-md mx-auto">
-          Get instant access + updates. No spam. Unsubscribe anytime.
-        </p>
       </div>
     </section>
   );

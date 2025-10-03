@@ -8,18 +8,18 @@ export const Footer = () => {
         {/* CTA Section */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to design your own system?
+            Let's Prepare Your Students for the Future
           </h2>
           <p className="text-xl text-background/80 mb-8 max-w-2xl mx-auto">
-            Start with the free Life OS or book a 1:1.
+            Ready to save time, boost engagement, and build digital confidence in your classroom? Book a workshop or explore our free educator resources.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="secondary" size="xl">
-              Get the Free Life OS
+              Book a PD Workshop
               <ArrowRight className="w-5 h-5" />
             </Button>
             <Button variant="outline" size="xl" className="border-background/20 bg-transparent text-background hover:bg-background/10">
-              Book 1:1 Coaching
+              Download Educator Toolkit
             </Button>
           </div>
         </div>
@@ -30,7 +30,7 @@ export const Footer = () => {
             <div>
               <h3 className="text-2xl font-bold mb-4">MindVault</h3>
               <p className="text-background/70">
-                Helping students build clarity, confidence, and systems with AI + Notion.
+                AI literacy and digital transformation for educators — building future-ready classrooms, one teacher at a time.
               </p>
             </div>
             

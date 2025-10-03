@@ -17,33 +17,29 @@ export const Hero = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center py-32">
         <div className="mb-8 inline-flex items-center gap-2 bg-primary/5 px-5 py-2.5 rounded-full border border-primary/10 animate-fade-in">
           <Sparkles className="w-4 h-4 text-primary" />
-          <span className="text-sm text-foreground font-medium">Professional Development & AI Literacy</span>
+          <span className="text-sm text-foreground font-medium">AI Literacy & Digital Confidence for Educators</span>
         </div>
 
         <h1 className="text-5xl md:text-7xl font-bold mb-8 text-foreground animate-fade-in leading-[1.1] tracking-tight">
-          Debunk. Demystify.<br />
+          Empower Your Teaching<br />
           <span className="text-primary">
-            Design Your Student Life.
+            With AI & Systems Design
           </span>
         </h1>
 
         <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in leading-relaxed">
-          Build clarity, confidence, and systems with AI + Notion.
+          Professional development workshops, custom classroom GPTs, and digital transformation consulting for educators who want to save time, boost engagement, and build future-ready classrooms.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in mb-8">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
           <Button size="lg" className="text-base px-8">
-            Get the Free Life OS
+            Book a PD Workshop
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
           <Button variant="outline" size="lg" className="text-base px-8">
-            Book 1:1 Coaching
+            Explore Tools for Teachers
           </Button>
         </div>
-
-        <p className="text-sm text-muted-foreground animate-fade-in">
-          Trusted by students & communities across UNSW, ISRA, NIDA Girls in STEM, and more.
-        </p>
       </div>
     </section>
   );
