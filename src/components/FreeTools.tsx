@@ -6,21 +6,21 @@ export const FreeTools = () => {
   const tools = [
     {
       icon: <Download className="w-8 h-8" />,
-      title: "Life OS Template",
-      description: "Complete Notion dashboard for goals, habits, reflection, and daily systems.",
+      title: "Student Life OS (Notion)",
+      description: "Rituals, trackers, weekly review templates — your personal operating system.",
       cta: "Download Free"
     },
     {
       icon: <Bot className="w-8 h-8" />,
-      title: "Course-Specific GPTs",
-      description: "Custom GPTs built for UNSW students — study helpers, assignment guides, and more.",
-      cta: "Access GPTs"
+      title: "AI Study GPT (course example)",
+      description: "Quiz yourself, summarise readings, plan study sessions with your own AI buddy.",
+      cta: "Get Your GPT"
     },
     {
       icon: <BookOpen className="w-8 h-8" />,
-      title: "Study Tools & Guides",
-      description: "Free resources on productivity, AI literacy, and building your digital confidence.",
-      cta: "Explore Resources"
+      title: "Reflection Prompts",
+      description: "Identity, values, focus resets — short exercises to build clarity.",
+      cta: "Download Prompts"
     }
   ];
 
@@ -29,10 +29,10 @@ export const FreeTools = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Free Tools & Resources
+            Free Tools for Students
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Everything you need to start building your future — no strings attached.
+            Download the starter kit and get moving today.
           </p>
         </div>
 
@@ -52,6 +52,10 @@ export const FreeTools = () => {
             </Card>
           ))}
         </div>
+        
+        <p className="text-center text-sm text-muted-foreground mt-8 max-w-md mx-auto">
+          Get instant access + updates. No spam. Unsubscribe anytime.
+        </p>
       </div>
     </section>
   );

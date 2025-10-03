@@ -47,7 +47,7 @@ export const CaseStudyCard = ({
       )}
       <CardContent className="p-10">
         <h3 className="text-2xl font-bold mb-5 text-foreground">{company}</h3>
-        <p className="text-muted-foreground mb-6 leading-relaxed text-base">{description}</p>
+        <p className="text-muted-foreground mb-6 leading-relaxed text-base" dangerouslySetInnerHTML={{ __html: description }}></p>
         
         {metrics && metrics.length > 0 && (
           <div className="mb-6 space-y-2">

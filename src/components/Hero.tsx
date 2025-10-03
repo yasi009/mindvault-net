@@ -21,25 +21,29 @@ export const Hero = () => {
         </div>
 
         <h1 className="text-5xl md:text-7xl font-bold mb-8 text-foreground animate-fade-in leading-[1.1] tracking-tight">
-          Transform How You Work<br />
+          Debunk. Demystify.<br />
           <span className="text-primary">
-            With AI & Systems Thinking
+            Design Your Student Life.
           </span>
         </h1>
 
         <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in leading-relaxed">
-          Expert coaching in Life Operating Systems, custom GPT development, and digital transformation for professionals and organizations.
+          Build clarity, confidence, and systems with AI + Notion.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in mb-8">
           <Button size="lg" className="text-base px-8">
-            Get Free Life OS Template
+            Get the Free Life OS
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
           <Button variant="outline" size="lg" className="text-base px-8">
-            Explore Free Resources
+            Book 1:1 Coaching
           </Button>
         </div>
+
+        <p className="text-sm text-muted-foreground animate-fade-in">
+          Trusted by students & communities across UNSW, ISRA, NIDA Girls in STEM, and more.
+        </p>
       </div>
     </section>
   );

@@ -1,24 +1,25 @@
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Sparkles, GraduationCap } from "lucide-react";
 
 export const Workshops = () => {
   const workshops = [
     {
-      icon: <Sparkles className="w-8 h-8" />,
-      title: "Girls in STEM (NIDA Theatre)",
-      description: "Flagship 'Debunk, Demystify, Design' workshop creating a safe sisterhood for young women exploring AI and tech.",
-      community: "Yeah the Girls"
-    },
-    {
       icon: <Users className="w-8 h-8" />,
-      title: "High School Communities",
+      title: "ISRA (Oct) — AI & Self-Awareness",
       description: "Interactive sessions teaching students how to build Life OS systems and custom GPTs for study and personal growth.",
       community: "ISRA & local schools"
     },
     {
+      icon: <Sparkles className="w-8 h-8" />,
+      title: "Girls in STEM / 'Yeah the Girls'",
+      description: "DDD workshop + ongoing mentorship creating a safe sisterhood for young women exploring AI and tech.",
+      community: "NIDA Theatre"
+    },
+    {
       icon: <GraduationCap className="w-8 h-8" />,
-      title: "University Classes",
-      description: "AI literacy workshops for UNSW peers, helping students integrate productivity tools and custom GPTs into their coursework.",
+      title: "University Guest Lectures",
+      description: "Innovation & Transformation in AI — helping peers integrate productivity tools and custom GPTs into coursework.",
       community: "UNSW & beyond"
     }
   ];
@@ -27,15 +28,15 @@ export const Workshops = () => {
     <section className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Workshops & Community
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground tracking-tight">
+            Workshops & Programs
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Building confidence, curiosity, and tech fluency — one workshop at a time.
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+            Delivered for mixed audiences — from high-school girls to execs — with the same result: "This feels simple and doable."
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
           {workshops.map((workshop, index) => (
             <Card key={index} className="group hover:scale-105 transition-all duration-300 bg-gradient-card border-border shadow-soft hover:shadow-elegant">
               <CardContent className="p-8">
@@ -50,6 +51,12 @@ export const Workshops = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        <div className="text-center">
+          <Button size="lg" variant="outline">
+            Bring this to your class or society
+          </Button>
         </div>
       </div>
     </section>
