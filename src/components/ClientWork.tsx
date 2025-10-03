@@ -4,7 +4,7 @@ import { useAudience } from "@/contexts/AudienceContext";
 import corporateImage from "@/assets/case-study-corporate.jpg";
 import healthcareImage from "@/assets/case-study-healthcare.jpg";
 import stemImage from "@/assets/case-study-stem.jpg";
-import workshopImage from "@/assets/case-study-workshop.jpg";
+import workshopImage from "@/assets/workshop-presentation.jpg";
 
 export const ClientWork = () => {
   const { audience } = useAudience();
