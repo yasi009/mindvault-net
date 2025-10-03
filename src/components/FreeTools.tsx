@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Download, Bot, BookOpen } from "lucide-react";
+import { ToolSignupDialog } from "./ToolSignupDialog";
 
 export const FreeTools = () => {
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [selectedTool, setSelectedTool] = useState("");
   const tools = [
     {
       icon: <Download className="w-8 h-8" />,
@@ -23,6 +27,11 @@ export const FreeTools = () => {
       cta: "Explore Resources"
     }
   ];
+
+  const handleToolClick = (toolTitle: string) => {
+    setSelectedTool(toolTitle);
+    setDialogOpen(true);
+  };
 
   return (
     <section className="py-24 px-6 bg-gradient-soft">
@@ -45,7 +54,11 @@ export const FreeTools = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-foreground">{tool.title}</h3>
                 <p className="text-muted-foreground mb-6 leading-relaxed">{tool.description}</p>
-                <Button variant="outline" className="w-full">
+                <Button 
+                  variant="outline" 
+                  className="w-full"
+                  onClick={() => handleToolClick(tool.title)}
+                >
                   {tool.cta}
                 </Button>
               </CardContent>
@@ -53,6 +66,12 @@ export const FreeTools = () => {
           ))}
         </div>
       </div>
+
+      <ToolSignupDialog 
+        open={dialogOpen}
+        onOpenChange={setDialogOpen}
+        toolName={selectedTool}
+      />
     </section>
   );
 };
