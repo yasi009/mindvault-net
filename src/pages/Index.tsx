@@ -1,4 +1,6 @@
 import { Hero } from "@/components/Hero";
+import { MyWhy } from "@/components/MyWhy";
+import { PullQuote } from "@/components/PullQuote";
 import { ProblemSection } from "@/components/ProblemSection";
 import { GuideSection } from "@/components/GuideSection";
 import { PlanSection } from "@/components/PlanSection";
@@ -19,10 +21,14 @@ const Index = () => {
     <AudienceProvider>
       <div className="min-h-screen">
         <Hero />
+        <MyWhy />
+        <PullQuote quote="True intelligence is seeing what's actually there." />
         <AudienceSelector />
         <ProblemSection />
+        <PullQuote quote="You don't rise to your goals; you fall to your systems." className="bg-gradient-soft" />
         <GuideSection />
         <PlanSection />
+        <PullQuote quote="Leadership begins with self-awareness." />
         <ClientWork />
         <AudiencePackages />
         <SuccessFailureSection />
