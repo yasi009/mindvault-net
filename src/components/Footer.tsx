@@ -41,30 +41,41 @@ export const Footer = () => {
     <>
       <footer className="bg-foreground text-background py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          {/* CTA Section */}
+          {/* Vision CTA Section */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to build your future system?
+              Imagine Your Future
             </h2>
-            <p className="text-xl text-background/80 mb-8 max-w-2xl mx-auto">
-              Start with free tools or book your 15-minute consultation today.
-            </p>
+            <div className="space-y-4 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-background/90 leading-relaxed">
+                Imagine studying without the stress.
+              </p>
+              <p className="text-xl text-background/90 leading-relaxed">
+                Imagine leading with clarity and confidence.
+              </p>
+              <p className="text-xl text-background/90 leading-relaxed">
+                Imagine teaching students who are genuinely engaged.
+              </p>
+              <p className="text-2xl text-background font-semibold mt-6">
+                That's what MindVault makes possible.
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 variant="secondary" 
                 size="lg"
-                onClick={() => audience === "students" ? setToolDialogOpen(true) : setConsultationOpen(true)}
+                onClick={() => setToolDialogOpen(true)}
               >
-                {cta.primary}
+                Download Free Tools
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
                 className="border-background/20 bg-transparent text-background hover:bg-background/10"
-                onClick={() => audience === "students" ? setConsultationOpen(true) : setToolDialogOpen(true)}
+                onClick={() => setConsultationOpen(true)}
               >
-                {cta.secondary}
+                Book a 15-min Call
               </Button>
             </div>
           </div>
