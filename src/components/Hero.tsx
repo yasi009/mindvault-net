@@ -21,15 +21,32 @@ export const Hero = () => {
         </div>
 
         <h1 className="text-5xl md:text-7xl font-bold mb-8 text-foreground animate-fade-in leading-[1.1] tracking-tight">
-          Transform How You Work<br />
+          Debunk. Demystify.<br />
           <span className="text-primary">
-            With AI & Systems Thinking
+            Design Your Future.
           </span>
         </h1>
 
         <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in leading-relaxed">
-          Professional development, AI literacy training, and digital transformation for students, educators, and executives.
+          AI literacy, systems, and clarity for students, educators, and leaders.
         </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-in">
+          <Button 
+            size="lg" 
+            onClick={() => document.getElementById('free-tools')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Download Free Tools
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Button>
+          <Button 
+            variant="outline" 
+            size="lg"
+            onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Book a Free 15-min Consultation
+          </Button>
+        </div>
 
         <div className="text-sm text-muted-foreground animate-fade-in">
           Choose your pathway below to get started ↓

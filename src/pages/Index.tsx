@@ -1,10 +1,10 @@
 import { Hero } from "@/components/Hero";
 import { ClientWork } from "@/components/ClientWork";
 import { About } from "@/components/About";
-import { WhatIOffer } from "@/components/WhatIOffer";
 import { Workshops } from "@/components/Workshops";
 import { FreeTools } from "@/components/FreeTools";
-import { PricingSection } from "@/components/PricingSection";
+import { AudiencePackages } from "@/components/AudiencePackages";
+import { SuccessStories } from "@/components/SuccessStories";
 import { Footer } from "@/components/Footer";
 import { AudienceSelector } from "@/components/AudienceSelector";
 import { AudienceProvider } from "@/contexts/AudienceContext";
@@ -16,11 +16,11 @@ const Index = () => {
         <Hero />
         <AudienceSelector />
         <ClientWork />
-        <WhatIOffer />
-        <PricingSection />
+        <AudiencePackages />
+        <FreeTools />
+        <SuccessStories />
         <About />
         <Workshops />
-        <FreeTools />
         <Footer />
       </div>
     </AudienceProvider>

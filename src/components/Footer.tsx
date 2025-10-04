@@ -44,10 +44,10 @@ export const Footer = () => {
           {/* CTA Section */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Let's Build Your Future System
+              Ready to build your future system?
             </h2>
             <p className="text-xl text-background/80 mb-8 max-w-2xl mx-auto">
-              Ready to turn chaos into clarity? Get started with a free consultation or grab your resources.
+              Start with free tools or book your 15-minute consultation today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
