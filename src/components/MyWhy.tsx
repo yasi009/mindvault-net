@@ -2,11 +2,12 @@ import { Heart } from "lucide-react";
 
 export const MyWhy = () => {
   return (
-    <section className="py-20 px-6 bg-background">
-      <div className="max-w-4xl mx-auto">
-        <div className="flex items-center justify-center gap-3 mb-8">
-          <Heart className="w-6 h-6 text-primary" />
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">My Why</h2>
+    <section className="py-24 px-6 bg-gradient-soft relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-glow opacity-20"></div>
+      <div className="max-w-4xl mx-auto relative z-10">
+        <div className="flex items-center justify-center gap-3 mb-10">
+          <Heart className="w-7 h-7 text-primary animate-pulse" />
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent">My Why</h2>
         </div>
         
         <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
