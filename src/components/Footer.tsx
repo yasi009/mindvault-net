@@ -86,7 +86,7 @@ export const Footer = () => {
             <div>
               <h3 className="text-2xl font-bold mb-4">MindVault</h3>
               <p className="text-background/70">
-                Empowering Gen Z and young adults with systems, AI literacy, and mentorship.
+                Empowering individuals and organizations to think clearly, work intentionally, and lead confidently in the age of AI.
               </p>
             </div>
             
