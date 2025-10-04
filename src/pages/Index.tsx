@@ -12,6 +12,7 @@ import { Workshops } from "@/components/Workshops";
 import { Footer } from "@/components/Footer";
 import { AudienceSelector } from "@/components/AudienceSelector";
 import { AudienceProvider } from "@/contexts/AudienceContext";
+import { ComingSoon } from "@/components/ComingSoon";
 
 const Index = () => {
   return (
@@ -29,6 +30,7 @@ const Index = () => {
         <SuccessStories />
         <About />
         <Workshops />
+        <ComingSoon />
         <Footer />
       </div>
     </AudienceProvider>
