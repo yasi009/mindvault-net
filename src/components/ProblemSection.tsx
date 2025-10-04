@@ -13,9 +13,9 @@ export const ProblemSection = () => {
 
   const problems: Record<string, Problem> = {
     students: {
-      external: "Are you drowning in assignments and apps?",
-      internal: "Do you feel scattered, overwhelmed, and always behind?",
-      philosophical: "You deserve tools that work for you, not against you."
+      external: "Drowning in assignments and don't know where to start?",
+      internal: "Feel scattered, overwhelmed, and like everyone else has it figured out except you?",
+      philosophical: "You deserve to feel organized and in control, not constantly stressed."
     },
     educators: {
       external: "Are your students disengaged and the tech gap widening?",

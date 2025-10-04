@@ -13,26 +13,26 @@ export const FreeTools = () => {
   const studentTools = [
     {
       icon: <Download className="w-8 h-8" />,
-      title: "Life OS Notion Template",
-      description: "A complete framework for managing your student life, projects, and goals in Notion.",
+      title: "Complete Study Organization System",
+      description: "A simple framework to organize your assignments, notes, and goals in one place.",
       cta: "Get Template"
     },
     {
       icon: <Sparkles className="w-8 h-8" />,
-      title: "Custom Study GPTs",
-      description: "Pre-built GPTs for research, note-taking, essay planning, and exam prep.",
-      cta: "Access GPTs"
+      title: "Study Assistants Built for You",
+      description: "Tools that help with research, essay planning, exam prep, and taking better notes.",
+      cta: "Access Study Helpers"
     },
     {
       icon: <BookOpen className="w-8 h-8" />,
-      title: "Journaling Prompts",
-      description: "Guided prompts and frameworks for reflection, goal-setting, and self-awareness.",
+      title: "Reflection & Goal-Setting Prompts",
+      description: "Simple questions to help you reflect, set goals, and stay clear on what matters.",
       cta: "Download Prompts"
     },
     {
       icon: <FileText className="w-8 h-8" />,
       title: "Student Productivity Guide",
-      description: "Essential workflows and systems to build your personal operating system.",
+      description: "Learn how to save time on assignments and feel more in control of your schedule.",
       cta: "Get Guide"
     }
   ];
@@ -111,7 +111,7 @@ export const FreeTools = () => {
   const getSubtitle = () => {
     switch (audience) {
       case "students":
-        return "Everything you need to start building your future — no strings attached";
+        return "Everything you need to save time, feel less stressed, and organize your study life";
       case "educators":
         return "Practical tools to bring AI literacy and systems thinking to your classroom";
       case "executives":
