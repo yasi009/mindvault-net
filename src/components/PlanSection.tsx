@@ -7,19 +7,19 @@ export const PlanSection = () => {
       number: "1",
       icon: <GraduationCap className="w-8 h-8" />,
       title: "Choose Your Path",
-      description: "Pick Student, Educator, or Executive to see options that fit what you need."
+      description: "Select Student, Educator, or Executive to see packages tailored to your needs."
     },
     {
       number: "2",
       icon: <Download className="w-8 h-8" />,
       title: "Get Started",
-      description: "Grab a free tool to try it out, or book a quick 15-minute call to chat about your goals."
+      description: "Download a free tool to try MindVault, or book a 15-minute clarity call to discuss your goals."
     },
     {
       number: "3",
       icon: <Rocket className="w-8 h-8" />,
       title: "Build Your System",
-      description: "Start using tools and habits that save you time, cut the stress, and help you actually thrive."
+      description: "Implement practical tools and strategies that save you time, reduce stress, and help you thrive."
     }
   ];
 

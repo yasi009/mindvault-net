@@ -28,9 +28,9 @@ export const AudiencePackages = () => {
       price: "Free",
       icon: <Bot className="w-8 h-8" />,
       features: [
-        "Complete study organization system",
-        "Study assistant that answers from your notes",
-        "Daily reflection prompts",
+        "Life OS Notion Template",
+        "AI Study GPT Access",
+        "Reflection Prompts Pack",
         "Email support"
       ],
       cta: "Get Free Tools",
@@ -41,10 +41,10 @@ export const AudiencePackages = () => {
       price: "$99–149",
       icon: <Calendar className="w-8 h-8" />,
       features: [
-        "2-hour session to organize your study and life",
-        "OR get your own study assistant built for you",
-        "Personalized plan to feel less stressed",
-        "Follow-up support for 2 weeks"
+        "2-hour Life OS coaching session",
+        "OR Custom GPT build",
+        "Personalized study assistant",
+        "Follow-up support (2 weeks)"
       ],
       cta: "Book Session",
       isPopular: true
@@ -54,10 +54,10 @@ export const AudiencePackages = () => {
       price: "$300–500",
       icon: <Users className="w-8 h-8" />,
       features: [
-        "For your society or class",
-        "Learn to use tech that actually helps",
-        "See cool tools in action",
-        "Build your own study system together"
+        "For societies/classes",
+        "AI literacy workshop",
+        "Interactive GPT demos",
+        "Group Life OS setup"
       ],
       cta: "Book Workshop"
     }
@@ -173,7 +173,7 @@ export const AudiencePackages = () => {
   const getSubtitle = () => {
     switch (audience) {
       case "students":
-        return "From free tools to personal help — build a system that saves you time and stress";
+        return "From free tools to personalized coaching — build your future system";
       case "educators":
         return "Professional development that transforms classrooms";
       case "executives":
