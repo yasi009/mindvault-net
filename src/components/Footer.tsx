@@ -43,12 +43,23 @@ export const Footer = () => {
         <div className="max-w-7xl mx-auto">
           {/* Vision CTA Section */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-background">
-              You Don't Rise to Your Goals — You Fall to Your Systems
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Imagine Your Future
             </h2>
-            <p className="text-xl text-background/80 mb-10 max-w-3xl mx-auto leading-relaxed">
-              Let's build one that works for you.
-            </p>
+            <div className="space-y-4 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-background/90 leading-relaxed">
+                Imagine studying without the stress.
+              </p>
+              <p className="text-xl text-background/90 leading-relaxed">
+                Imagine leading with clarity and confidence.
+              </p>
+              <p className="text-xl text-background/90 leading-relaxed">
+                Imagine teaching students who are genuinely engaged.
+              </p>
+              <p className="text-2xl text-background font-semibold mt-6">
+                That's what MindVault makes possible.
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 variant="secondary" 
@@ -75,7 +86,7 @@ export const Footer = () => {
             <div>
               <h3 className="text-2xl font-bold mb-4">MindVault</h3>
               <p className="text-background/70">
-                A space to think clearly, design intentionally, and lead with clarity — for students, educators, and leaders ready to build systems that fit who they actually are.
+                Empowering individuals and organizations to think clearly, work intentionally, and lead confidently in the age of AI.
               </p>
             </div>
             

@@ -11,27 +11,27 @@ interface Story {
 export const SuccessStories = () => {
   const stories: Story[] = [
     {
-      problem: "Care teams were drowning in handover chaos — critical patient information kept slipping through the cracks.",
-      solution: "We built a simple system that turns scattered notes into clear, complete patient summaries automatically.",
-      impact: "Staff got 5+ hours back each week. Documentation errors dropped by 40%. Care quality improved — and so did team morale.",
+      problem: "Patient handovers had critical information gaps, leading to care coordination errors.",
+      solution: "Built custom GPT + Zapier workflow for automated patient summary generation.",
+      impact: "Saved 5+ staff hours per week, improved care documentation accuracy by 40%.",
       client: "NDIS South Coast Carers"
     },
     {
-      problem: "Product knowledge was buried across different systems. Sales and support teams were wasting hours searching for answers.",
-      solution: "We created a thinking partner for their team — a tool that knows everything about their products, instantly.",
-      impact: "Finding information went from frustrating to fast — 85% faster. Leadership finally had a roadmap for what's next.",
+      problem: "Product knowledge spread across multiple systems, slowing down sales and support.",
+      solution: "Implemented custom GPT solutions for internal knowledge management across 3 markets.",
+      impact: "Reduced product knowledge retrieval time by 85%, established AI roadmap for C-suite.",
       client: "Makinex Construction"
     },
     {
-      problem: "Young women felt like STEM wasn't for them. They lacked confidence, community, and role models.",
-      solution: "We created 'Debunk, Demystify, Design' — a workshop series that makes tech feel personal, not intimidating. Then we kept showing up with mentorship.",
-      impact: "50+ young women found their people. 90% said they now see themselves in STEM. The community is still growing.",
+      problem: "Young women lacked confidence and community in STEM career pathways.",
+      solution: "Led flagship 'Debunk, Demystify, Design' workshop series with ongoing mentorship.",
+      impact: "Established community of 50+ young women, 90% reported increased STEM confidence.",
       client: "Girls in STEM (NIDA)"
     },
     {
-      problem: "Children at an orphanage in Bali had never even touched a computer. They didn't know what was possible.",
-      solution: "We taught a hands-on workshop introducing them to technology — not as something scary, but as something empowering.",
-      impact: "You could see it in their eyes: curiosity, excitement, possibility. They left knowing they could create, not just consume.",
+      problem: "Orphanage children had no exposure to technology or AI literacy.",
+      solution: "Taught foundational tech/AI literacy workshop with hands-on learning activities.",
+      impact: "Sparked curiosity and empowerment, introduced digital skills for future opportunities.",
       client: "Bali Orphanage"
     }
   ];
@@ -41,10 +41,10 @@ export const SuccessStories = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Stories That Matter
+            Success Stories
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Real people. Real breakthroughs. Real change.
+            Real problems solved. Measurable impact delivered.
           </p>
         </div>
 

@@ -28,14 +28,14 @@ export const Hero = () => {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-8 text-foreground animate-fade-in leading-[1.1] tracking-tight">
-            Think Clearly.<br />
+            Clarity, Not Chaos:<br />
             <span className="text-primary">
-              Work Intentionally. Lead Confidently.
+              Build Systems That Help You Thrive
             </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in leading-relaxed">
-            I help students, educators, and leaders cut through overwhelm and build systems that bring clarity, control, and calm to their work and life.
+            Whether you're a student, educator, or leader, MindVault helps you cut through the noise, save time, and design systems that fit your real life.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
