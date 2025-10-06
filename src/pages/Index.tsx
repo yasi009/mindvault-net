@@ -8,11 +8,10 @@ import { SuccessFailureSection } from "@/components/SuccessFailureSection";
 import { FreeTools } from "@/components/FreeTools";
 import { SuccessStories } from "@/components/SuccessStories";
 import { About } from "@/components/About";
-import { Workshops } from "@/components/Workshops";
+import { WorkshopsEvents } from "@/components/WorkshopsEvents";
 import { Footer } from "@/components/Footer";
 import { AudienceSelector } from "@/components/AudienceSelector";
 import { AudienceProvider } from "@/contexts/AudienceContext";
-import { ComingSoon } from "@/components/ComingSoon";
 
 const Index = () => {
   return (
@@ -29,8 +28,7 @@ const Index = () => {
         <FreeTools />
         <SuccessStories />
         <About />
-        <Workshops />
-        <ComingSoon />
+        <WorkshopsEvents />
         <Footer />
       </div>
     </AudienceProvider>
