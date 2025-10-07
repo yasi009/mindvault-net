@@ -8,52 +8,57 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Moody, premium palette */
-    --background: 32 22% 16%;
-    --foreground: 32 15% 95%;
-
-    --card: 32 20% 18%;
-    --card-foreground: 32 15% 95%;
-
-    --popover: 32 20% 18%;
-    --popover-foreground: 32 15% 95%;
-
-    --primary: 340 75% 65%;
-    --primary-foreground: 32 15% 95%;
-
-    --secondary: 32 18% 22%;
-    --secondary-foreground: 32 15% 95%;
-
-    --muted: 32 18% 25%;
-    --muted-foreground: 32 10% 65%;
-
-    --accent: 280 65% 70%;
-    --accent-foreground: 32 15% 95%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 32 15% 30%;
-    --input: 32 15% 30%;
-    --ring: 340 75% 65%;
-
-    --radius: 1rem;
-
-    /* Cinematic gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(340 75% 65% / 0.15) 0%, hsl(280 65% 70% / 0.1) 50%, hsl(32 22% 16%) 100%);
-    --gradient-soft: linear-gradient(180deg, hsl(32 20% 18%) 0%, hsl(32 22% 16%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(32 20% 18%) 0%, hsl(32 18% 20%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(340 75% 65%) 0%, hsl(280 65% 70%) 100%);
-    --gradient-warm: linear-gradient(90deg, hsl(28 80% 70% / 0.2) 0%, hsl(340 75% 65% / 0.2) 100%);
+    /* Premium, cinematic palette - mood-based */
+    --background: 32 25% 8%;
+    --foreground: 30 15% 97%;
     
-    /* Premium shadows with glow */
-    --shadow-elegant: 0 8px 40px -8px hsl(340 75% 65% / 0.25);
-    --shadow-soft: 0 4px 20px -4px hsl(340 75% 65% / 0.15);
-    --shadow-glow: 0 0 60px -10px hsl(340 75% 65% / 0.4);
-    --shadow-speech: 0 4px 20px -4px hsl(280 65% 70% / 0.2);
+    --card: 30 20% 12%;
+    --card-foreground: 30 15% 97%;
+    
+    --popover: 30 20% 12%;
+    --popover-foreground: 30 15% 97%;
+    
+    /* Warm empowerment tones */
+    --primary: 25 85% 65%;
+    --primary-foreground: 30 5% 10%;
+    --primary-glow: 25 90% 75%;
+    
+    /* Cool clarity tones */
+    --secondary: 250 50% 70%;
+    --secondary-foreground: 30 5% 10%;
+    
+    --muted: 30 15% 18%;
+    --muted-foreground: 30 12% 70%;
+    
+    /* High contrast urgency */
+    --accent: 340 75% 65%;
+    --accent-foreground: 30 5% 10%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 30 15% 97%;
+    
+    --border: 30 15% 22%;
+    --input: 30 15% 22%;
+    --ring: 25 85% 65%;
+    
+    --radius: 1rem;
+    
+    /* Mood-based gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(32 25% 8%) 0%, hsl(30 20% 12%) 50%, hsl(250 30% 15%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(25 85% 65%) 0%, hsl(340 75% 65%) 100%);
+    --gradient-cool: linear-gradient(135deg, hsl(250 50% 70%) 0%, hsl(200 45% 65%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(30 20% 12%) 0%, hsl(32 25% 8%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(30 20% 12%) 0%, hsl(30 18% 14%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(25 85% 65%) 0%, hsl(340 75% 65%) 50%, hsl(250 50% 70%) 100%);
+    
+    /* Premium shadows */
+    --shadow-elegant: 0 20px 60px -15px hsl(25 85% 65% / 0.4);
+    --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.15);
+    --shadow-glow: 0 0 40px hsl(25 90% 75% / 0.3);
+    --shadow-speech: 0 8px 30px hsl(0 0% 0% / 0.2);
     
     /* Smooth, cinematic transitions */
-    --transition-smooth: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 }
@@ -66,6 +71,8 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -75,5 +82,26 @@ All colors MUST be HSL.
     font-weight: 700;
     letter-spacing: -0.03em;
     line-height: 1.1;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 8vw, 7.5rem);
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin-bottom: 1.5rem;
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+  }
+
+  .pull-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-style: italic;
+    line-height: 1.4;
   }
 }

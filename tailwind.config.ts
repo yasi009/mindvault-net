@@ -17,6 +17,11 @@ export default {
         'display': ['Playfair Display', 'serif'],
         'sans': ['Inter', 'sans-serif'],
       },
+      fontSize: {
+        'hero': 'clamp(3rem, 8vw, 7.5rem)',
+        'section': 'clamp(2rem, 5vw, 4rem)',
+        'quote': 'clamp(1.5rem, 3vw, 3rem)',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -58,6 +63,11 @@ export default {
         'gradient-card': 'var(--gradient-card)',
         'gradient-accent': 'var(--gradient-accent)',
         'gradient-warm': 'var(--gradient-warm)',
+        'gradient-cool': 'var(--gradient-cool)',
+      },
+      spacing: {
+        '128': '32rem',
+        '144': '36rem',
       },
       boxShadow: {
         'elegant': 'var(--shadow-elegant)',
