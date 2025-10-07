@@ -1,5 +1,6 @@
 export const About = () => {
-  return <section className="py-24 px-6 bg-muted/30">
+  return (
+    <section className="py-24 px-6 bg-muted/30">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground tracking-tight">
@@ -13,7 +14,10 @@ export const About = () => {
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div className="bg-card p-8 rounded-lg shadow-soft border border-border">
             <h3 className="text-2xl font-semibold mb-4 text-foreground">Systems-First Thinking</h3>
-            <p className="text-muted-foreground leading-relaxed">We specialise in creating Life Operating Systems. Structured frameworks that transform complexity into clarity. These digital ecosystems help individuals and organisations optimise their workflows, decision-making, and productivity.</p>
+            <p className="text-muted-foreground leading-relaxed">
+              I specialize in creating Life Operating Systems—structured frameworks that transform complexity into clarity. 
+              These digital ecosystems help individuals and organizations optimize their workflows, decision-making, and productivity.
+            </p>
           </div>
 
           <div className="bg-card p-8 rounded-lg shadow-soft border border-border">
@@ -31,5 +35,6 @@ export const About = () => {
           </p>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };

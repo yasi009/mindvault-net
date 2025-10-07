@@ -41,41 +41,30 @@ export const Footer = () => {
     <>
       <footer className="bg-foreground text-background py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          {/* Vision CTA Section */}
+          {/* CTA Section */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Imagine Your Future
+              Let's Build Your Future System
             </h2>
-            <div className="space-y-4 mb-8 max-w-3xl mx-auto">
-              <p className="text-xl text-background/90 leading-relaxed">
-                Imagine studying without the stress.
-              </p>
-              <p className="text-xl text-background/90 leading-relaxed">
-                Imagine leading with clarity and confidence.
-              </p>
-              <p className="text-xl text-background/90 leading-relaxed">
-                Imagine teaching students who are genuinely engaged.
-              </p>
-              <p className="text-2xl text-background font-semibold mt-6">
-                That's what MindVault makes possible.
-              </p>
-            </div>
+            <p className="text-xl text-background/80 mb-8 max-w-2xl mx-auto">
+              Ready to turn chaos into clarity? Get started with a free consultation or grab your resources.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 variant="secondary" 
                 size="lg"
-                onClick={() => setToolDialogOpen(true)}
+                onClick={() => audience === "students" ? setToolDialogOpen(true) : setConsultationOpen(true)}
               >
-                Download Free Tools
+                {cta.primary}
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
                 className="border-background/20 bg-transparent text-background hover:bg-background/10"
-                onClick={() => setConsultationOpen(true)}
+                onClick={() => audience === "students" ? setConsultationOpen(true) : setToolDialogOpen(true)}
               >
-                Book a 15-min Call
+                {cta.secondary}
               </Button>
             </div>
           </div>
@@ -103,11 +92,14 @@ export const Footer = () => {
             <div>
               <h4 className="font-semibold mb-4">Connect</h4>
               <div className="flex gap-4">
-                <a href="mailto:admin@mindvault.net.au" className="text-background/70 hover:text-background transition-colors">
+                <a href="#" className="text-background/70 hover:text-background transition-colors">
                   <Mail className="w-6 h-6" />
                 </a>
-                <a href="https://www.linkedin.com/in/yaseerah-hassan-66a51b249" target="_blank" rel="noopener noreferrer" className="text-background/70 hover:text-background transition-colors">
+                <a href="#" className="text-background/70 hover:text-background transition-colors">
                   <Linkedin className="w-6 h-6" />
+                </a>
+                <a href="#" className="text-background/70 hover:text-background transition-colors">
+                  <Instagram className="w-6 h-6" />
                 </a>
               </div>
             </div>
