@@ -25,14 +25,14 @@ export const Hero = () => {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-8 text-foreground animate-fade-in leading-[1.1] tracking-tight">
-            Think Clearly.<br />
+            Build Your Life OS.<br />
             <span className="text-primary">
-              Work Intentionally. Lead Confidently.
+              Study Smarter. Feel Less Stressed.
             </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in leading-relaxed">
-            We help people see clearly again — cutting through the noise and building systems that bring clarity, calm, and courage back into their work and life.
+            Stop feeling scattered. Start building systems that help you organize your studies, manage your time, and feel more in control of your life.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
