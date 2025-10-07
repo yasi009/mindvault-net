@@ -3,8 +3,9 @@ import { SpeechBubble } from "./SpeechBubble";
 import { useAudience } from "@/contexts/AudienceContext";
 import corporateImage from "@/assets/case-study-corporate.jpg";
 import healthcareImage from "@/assets/case-study-healthcare.jpg";
-import stemImage from "@/assets/case-study-stem.jpg";
-import workshopImage from "@/assets/workshop-presentation.jpg";
+import nidaWorkshopImage from "@/assets/yaseerah-nida-workshop.jpg";
+import unswTeachingImage from "@/assets/yaseerah-unsw-teaching.jpg";
+import baliOrphanageImage from "@/assets/yaseerah-bali-orphanage.jpg";
 
 export const ClientWork = () => {
   const { audience } = useAudience();
@@ -19,7 +20,7 @@ export const ClientWork = () => {
           description="Led flagship 'Debunk, Demystify, Design' workshop series at NIDA Theatre, establishing ongoing community mentorship program ('Yeah the Girls'). Created sustainable peer-to-peer learning environment focused on AI literacy and STEM career pathways for young women."
           impact="Established thriving community of 50+ young women actively exploring STEM careers, with 90% of participants reporting increased confidence in technology fields and sustained engagement in ongoing mentorship programs."
           quote="This program demonstrated that technology education can be both accessible and personally relevant. It fundamentally changed how I view my potential in STEM fields."
-          image={stemImage}
+          image={nidaWorkshopImage}
         />
         
         <CaseStudyCard
@@ -27,7 +28,7 @@ export const ClientWork = () => {
           description="Interactive AI literacy sessions for university and high school students, teaching practical GPT development, Notion systems, and digital productivity tools."
           impact="Helped 100+ students build their own Life OS systems and custom study GPTs, with students reporting significant improvements in time management and academic confidence."
           quote="It's really that easy? I thought AI was complicated, but now I use it every day for my studies."
-          image={workshopImage}
+          image={unswTeachingImage}
         />
       </div>
 
@@ -59,7 +60,7 @@ export const ClientWork = () => {
           description="Professional development workshop series demonstrating how to make technology education accessible and engaging for diverse student groups. Created replicable framework for AI literacy in educational settings."
           impact="Trained educators in designing inclusive tech workshops, resulting in 50+ young women gaining confidence in STEM fields and inspiring similar programs at other institutions."
           quote="The pedagogical approach and practical tools provided have transformed how I introduce AI concepts to my students."
-          image={stemImage}
+          image={nidaWorkshopImage}
           pricing="$3,500 - $7,000"
         />
         
@@ -68,7 +69,7 @@ export const ClientWork = () => {
           description="Designed multigenerational learning experience for diverse stakeholder group. Delivered accessible AI literacy workshop demonstrating differentiated instruction and practical implementation strategies for mixed-ability groups."
           impact="Successfully engaged 40+ participants across ages 12-65, showcasing effective strategies for teaching technology concepts across different learning styles and experience levels."
           quote="The ability to make complex technology accessible to such a diverse audience demonstrated exceptional pedagogical skill."
-          image={workshopImage}
+          image={unswTeachingImage}
           pricing="$4,000 - $8,000"
         />
       </div>
