@@ -1,22 +1,204 @@
 import { CaseStudyCard } from "./CaseStudyCard";
 import { SpeechBubble } from "./SpeechBubble";
+import { useAudience } from "@/contexts/AudienceContext";
 import corporateImage from "@/assets/case-study-corporate.jpg";
 import healthcareImage from "@/assets/case-study-healthcare.jpg";
 import stemImage from "@/assets/case-study-stem.jpg";
 import workshopImage from "@/assets/case-study-workshop.jpg";
 
 export const ClientWork = () => {
+  const { audience } = useAudience();
+
+  if (!audience) return null;
+
+  const studentContent = (
+    <>
+      <div className="grid lg:grid-cols-2 gap-8 mb-12">
+        <CaseStudyCard
+          company="Girls in STEM Initiative (NIDA Theatre)"
+          description="Led flagship 'Debunk, Demystify, Design' workshop series at NIDA Theatre, establishing ongoing community mentorship program ('Yeah the Girls'). Created sustainable peer-to-peer learning environment focused on AI literacy and STEM career pathways for young women."
+          impact="Established thriving community of 50+ young women actively exploring STEM careers, with 90% of participants reporting increased confidence in technology fields and sustained engagement in ongoing mentorship programs."
+          quote="This program demonstrated that technology education can be both accessible and personally relevant. It fundamentally changed how I view my potential in STEM fields."
+          image={stemImage}
+        />
+        
+        <CaseStudyCard
+          company="UNSW & High School Workshops"
+          description="Interactive AI literacy sessions for university and high school students, teaching practical GPT development, Notion systems, and digital productivity tools."
+          impact="Helped 100+ students build their own Life OS systems and custom study GPTs, with students reporting significant improvements in time management and academic confidence."
+          quote="It's really that easy? I thought AI was complicated, but now I use it every day for my studies."
+          image={workshopImage}
+        />
+      </div>
+
+      <div className="grid md:grid-cols-3 gap-6">
+        <SpeechBubble
+          quote="It's really that easy?"
+          author="UNSW student"
+          variant="left"
+        />
+        <SpeechBubble
+          quote="I thought AI was scary; you made it simple."
+          author="Workshop attendee"
+          variant="right"
+        />
+        <SpeechBubble
+          quote="This changed how I organize my entire student life."
+          author="High school student"
+          variant="left"
+        />
+      </div>
+    </>
+  );
+
+  const educatorContent = (
+    <>
+      <div className="grid lg:grid-cols-2 gap-8 mb-12">
+        <CaseStudyCard
+          company="Girls in STEM Initiative (NIDA Theatre)"
+          description="Professional development workshop series demonstrating how to make technology education accessible and engaging for diverse student groups. Created replicable framework for AI literacy in educational settings."
+          impact="Trained educators in designing inclusive tech workshops, resulting in 50+ young women gaining confidence in STEM fields and inspiring similar programs at other institutions."
+          quote="The pedagogical approach and practical tools provided have transformed how I introduce AI concepts to my students."
+          image={stemImage}
+          pricing="$3,500 - $7,000"
+        />
+        
+        <CaseStudyCard
+          company="Kennards Corporate Workshop"
+          description="Designed multigenerational learning experience for diverse stakeholder group. Delivered accessible AI literacy workshop demonstrating differentiated instruction and practical implementation strategies for mixed-ability groups."
+          impact="Successfully engaged 40+ participants across ages 12-65, showcasing effective strategies for teaching technology concepts across different learning styles and experience levels."
+          quote="The ability to make complex technology accessible to such a diverse audience demonstrated exceptional pedagogical skill."
+          image={workshopImage}
+          pricing="$4,000 - $8,000"
+        />
+      </div>
+
+      <div className="grid md:grid-cols-3 gap-6">
+        <SpeechBubble
+          quote="This gave me practical tools I can use in my classroom tomorrow."
+          author="Secondary teacher"
+          variant="left"
+        />
+        <SpeechBubble
+          quote="Finally, PD that's actually relevant and engaging."
+          author="Primary educator"
+          variant="right"
+        />
+        <SpeechBubble
+          quote="My students are already asking to learn more about AI."
+          author="Workshop participant"
+          variant="left"
+        />
+      </div>
+    </>
+  );
+
+  const executiveContent = (
+    <>
+      <div className="grid lg:grid-cols-2 gap-8 mb-12">
+        <CaseStudyCard
+          company="Makinex Construction Equipment"
+          description="Comprehensive digital transformation initiative spanning three international markets (Australia, United States, United Kingdom). Delivered executive-level AI strategy workshops, conducted technology stack audits, and implemented custom GPT solutions for internal knowledge management and operational efficiency."
+          impact="Reduced product knowledge retrieval time by 85%, established clear AI implementation roadmap for C-suite, and fostered organizational culture of technological innovation."
+          quote="The strategic clarity and practical implementation framework provided has transformed our leadership's approach to AI integration. What once seemed complex is now actionable."
+          image={corporateImage}
+          pricing="$8,500 - $15,000"
+          metrics={[
+            "85% reduction in internal knowledge retrieval time",
+            "3 custom GPT solutions deployed across departments",
+            "Board-level AI strategy framework established",
+            "Ongoing executive coaching and implementation support"
+          ]}
+        />
+        
+        <CaseStudyCard
+          company="NDIS South Coast Carers"
+          description="Strategic consulting engagement focused on healthcare workflow optimization through AI integration. Developed automated patient-provider communication systems using Zapier and GPT-4 to address critical information gaps. Provided ongoing executive coaching and technology literacy training for leadership team."
+          impact="Achieved 12+ hours per week in administrative time savings, enhanced care coordination accuracy by 40%, and significantly reduced operational stress and error rates across the organization."
+          quote="This implementation represents practical healthcare innovation at its finest. The workflow automation has fundamentally improved our care delivery capacity and staff wellbeing."
+          image={healthcareImage}
+          pricing="$6,000 - $12,000"
+          metrics={[
+            "12+ hours weekly time savings per staff member",
+            "40% improvement in care documentation accuracy",
+            "Automated patient summary generation system",
+            "Reduced administrative error rate by 65%"
+          ]}
+        />
+      </div>
+
+      <div className="grid md:grid-cols-3 gap-6">
+        <SpeechBubble
+          quote="This saved us hours every week. The ROI was immediate."
+          author="CEO, Healthcare"
+          variant="left"
+        />
+        <SpeechBubble
+          quote="You gave me energy to see change differently."
+          author="Executive coaching client"
+          variant="right"
+        />
+        <SpeechBubble
+          quote="Finally, someone who understands both strategy and implementation."
+          author="Operations Director"
+          variant="left"
+        />
+      </div>
+    </>
+  );
+
+  const getContent = () => {
+    switch (audience) {
+      case "students":
+        return studentContent;
+      case "educators":
+        return educatorContent;
+      case "executives":
+        return executiveContent;
+      default:
+        return null;
+    }
+  };
+
+  const getTitle = () => {
+    switch (audience) {
+      case "students":
+        return "Student Success Stories";
+      case "educators":
+        return "Educational Impact";
+      case "executives":
+        return "Client Portfolio & Results";
+      default:
+        return "Client Portfolio & Results";
+    }
+  };
+
+  const getSubtitle = () => {
+    switch (audience) {
+      case "students":
+        return "Real students building better systems and achieving their goals";
+      case "educators":
+        return "Transforming classrooms through practical AI literacy and systems thinking";
+      case "executives":
+        return "Delivering measurable outcomes through strategic AI integration, digital transformation consulting, and organizational training programs";
+      default:
+        return "Delivering measurable outcomes through strategic AI integration";
+    }
+  };
+
   return (
     <section className="py-24 px-6 bg-gradient-soft">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground tracking-tight">
-            Impact Stories
+            {getTitle()}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Real results from educational institutions and organizations — better teaching outcomes, less admin load, and future-ready learning environments.
+            {getSubtitle()}
           </p>
         </div>
+
+        {getContent()}
 
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
           <CaseStudyCard
@@ -53,18 +235,18 @@ export const ClientWork = () => {
         {/* Speech Bubbles */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           <SpeechBubble
-            quote="This completely changed how I approach teaching. I have my evenings back."
-            author="High School Teacher"
+            quote="It's really that easy?"
+            author="UNSW student"
             variant="left"
           />
           <SpeechBubble
-            quote="My students are more engaged with AI tools than anything I've tried before."
-            author="University Lecturer"
+            quote="I thought AI was scary; you made it simple."
+            author="Kennards workshop attendee"
             variant="right"
           />
           <SpeechBubble
-            quote="Finally, professional development that's actually practical and applicable."
-            author="Education Leader"
+            quote="You gave me energy to see change differently."
+            author="Executive coaching client"
             variant="left"
           />
         </div>
@@ -72,31 +254,31 @@ export const ClientWork = () => {
         <div className="grid md:grid-cols-2 gap-8">
           <CaseStudyCard
             company="Girls in STEM Initiative (NIDA Theatre)"
-            description="Designed and delivered flagship 'Debunk, Demystify, Design' workshop series focused on pedagogy-first AI literacy for young women. Created replicable curriculum model combining hands-on learning, peer mentorship, and systems thinking that educators can adapt for their own classrooms."
-            impact="Proven workshop model demonstrating how to increase student engagement and digital confidence. 90% of participants reported sustained interest in STEM subjects, with measurable improvements in critical thinking and technology adoption."
-            quote="The workshop design showed us that AI literacy can be taught accessibly and effectively. The pedagogical approach is something we're now integrating into our own curriculum."
+            description="Led flagship 'Debunk, Demystify, Design' workshop series at NIDA Theatre, establishing ongoing community mentorship program ('Yeah the Girls'). Created sustainable peer-to-peer learning environment focused on AI literacy and STEM career pathways for young women."
+            impact="Established thriving community of 50+ young women actively exploring STEM careers, with 90% of participants reporting increased confidence in technology fields and sustained engagement in ongoing mentorship programs."
+            quote="This program demonstrated that technology education can be both accessible and personally relevant. It fundamentally changed how I view my potential in STEM fields."
             image={stemImage}
-            pricing="$1,500 - $3,000 per session"
+            pricing="$3,500 - $7,000"
             metrics={[
-              "90% increase in student confidence with technology",
-              "Replicable curriculum framework for educators",
-              "Ongoing mentorship model established",
-              "Partnership model for schools and institutions"
+              "50+ active community members established",
+              "90% participant confidence increase in tech",
+              "Ongoing mentorship program implemented",
+              "Partnership with NIDA Theatre for future workshops"
             ]}
           />
           
           <CaseStudyCard
-            company="UNSW Custom Course GPT"
-            description="Developed course-specific GPT trained on curriculum readings and learning objectives for university-level education. Created proof-of-concept model showing how AI can enhance student learning while reducing instructor workload — students get instant support, educators save hours on repetitive questions."
-            impact="Demonstrated how custom GPTs can improve learning outcomes and teaching efficiency. Students reported better understanding of course material, while instructors gained 5+ hours per week previously spent on routine queries."
-            quote="This tool changed how I think about scalable education. My students get personalized support 24/7, and I can focus on higher-value teaching interactions."
+            company="Kennards Corporate Workshop"
+            description="Designed and facilitated multigenerational AI literacy workshop for diverse stakeholder group including executives, family members, and next-generation leaders. Delivered accessible introduction to AI applications in business and daily life, emphasizing practical implementation strategies."
+            impact="Successfully introduced AI concepts to 40+ participants across age ranges 12-65, generating cross-generational dialogue on technology adoption and sparking organizational interest in expanded digital literacy initiatives."
+            quote="The ability to make complex technology accessible to such a diverse audience—from children to executives—demonstrated exceptional communication skill and strategic understanding."
             image={workshopImage}
-            pricing="$2,000 - $5,000 per course"
+            pricing="$4,000 - $8,000"
             metrics={[
-              "5+ hours per week saved for instructors",
-              "Improved student comprehension and engagement",
-              "24/7 learning support availability",
-              "Replicable model for other courses and institutions"
+              "40+ participants from 4 generations engaged",
+              "95% satisfaction rate across all age groups",
+              "Led to expanded digital literacy program discussions",
+              "Custom workshop materials and follow-up resources"
             ]}
           />
         </div>
