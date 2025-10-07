@@ -5,12 +5,11 @@ interface SpeechBubbleProps {
   author: string;
   className?: string;
   variant?: "left" | "right";
-  style?: React.CSSProperties;
 }
 
-export const SpeechBubble = ({ quote, author, className, variant = "left", style }: SpeechBubbleProps) => {
+export const SpeechBubble = ({ quote, author, className, variant = "left" }: SpeechBubbleProps) => {
   return (
-    <div className={cn("animate-fade-in", className)} style={style}>
+    <div className={cn("animate-fade-in", className)}>
       <div className={cn(
         "relative bg-card rounded-2xl p-6 shadow-speech border border-border max-w-md",
         variant === "right" && "ml-auto"

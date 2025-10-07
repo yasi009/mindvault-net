@@ -1,12 +1,41 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Mail, Linkedin } from "lucide-react";
+import { ArrowRight, Mail, Linkedin, Instagram } from "lucide-react";
 import { useState } from "react";
 import { ConsultationDialog } from "./ConsultationDialog";
 import { ToolSignupDialog } from "./ToolSignupDialog";
+import { useAudience } from "@/contexts/AudienceContext";
 
 export const Footer = () => {
+  const { audience } = useAudience();
   const [consultationOpen, setConsultationOpen] = useState(false);
   const [toolDialogOpen, setToolDialogOpen] = useState(false);
+
+  const getCTA = () => {
+    switch (audience) {
+      case "students":
+        return {
+          primary: "Download Free Life OS Template",
+          secondary: "Book a Free Clarity Call"
+        };
+      case "educators":
+        return {
+          primary: "Book a PD Workshop",
+          secondary: "Get Free Resources"
+        };
+      case "executives":
+        return {
+          primary: "Book Your 15-Min Consultation",
+          secondary: "Get AI Readiness Assessment"
+        };
+      default:
+        return {
+          primary: "Book Free Consultation",
+          secondary: "Download Life OS"
+        };
+    }
+  };
+
+  const cta = getCTA();
 
   return (
     <>
@@ -99,7 +128,7 @@ export const Footer = () => {
     <ToolSignupDialog
       open={toolDialogOpen}
       onOpenChange={setToolDialogOpen}
-      toolName="Free Resources"
+      toolName={audience === "students" ? "Life OS Template" : "Free Resources"}
     />
     </>
   );

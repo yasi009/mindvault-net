@@ -122,30 +122,29 @@ export const FreeTools = () => {
   };
 
   return (
-    <section id="free-tools" className="py-32 px-6 bg-background relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-display font-bold mb-6 text-foreground">
+    <section id="free-tools" className="py-24 px-6 bg-gradient-soft">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
             {getTitle()}
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             {getSubtitle()}
           </p>
         </div>
 
         <div className={`grid gap-8 ${tools.length === 2 ? 'md:grid-cols-2 max-w-4xl mx-auto' : 'md:grid-cols-3'}`}>
           {tools.map((tool, index) => (
-            <Card key={index} className="group hover:scale-105 transition-all duration-500 bg-gradient-card border-primary/20 shadow-soft hover:shadow-glow">
-              <CardContent className="p-10 text-center">
-                <div className="text-primary mb-6 flex justify-center group-hover:animate-float">
+            <Card key={index} className="group hover:scale-105 transition-all duration-300 bg-card border-border shadow-soft hover:shadow-elegant">
+              <CardContent className="p-8 text-center">
+                <div className="text-primary mb-4 flex justify-center group-hover:animate-float">
                   {tool.icon}
                 </div>
-                <h3 className="text-2xl font-display font-bold mb-4 text-foreground">{tool.title}</h3>
-                <p className="text-muted-foreground mb-8 leading-relaxed text-lg">{tool.description}</p>
+                <h3 className="text-xl font-bold mb-3 text-foreground">{tool.title}</h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed">{tool.description}</p>
                 <Button 
                   variant="outline" 
-                  className="w-full border-primary/50 hover:bg-primary/10 hover:border-primary transition-all duration-500"
+                  className="w-full"
                   onClick={() => handleToolClick(tool.title)}
                 >
                   {tool.cta}

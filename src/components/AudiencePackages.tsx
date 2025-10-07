@@ -198,14 +198,13 @@ export const AudiencePackages = () => {
 
   return (
     <>
-      <section id="packages" className="py-32 px-6 bg-secondary relative">
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-display font-bold mb-6 text-foreground">
+      <section id="packages" className="py-24 px-6 bg-gradient-soft">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
               {getTitle()}
             </h2>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               {getSubtitle()}
             </p>
           </div>
@@ -214,8 +213,8 @@ export const AudiencePackages = () => {
             {packages.map((pkg, index) => (
               <Card 
                 key={index}
-                className={`relative overflow-hidden transition-all duration-500 hover:shadow-glow bg-gradient-card border ${
-                  pkg.isPopular ? 'border-2 border-primary shadow-glow md:scale-105' : 'border-primary/20'
+                className={`relative overflow-hidden transition-all duration-300 hover:shadow-elegant ${
+                  pkg.isPopular ? 'border-2 border-primary shadow-elegant md:scale-105' : 'border-border'
                 }`}
               >
                 {pkg.isPopular && (

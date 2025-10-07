@@ -187,14 +187,13 @@ export const ClientWork = () => {
   };
 
   return (
-    <section className="py-32 px-6 bg-background relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-display font-bold mb-6 text-foreground">
+    <section className="py-24 px-6 bg-gradient-soft">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground tracking-tight">
             {getTitle()}
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             {getSubtitle()}
           </p>
         </div>
