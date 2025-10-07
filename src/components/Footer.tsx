@@ -43,12 +43,9 @@ export const Footer = () => {
         <div className="max-w-7xl mx-auto">
           {/* Vision CTA Section */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-background">
-              You Don't Rise to Your Goals — You Fall to Your Systems
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-background leading-tight">
+              "You don't rise to your goals — you fall to your systems."
             </h2>
-            <p className="text-xl text-background/80 mb-10 max-w-3xl mx-auto leading-relaxed">
-              Let's build one that works for you.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 variant="secondary" 
@@ -103,7 +100,7 @@ export const Footer = () => {
           </div>
           
           <div className="text-center text-background/50 text-sm">
-            <p>© {new Date().getFullYear()} MindVault. Designed with intention. Built for the future.</p>
+            <p>© {new Date().getFullYear()} MindVault. Designed with intention.</p>
           </div>
         </div>
       </div>

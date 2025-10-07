@@ -124,12 +124,12 @@ export const FreeTools = () => {
   return (
     <section id="free-tools" className="py-24 px-6 bg-gradient-soft">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            {getTitle()}
+            Start Small. Start Now.
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            {getSubtitle()}
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Access free templates, GPTs, and study tools that help you feel less scattered and more in control.
           </p>
         </div>
 
