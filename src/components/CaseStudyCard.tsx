@@ -30,7 +30,7 @@ export const CaseStudyCard = ({
       className
     )}>
       {image && (
-        <div className="relative h-96 overflow-hidden">
+        <div className="relative h-[500px] overflow-hidden">
           <img 
             src={image} 
             alt={company} 
