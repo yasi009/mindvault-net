@@ -1,73 +1,28 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail, Linkedin, Instagram } from "lucide-react";
-import { useState } from "react";
-import { ConsultationDialog } from "./ConsultationDialog";
-import { ToolSignupDialog } from "./ToolSignupDialog";
-import { useAudience } from "@/contexts/AudienceContext";
 
 export const Footer = () => {
-  const { audience } = useAudience();
-  const [consultationOpen, setConsultationOpen] = useState(false);
-  const [toolDialogOpen, setToolDialogOpen] = useState(false);
-
-  const getCTA = () => {
-    switch (audience) {
-      case "students":
-        return {
-          primary: "Download Free Life OS Template",
-          secondary: "Book a Free Clarity Call"
-        };
-      case "educators":
-        return {
-          primary: "Book a PD Workshop",
-          secondary: "Get Free Resources"
-        };
-      case "executives":
-        return {
-          primary: "Book Your 15-Min Consultation",
-          secondary: "Get AI Readiness Assessment"
-        };
-      default:
-        return {
-          primary: "Book Free Consultation",
-          secondary: "Download Life OS"
-        };
-    }
-  };
-
-  const cta = getCTA();
-
   return (
-    <>
-      <footer className="bg-foreground text-background py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          {/* CTA Section */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Let's Build Your Future System
-            </h2>
-            <p className="text-xl text-background/80 mb-8 max-w-2xl mx-auto">
-              Ready to turn chaos into clarity? Get started with a free consultation or grab your resources.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                variant="secondary" 
-                size="lg"
-                onClick={() => audience === "students" ? setToolDialogOpen(true) : setConsultationOpen(true)}
-              >
-                {cta.primary}
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="border-background/20 bg-transparent text-background hover:bg-background/10"
-                onClick={() => audience === "students" ? setConsultationOpen(true) : setToolDialogOpen(true)}
-              >
-                {cta.secondary}
-              </Button>
-            </div>
+    <footer className="bg-foreground text-background py-20 px-6">
+      <div className="max-w-7xl mx-auto">
+        {/* CTA Section */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Let's Build Your Future System
+          </h2>
+          <p className="text-xl text-background/80 mb-8 max-w-2xl mx-auto">
+            Ready to turn chaos into clarity? Get started with a free consultation or grab your Life OS template.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="secondary" size="xl">
+              Book Free Consultation
+              <ArrowRight className="w-5 h-5" />
+            </Button>
+            <Button variant="outline" size="xl" className="border-background/20 bg-transparent text-background hover:bg-background/10">
+              Download Life OS
+            </Button>
           </div>
+        </div>
 
         {/* Footer Links */}
         <div className="border-t border-background/20 pt-12">
@@ -111,17 +66,5 @@ export const Footer = () => {
         </div>
       </div>
     </footer>
-    
-    <ConsultationDialog 
-      open={consultationOpen}
-      onOpenChange={setConsultationOpen}
-    />
-    
-    <ToolSignupDialog
-      open={toolDialogOpen}
-      onOpenChange={setToolDialogOpen}
-      toolName={audience === "students" ? "Life OS Template" : "Free Resources"}
-    />
-    </>
   );
 };

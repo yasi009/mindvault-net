@@ -1,38 +1,35 @@
 export const About = () => {
   return (
     <section className="py-24 px-6 bg-muted/30">
-      <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground tracking-tight">
-            Approach & Philosophy
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+            From Perfectionism to Purpose
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Bridging technology and human potential through systematic design
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-card p-8 rounded-lg shadow-soft border border-border">
-            <h3 className="text-2xl font-semibold mb-4 text-foreground">Systems-First Thinking</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              I specialize in creating Life Operating Systems—structured frameworks that transform complexity into clarity. 
-              These digital ecosystems help individuals and organizations optimize their workflows, decision-making, and productivity.
-            </p>
-          </div>
-
-          <div className="bg-card p-8 rounded-lg shadow-soft border border-border">
-            <h3 className="text-2xl font-semibold mb-4 text-foreground">AI Literacy & Integration</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              From custom GPT development to AI-powered automation, I help clients harness artificial intelligence 
-              as a practical tool for growth. My approach demystifies technology and makes it accessible for all skill levels.
-            </p>
-          </div>
-        </div>
-
-        <div className="bg-gradient-card p-10 rounded-xl shadow-elegant border border-border">
-          <p className="text-2xl text-foreground font-medium text-center leading-relaxed">
-            Trusted by students, professionals, and organizations across education, healthcare, and technology sectors.
+        <div className="prose prose-lg max-w-none">
+          <p className="text-lg text-foreground/80 leading-relaxed mb-6">
+            I used to think success meant doing everything perfectly. Then I discovered AI, systems thinking, 
+            and the power of intentional design.
           </p>
+          
+          <p className="text-lg text-foreground/80 leading-relaxed mb-6">
+            Now, I mentor peers and communities on building <span className="font-semibold text-primary">Life Operating Systems</span> — 
+            digital frameworks that turn chaos into clarity. From high school students to executives, 
+            I help people feel tech-fluent, confident, and empowered.
+          </p>
+          
+          <p className="text-lg text-foreground/80 leading-relaxed mb-6">
+            My work spans workshops for young women in STEM, AI literacy coaching for businesses, 
+            and building custom GPTs that make work feel less like work.
+          </p>
+
+          <div className="bg-gradient-card p-8 rounded-2xl shadow-soft border border-border mt-8">
+            <p className="text-xl text-foreground italic text-center">
+              "The best time to build your future was yesterday. The second best time is now."
+            </p>
+          </div>
         </div>
       </div>
     </section>
