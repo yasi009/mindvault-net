@@ -32,40 +32,40 @@ export const ProblemSection = () => {
   const problem = problems[audience || "students"];
 
   return (
-    <section className="py-24 px-6 bg-background">
+    <section className="py-32 px-6 bg-secondary">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-destructive/10 mb-6">
-            <AlertCircle className="w-8 h-8 text-destructive" />
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-accent mb-8 shadow-glow">
+            <AlertCircle className="w-10 h-10 text-foreground" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+          <h2 className="text-5xl md:text-6xl font-display font-bold mb-6 text-foreground">
             You're Not Alone in This Struggle
           </h2>
         </div>
 
-        <div className="space-y-8">
-          <Card className="border-l-4 border-l-destructive">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-3 text-foreground">{problem.external}</h3>
-              <p className="text-muted-foreground leading-relaxed">
+        <div className="space-y-6">
+          <Card className="border-l-4 border-l-destructive bg-gradient-card hover:shadow-glow transition-all duration-500">
+            <CardContent className="p-10">
+              <h3 className="text-2xl md:text-3xl font-display font-bold mb-4 text-foreground">{problem.external}</h3>
+              <p className="text-muted-foreground leading-relaxed text-lg">
                 The external challenge: too many tools, too much noise, and not enough time to figure it all out.
               </p>
             </CardContent>
           </Card>
 
-          <Card className="border-l-4 border-l-primary">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-3 text-foreground">{problem.internal}</h3>
-              <p className="text-muted-foreground leading-relaxed">
+          <Card className="border-l-4 border-l-primary bg-gradient-card hover:shadow-glow transition-all duration-500">
+            <CardContent className="p-10">
+              <h3 className="text-2xl md:text-3xl font-display font-bold mb-4 text-foreground">{problem.internal}</h3>
+              <p className="text-muted-foreground leading-relaxed text-lg">
                 The internal struggle: feeling lost, anxious, and like everyone else has it figured out except you.
               </p>
             </CardContent>
           </Card>
 
-          <Card className="border-l-4 border-l-accent">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-3 text-foreground">{problem.philosophical}</h3>
-              <p className="text-muted-foreground leading-relaxed">
+          <Card className="border-l-4 border-l-accent bg-gradient-card hover:shadow-glow transition-all duration-500">
+            <CardContent className="p-10">
+              <h3 className="text-2xl md:text-3xl font-display font-bold mb-4 text-foreground">{problem.philosophical}</h3>
+              <p className="text-muted-foreground leading-relaxed text-lg">
                 The truth: You shouldn't have to work this hard to feel this scattered. There's a better way.
               </p>
             </CardContent>

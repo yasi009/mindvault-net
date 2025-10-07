@@ -51,13 +51,14 @@ const workshops: Workshop[] = [
 
 export const WorkshopsEvents = () => {
   return (
-    <section className="py-24 px-6 bg-gradient-soft">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+    <section className="py-32 px-6 bg-secondary relative overflow-hidden">
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-6xl font-display font-bold mb-6 text-foreground">
             Workshops & Events
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Each workshop blends storytelling, reflection, and digital tools — helping participants unlearn fear, 
             rediscover truth, and design systems that fit their real lives.
           </p>
@@ -68,45 +69,45 @@ export const WorkshopsEvents = () => {
             {workshops.map((workshop, index) => (
               <Card 
                 key={index}
-                className="inline-block w-[380px] hover:shadow-elegant transition-all duration-300 bg-card border-border shadow-soft flex-shrink-0 animate-fade-in"
+                className="inline-block w-[400px] hover:shadow-glow transition-all duration-500 bg-gradient-card border-primary/20 shadow-soft flex-shrink-0 animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <CardContent className="p-8 h-full flex flex-col">
-                  <div className="flex items-start justify-between mb-4">
+                <CardContent className="p-10 h-full flex flex-col">
+                  <div className="flex items-start justify-between mb-6">
                     <div className="text-primary">
                       {workshop.icon}
                     </div>
-                    <span className={`text-xs font-medium px-3 py-1 rounded-full ${
+                    <span className={`text-xs font-semibold px-4 py-2 rounded-full ${
                       workshop.type === "upcoming" 
-                        ? "bg-primary/10 text-primary" 
-                        : "bg-muted text-muted-foreground"
+                        ? "bg-gradient-accent text-foreground shadow-glow" 
+                        : "bg-muted/50 text-muted-foreground"
                     }`}>
                       {workshop.type === "upcoming" ? "Upcoming" : "Past Event"}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold mb-4 text-foreground whitespace-normal">
+                  <h3 className="text-2xl font-display font-bold mb-6 text-foreground whitespace-normal leading-tight">
                     {workshop.title}
                   </h3>
 
-                  <div className="flex flex-col gap-2 mb-4 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4" />
-                      <span>{workshop.date}</span>
+                  <div className="flex flex-col gap-3 mb-6 text-sm text-muted-foreground">
+                    <div className="flex items-center gap-3">
+                      <Calendar className="w-5 h-5 text-primary" />
+                      <span className="text-base">{workshop.date}</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <MapPin className="w-4 h-4" />
-                      <span>{workshop.location}</span>
+                    <div className="flex items-center gap-3">
+                      <MapPin className="w-5 h-5 text-primary" />
+                      <span className="text-base">{workshop.location}</span>
                     </div>
                   </div>
 
-                  <p className="text-muted-foreground leading-relaxed mb-6 whitespace-normal flex-grow">
+                  <p className="text-muted-foreground leading-relaxed mb-8 whitespace-normal flex-grow text-lg">
                     {workshop.description}
                   </p>
 
                   {workshop.type === "upcoming" && workshop.ctaLink && (
                     <Button 
-                      className="w-full shadow-soft hover:shadow-elegant transition-shadow"
+                      className="w-full shadow-glow hover:shadow-elegant transition-all duration-500 text-lg py-6"
                       onClick={() => window.location.href = workshop.ctaLink}
                     >
                       Get Tickets
@@ -119,7 +120,7 @@ export const WorkshopsEvents = () => {
             <div className="inline-flex items-center justify-center w-[200px] flex-shrink-0">
               <Button 
                 variant="outline"
-                className="whitespace-normal h-auto py-4 px-6"
+                className="whitespace-normal h-auto py-6 px-8 border-primary/50 hover:bg-primary/10 hover:border-primary transition-all duration-500 text-lg"
               >
                 View All Workshops
               </Button>

@@ -8,49 +8,53 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 15%;
+    /* Moody, premium palette */
+    --background: 32 22% 16%;
+    --foreground: 32 15% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 15%;
+    --card: 32 20% 18%;
+    --card-foreground: 32 15% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 15%;
+    --popover: 32 20% 18%;
+    --popover-foreground: 32 15% 95%;
 
-    --primary: 262 52% 47%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 340 75% 65%;
+    --primary-foreground: 32 15% 95%;
 
-    --secondary: 240 5% 96%;
-    --secondary-foreground: 240 10% 15%;
+    --secondary: 32 18% 22%;
+    --secondary-foreground: 32 15% 95%;
 
-    --muted: 240 5% 96%;
-    --muted-foreground: 240 4% 46%;
+    --muted: 32 18% 25%;
+    --muted-foreground: 32 10% 65%;
 
-    --accent: 262 52% 47%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 280 65% 70%;
+    --accent-foreground: 32 15% 95%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 6% 90%;
-    --input: 240 6% 90%;
-    --ring: 262 52% 47%;
+    --border: 32 15% 30%;
+    --input: 32 15% 30%;
+    --ring: 340 75% 65%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
-    /* Professional gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(262 52% 47% / 0.05) 0%, hsl(262 52% 47% / 0.02) 100%);
-    --gradient-soft: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(240 5% 98%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(240 5% 99%) 100%);
+    /* Cinematic gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(340 75% 65% / 0.15) 0%, hsl(280 65% 70% / 0.1) 50%, hsl(32 22% 16%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(32 20% 18%) 0%, hsl(32 22% 16%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(32 20% 18%) 0%, hsl(32 18% 20%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(340 75% 65%) 0%, hsl(280 65% 70%) 100%);
+    --gradient-warm: linear-gradient(90deg, hsl(28 80% 70% / 0.2) 0%, hsl(340 75% 65% / 0.2) 100%);
     
-    /* Professional shadows */
-    --shadow-elegant: 0 4px 24px -4px hsl(240 10% 15% / 0.08);
-    --shadow-soft: 0 2px 12px -2px hsl(240 10% 15% / 0.04);
-    --shadow-speech: 0 4px 16px -4px hsl(240 10% 15% / 0.06);
+    /* Premium shadows with glow */
+    --shadow-elegant: 0 8px 40px -8px hsl(340 75% 65% / 0.25);
+    --shadow-soft: 0 4px 20px -4px hsl(340 75% 65% / 0.15);
+    --shadow-glow: 0 0 60px -10px hsl(340 75% 65% / 0.4);
+    --shadow-speech: 0 4px 20px -4px hsl(280 65% 70% / 0.2);
     
-    /* Transitions */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Smooth, cinematic transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 }
 
@@ -67,7 +71,9 @@ All colors MUST be HSL.
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-    letter-spacing: -0.02em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
   }
 }
