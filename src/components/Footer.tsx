@@ -41,30 +41,30 @@ export const Footer = () => {
     <>
       <footer className="bg-foreground text-background py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          {/* CTA Section */}
+          {/* Vision CTA Section */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Let's Build Your Future System
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-background">
+              You Don't Rise to Your Goals — You Fall to Your Systems
             </h2>
-            <p className="text-xl text-background/80 mb-8 max-w-2xl mx-auto">
-              Ready to turn chaos into clarity? Get started with a free consultation or grab your resources.
+            <p className="text-xl text-background/80 mb-10 max-w-3xl mx-auto leading-relaxed">
+              Let's build one that works for you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 variant="secondary" 
                 size="lg"
-                onClick={() => audience === "students" ? setToolDialogOpen(true) : setConsultationOpen(true)}
+                onClick={() => setToolDialogOpen(true)}
               >
-                {cta.primary}
+                Download Free Tools
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
                 className="border-background/20 bg-transparent text-background hover:bg-background/10"
-                onClick={() => audience === "students" ? setConsultationOpen(true) : setToolDialogOpen(true)}
+                onClick={() => setConsultationOpen(true)}
               >
-                {cta.secondary}
+                Book a 15-min Call
               </Button>
             </div>
           </div>
@@ -75,7 +75,7 @@ export const Footer = () => {
             <div>
               <h3 className="text-2xl font-bold mb-4">MindVault</h3>
               <p className="text-background/70">
-                Empowering Gen Z and young adults with systems, AI literacy, and mentorship.
+                A space to think clearly, design intentionally, and lead with clarity — for students, educators, and leaders ready to build systems that fit who they actually are.
               </p>
             </div>
             
@@ -92,14 +92,11 @@ export const Footer = () => {
             <div>
               <h4 className="font-semibold mb-4">Connect</h4>
               <div className="flex gap-4">
-                <a href="#" className="text-background/70 hover:text-background transition-colors">
+                <a href="mailto:admin@mindvault.net.au" className="text-background/70 hover:text-background transition-colors">
                   <Mail className="w-6 h-6" />
                 </a>
-                <a href="#" className="text-background/70 hover:text-background transition-colors">
+                <a href="https://www.linkedin.com/in/yaseerah-hassan-66a51b249" target="_blank" rel="noopener noreferrer" className="text-background/70 hover:text-background transition-colors">
                   <Linkedin className="w-6 h-6" />
-                </a>
-                <a href="#" className="text-background/70 hover:text-background transition-colors">
-                  <Instagram className="w-6 h-6" />
                 </a>
               </div>
             </div>

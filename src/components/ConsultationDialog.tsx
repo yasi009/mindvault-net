@@ -15,6 +15,7 @@ import { z } from "zod";
 const consultationSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
   email: z.string().trim().email("Invalid email address").max(255),
+  preferredDate: z.string().trim().min(1, "Please select your preferred day/time").max(100),
   purpose: z.string().trim().min(1, "Please share the purpose of your consultation").max(500),
 });
 
@@ -27,6 +28,7 @@ interface ConsultationDialogProps {
 export const ConsultationDialog = ({ open, onOpenChange, onSuccess }: ConsultationDialogProps) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [preferredDate, setPreferredDate] = useState("");
   const [purpose, setPurpose] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -36,7 +38,7 @@ export const ConsultationDialog = ({ open, onOpenChange, onSuccess }: Consultati
     e.preventDefault();
     
     try {
-      const validatedData = consultationSchema.parse({ name, email, purpose });
+      const validatedData = consultationSchema.parse({ name, email, preferredDate, purpose });
       setIsSubmitting(true);
 
       const { error } = await supabase
@@ -44,6 +46,7 @@ export const ConsultationDialog = ({ open, onOpenChange, onSuccess }: Consultati
         .insert([{
           name: validatedData.name,
           email: validatedData.email,
+          preferred_date: validatedData.preferredDate,
           purpose: validatedData.purpose,
         }]);
 
@@ -61,6 +64,7 @@ export const ConsultationDialog = ({ open, onOpenChange, onSuccess }: Consultati
         setIsSuccess(false);
         setName("");
         setEmail("");
+        setPreferredDate("");
         setPurpose("");
         onOpenChange(false);
       }, 3000);
@@ -119,6 +123,17 @@ export const ConsultationDialog = ({ open, onOpenChange, onSuccess }: Consultati
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 maxLength={255}
+                className="w-full"
+              />
+            </div>
+
+            <div>
+              <Input
+                placeholder="Preferred day/time (e.g., Monday 2pm, Thursday morning)"
+                value={preferredDate}
+                onChange={(e) => setPreferredDate(e.target.value)}
+                required
+                maxLength={100}
                 className="w-full"
               />
             </div>
