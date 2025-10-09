@@ -19,7 +19,7 @@ export const Hero = () => {
         {/* Content */}
         <div className="relative z-10 max-w-6xl mx-auto px-6 text-center py-32">
           <div className="mb-8 inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border bg-card/50 backdrop-blur-sm animate-fade-in">
-            <span className="text-sm text-foreground font-medium">MindVault</span>
+            <span className="text-sm text-foreground font-medium">TheMindVault</span>
             <span className="text-xs text-muted-foreground">•</span>
             <span className="text-sm text-muted-foreground">Debunk. Demystify. Design.</span>
           </div>

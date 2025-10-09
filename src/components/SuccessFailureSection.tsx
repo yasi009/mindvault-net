@@ -22,7 +22,7 @@ export const SuccessFailureSection = () => {
                 <div className="w-12 h-12 rounded-full bg-destructive/10 flex items-center justify-center">
                   <X className="w-6 h-6 text-destructive" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground">Without MindVault</h3>
+                <h3 className="text-2xl font-bold text-foreground">Without TheMindVault</h3>
               </div>
             </CardHeader>
             <CardContent className="pt-6 space-y-4">
@@ -56,7 +56,7 @@ export const SuccessFailureSection = () => {
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                   <CheckCircle2 className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground">With MindVault</h3>
+                <h3 className="text-2xl font-bold text-foreground">With TheMindVault</h3>
               </div>
             </CardHeader>
             <CardContent className="pt-6 space-y-4">

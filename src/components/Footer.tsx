@@ -70,9 +70,12 @@ export const Footer = () => {
         <div className="border-t border-background/20 pt-12">
           <div className="grid md:grid-cols-3 gap-12 mb-12">
             <div>
-              <h3 className="text-2xl font-bold mb-4">MindVault</h3>
+              <h3 className="text-2xl font-bold mb-4">TheMindVault</h3>
               <p className="text-background/70">
-                A space to think clearly, design intentionally, and lead with clarity — for students, educators, and leaders ready to build systems that fit who they actually are.
+                A space to think clearly, design intentionally, and lead with clarity — for students ready to build systems that fit who they actually are.
+              </p>
+              <p className="text-background/50 text-sm mt-2">
+                ABN 27 788 627 206
               </p>
             </div>
             
@@ -100,7 +103,7 @@ export const Footer = () => {
           </div>
           
           <div className="text-center text-background/50 text-sm">
-            <p>© {new Date().getFullYear()} MindVault. Designed with intention.</p>
+            <p>© {new Date().getFullYear()} TheMindVault. Designed with intention.</p>
           </div>
         </div>
       </div>

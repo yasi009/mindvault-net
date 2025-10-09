@@ -21,7 +21,7 @@ export const MyWhy = () => {
             </p>
             
             <p className="text-foreground font-medium">
-              That's what MindVault is about. Not hustle. Not hacks. Just systems that breathe.
+              That's what TheMindVault is about. Not hustle. Not hacks. Just systems that breathe.
             </p>
           </div>
           
