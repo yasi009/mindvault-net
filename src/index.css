@@ -8,45 +8,45 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 42 28% 96%;
-    --foreground: 220 25% 20%;
+    --background: 350 30% 92%;
+    --foreground: 220 45% 25%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 25% 20%;
+    --card-foreground: 220 45% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 25% 20%;
+    --popover-foreground: 220 45% 25%;
 
     --primary: 220 45% 25%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 42 20% 92%;
-    --secondary-foreground: 220 25% 20%;
+    --secondary: 350 30% 92%;
+    --secondary-foreground: 220 45% 25%;
 
-    --muted: 42 20% 92%;
-    --muted-foreground: 220 15% 45%;
+    --muted: 350 25% 88%;
+    --muted-foreground: 220 30% 45%;
 
     --accent: 25 85% 65%;
-    --accent-foreground: 220 25% 20%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 42 20% 88%;
-    --input: 42 20% 88%;
+    --border: 350 25% 85%;
+    --input: 350 25% 85%;
     --ring: 220 45% 25%;
 
     --radius: 0.5rem;
 
     /* Professional gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(220 45% 25% / 0.03) 0%, hsl(220 45% 25% / 0.01) 100%);
-    --gradient-soft: linear-gradient(180deg, hsl(42 28% 96%) 0%, hsl(42 25% 94%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(42 20% 98%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(350 30% 92%) 0%, hsl(350 25% 88%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(350 30% 92%) 0%, hsl(350 28% 90%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(350 25% 95%) 100%);
     
     /* Professional shadows */
-    --shadow-elegant: 0 4px 24px -4px hsl(220 25% 20% / 0.08);
-    --shadow-soft: 0 2px 12px -2px hsl(220 25% 20% / 0.04);
-    --shadow-speech: 0 4px 16px -4px hsl(220 25% 20% / 0.06);
+    --shadow-elegant: 0 4px 24px -4px hsl(220 45% 25% / 0.12);
+    --shadow-soft: 0 2px 12px -2px hsl(220 45% 25% / 0.06);
+    --shadow-speech: 0 4px 16px -4px hsl(220 45% 25% / 0.08);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
