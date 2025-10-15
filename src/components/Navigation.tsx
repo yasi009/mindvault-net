@@ -8,6 +8,7 @@ export const Navigation = () => {
     { path: "/students", label: "Students" },
     { path: "/educators", label: "Educators" },
     { path: "/executives", label: "Executives" },
+    { path: "/about-us", label: "About Us" },
   ];
 
   return (
