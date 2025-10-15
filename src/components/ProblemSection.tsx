@@ -32,42 +32,38 @@ export const ProblemSection = () => {
 
   return (
     <section className="py-24 px-6 bg-gradient-soft">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="w-full bg-accent py-6 mb-16">
-          <div className="max-w-7xl mx-auto px-6 text-center">
+          <div className="max-w-7xl mx-auto px-6 text-center flex items-center justify-center gap-4">
+            <span className="text-3xl text-white">✸</span>
             <h2 className="text-4xl md:text-5xl font-bold text-white">
               You're Not Alone in This Struggle
             </h2>
+            <span className="text-3xl text-white">✸</span>
           </div>
         </div>
 
-        <div className="space-y-8">
-          <Card className="border-l-4 border-l-destructive transition-transform duration-300 hover:-translate-y-2">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-3 text-foreground">{problem.external}</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                The external challenge: too many tools, too much noise, and not enough time to figure it all out.
-              </p>
-            </CardContent>
-          </Card>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="text-center space-y-4">
+            <h3 className="text-2xl font-bold text-accent">{problem.external}</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              The external challenge: too many tools, too much noise, and not enough time to figure it all out.
+            </p>
+          </div>
 
-          <Card className="border-l-4 border-l-primary transition-transform duration-300 hover:-translate-y-2">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-3 text-foreground">{problem.internal}</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                The internal struggle: feeling lost, anxious, and like everyone else has it figured out except you.
-              </p>
-            </CardContent>
-          </Card>
+          <div className="text-center space-y-4">
+            <h3 className="text-2xl font-bold text-primary">{problem.internal}</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              The internal struggle: feeling lost, anxious, and like everyone else has it figured out except you.
+            </p>
+          </div>
 
-          <Card className="border-l-4 border-l-accent transition-transform duration-300 hover:-translate-y-2">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-3 text-foreground">{problem.philosophical}</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                The truth: You shouldn't have to work this hard to feel this scattered. There's a better way.
-              </p>
-            </CardContent>
-          </Card>
+          <div className="text-center space-y-4">
+            <h3 className="text-2xl font-bold text-accent">{problem.philosophical}</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              The truth: You shouldn't have to work this hard to feel this scattered. There's a better way.
+            </p>
+          </div>
         </div>
       </div>
     </section>

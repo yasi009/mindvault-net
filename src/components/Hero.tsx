@@ -32,7 +32,9 @@ export const Hero = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 space-y-12">
           <div className="w-full text-left">
             <h1 className="text-6xl md:text-8xl font-bold text-primary animate-fade-in leading-[1.05] tracking-tight italic uppercase w-full">
-              Think Clearly.
+              <span className="relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-accent after:animate-fade-in">
+                Think Clearly.
+              </span>
               <br />
               Work Intentionally.
               <br />

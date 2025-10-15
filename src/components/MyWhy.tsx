@@ -10,17 +10,17 @@ export const MyWhy = () => {
         </div>
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed font-heading">
             <p>
-              As an overachieving UNSW international student and strategist consultant, <span className="font-heading text-primary italic relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary">I used to chase perfection — now I build systems that help me stay human.</span> After years of feeling scattered across too many tools and overwhelmed by endless advice, I realized something: <span className="font-heading text-primary italic relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary">we don't need more information. We need clarity, structure, and a way to think for ourselves.</span>
+              As an overachieving UNSW international student and strategist consultant, <span className="bg-accent/30 px-1">I used to chase perfection — now I build systems that help me stay human.</span> After years of feeling scattered across too many tools and overwhelmed by endless advice, I realized something: <span className="bg-accent/30 px-1">we don't need more information. We need clarity, structure, and a way to think for ourselves.</span>
             </p>
             
             <p>
-              That's what MindVault is about. It's not a productivity hack or another "10X your life" promise. It's a space to breathe, reflect, and design systems that actually work for who you are — not who you think you should be.
+              That's what MindVault is about. It's not a productivity hack or another "10X your life" promise. <span className="bg-accent/30 px-1">It's a space to breathe, reflect, and design systems that actually work for who you are</span> — not who you think you should be.
             </p>
             
             <p className="text-foreground font-medium italic">
-              I believe true intelligence is seeing what's actually there. And leadership begins with knowing yourself first.
+              <span className="bg-accent/30 px-1">I believe true intelligence is seeing what's actually there.</span> And <span className="bg-accent/30 px-1">leadership begins with knowing yourself first.</span>
             </p>
           </div>
           
