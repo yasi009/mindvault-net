@@ -8,45 +8,45 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 15%;
+    --background: 42 28% 96%;
+    --foreground: 220 25% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 15%;
+    --card-foreground: 220 25% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 15%;
+    --popover-foreground: 220 25% 20%;
 
-    --primary: 262 52% 47%;
+    --primary: 220 45% 25%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 240 5% 96%;
-    --secondary-foreground: 240 10% 15%;
+    --secondary: 42 20% 92%;
+    --secondary-foreground: 220 25% 20%;
 
-    --muted: 240 5% 96%;
-    --muted-foreground: 240 4% 46%;
+    --muted: 42 20% 92%;
+    --muted-foreground: 220 15% 45%;
 
-    --accent: 262 52% 47%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 25 85% 65%;
+    --accent-foreground: 220 25% 20%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 6% 90%;
-    --input: 240 6% 90%;
-    --ring: 262 52% 47%;
+    --border: 42 20% 88%;
+    --input: 42 20% 88%;
+    --ring: 220 45% 25%;
 
     --radius: 0.5rem;
 
     /* Professional gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(262 52% 47% / 0.05) 0%, hsl(262 52% 47% / 0.02) 100%);
-    --gradient-soft: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(240 5% 98%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(240 5% 99%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 45% 25% / 0.03) 0%, hsl(220 45% 25% / 0.01) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(42 28% 96%) 0%, hsl(42 25% 94%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(42 20% 98%) 100%);
     
     /* Professional shadows */
-    --shadow-elegant: 0 4px 24px -4px hsl(240 10% 15% / 0.08);
-    --shadow-soft: 0 2px 12px -2px hsl(240 10% 15% / 0.04);
-    --shadow-speech: 0 4px 16px -4px hsl(240 10% 15% / 0.06);
+    --shadow-elegant: 0 4px 24px -4px hsl(220 25% 20% / 0.08);
+    --shadow-soft: 0 2px 12px -2px hsl(220 25% 20% / 0.04);
+    --shadow-speech: 0 4px 16px -4px hsl(220 25% 20% / 0.06);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
