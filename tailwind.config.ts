@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        'nightingale': ['Nixie One', 'cursive'],
+        'rafgins': ['Ramaraja', 'serif'],
         'sans': ['Inter', 'sans-serif'],
       },
       colors: {
