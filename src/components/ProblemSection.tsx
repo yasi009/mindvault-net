@@ -31,7 +31,7 @@ export const ProblemSection = () => {
   const problem = problems[audience || "students"];
 
   return (
-    <section className="py-24 px-6 bg-background">
+    <section className="py-24 px-6 bg-gradient-soft">
       <div className="max-w-5xl mx-auto">
         <div className="w-full bg-accent py-6 mb-16">
           <div className="max-w-7xl mx-auto px-6 text-center">

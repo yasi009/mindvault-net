@@ -3,10 +3,10 @@ import baliImage from "@/assets/yaseerah-bali-orphanage.jpg";
 
 export const MyWhy = () => {
   return (
-    <section className="py-20 px-6 bg-background">
+    <section className="py-20 px-6 bg-gradient-soft">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">My Mission</h2>
+          <h2 className="text-3xl md:text-4xl font-bold" style={{ color: 'hsl(340 45% 75%)' }}>My Mission</h2>
         </div>
         
         <div className="grid md:grid-cols-2 gap-12 items-center">

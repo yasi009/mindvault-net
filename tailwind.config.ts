@@ -51,6 +51,10 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        rose: {
+          DEFAULT: "hsl(var(--rose))",
+          foreground: "hsl(var(--rose-foreground))",
+        },
       },
       backgroundImage: {
         'gradient-hero': 'var(--gradient-hero)',
@@ -61,6 +65,7 @@ export default {
         'elegant': 'var(--shadow-elegant)',
         'soft': 'var(--shadow-soft)',
         'speech': 'var(--shadow-speech)',
+        'glass': 'var(--shadow-glass)',
       },
       transitionProperty: {
         'smooth': 'var(--transition-smooth)',

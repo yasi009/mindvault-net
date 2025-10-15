@@ -3,13 +3,13 @@ import { CheckCircle2 } from "lucide-react";
 
 export const GuideSection = () => {
   return (
-    <section className="py-24 px-6 bg-gradient-soft">
+    <section className="py-24 px-6 bg-primary">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             I've Been There Too
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
             Overwhelmed. Busy. Lost in the noise. That's why I've dedicated my work to helping people save hours, reduce stress, and reconnect with what actually matters.
           </p>
         </div>
@@ -37,6 +37,7 @@ export const GuideSection = () => {
               quote="This didn't just save us time — it gave us energy back."
               author="Healthcare Leader"
               variant="left"
+              glass={true}
             />
             <SpeechBubble
               quote="I didn't think I was a 'tech person.' Now I'm the one teaching my friends."
@@ -47,6 +48,7 @@ export const GuideSection = () => {
               quote="You made me feel like I could actually do this. I'm not scared of tech anymore."
               author="University Student"
               variant="left"
+              glass={true}
             />
             <SpeechBubble
               quote="This isn't just another workshop — it actually changed how I show up in my classroom."
@@ -57,12 +59,13 @@ export const GuideSection = () => {
               quote="You helped my team see change differently. It's not overwhelming anymore — it's exciting."
               author="Executive"
               variant="left"
+              glass={true}
             />
-            {/* Duplicate for seamless loop */}
             <SpeechBubble
               quote="This didn't just save us time — it gave us energy back."
               author="Healthcare Leader"
               variant="left"
+              glass={true}
             />
             <SpeechBubble
               quote="I didn't think I was a 'tech person.' Now I'm the one teaching my friends."
@@ -73,6 +76,7 @@ export const GuideSection = () => {
               quote="You made me feel like I could actually do this. I'm not scared of tech anymore."
               author="University Student"
               variant="left"
+              glass={true}
             />
             <SpeechBubble
               quote="This isn't just another workshop — it actually changed how I show up in my classroom."
@@ -83,6 +87,7 @@ export const GuideSection = () => {
               quote="You helped my team see change differently. It's not overwhelming anymore — it's exciting."
               author="Executive"
               variant="left"
+              glass={true}
             />
           </div>
         </div>
