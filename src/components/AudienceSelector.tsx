@@ -4,8 +4,8 @@ import { useAudience } from "@/contexts/AudienceContext";
 const audiences = [{
   type: "students" as const,
   icon: <GraduationCap className="w-12 h-12" />,
-  title: "Students",
-  description: "Build your Life OS and master AI tools for smarter studying"
+  title: "Learners",
+  description: "Build your Life OS and master AI tools for smarter living"
 }, {
   type: "educators" as const,
   icon: <Users className="w-12 h-12" />,
