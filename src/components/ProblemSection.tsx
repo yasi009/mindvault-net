@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { AlertCircle } from "lucide-react";
 import { useAudience } from "@/contexts/AudienceContext";
 
 interface Problem {
@@ -34,17 +33,16 @@ export const ProblemSection = () => {
   return (
     <section className="py-24 px-6 bg-background">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-destructive/10 mb-6">
-            <AlertCircle className="w-8 h-8 text-destructive" />
+        <div className="w-full bg-accent py-6 mb-16">
+          <div className="max-w-7xl mx-auto px-6 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white">
+              You're Not Alone in This Struggle
+            </h2>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            You're Not Alone in This Struggle
-          </h2>
         </div>
 
         <div className="space-y-8">
-          <Card className="border-l-4 border-l-destructive">
+          <Card className="border-l-4 border-l-destructive transition-transform duration-300 hover:-translate-y-2">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-3 text-foreground">{problem.external}</h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -53,7 +51,7 @@ export const ProblemSection = () => {
             </CardContent>
           </Card>
 
-          <Card className="border-l-4 border-l-primary">
+          <Card className="border-l-4 border-l-primary transition-transform duration-300 hover:-translate-y-2">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-3 text-foreground">{problem.internal}</h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -62,7 +60,7 @@ export const ProblemSection = () => {
             </CardContent>
           </Card>
 
-          <Card className="border-l-4 border-l-accent">
+          <Card className="border-l-4 border-l-accent transition-transform duration-300 hover:-translate-y-2">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-3 text-foreground">{problem.philosophical}</h3>
               <p className="text-muted-foreground leading-relaxed">
