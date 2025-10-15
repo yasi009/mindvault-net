@@ -1,10 +1,12 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { AudienceProvider } from "@/contexts/AudienceContext";
 
 export const AboutUs = () => {
   return (
-    <div className="min-h-screen">
-      <Navigation />
+    <AudienceProvider>
+      <div className="min-h-screen">
+        <Navigation />
       
       <section className="py-24 px-6 bg-muted/30">
         <div className="max-w-5xl mx-auto">
@@ -41,7 +43,8 @@ export const AboutUs = () => {
       </section>
 
       <Footer />
-    </div>
+      </div>
+    </AudienceProvider>
   );
 };
 
