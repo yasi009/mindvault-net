@@ -29,9 +29,9 @@ export const Hero = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 space-y-12">
-          <div className="w-full text-left">
-            <h1 className="text-6xl font-bold text-primary animate-fade-in leading-[1.05] tracking-tight italic uppercase w-full md:text-7xl">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 md:py-32 space-y-8 sm:space-y-12">
+          <div className="w-full text-center sm:text-left">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary animate-fade-in leading-[1.1] sm:leading-[1.05] tracking-tight italic uppercase w-full">
               <span className="relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-accent after:animate-fade-in">
                 Think Clearly.
               </span>
@@ -42,8 +42,8 @@ export const Hero = () => {
             </h1>
           </div>
 
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <p className="text-xl md:text-2xl text-foreground animate-fade-in leading-relaxed">
+          <div className="max-w-3xl mx-auto text-center space-y-6 sm:space-y-8">
+            <p className="text-lg sm:text-xl md:text-2xl text-foreground animate-fade-in leading-relaxed px-2">
               I help students, educators, and leaders cut through overwhelm and build systems that bring clarity, control, and calm to their work and life.
             </p>
 

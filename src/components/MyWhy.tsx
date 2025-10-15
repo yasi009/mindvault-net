@@ -7,14 +7,14 @@ export const MyWhy = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="py-20 px-6 bg-gradient-soft">
+    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-soft">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold" style={{ color: 'hsl(340 45% 75%)' }}>Our Mission</h2>
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold" style={{ color: 'hsl(340 45% 75%)' }}>Our Mission</h2>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed font-heading">
+        <div className="grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
+          <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-muted-foreground leading-relaxed font-heading">
             <p>
               We were always obsessed with intelligence — with how humans could be <strong>better, sharper, more perfect</strong>. Whether it was goals, grades, or validation — if it looked good, we got it. But we were <strong>miserable</strong>.
             </p>
@@ -39,18 +39,18 @@ export const MyWhy = () => {
               The work here is to challenge those illusions that build <strong>limiting beliefs</strong> — to rebuild our internal operating systems with <strong>intention</strong>.
             </p>
 
-            <div className="flex justify-center mt-8">
+            <div className="flex justify-center mt-6 sm:mt-8">
               <Button
                 onClick={() => navigate('/about-us')}
-                className="bg-primary text-primary-foreground hover:bg-background hover:text-foreground transition-colors duration-300 text-2xl py-6 px-8 font-heading italic"
+                className="bg-primary text-primary-foreground hover:bg-background hover:text-foreground transition-colors duration-300 text-lg sm:text-xl md:text-2xl py-4 sm:py-6 px-6 sm:px-8 font-heading italic"
               >
                 About our Philosophy
               </Button>
             </div>
           </div>
           
-          <div className="relative space-y-6">
-            <p className="text-foreground font-medium italic text-xl md:text-2xl leading-relaxed">
+          <div className="relative space-y-4 sm:space-y-6 mt-8 md:mt-0">
+            <p className="text-foreground font-medium italic text-lg sm:text-xl md:text-2xl leading-relaxed">
               <span className="border-b-2 border-accent">This is the real work of modern intelligence: learning to stay human in the age of systems.</span>
             </p>
             

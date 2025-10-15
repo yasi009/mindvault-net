@@ -11,13 +11,13 @@ export const Navigation = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="text-2xl font-heading font-semibold text-foreground tracking-tight">
+          <Link to="/" className="text-xl sm:text-2xl font-heading font-semibold text-foreground tracking-tight">
             TheMindVault
           </Link>
           
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-4 sm:gap-8">
             {links.map((link) => (
               <Link
                 key={link.path}

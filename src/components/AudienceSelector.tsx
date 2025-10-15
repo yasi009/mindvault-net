@@ -32,18 +32,18 @@ export const AudienceSelector = () => {
       });
     }, 100);
   };
-  return <section className="py-24 px-6 bg-background">
+  return <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-background">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">What are you here for?</h2>
-          <p className="text-lg text-muted-foreground">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-foreground">What are you here for?</h2>
+          <p className="text-base sm:text-lg text-muted-foreground px-2">
             Select your role to see tailored packages and resources
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-5xl mx-auto">
           {audiences.map(aud => <Card key={aud.type} className={`cursor-pointer transition-all duration-300 hover:shadow-elegant hover:scale-105 ${audience === aud.type ? 'border-2 border-primary shadow-elegant scale-105' : 'border-border hover:border-primary/50'}`} onClick={() => handleAudienceClick(aud.type)}>
-              <CardContent className="p-8 text-center">
+              <CardContent className="p-4 sm:p-6 md:p-8 text-center">
                 <div className={`mb-4 flex justify-center transition-colors ${audience === aud.type ? 'text-primary' : 'text-muted-foreground'}`}>
                   {aud.icon}
                 </div>
