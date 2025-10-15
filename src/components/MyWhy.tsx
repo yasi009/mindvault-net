@@ -13,15 +13,15 @@ export const MyWhy = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              I used to chase perfection — now I build systems that help me stay human.
+              I used to chase perfection — now I build systems that help me stay human. After years of feeling scattered across too many tools and overwhelmed by endless advice, I realized something: <span className="text-foreground font-medium">we don't need more information. We need clarity, structure, and a way to think for ourselves.</span>
             </p>
             
             <p>
-              After years of drowning in tools and advice, I realized <span className="text-foreground font-medium">we don't need more information — we need clarity, structure, and a way to think for ourselves.</span>
+              That's what MindVault is about. It's not a productivity hack or another "10X your life" promise. It's a space to breathe, reflect, and design systems that actually work for who you are — not who you think you should be.
             </p>
             
-            <p className="text-foreground font-medium">
-              That's what TheMindVault is about. Not hustle. Not hacks. Just systems that breathe.
+            <p className="text-foreground font-medium italic">
+              I believe true intelligence is seeing what's actually there. And leadership begins with knowing yourself first.
             </p>
           </div>
           

@@ -1,9 +1,10 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Check, Calendar, Bot, Users } from "lucide-react";
+import { Check, Calendar, Bot, Users, GraduationCap, Briefcase } from "lucide-react";
 import { useState } from "react";
 import { ConsultationDialog } from "./ConsultationDialog";
 import { ToolSignupDialog } from "./ToolSignupDialog";
+import { useAudience } from "@/contexts/AudienceContext";
 
 interface Package {
   name: string;
@@ -16,11 +17,12 @@ interface Package {
 }
 
 export const AudiencePackages = () => {
+  const { audience } = useAudience();
   const [consultationOpen, setConsultationOpen] = useState(false);
   const [toolDialogOpen, setToolDialogOpen] = useState(false);
   const [selectedTool, setSelectedTool] = useState("");
 
-  const packages: Package[] = [
+  const studentPackages: Package[] = [
     {
       name: "Free Starter",
       price: "Free",
@@ -61,6 +63,126 @@ export const AudiencePackages = () => {
     }
   ];
 
+  const educatorPackages: Package[] = [
+    {
+      name: "Intro Webinar",
+      price: "Free–$500",
+      icon: <GraduationCap className="w-8 h-8" />,
+      features: [
+        "Taster PD session",
+        "AI literacy intro",
+        "Classroom application ideas",
+        "Q&A time"
+      ],
+      cta: "Book Intro",
+      isFree: true
+    },
+    {
+      name: "Future-Ready PD",
+      price: "$1,500–3,000",
+      icon: <Bot className="w-8 h-8" />,
+      features: [
+        "Half or full-day workshop",
+        "Practical AI tools",
+        "Teacher resources pack",
+        "Implementation support"
+      ],
+      cta: "Book PD Workshop",
+      isPopular: true
+    },
+    {
+      name: "Custom GPT Tutor",
+      price: "$3,000–5,000",
+      icon: <Users className="w-8 h-8" />,
+      features: [
+        "Custom classroom GPT",
+        "Teacher training session",
+        "Student onboarding materials",
+        "Ongoing support (3 months)"
+      ],
+      cta: "Get Custom GPT"
+    }
+  ];
+
+  const executivePackages: Package[] = [
+    {
+      name: "Executive Briefing",
+      price: "$2,000–5,000",
+      icon: <Briefcase className="w-8 h-8" />,
+      features: [
+        "90-minute strategic session",
+        "AI landscape overview",
+        "Quick wins assessment",
+        "Implementation roadmap"
+      ],
+      cta: "Book Briefing"
+    },
+    {
+      name: "AI Literacy Sprint",
+      price: "$12,000–15,000",
+      icon: <Bot className="w-8 h-8" />,
+      features: [
+        "4-week program",
+        "2 pilot candidates + demo",
+        "Team training workshops",
+        "Custom GPT solutions"
+      ],
+      cta: "Start Sprint",
+      isPopular: true
+    },
+    {
+      name: "Full Transformation",
+      price: "$20,000–30,000",
+      icon: <Users className="w-8 h-8" />,
+      features: [
+        "Digital maturity audit",
+        "Pilot program design",
+        "Change management support",
+        "6-month implementation"
+      ],
+      cta: "Begin Transformation"
+    }
+  ];
+
+  const getPackages = () => {
+    switch (audience) {
+      case "students":
+        return studentPackages;
+      case "educators":
+        return educatorPackages;
+      case "executives":
+        return executivePackages;
+      default:
+        return [];
+    }
+  };
+
+  const getTitle = () => {
+    switch (audience) {
+      case "students":
+        return "Student Packages";
+      case "educators":
+        return "Educator Programs";
+      case "executives":
+        return "Executive Services";
+      default:
+        return "Packages";
+    }
+  };
+
+  const getSubtitle = () => {
+    switch (audience) {
+      case "students":
+        return "From free tools to personal help — build a system that saves you time and stress";
+      case "educators":
+        return "Professional development that transforms classrooms";
+      case "executives":
+        return "Strategic AI integration from briefing to full transformation";
+      default:
+        return "Choose the right package for your needs";
+    }
+  };
+
   const handleCTAClick = (pkg: Package) => {
     if (pkg.isFree) {
       setSelectedTool(pkg.name);
@@ -70,16 +192,20 @@ export const AudiencePackages = () => {
     }
   };
 
+  const packages = getPackages();
+
+  if (!audience || packages.length === 0) return null;
+
   return (
     <>
       <section id="packages" className="py-24 px-6 bg-gradient-soft">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-              Student Packages
+              {getTitle()}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              From free tools to personal help — build a system that saves you time and stress
+              {getSubtitle()}
             </p>
           </div>
 

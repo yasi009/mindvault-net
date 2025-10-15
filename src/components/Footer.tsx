@@ -43,9 +43,12 @@ export const Footer = () => {
         <div className="max-w-7xl mx-auto">
           {/* Vision CTA Section */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-background leading-tight">
-              "You don't rise to your goals — you fall to your systems."
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-background">
+              You Don't Rise to Your Goals — You Fall to Your Systems
             </h2>
+            <p className="text-xl text-background/80 mb-10 max-w-3xl mx-auto leading-relaxed">
+              Let's build one that works for you.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 variant="secondary" 
@@ -70,12 +73,9 @@ export const Footer = () => {
         <div className="border-t border-background/20 pt-12">
           <div className="grid md:grid-cols-3 gap-12 mb-12">
             <div>
-              <h3 className="text-2xl font-bold mb-4">TheMindVault</h3>
+              <h3 className="text-2xl font-bold mb-4">MindVault</h3>
               <p className="text-background/70">
-                A space to think clearly, design intentionally, and lead with clarity — for students ready to build systems that fit who they actually are.
-              </p>
-              <p className="text-background/50 text-sm mt-2">
-                ABN 27 788 627 206
+                A space to think clearly, design intentionally, and lead with clarity — for students, educators, and leaders ready to build systems that fit who they actually are.
               </p>
             </div>
             
@@ -103,7 +103,7 @@ export const Footer = () => {
           </div>
           
           <div className="text-center text-background/50 text-sm">
-            <p>© {new Date().getFullYear()} TheMindVault. Designed with intention.</p>
+            <p>© {new Date().getFullYear()} MindVault. Designed with intention. Built for the future.</p>
           </div>
         </div>
       </div>
