@@ -15,8 +15,8 @@ export const SuccessStories = () => {
   const stories: Story[] = [
     {
       problem: "Young women felt like STEM wasn't for them. They lacked confidence, community, and role models.",
-      solution: "We created 'Debunk, Demystify, Design' — a workshop series that makes tech feel personal, not intimidating. Then we kept showing up with mentorship.",
-      impact: "50+ young women found their people. 90% said they now see themselves in STEM. The community is still growing.",
+      solution: "Led flagship 'Debunk, Demystify, Design' workshop series at NIDA Theatre, establishing ongoing community mentorship program ('Yeah the Girls'). Created sustainable peer-to-peer learning environment focused on AI literacy and STEM career pathways for young women.",
+      impact: "Established thriving community of 50+ young women actively exploring STEM careers, with 90% of participants reporting increased confidence in technology fields and sustained engagement in ongoing mentorship programs.",
       client: "Girls in STEM Initiative (NIDA Theatre)"
     },
     {
@@ -47,61 +47,50 @@ export const SuccessStories = () => {
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {stories.map((story, index) => (
-            <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-none bg-white/95">
-              <CardContent className="p-8">
-                <div className="space-y-6">
-                  {/* Impact - Main subtitle */}
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-4">{story.impact}</h3>
-                  </div>
+            <div 
+              key={index} 
+              className="group relative p-8 bg-card rounded-lg hover:shadow-elegant transition-all duration-300 cursor-pointer"
+              onClick={() => setExpandedStory(expandedStory === index ? null : index)}
+            >
+              <div className="space-y-6">
+                {/* Client */}
+                <h3 className="text-2xl font-bold text-foreground">{story.client}</h3>
+                
+                {/* Impact */}
+                <p className="text-muted-foreground leading-relaxed">
+                  {story.impact}
+                </p>
 
-                  {/* Expandable content */}
-                  {expandedStory === index && (
-                    <>
-                      {/* Problem */}
-                      <div className="animate-fade-in">
-                        <div className="flex items-center gap-2 mb-3">
-                          <div className="w-8 h-8 rounded-full bg-destructive/10 flex items-center justify-center text-destructive font-bold">
-                            P
-                          </div>
-                          <h4 className="font-semibold text-foreground">Problem</h4>
-                        </div>
-                        <p className="text-muted-foreground text-sm leading-relaxed ml-10">
-                          {story.problem}
-                        </p>
-                      </div>
-
-                      {/* Solution */}
-                      <div className="animate-fade-in">
-                        <div className="flex items-center gap-2 mb-3">
-                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
-                            S
-                          </div>
-                          <h4 className="font-semibold text-foreground">Solution</h4>
-                        </div>
-                        <p className="text-muted-foreground text-sm leading-relaxed ml-10">
-                          {story.solution}
-                        </p>
-                      </div>
-                    </>
-                  )}
-
-                  {/* Client & Read More */}
-                  <div className="pt-4 border-t border-border">
-                    <p className="text-sm text-muted-foreground font-medium mb-3">
-                      — {story.client}
-                    </p>
-                    <button
-                      onClick={() => setExpandedStory(expandedStory === index ? null : index)}
-                      className="text-primary font-medium text-sm flex items-center gap-1 hover:gap-2 transition-all"
-                    >
-                      {expandedStory === index ? "Show less" : "Read more"}
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
-                  </div>
+                {/* Read More Button - appears on hover */}
+                <div className="opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                  <button className="text-accent font-medium text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                    {expandedStory === index ? "Show less" : "Read more"}
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
                 </div>
-              </CardContent>
-            </Card>
+
+                {/* Expandable content */}
+                {expandedStory === index && (
+                  <div className="space-y-6 pt-6 border-t border-border animate-fade-in">
+                    {/* Solution */}
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">How We Did It</h4>
+                      <p className="text-muted-foreground text-sm leading-relaxed">
+                        {story.solution}
+                      </p>
+                    </div>
+
+                    {/* Problem */}
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">The Challenge</h4>
+                      <p className="text-muted-foreground text-sm leading-relaxed">
+                        {story.problem}
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
           ))}
         </div>
 
