@@ -49,7 +49,11 @@ export const MyWhy = () => {
             </div>
           </div>
           
-          <div className="relative">
+          <div className="relative space-y-6">
+            <p className="text-foreground font-medium italic text-xl md:text-2xl leading-relaxed">
+              <span className="border-b-2 border-accent">This is the real work of modern intelligence: learning to stay human in the age of systems.</span>
+            </p>
+            
             <img 
               src={baliImage} 
               alt="Yaseerah presenting at NIDA workshop on clarity and systems design"
