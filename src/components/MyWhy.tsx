@@ -1,7 +1,7 @@
 import { Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import baliImage from "@/assets/yaseerah-bali-orphanage.jpg";
+import baliImage from "@/assets/yaseerah-workshop-nida.jpg";
 
 export const MyWhy = () => {
   const navigate = useNavigate();
@@ -40,7 +40,7 @@ export const MyWhy = () => {
           <div className="relative">
             <img 
               src={baliImage} 
-              alt="Yaseerah teaching mindfulness at Bali orphanage"
+              alt="Yaseerah presenting at NIDA workshop on clarity and systems design"
               className="rounded-lg shadow-lg w-full h-auto object-cover"
             />
           </div>
