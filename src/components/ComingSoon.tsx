@@ -8,9 +8,9 @@ export const ComingSoon = () => {
           <span className="text-sm font-medium text-foreground">November 2025</span>
         </div>
         
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Coming Soon: ISRA Academy Workshop
-
-      </h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-2 text-foreground">Coming Soon: ISRA Academy Workshop</h2>
+        
+        <p className="text-sm text-muted-foreground mb-6">Level 3/128-136 S Parade, Auburn NSW 2144</p>
         
         <p className="text-xl text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed">
           Join us this November for a powerful session on clarity, consciousness, and creating systems for your real self.
