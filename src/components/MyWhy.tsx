@@ -26,6 +26,15 @@ export const MyWhy = () => {
             <p className="text-foreground font-medium italic text-2xl md:text-3xl leading-relaxed">
               <span className="border-b-2 border-accent">I believe true intelligence is seeing what's actually there.</span> And <span className="border-b-2 border-accent">leadership begins with knowing yourself first.</span>
             </p>
+
+            <div className="flex justify-center mt-8">
+              <Button
+                onClick={() => navigate('/about-us')}
+                className="bg-primary text-primary-foreground hover:bg-background hover:text-foreground transition-colors duration-300 text-2xl py-6 px-8 font-heading italic"
+              >
+                About our Philosophy
+              </Button>
+            </div>
           </div>
           
           <div className="relative">
@@ -35,15 +44,6 @@ export const MyWhy = () => {
               className="rounded-lg shadow-lg w-full h-auto object-cover"
             />
           </div>
-        </div>
-
-        <div className="mt-12 flex justify-center">
-          <Button
-            onClick={() => navigate('/about-us')}
-            className="bg-primary text-primary-foreground hover:bg-background hover:text-foreground transition-colors duration-300"
-          >
-            About our Philosophy
-          </Button>
         </div>
       </div>
     </section>
