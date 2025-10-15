@@ -25,12 +25,9 @@ const ExecutivesContent = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <section className="py-24 px-6 bg-gradient-hero">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">For Executives</h1>
-          <p className="text-xl text-muted-foreground">Strategic AI integration for organizational transformation</p>
-        </div>
-      </section>
+      <Hero />
+      <MyWhy />
+      <PullQuote quote="You don't rise to your goals; you fall to your systems." />
       <ProblemSection />
       <GuideSection />
       <PlanSection />
