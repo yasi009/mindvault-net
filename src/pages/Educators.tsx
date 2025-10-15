@@ -25,9 +25,12 @@ const EducatorsContent = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <Hero />
-      <MyWhy />
-      <PullQuote quote="You don't rise to your goals; you fall to your systems." />
+      <section className="py-24 px-6 bg-gradient-hero">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">For Educators</h1>
+          <p className="text-xl text-muted-foreground">Bring AI literacy and systems thinking to your classroom</p>
+        </div>
+      </section>
       <ProblemSection />
       <GuideSection />
       <PlanSection />
