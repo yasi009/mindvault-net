@@ -44,7 +44,7 @@ export const Footer = () => {
           {/* Vision CTA Section */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-background">
-              You Don't Rise to Your Goals — You Fall to Your Systems
+              Systems designed with care create lives lived with purpose.
             </h2>
             <p className="text-xl text-background/80 mb-10 max-w-3xl mx-auto leading-relaxed">
               Let's build one that works for you.
