@@ -16,15 +16,15 @@ export const MyWhy = () => {
         <div className="grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
           <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-muted-foreground leading-relaxed font-heading">
             <p>
-              We were always obsessed with intelligence — with how humans could be <strong>better, sharper, more perfect</strong>. Whether it was goals, grades, or validation — if it looked good, we got it. But we were <strong>miserable</strong>.
+              We were always obsessed with intelligence and with how humans could be <strong>better, sharper, more perfect</strong>. Whether it was goals, grades, or validation — if it looked good, we got it. But we were <strong>miserable</strong>.
             </p>
             
             <p>
-              We built systems that optimized everything — and in the process, got stuck inside the delusions of who we thought we needed to be. Now, we build systems that help us <strong>stay human</strong>. Systems that keep us in alignment, but still hold structure and discipline for success.
+              We built systems that optimised everything — and in the process, got stuck inside the delusions of who we thought we needed to be. Now, we build systems that help us <strong>stay human</strong>. Systems that keep us in alignment, but still hold structure and discipline for success.
             </p>
             
             <p>
-              After years of feeling scattered across too many tools and overwhelmed by endless advice, we realized something simple: we don't need more information — we need <strong>clarity</strong>. We need a way to <strong>think for ourselves</strong>.
+              After years of feeling scattered across too many tools and overwhelmed by endless advice, we realised something simple: we don't need more information — we need <strong>clarity</strong>. We need a way to <strong>think for ourselves</strong>.
             </p>
             
             <p>
