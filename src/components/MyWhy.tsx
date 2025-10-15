@@ -16,15 +16,35 @@ export const MyWhy = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed font-heading">
             <p>
-              As an overachieving UNSW international student and strategist consultant, I used to chase perfection — now I build systems that help me stay human. After years of feeling scattered across too many tools and overwhelmed by endless advice, I realized something: we don't need more information. We need clarity, structure, and a way to think for ourselves.
+              I was always obsessed with intelligence — with how humans could be better, sharper, more perfect. Whether it was goals, grades, or validation — if it looked good, I got it. But I was miserable.
             </p>
             
             <p>
-              That's what MindVault is about. It's not a productivity hack or another "10X your life" promise. It's a space to breathe, reflect, and design systems that actually work for who you are — not who you think you should be.
+              I had systems that optimized everything — and trapped me in the very delusions I built. I thought I was becoming better, but really, I was just getting better at performing.
+            </p>
+            
+            <p>
+              Now, I build systems that help me stay human — systems built on alignment, reflection, and structure that still support real success.
+            </p>
+            
+            <p>
+              After years of feeling scattered across too many tools and overwhelmed by endless advice, I realized something simple: we don't need more information — we need clarity. We need a way to think for ourselves.
+            </p>
+            
+            <p>
+              That's what MindVault is about. It's not a productivity hack or a "10X your life" system. It's a space to reflect and design systems that actually work — for who you are, not who you've been told to be.
+            </p>
+            
+            <p>
+              Because every thought, feeling, and action is derived from how you see the world, yourself, and others — so let's make sure you see those things clearly.
+            </p>
+            
+            <p>
+              The work here is to challenge the illusions that build limiting beliefs, and to rebuild your internal operating system — with intention.
             </p>
             
             <p className="text-foreground font-medium italic text-2xl md:text-3xl leading-relaxed">
-              <span className="border-b-2 border-accent">I believe true intelligence is seeing what's actually there.</span> And <span className="border-b-2 border-accent">leadership begins with knowing yourself first.</span>
+              <span className="border-b-2 border-accent">This is the real work of modern intelligence: learning to stay human in the age of systems.</span>
             </p>
 
             <div className="flex justify-center mt-8">
