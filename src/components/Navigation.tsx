@@ -5,6 +5,7 @@ export const Navigation = () => {
   const location = useLocation();
   
   const links = [
+    { path: "/", label: "Home" },
     { path: "/students", label: "Students" },
     { path: "/educators", label: "Educators" },
     { path: "/executives", label: "Executives" },

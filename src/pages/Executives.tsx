@@ -36,7 +36,6 @@ const ExecutivesContent = () => {
       <AudiencePackages />
       <SuccessFailureSection />
       <FreeTools />
-      <About />
       <Footer />
     </div>
   );

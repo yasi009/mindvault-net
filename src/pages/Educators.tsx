@@ -36,7 +36,6 @@ const EducatorsContent = () => {
       <AudiencePackages />
       <SuccessFailureSection />
       <FreeTools />
-      <About />
       <Footer />
     </div>
   );

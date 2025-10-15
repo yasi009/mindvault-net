@@ -26,17 +26,16 @@ const StudentsContent = () => {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
-      <ProblemSection />
       <MyWhy />
       <PullQuote quote="You don't rise to your goals; you fall to your systems." />
+      <ProblemSection />
       <GuideSection />
       <PlanSection />
       <PullQuote quote="Leadership begins with self-awareness." />
-      <ClientWork />
       <AudiencePackages />
+      <ClientWork />
       <SuccessFailureSection />
       <FreeTools />
-      <About />
       <Footer />
     </div>
   );
