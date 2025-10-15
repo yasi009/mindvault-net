@@ -14,9 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        'petit': ['Petit Formal Script', 'cursive'],
-        'manrope': ['Manrope', 'sans-serif'],
-        'inter': ['Inter', 'sans-serif'],
+        'nightingale': ['Nixie One', 'cursive'],
+        'sans': ['Inter', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
