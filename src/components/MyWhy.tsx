@@ -1,7 +1,11 @@
 import { Heart } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import baliImage from "@/assets/yaseerah-bali-orphanage.jpg";
 
 export const MyWhy = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="py-20 px-6 bg-gradient-soft">
       <div className="max-w-6xl mx-auto">
@@ -22,6 +26,15 @@ export const MyWhy = () => {
             <p className="text-foreground font-medium italic text-2xl md:text-3xl leading-relaxed">
               <span className="border-b-2 border-accent">I believe true intelligence is seeing what's actually there.</span> And <span className="border-b-2 border-accent">leadership begins with knowing yourself first.</span>
             </p>
+
+            <div className="mt-8">
+              <Button
+                onClick={() => navigate('/about-us')}
+                className="bg-primary text-primary-foreground hover:bg-background hover:text-foreground transition-colors duration-300"
+              >
+                About our Philosophy
+              </Button>
+            </div>
           </div>
           
           <div className="relative">
