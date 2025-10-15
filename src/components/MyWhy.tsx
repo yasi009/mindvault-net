@@ -10,41 +10,33 @@ export const MyWhy = () => {
     <section className="py-20 px-6 bg-gradient-soft">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold" style={{ color: 'hsl(340 45% 75%)' }}>My Mission</h2>
+          <h2 className="text-3xl md:text-4xl font-bold" style={{ color: 'hsl(340 45% 75%)' }}>Our Mission</h2>
         </div>
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed font-heading">
             <p>
-              I was always obsessed with intelligence — with how humans could be better, sharper, more perfect. Whether it was goals, grades, or validation — if it looked good, I got it. But I was miserable.
+              We were always obsessed with intelligence — with how humans could be <strong>better, sharper, more perfect</strong>. Whether it was goals, grades, or validation — if it looked good, we got it. But we were <strong>miserable</strong>.
             </p>
             
             <p>
-              I had systems that optimized everything — and trapped me in the very delusions I built. I thought I was becoming better, but really, I was just getting better at performing.
+              We built systems that optimized everything — and in the process, got stuck inside the delusions of who we thought we needed to be. Now, we build systems that help us <strong>stay human</strong>. Systems that keep us in alignment, but still hold structure and discipline for success.
             </p>
             
             <p>
-              Now, I build systems that help me stay human — systems built on alignment, reflection, and structure that still support real success.
+              After years of feeling scattered across too many tools and overwhelmed by endless advice, we realized something simple: we don't need more information — we need <strong>clarity</strong>. We need a way to <strong>think for ourselves</strong>.
             </p>
             
             <p>
-              After years of feeling scattered across too many tools and overwhelmed by endless advice, I realized something simple: we don't need more information — we need clarity. We need a way to think for ourselves.
+              That's what MindVault is about. It's not a productivity hack or a "10X your life" system. It's a space to reflect, and design systems that actually work — for <strong>who you are</strong>, not who you've been told to be.
             </p>
             
             <p>
-              That's what MindVault is about. It's not a productivity hack or a "10X your life" system. It's a space to reflect and design systems that actually work — for who you are, not who you've been told to be.
+              Because every thought, feeling, and action is derived from how you see the world, yourself, and others. So let's make sure we see these things <strong>clearly</strong>.
             </p>
             
             <p>
-              Because every thought, feeling, and action is derived from how you see the world, yourself, and others — so let's make sure you see those things clearly.
-            </p>
-            
-            <p>
-              The work here is to challenge the illusions that build limiting beliefs, and to rebuild your internal operating system — with intention.
-            </p>
-            
-            <p className="text-foreground font-medium italic text-2xl md:text-3xl leading-relaxed">
-              <span className="border-b-2 border-accent">This is the real work of modern intelligence: learning to stay human in the age of systems.</span>
+              The work here is to challenge those illusions that build <strong>limiting beliefs</strong> — to rebuild our internal operating systems with <strong>intention</strong>.
             </p>
 
             <div className="flex justify-center mt-8">
