@@ -202,6 +202,7 @@ export const FreeTools = () => {
         open={dialogOpen}
         onOpenChange={setDialogOpen}
         toolName={selectedTool}
+        delayedDelivery={true}
       />
     </section>
   );

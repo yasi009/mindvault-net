@@ -118,6 +118,7 @@ export const Footer = () => {
       open={toolDialogOpen}
       onOpenChange={setToolDialogOpen}
       toolName={audience === "students" ? "Life OS Template" : "Free Resources"}
+      delayedDelivery={true}
     />
     </>
   );

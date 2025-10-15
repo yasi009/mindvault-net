@@ -61,6 +61,6 @@ export const Hero = () => {
 
       <ConsultationDialog open={consultationOpen} onOpenChange={setConsultationOpen} />
       
-      <ToolSignupDialog open={toolDialogOpen} onOpenChange={setToolDialogOpen} toolName="Free Resources" />
+      <ToolSignupDialog open={toolDialogOpen} onOpenChange={setToolDialogOpen} toolName="Free Resources" delayedDelivery={true} />
     </>;
 };

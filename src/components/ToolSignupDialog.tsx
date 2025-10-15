@@ -17,9 +17,10 @@ interface ToolSignupDialogProps {
   onOpenChange: (open: boolean) => void;
   toolName: string;
   onSuccess?: () => void;
+  delayedDelivery?: boolean; // If true, shows "will be emailed" message instead of "instant access"
 }
 
-export const ToolSignupDialog = ({ open, onOpenChange, toolName, onSuccess }: ToolSignupDialogProps) => {
+export const ToolSignupDialog = ({ open, onOpenChange, toolName, onSuccess, delayedDelivery = false }: ToolSignupDialogProps) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -54,7 +55,9 @@ export const ToolSignupDialog = ({ open, onOpenChange, toolName, onSuccess }: To
 
       toast({
         title: "Success! 🎉",
-        description: "Check your email for the download link.",
+        description: delayedDelivery 
+          ? "You'll receive an email once the resource is ready." 
+          : "Check your email for the download link.",
       });
 
       // Reset form and close dialog
@@ -81,9 +84,11 @@ export const ToolSignupDialog = ({ open, onOpenChange, toolName, onSuccess }: To
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle>Get Instant Access</DialogTitle>
+          <DialogTitle>{delayedDelivery ? "Get Notified" : "Get Instant Access"}</DialogTitle>
           <DialogDescription>
-            Enter your name & email to receive the download link. No spam. Unsubscribe anytime.
+            {delayedDelivery 
+              ? "Enter your name & email. We'll send you the resource once it's polished and ready. No spam. Unsubscribe anytime."
+              : "Enter your name & email to receive the download link. No spam. Unsubscribe anytime."}
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4 mt-4">
@@ -111,10 +116,12 @@ export const ToolSignupDialog = ({ open, onOpenChange, toolName, onSuccess }: To
             />
           </div>
           <Button type="submit" className="w-full" disabled={isSubmitting}>
-            {isSubmitting ? "Submitting..." : "Get Access"}
+            {isSubmitting ? "Submitting..." : (delayedDelivery ? "Notify Me" : "Get Access")}
           </Button>
           <p className="text-xs text-muted-foreground text-center">
-            I send updates + fixes to your template/GPT.
+            {delayedDelivery 
+              ? "You'll be notified when it's ready."
+              : "I send updates + fixes to your template/GPT."}
           </p>
         </form>
       </DialogContent>

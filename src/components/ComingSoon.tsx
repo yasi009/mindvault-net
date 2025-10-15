@@ -1,6 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
+import { useState } from "react";
+import { ToolSignupDialog } from "./ToolSignupDialog";
+
 export const ComingSoon = () => {
+  const [ticketDialogOpen, setTicketDialogOpen] = useState(false);
+  
   return <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-br from-purple-50 via-pink-50 to-peach-50">
       <div className="max-w-4xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full mb-6">
@@ -16,9 +21,16 @@ export const ComingSoon = () => {
           Join us this November for a powerful session on clarity, consciousness, and creating systems for your real self.
         </p>
         
-        <Button size="lg" className="shadow-lg hover:shadow-xl transition-shadow" onClick={() => window.location.href = '#tickets'}>
+        <Button size="lg" className="shadow-lg hover:shadow-xl transition-shadow" onClick={() => setTicketDialogOpen(true)}>
           Get Tickets
         </Button>
       </div>
+      
+      <ToolSignupDialog 
+        open={ticketDialogOpen}
+        onOpenChange={setTicketDialogOpen}
+        toolName="ISRA Academy Workshop Tickets"
+        delayedDelivery={true}
+      />
     </section>;
 };
