@@ -12,11 +12,11 @@ export const MyWhy = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed font-heading">
             <p>
-              As an overachieving UNSW international student and strategist consultant, <span className="border-b-2 border-accent">I used to chase perfection — now I build systems that help me stay human.</span> After years of feeling scattered across too many tools and overwhelmed by endless advice, I realized something: <span className="border-b-2 border-accent">we don't need more information. We need clarity, structure, and a way to think for ourselves.</span>
+              As an overachieving UNSW international student and strategist consultant, I used to chase perfection — now I build systems that help me stay human. After years of feeling scattered across too many tools and overwhelmed by endless advice, I realized something: we don't need more information. We need clarity, structure, and a way to think for ourselves.
             </p>
             
             <p>
-              That's what MindVault is about. It's not a productivity hack or another "10X your life" promise. <span className="border-b-2 border-accent">It's a space to breathe, reflect, and design systems that actually work for who you are</span> — not who you think you should be.
+              That's what MindVault is about. It's not a productivity hack or another "10X your life" promise. It's a space to breathe, reflect, and design systems that actually work for who you are — not who you think you should be.
             </p>
             
             <p className="text-foreground font-medium italic text-2xl md:text-3xl leading-relaxed">
