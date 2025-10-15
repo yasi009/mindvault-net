@@ -32,22 +32,33 @@ export const ClientWork = () => {
         />
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6">
-        <SpeechBubble
-          quote="It's really that easy?"
-          author="UNSW student"
-          variant="left"
-        />
-        <SpeechBubble
-          quote="I thought AI was scary; you made it simple."
-          author="Workshop attendee"
-          variant="right"
-        />
-        <SpeechBubble
-          quote="This changed how I organize my entire student life."
-          author="High school student"
-          variant="left"
-        />
+      <div className="space-y-8 max-w-4xl mx-auto">
+        {[
+          { quote: "It's really that easy?", author: "UNSW student" },
+          { quote: "I thought AI was scary; you made it simple.", author: "Workshop attendee" },
+          { quote: "This changed how I organize my entire student life.", author: "High school student" }
+        ]
+          .sort((a, b) => a.quote.length - b.quote.length)
+          .map((testimonial, index) => (
+            <blockquote
+              key={index}
+              className="text-foreground font-heading italic text-center"
+              style={{ 
+                fontSize: `${1.5 + index * 0.3}rem`,
+              }}
+            >
+              <span 
+                className="inline-block overflow-hidden whitespace-nowrap border-r-2 border-foreground pr-1 animate-typing"
+                style={{
+                  animationDelay: `${index * 0.5}s`,
+                  animationDuration: `${2 + testimonial.quote.length * 0.03}s`
+                }}
+              >
+                "{testimonial.quote}"
+              </span>
+              <footer className="text-muted-foreground text-base mt-2 not-italic font-heading">— {testimonial.author}</footer>
+            </blockquote>
+          ))}
       </div>
     </>
   );
