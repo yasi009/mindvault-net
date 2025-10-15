@@ -42,13 +42,13 @@ export const ClientWork = () => {
           .map((testimonial, index) => (
             <blockquote
               key={index}
-              className="text-foreground font-heading italic text-center"
+              className="text-accent font-heading italic text-center"
               style={{ 
                 fontSize: `${1.5 + index * 0.3}rem`,
               }}
             >
               <span 
-                className="inline-block overflow-hidden whitespace-nowrap border-r-2 border-foreground pr-1 animate-typing"
+                className="inline-block overflow-hidden whitespace-nowrap border-r-2 border-accent pr-1 animate-typing"
                 style={{
                   animationDelay: `${index * 0.5}s`,
                   animationDuration: `${2 + testimonial.quote.length * 0.03}s`
@@ -56,7 +56,7 @@ export const ClientWork = () => {
               >
                 "{testimonial.quote}"
               </span>
-              <footer className="text-muted-foreground text-base mt-2 not-italic font-heading">— {testimonial.author}</footer>
+              <footer className="text-accent/70 text-base mt-2 not-italic font-heading">— {testimonial.author}</footer>
             </blockquote>
           ))}
       </div>

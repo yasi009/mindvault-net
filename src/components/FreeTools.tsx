@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Download, Sparkles, BookOpen, FileText, Users, Briefcase } from "lucide-react";
+import { Download, Sparkles, BookOpen, FileText, Users, Briefcase, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { ToolSignupDialog } from "./ToolSignupDialog";
 import { useAudience } from "@/contexts/AudienceContext";
@@ -9,6 +9,7 @@ export const FreeTools = () => {
   const { audience } = useAudience();
   const [dialogOpen, setDialogOpen] = useState(false);
   const [selectedTool, setSelectedTool] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const studentTools = [
     {
@@ -92,6 +93,18 @@ export const FreeTools = () => {
   };
 
   const tools = getTools();
+  
+  const handleNext = () => {
+    if (currentIndex < tools.length - 3) {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+
+  const handlePrev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
 
   if (!audience || tools.length === 0) return null;
 
@@ -133,25 +146,55 @@ export const FreeTools = () => {
           </p>
         </div>
 
-        <div className={`grid gap-8 ${tools.length === 2 ? 'md:grid-cols-2 max-w-4xl mx-auto' : 'md:grid-cols-3'}`}>
-          {tools.map((tool, index) => (
-            <Card key={index} className="group hover:scale-105 transition-all duration-300 bg-card border-border shadow-soft hover:shadow-elegant">
-              <CardContent className="p-8 text-center">
-                <div className="text-primary mb-4 flex justify-center group-hover:animate-float">
-                  {tool.icon}
+        <div className="relative max-w-7xl mx-auto">
+          {/* Navigation Arrows */}
+          {tools.length > 3 && (
+            <>
+              <button
+                onClick={handlePrev}
+                disabled={currentIndex === 0}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 z-10 bg-accent text-accent-foreground p-3 rounded-full shadow-elegant hover:scale-110 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+              <button
+                onClick={handleNext}
+                disabled={currentIndex >= tools.length - 3}
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 z-10 bg-accent text-accent-foreground p-3 rounded-full shadow-elegant hover:scale-110 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+            </>
+          )}
+
+          {/* Tools Container */}
+          <div className="overflow-hidden">
+            <div 
+              className="flex gap-8 transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
+            >
+              {tools.map((tool, index) => (
+                <div key={index} className="min-w-[calc(33.333%-1.333rem)] flex-shrink-0">
+                  <Card className="group hover:scale-105 transition-all duration-300 bg-card border-border shadow-soft hover:shadow-elegant h-full">
+                    <CardContent className="p-8 text-center flex flex-col h-full">
+                      <div className="text-primary mb-4 flex justify-center group-hover:animate-float">
+                        {tool.icon}
+                      </div>
+                      <h3 className="text-xl font-bold mb-3 text-foreground">{tool.title}</h3>
+                      <p className="text-muted-foreground mb-6 leading-relaxed flex-grow">{tool.description}</p>
+                      <Button 
+                        variant="outline" 
+                        className="w-full"
+                        onClick={() => handleToolClick(tool.title)}
+                      >
+                        {tool.cta}
+                      </Button>
+                    </CardContent>
+                  </Card>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">{tool.title}</h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">{tool.description}</p>
-                <Button 
-                  variant="outline" 
-                  className="w-full"
-                  onClick={() => handleToolClick(tool.title)}
-                >
-                  {tool.cta}
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
