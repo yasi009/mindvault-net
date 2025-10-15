@@ -16,7 +16,7 @@ const Index = () => {
         <Navigation />
         <Hero />
         <MyWhy />
-        <PullQuote quote="You don't rise to your goals; you fall to your systems." />
+        <PullQuote quote="Systems designed with care create lives lived with purpose." />
         <AudienceSelector />
         <GuideSection />
         <Workshops />
