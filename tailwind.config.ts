@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        'rafgins': ['Ramaraja', 'serif'],
-        'sans': ['Inter', 'sans-serif'],
+        'heading': ['Cormorant Garamond', 'serif'],
+        'sans': ['Montserrat', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
