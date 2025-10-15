@@ -112,13 +112,20 @@ export const SuccessStories = () => {
             .map((testimonial, index) => (
               <blockquote
                 key={index}
-                className="text-white/90 font-heading italic text-center animate-fade-in"
+                className="text-white/90 font-heading italic text-center"
                 style={{ 
                   fontSize: `${1.5 + index * 0.3}rem`,
-                  animationDelay: `${index * 0.3}s`
                 }}
               >
-                "{testimonial.quote}"
+                <span 
+                  className="inline-block overflow-hidden whitespace-nowrap border-r-2 border-white/90 pr-1 animate-typing"
+                  style={{
+                    animationDelay: `${index * 0.5}s`,
+                    animationDuration: `${2 + testimonial.quote.length * 0.03}s`
+                  }}
+                >
+                  "{testimonial.quote}"
+                </span>
                 <footer className="text-white/70 text-base mt-2 not-italic font-heading">— {testimonial.author}</footer>
               </blockquote>
             ))}

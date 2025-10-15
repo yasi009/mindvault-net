@@ -113,6 +113,14 @@ export default {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" }
         },
+        "typing": {
+          "0%": { width: "0" },
+          "100%": { width: "100%" }
+        },
+        "blink": {
+          "0%, 100%": { borderColor: "transparent" },
+          "50%": { borderColor: "currentColor" }
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -122,6 +130,8 @@ export default {
         "underline-draw": "underline-draw 1.2s ease-out 0.5s forwards",
         "scroll-left": "scroll-left 30s linear infinite",
         "scroll-right": "scroll-right 40s linear infinite",
+        "typing": "typing 3s steps(40, end) forwards",
+        "blink": "blink 0.7s infinite"
       },
     },
   },
