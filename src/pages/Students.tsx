@@ -28,9 +28,8 @@ const StudentsContent = () => {
       <Hero />
       <ProblemSection />
       <MyWhy />
-      <PullQuote quote="True intelligence is seeing what's actually there." />
+      <PullQuote quote="You don't rise to your goals; you fall to your systems." />
       <GuideSection />
-      <PullQuote quote="You don't rise to your goals; you fall to your systems." className="bg-gradient-soft" />
       <PlanSection />
       <PullQuote quote="Leadership begins with self-awareness." />
       <ClientWork />
