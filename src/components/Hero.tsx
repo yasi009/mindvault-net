@@ -11,10 +11,13 @@ export const Hero = () => {
   return (
     <>
       {/* Orange ribbon banner */}
-      <div className="w-full bg-accent py-4 mb-8">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="font-heading text-white italic text-lg md:text-xl tracking-[0.3em] uppercase">
-            MINDVAULT • DEBUNK. DEMYSTIFY. DESIGN.
+      <div className="w-full bg-accent py-4 mb-8 overflow-hidden">
+        <div className="flex animate-scroll-right whitespace-nowrap">
+          <p className="font-heading text-white italic text-lg md:text-xl tracking-[0.3em] uppercase px-8">
+            DEBUNK. DEMYSTIFY. DESIGN. • DEBUNK. DEMYSTIFY. DESIGN. • DEBUNK. DEMYSTIFY. DESIGN. • DEBUNK. DEMYSTIFY. DESIGN. • DEBUNK. DEMYSTIFY. DESIGN. • DEBUNK. DEMYSTIFY. DESIGN. • DEBUNK. DEMYSTIFY. DESIGN. • DEBUNK. DEMYSTIFY. DESIGN.
+          </p>
+          <p className="font-heading text-white italic text-lg md:text-xl tracking-[0.3em] uppercase px-8">
+            DEBUNK. DEMYSTIFY. DESIGN. • DEBUNK. DEMYSTIFY. DESIGN. • DEBUNK. DEMYSTIFY. DESIGN. • DEBUNK. DEMYSTIFY. DESIGN. • DEBUNK. DEMYSTIFY. DESIGN. • DEBUNK. DEMYSTIFY. DESIGN. • DEBUNK. DEMYSTIFY. DESIGN. • DEBUNK. DEMYSTIFY. DESIGN.
           </p>
         </div>
       </div>

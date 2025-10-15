@@ -6,6 +6,15 @@
 All colors MUST be HSL.
 */
 
+@keyframes scroll-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 @layer base {
   :root {
     --background: 340 35% 90%;
