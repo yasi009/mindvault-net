@@ -50,15 +50,9 @@ export const SuccessStories = () => {
             <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-none bg-white/95">
               <CardContent className="p-8">
                 <div className="space-y-6">
-                  {/* Impact - Always visible */}
+                  {/* Impact - Main subtitle */}
                   <div>
-                    <div className="flex items-center gap-2 mb-3">
-                      <CheckCircle2 className="w-8 h-8 text-accent" />
-                      <h4 className="font-semibold text-foreground">Project Impact</h4>
-                    </div>
-                    <p className="text-accent font-medium text-sm leading-relaxed ml-10">
-                      {story.impact}
-                    </p>
+                    <h3 className="text-2xl font-bold text-foreground mb-4">{story.impact}</h3>
                   </div>
 
                   {/* Expandable content */}
@@ -94,12 +88,12 @@ export const SuccessStories = () => {
 
                   {/* Client & Read More */}
                   <div className="pt-4 border-t border-border">
-                    <p className="text-sm text-muted-foreground font-medium ml-10 mb-3">
+                    <p className="text-sm text-muted-foreground font-medium mb-3">
                       — {story.client}
                     </p>
                     <button
                       onClick={() => setExpandedStory(expandedStory === index ? null : index)}
-                      className="ml-10 text-primary font-medium text-sm flex items-center gap-1 hover:gap-2 transition-all"
+                      className="text-primary font-medium text-sm flex items-center gap-1 hover:gap-2 transition-all"
                     >
                       {expandedStory === index ? "Show less" : "Read more"}
                       <ArrowRight className="w-4 h-4" />
@@ -112,20 +106,22 @@ export const SuccessStories = () => {
         </div>
 
         {/* Testimonials */}
-        <div className="space-y-6 max-w-4xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <blockquote
-              key={index}
-              className="text-white/90 font-heading italic text-center animate-fade-in"
-              style={{ 
-                fontSize: `${1.25 + index * 0.25}rem`,
-                animationDelay: `${index * 0.2}s`
-              }}
-            >
-              "{testimonial.quote}"
-              <footer className="text-white/70 text-sm mt-2 not-italic">— {testimonial.author}</footer>
-            </blockquote>
-          ))}
+        <div className="space-y-8 max-w-4xl mx-auto">
+          {testimonials
+            .sort((a, b) => a.quote.length - b.quote.length)
+            .map((testimonial, index) => (
+              <blockquote
+                key={index}
+                className="text-white/90 font-heading italic text-center animate-fade-in"
+                style={{ 
+                  fontSize: `${1.5 + index * 0.3}rem`,
+                  animationDelay: `${index * 0.3}s`
+                }}
+              >
+                "{testimonial.quote}"
+                <footer className="text-white/70 text-base mt-2 not-italic font-heading">— {testimonial.author}</footer>
+              </blockquote>
+            ))}
         </div>
       </div>
     </section>
