@@ -11,8 +11,8 @@ export const AboutUs = () => {
       <section className="py-24 px-6 bg-muted/30">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground tracking-tight">
-              Approach & Philosophy
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-[#FF6B6B]">
+              ✦ Approach & Philosophy ✦
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Bridging technology and human potential through systematic design
@@ -20,12 +20,12 @@ export const AboutUs = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-card p-8 rounded-lg shadow-soft border border-border">
+            <div className="backdrop-blur-md bg-white/10 p-8 rounded-lg border border-white/20 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-2">
               <h3 className="text-2xl font-semibold mb-4 text-foreground">Systems-First Thinking</h3>
               <p className="text-muted-foreground leading-relaxed">We specialise in creating Life Operating Systems. Structured frameworks that transform complexity into clarity. These digital ecosystems help individuals and organisations optimise their workflows, decision-making, and productivity.</p>
             </div>
 
-            <div className="bg-card p-8 rounded-lg shadow-soft border border-border">
+            <div className="backdrop-blur-md bg-white/10 p-8 rounded-lg border border-white/20 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-2">
               <h3 className="text-2xl font-semibold mb-4 text-foreground">AI Literacy & Integration</h3>
               <p className="text-muted-foreground leading-relaxed">
                 From custom GPT development to AI-powered automation, I help clients harness artificial intelligence 
