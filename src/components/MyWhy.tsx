@@ -12,7 +12,7 @@ export const MyWhy = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              As an overachieving UNSW international student and strategist consultant, I used to chase perfection — now I build systems that help me stay human. After years of feeling scattered across too many tools and overwhelmed by endless advice, I realized something: <span className="text-foreground font-medium relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent">we don't need more information. We need clarity, structure, and a way to think for ourselves.</span>
+              As an overachieving UNSW international student and strategist consultant, <span className="font-heading text-primary italic relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary">I used to chase perfection — now I build systems that help me stay human.</span> After years of feeling scattered across too many tools and overwhelmed by endless advice, I realized something: <span className="font-heading text-primary italic relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary">we don't need more information. We need clarity, structure, and a way to think for ourselves.</span>
             </p>
             
             <p>

@@ -100,6 +100,10 @@ export default {
           "0%": { width: "0%" },
           "100%": { width: "100%" },
         },
+        "scroll-left": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -107,6 +111,7 @@ export default {
         "float": "float 3s ease-in-out infinite",
         "fade-in": "fade-in 0.6s ease-out",
         "underline-draw": "underline-draw 1.2s ease-out 0.5s forwards",
+        "scroll-left": "scroll-left 30s linear infinite",
       },
     },
   },
