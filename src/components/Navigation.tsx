@@ -15,7 +15,7 @@ export const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="text-xl font-bold text-foreground">
-            TheMindVault
+            <span className="font-petit">TheMind</span><span className="font-manrope">Vault</span>
           </Link>
           
           <div className="flex items-center gap-8">
