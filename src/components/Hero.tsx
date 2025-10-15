@@ -43,7 +43,7 @@ export const Hero = () => {
           </div>
 
           <div className="max-w-3xl mx-auto text-center space-y-6 sm:space-y-8">
-            <p className="text-lg sm:text-xl md:text-2xl text-foreground animate-fade-in leading-relaxed px-4">We help lea, educators, and leaders cut through overwhelm and build systems that bring clarity, control, and calm to their work and life.</p>
+            <p className="text-lg sm:text-xl md:text-2xl text-foreground animate-fade-in leading-relaxed px-4">We help learners, educators, and leaders cut through overwhelm and build systems that bring clarity, control, and calm to their work and life.</p>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in justify-center">
               <Button size="lg" onClick={() => setConsultationOpen(true)}>
