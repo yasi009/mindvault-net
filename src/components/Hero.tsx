@@ -10,22 +10,26 @@ export const Hero = () => {
 
   return (
     <>
+      {/* Orange ribbon banner */}
+      <div className="w-full bg-accent py-4 mb-8">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <p className="font-heading text-white italic text-lg md:text-xl tracking-[0.3em] uppercase">
+            MINDVAULT • DEBUNK. DEMYSTIFY. DESIGN.
+          </p>
+        </div>
+      </div>
+
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-soft">
         {/* Subtle background pattern */}
         <div className="absolute inset-0 opacity-[0.03]">
           <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(262 52% 47%) 1px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(220 45% 25%) 1px, transparent 0)',
             backgroundSize: '48px 48px'
           }}></div>
         </div>
 
         {/* Content */}
         <div className="relative z-10 max-w-6xl mx-auto px-6 text-center py-32">
-          <div className="mb-8 inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border bg-card/50 backdrop-blur-sm animate-fade-in">
-            <span className="text-sm text-foreground font-medium">MindVault</span>
-            <span className="text-xs text-muted-foreground">•</span>
-            <span className="text-sm text-muted-foreground">Debunk. Demystify. Design.</span>
-          </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-8 text-foreground animate-fade-in leading-[1.1] tracking-tight">
             <span className="relative inline-block">
