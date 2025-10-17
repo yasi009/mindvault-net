@@ -10,10 +10,10 @@ export const ComingSoon = () => {
       <div className="max-w-4xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full mb-6">
           <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-          <span className="text-xs sm:text-sm font-medium text-foreground">November 2025</span>
+          <span className="text-xs sm:text-sm font-medium text-foreground">23rd November 2025 • 12:00 PM</span>
         </div>
         
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 text-foreground px-4">Coming Soon: ISRA Academy Workshop</h2>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 text-foreground px-4">ISRA Academy Workshop</h2>
         
         <p className="text-xs sm:text-sm text-muted-foreground mb-6">Level 3/128-136 S Parade, Auburn NSW 2144</p>
         
