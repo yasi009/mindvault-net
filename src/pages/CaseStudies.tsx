@@ -12,7 +12,7 @@ const CaseStudies = () => {
       solution: "Designed custom workflow automation system and trained staff on streamlined processes aligned with NDIS requirements.",
       result: "40% reduction in administrative time, 100% compliance rate, and improved staff satisfaction.",
       testimonial: "Working with Yaseerah was a game-changer. I showed her my frustrations with a messy system of carers sending case notes in every format and within an hour she'd mapped out a solution that actually made sense. She designed a simple AI setup that now pulls all our notes into one place and gives us clean client summaries without all the manual admin. It's made day-to-day management so much easier.",
-      author: "Operations Manager"
+      author: "South Coast Carers, Business Owner"
     },
     {
       title: "AI Integration Strategy",
