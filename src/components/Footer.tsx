@@ -66,10 +66,10 @@ export const Footer = () => {
             <div>
               <h4 className="font-semibold mb-4">Connect</h4>
               <div className="flex gap-4">
-                <a href="mailto:yaseerah@mindvault.com.au" className="text-background/70 hover:text-background transition-colors">
+                <a href="mailto:admin@mindvault.net.au" className="text-background/70 hover:text-background transition-colors">
                   <Mail className="w-6 h-6" />
                 </a>
-                <a href="https://www.linkedin.com/in/yaseerahmirza" target="_blank" rel="noopener noreferrer" className="text-background/70 hover:text-background transition-colors">
+                <a href="https://www.linkedin.com/in/yaseerah-hassan-66a51b249" target="_blank" rel="noopener noreferrer" className="text-background/70 hover:text-background transition-colors">
                   <Linkedin className="w-6 h-6" />
                 </a>
               </div>

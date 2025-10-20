@@ -163,20 +163,20 @@ const Contact = () => {
               <h3 className="text-xl font-semibold text-foreground">Direct Contact</h3>
               
               <a 
-                href="mailto:yaseerah@mindvault.com.au" 
+                href="mailto:admin@mindvault.net.au" 
                 className="flex items-center gap-3 p-4 bg-card rounded-lg border border-border hover:shadow-soft transition-shadow group"
               >
                 <Mail className="w-6 h-6 text-accent" />
                 <div>
                   <div className="text-sm text-muted-foreground">Email</div>
                   <div className="text-foreground group-hover:text-primary transition-colors">
-                    yaseerah@mindvault.com.au
+                    admin@mindvault.net.au
                   </div>
                 </div>
               </a>
 
               <a 
-                href="https://www.linkedin.com/in/yaseerahmirza" 
+                href="https://www.linkedin.com/in/yaseerah-hassan-66a51b249" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 p-4 bg-card rounded-lg border border-border hover:shadow-soft transition-shadow group"
