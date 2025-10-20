@@ -6,7 +6,12 @@ export const Navigation = () => {
   
   const links = [
     { path: "/", label: "Home" },
-    { path: "/about-us", label: "About Us" },
+    { path: "/services", label: "Services" },
+    { path: "/work-with-us", label: "Work With Us" },
+    { path: "/case-studies", label: "Case Studies" },
+    { path: "/library", label: "Library" },
+    { path: "/about-us", label: "About" },
+    { path: "/contact", label: "Contact" },
   ];
 
   return (

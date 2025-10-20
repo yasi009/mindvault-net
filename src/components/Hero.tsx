@@ -43,16 +43,14 @@ export const Hero = () => {
           </div>
 
           <div className="max-w-3xl mx-auto text-center space-y-6 sm:space-y-8">
-            <p className="text-lg sm:text-xl md:text-2xl text-foreground animate-fade-in leading-relaxed px-4">We help learners, educators, and leaders cut through overwhelm and build systems that bring clarity, control, and calm to their work and life.</p>
-
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in justify-center">
               <Button size="lg" onClick={() => setConsultationOpen(true)}>
-                Book a 15-min Call
+                Book a Consultation
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
-              <Button variant="outline" size="lg" onClick={() => setToolDialogOpen(true)}>
-                <Download className="w-5 h-5 mr-2" />
-                Download Free Tools
+              <Button variant="outline" size="lg" onClick={() => window.location.href = '/services'}>
+                Explore Workshops
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </div>
           </div>
