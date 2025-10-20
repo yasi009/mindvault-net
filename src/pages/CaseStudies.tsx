@@ -8,9 +8,9 @@ const CaseStudies = () => {
     {
       title: "NDIS Workflow Transformation",
       client: "Healthcare Provider",
-      challenge: "Complex NDIS compliance processes causing administrative overwhelm and inconsistent service delivery.",
-      solution: "Designed custom workflow automation system and trained staff on streamlined processes aligned with NDIS requirements.",
-      result: "40% reduction in administrative time, 100% compliance rate, and improved staff satisfaction.",
+      challenge: "Managing case notes from multiple carers in different formats was creating major admin bottlenecks and making it hard to maintain consistency and compliance across client records.",
+      solution: "Mapped and designed an AI-assisted workflow that automatically collects and structures case notes, integrates with Xero for record-keeping, and generates real-time client summaries—simplifying documentation and compliance tracking.",
+      result: "Streamlined data flow, reduced manual admin workload, and improved visibility across client care — enabling faster decision-making and higher-quality service delivery.",
       testimonial: "Working with Yaseerah was a game-changer. I showed her my frustrations with a messy system of carers sending case notes in every format and within an hour she'd mapped out a solution that actually made sense. She designed a simple AI setup that now pulls all our notes into one place and gives us clean client summaries without all the manual admin. It's made day-to-day management so much easier.",
       author: "South Coast Carers, Business Owner"
     },
