@@ -32,15 +32,6 @@ const CaseStudies = () => {
       testimonial: "Yaseerah made AI accessible and relevant. Her approach is practical, ethical, and genuinely empowering.",
       author: "Senior Lecturer, UNSW"
     },
-    {
-      title: "Digital Literacy Program",
-      client: "Scroll2Action",
-      challenge: "Community members struggling with digital overwhelm and lack of systematic approach to online learning.",
-      solution: "Co-designed digital literacy curriculum emphasizing systems thinking and intentional technology use.",
-      result: "Program reached 200+ participants with 90% completion rate and measurable skill improvements.",
-      testimonial: "The program didn't just teach skills—it changed how people think about technology and learning.",
-      author: "Program Director"
-    }
   ];
 
   return (
