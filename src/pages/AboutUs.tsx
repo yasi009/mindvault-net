@@ -32,11 +32,14 @@ export const AboutUs = () => {
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <img 
-                src={yaseerahImage} 
-                alt="Yaseerah teaching at UNSW" 
+              <video 
+                controls
                 className="rounded-lg shadow-elegant w-full"
-              />
+                poster={yaseerahImage}
+              >
+                <source src="/path-to-your-video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
