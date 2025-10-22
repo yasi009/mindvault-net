@@ -20,8 +20,8 @@ const CaseStudies = () => {
       challenge: "The leadership team wanted to explore AI adoption but faced overwhelming, disconnected systems, low digital confidence, and no clear data foundations. Tools and processes were fragmented across platforms, making it difficult to see where AI could add real value.",
       solution: "Led a strategic discovery and education process — conducting AI literacy sessions, mapping current workflows, and identifying readiness gaps. Designed a phased roadmap that focused first on building solid digital systems and data flow before layering in responsible AI use cases.",
       result: "Shifted the team's mindset from overwhelm to clarity, established strong digital foundations, and created a realistic, human-centred AI integration plan aligned with long-term transformation goals.",
-      testimonial: "The workshop demystified AI for our entire team. We now have a clear roadmap that aligns with our values.",
-      author: "CEO, Makinex"
+      testimonial: "Yasi came to Markinex to investigate AI and our digital transformation for AI. She quickly taught most people in the organisation the best methods for using AI, how it works and some basics while developing a more robust strategy for the business as a whole",
+      author: "CEO Rory Kennard"
     },
     {
       title: "Educational AI Workshop Series",
