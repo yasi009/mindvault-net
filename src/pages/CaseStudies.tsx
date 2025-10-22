@@ -24,13 +24,13 @@ const CaseStudies = () => {
       author: "CEO Rory Kennard"
     },
     {
-      title: "Educational AI Workshop Series",
-      client: "University Educators (UNSW)",
-      challenge: "Faculty overwhelmed by AI developments and uncertain how to integrate it into teaching ethically.",
-      solution: "Delivered hands-on workshops covering AI literacy, practical applications, and ethical frameworks for education.",
-      result: "85% of participants reported increased confidence in using AI tools; 3 new AI-enhanced courses launched.",
-      testimonial: "Yaseerah made AI accessible and relevant. Her approach is practical, ethical, and genuinely empowering.",
-      author: "Senior Lecturer, UNSW"
+      title: "Debunk, Demystify & Design Workshop",
+      client: "Girls in Business (UNSW/NIDA)",
+      challenge: "High school girls navigating stereotypes, identity questions, and uncertainty about their place in an AI-powered future — needing honest conversations and practical tools to build confidence and digital literacy.",
+      solution: "Co-branded and delivered 'Debunk, Demystify & Design Your Future' workshop at the 2025 Girls in Business Camp at NIDA theatre. Used storytelling, honesty, and a powerful live exercise to challenge stereotypes and spark conversations about identity, confidence, and designing futures with intention.",
+      result: "Created an inspiring space where hundreds of young women felt empowered to rethink what's possible, lead boldly as their true selves, and approach their futures with clarity and purpose in a digital world.",
+      testimonial: "Yasi's session, Debunk, Demystify & Design Your Future, was a standout success at the 2025 Girls in Business Camp. Through storytelling, honesty, and a powerful live exercise, she challenged stereotypes and sparked conversations about identity, confidence, and digital literacy in an AI-powered world. Her authenticity, courage, and purpose-driven approach created a space where young women felt inspired to design their futures with intention and lead boldly as their true selves. Yasi truly embodied the principles of Debunk, Demystify & Design — and in doing so, inspired a new generation to rethink what's possible.",
+      author: "Rhiannon Tout, Equity, Diversity & Inclusion Project Officer, UNSW Business School"
     },
   ];
 
