@@ -92,7 +92,7 @@ export const AboutUs = () => {
           {/* Trust Statement */}
           <div className="bg-muted/30 p-10 rounded-xl text-center">
             <p className="text-xl text-foreground font-medium leading-relaxed">
-              Trusted by students, professionals, and organizations across education, healthcare, and technology sectors.
+              Trusted by learners, professionals, and organizations across education, healthcare, and technology sectors.
             </p>
           </div>
         </div>
