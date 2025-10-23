@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        'heading': ['Fraunces', 'serif'],
+        'heading': ['Cormorant Garamond', 'serif'],
         'sans': ['Mulish', 'sans-serif'],
       },
       colors: {
