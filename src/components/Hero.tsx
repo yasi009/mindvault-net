@@ -36,7 +36,7 @@ export const Hero = () => {
                 Think clearer.
               </span>
               <br />
-              Do less.
+              DO MORE.
               <br />
               Achieve more.
             </h1>
