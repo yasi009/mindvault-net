@@ -4,13 +4,10 @@ import { useState } from "react";
 import { ConsultationDialog } from "./ConsultationDialog";
 import { ToolSignupDialog } from "./ToolSignupDialog";
 import { Link } from "react-router-dom";
-
 export const Footer = () => {
   const [consultationOpen, setConsultationOpen] = useState(false);
   const [toolDialogOpen, setToolDialogOpen] = useState(false);
-
-  return (
-    <>
+  return <>
       <footer className="bg-foreground text-background py-20 px-6">
         <div className="max-w-7xl mx-auto">
           {/* Vision CTA Section */}
@@ -22,20 +19,11 @@ export const Footer = () => {
               Let's design systems that work for you, not against you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                variant="secondary" 
-                size="lg"
-                onClick={() => setToolDialogOpen(true)}
-              >
+              <Button variant="secondary" size="lg" onClick={() => setToolDialogOpen(true)}>
                 Download Free Resources
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="border-background/20 bg-transparent text-background hover:bg-background/10"
-                onClick={() => setConsultationOpen(true)}
-              >
+              <Button variant="outline" size="lg" className="border-background/20 bg-transparent text-background hover:bg-background/10" onClick={() => setConsultationOpen(true)}>
                 Book a Discovery Call
               </Button>
             </div>
@@ -46,9 +34,8 @@ export const Footer = () => {
           <div className="grid md:grid-cols-3 gap-12 mb-12">
             <div>
               <h3 className="text-2xl font-bold mb-4">MindVault</h3>
-              <p className="text-background/70 leading-relaxed">
-                Helping leaders and educators make sense of modern systems — so they can build clarity, confidence, and impact.
-              </p>
+              <p className="text-background/70 leading-relaxed">Think about the dissonance between your current self and your future self. 
+MindVault uses AI and structure to close that gap with clarity, calm, and consistency.</p>
             </div>
             
             <div>
@@ -83,17 +70,8 @@ export const Footer = () => {
       </div>
     </footer>
     
-    <ConsultationDialog 
-      open={consultationOpen}
-      onOpenChange={setConsultationOpen}
-    />
+    <ConsultationDialog open={consultationOpen} onOpenChange={setConsultationOpen} />
     
-    <ToolSignupDialog
-      open={toolDialogOpen}
-      onOpenChange={setToolDialogOpen}
-      toolName="Free Resources"
-      delayedDelivery={true}
-    />
-    </>
-  );
+    <ToolSignupDialog open={toolDialogOpen} onOpenChange={setToolDialogOpen} toolName="Free Resources" delayedDelivery={true} />
+    </>;
 };
