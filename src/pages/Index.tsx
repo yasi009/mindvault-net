@@ -18,7 +18,7 @@ const Index = () => {
       <section className="py-20 px-6 bg-muted/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
-            Helping leaders and learners <span className="italic text-accent">Debunk</span> confusion, <span className="italic text-accent">Demystify</span> AI, and <span className="italic text-accent">Design</span> systems that work.
+            Helping leaders and learners debunk confusion, demystify AI, and design systems that work for them — not against them.
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
             We help you make sense of modern tech, design better systems, and lead confidently in the age of AI.
