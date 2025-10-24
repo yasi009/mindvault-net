@@ -5,12 +5,9 @@ import { DDDProcess } from "@/components/DDDProcess";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-
 const Index = () => {
   const navigate = useNavigate();
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navigation />
       <Hero />
       
@@ -20,9 +17,7 @@ const Index = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
             Helping leaders and learners <span className="italic text-accent">Debunk</span> confusion, <span className="italic text-accent">Demystify</span> AI, and <span className="italic text-accent">Design</span> systems that work.
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            We help you make sense of modern tech, design better systems, and lead confidently in the age of AI.
-          </p>
+          <p className="text-xl text-muted-foreground leading-relaxed">We help leaders and educators make sense of modern technology, build clarity into complexity, and design smarter systems that create confidence, impact, and calm in the age of AI.</p>
         </div>
       </section>
 
@@ -45,8 +40,6 @@ const Index = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
