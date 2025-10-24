@@ -33,12 +33,12 @@ export const Hero = () => {
           <div className="w-full text-left">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary animate-fade-in leading-[1.05] tracking-tight italic uppercase w-full">
               <span className="relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-accent after:animate-fade-in">
-                Think Clearly.
+                Think clearer.
               </span>
               <br />
-              Work Intentionally.
+              Do less.
               <br />
-              Lead Confidently.
+              Achieve more.
             </h1>
           </div>
 
