@@ -6,10 +6,11 @@ export const Navigation = () => {
   
   const links = [
     { path: "/", label: "Home" },
-    { path: "/life-os", label: "Product", highlight: true },
-    { path: "/method", label: "How It Works" },
+    { path: "/services", label: "Services" },
+    { path: "/work-with-us", label: "Work With Us" },
     { path: "/case-studies", label: "Case Studies" },
-    { path: "/about", label: "About" },
+    { path: "/library", label: "Library" },
+    { path: "/about-us", label: "About" },
     { path: "/contact", label: "Contact" },
   ];
 
@@ -27,12 +28,10 @@ export const Navigation = () => {
                 key={link.path}
                 to={link.path}
                 className={cn(
-                  "text-sm font-medium transition-colors",
-                  link.highlight
-                    ? "bg-accent text-white px-4 py-2 rounded-full hover:bg-accent/90"
-                    : location.pathname === link.path
+                  "text-sm font-medium transition-colors hover:text-primary",
+                  location.pathname === link.path
                     ? "text-primary"
-                    : "text-muted-foreground hover:text-primary"
+                    : "text-muted-foreground"
                 )}
               >
                 {link.label}

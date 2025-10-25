@@ -149,9 +149,9 @@ const Contact = () => {
           <div className="space-y-6">
             <Card className="p-8 bg-gradient-card border-border">
               <Calendar className="w-12 h-12 text-accent mb-4" />
-              <h3 className="text-2xl font-bold mb-3 text-foreground">Book a Fit Check</h3>
+              <h3 className="text-2xl font-bold mb-3 text-foreground">Book a Discovery Call</h3>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Prefer a conversation? Schedule a 15-minute fit check to discuss your needs and see if Life OS is right for you.
+                Prefer a conversation? Schedule a 15-minute clarity session to discuss your needs.
               </p>
               <Button size="lg" onClick={() => setConsultationOpen(true)} className="w-full">
                 Book Now
