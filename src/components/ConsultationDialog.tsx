@@ -91,7 +91,7 @@ export const ConsultationDialog = ({ open, onOpenChange, onSuccess }: Consultati
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-2xl">Book Your Free 15-Minute Clarity Call</DialogTitle>
+          <DialogTitle className="text-2xl">Book Your Free 15-Minute Fit Check</DialogTitle>
         </DialogHeader>
 
         {isSuccess ? (
