@@ -35,11 +35,11 @@ export const Hero = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 md:py-32 space-y-8 sm:space-y-12">
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold animate-fade-in leading-[1.05] tracking-tight italic uppercase">
-              <span className="text-primary underline decoration-accent decoration-4">Think</span> clearly.
+              <span className="text-primary underline decoration-accent decoration-4">Think</span> clearer.
               <br />
-              <span className="text-accent underline decoration-primary decoration-4">Act</span> intentionally.
+              <span className="text-accent underline decoration-primary decoration-4">Do</span> less.
               <br />
-              <span className="text-primary underline decoration-accent decoration-4">Feel</span> in control.
+              <span className="text-primary underline decoration-accent decoration-4">Achieve</span> more.
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground mt-8 mb-10 max-w-3xl mx-auto leading-relaxed">
