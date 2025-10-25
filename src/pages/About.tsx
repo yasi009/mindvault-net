@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import yaseerahImage from "@/assets/yaseerah-unsw-teaching.jpg";
 
-export const AboutUs = () => {
+const About = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -103,4 +103,4 @@ export const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default About;
