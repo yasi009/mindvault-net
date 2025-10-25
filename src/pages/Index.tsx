@@ -49,18 +49,6 @@ const Index = () => {
       <Navigation />
       <Hero />
       
-      {/* Mission Tagline */}
-      <section className="py-8 px-6 bg-background border-b border-border">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-xl md:text-2xl leading-relaxed">
-            Helping leaders and learners{" "}
-            <span className="font-bold text-primary">Debunk</span> confusion,{" "}
-            <span className="font-bold text-accent">Demystify</span> AI, and{" "}
-            <span className="font-bold text-primary">Design</span> systems that work.
-          </p>
-        </div>
-      </section>
-      
       {/* Social Proof Strip */}
       <section className="py-12 px-6 bg-muted/30 border-b border-border">
         <div className="max-w-6xl mx-auto">
