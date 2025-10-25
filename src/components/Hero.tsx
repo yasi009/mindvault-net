@@ -43,13 +43,16 @@ export const Hero = () => {
           </div>
 
           <div className="max-w-3xl mx-auto text-center space-y-6 sm:space-y-8">
+            <p className="text-xl text-muted-foreground mb-8">
+              An AI-guided Life OS in Notion that turns your values into daily action.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in justify-center">
-              <Button size="lg" onClick={() => setConsultationOpen(true)}>
-                Book a Consultation
+              <Button size="lg" onClick={() => window.location.href = '/life-os'}>
+                Get Life OS
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
-              <Button variant="outline" size="lg" onClick={() => window.location.href = '/services'}>
-                Explore Workshops
+              <Button variant="outline" size="lg" onClick={() => window.location.href = '/method'}>
+                See How It Works
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </div>

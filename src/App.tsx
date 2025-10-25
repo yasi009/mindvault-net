@@ -4,10 +4,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import Services from "./pages/Services";
-import WorkWithUs from "./pages/WorkWithUs";
+import LifeOS from "./pages/LifeOS";
+import Method from "./pages/Method";
 import CaseStudies from "./pages/CaseStudies";
-import Library from "./pages/Library";
 import Contact from "./pages/Contact";
 import AboutUs from "./pages/AboutUs";
 import NotFound from "./pages/NotFound";
@@ -22,10 +21,9 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/work-with-us" element={<WorkWithUs />} />
+          <Route path="/life-os" element={<LifeOS />} />
+          <Route path="/method" element={<Method />} />
           <Route path="/case-studies" element={<CaseStudies />} />
-          <Route path="/library" element={<Library />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about-us" element={<AboutUs />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

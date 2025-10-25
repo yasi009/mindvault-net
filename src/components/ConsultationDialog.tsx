@@ -91,7 +91,7 @@ export const ConsultationDialog = ({ open, onOpenChange, onSuccess }: Consultati
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-2xl">Book Your Free 15-Minute Clarity Call</DialogTitle>
+          <DialogTitle className="text-2xl">Book Your Free 15-Minute Fit Check</DialogTitle>
         </DialogHeader>
 
         {isSuccess ? (
@@ -140,7 +140,7 @@ export const ConsultationDialog = ({ open, onOpenChange, onSuccess }: Consultati
 
             <div>
               <Textarea
-                placeholder="What would you like to discuss? (e.g., AI literacy for my team, digital transformation strategy, student productivity system)"
+                placeholder="What would you like to discuss? (e.g., Is Life OS right for me? How does onboarding work? Which package should I choose?)"
                 value={purpose}
                 onChange={(e) => setPurpose(e.target.value)}
                 required

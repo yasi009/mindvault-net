@@ -1,15 +1,15 @@
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 export const Navigation = () => {
   const location = useLocation();
   
   const links = [
     { path: "/", label: "Home" },
-    { path: "/services", label: "Services" },
-    { path: "/work-with-us", label: "Work With Us" },
+    { path: "/life-os", label: "Product" },
+    { path: "/method", label: "How It Works" },
     { path: "/case-studies", label: "Case Studies" },
-    { path: "/library", label: "Library" },
     { path: "/about-us", label: "About" },
     { path: "/contact", label: "Contact" },
   ];
@@ -37,6 +37,11 @@ export const Navigation = () => {
                 {link.label}
               </Link>
             ))}
+            <Link to="/life-os">
+              <Button size="sm" className="ml-2">
+                Get Life OS
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

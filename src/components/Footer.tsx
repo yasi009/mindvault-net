@@ -19,12 +19,12 @@ export const Footer = () => {
               Let's design systems that work for you, not against you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="secondary" size="lg" onClick={() => setToolDialogOpen(true)}>
-                Download Free Resources
+              <Button variant="secondary" size="lg" onClick={() => window.location.href = '/life-os'}>
+                Get Life OS
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
-              <Button variant="outline" size="lg" className="border-background/20 bg-transparent text-background hover:bg-background/10" onClick={() => setConsultationOpen(true)}>
-                Book a Discovery Call
+              <Button variant="outline" size="lg" className="border-background/20 bg-transparent text-background hover:bg-background/10" onClick={() => setToolDialogOpen(true)}>
+                Join Waitlist
               </Button>
             </div>
           </div>
@@ -42,10 +42,9 @@ MindVault uses AI and structure to close that gap with clarity, calm, and consis
               <h4 className="font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2 text-background/70">
                 <li><Link to="/about-us" className="hover:text-background transition-colors">About</Link></li>
-                <li><Link to="/services" className="hover:text-background transition-colors">Services</Link></li>
-                <li><Link to="/work-with-us" className="hover:text-background transition-colors">Work With Us</Link></li>
+                <li><Link to="/life-os" className="hover:text-background transition-colors">Product</Link></li>
+                <li><Link to="/method" className="hover:text-background transition-colors">How It Works</Link></li>
                 <li><Link to="/case-studies" className="hover:text-background transition-colors">Case Studies</Link></li>
-                <li><Link to="/library" className="hover:text-background transition-colors">Library</Link></li>
                 <li><Link to="/contact" className="hover:text-background transition-colors">Contact</Link></li>
               </ul>
             </div>
