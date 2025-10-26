@@ -3,7 +3,8 @@ import { Hero } from "@/components/Hero";
 import { Footer } from "@/components/Footer";
 import { DDDProcess } from "@/components/DDDProcess";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { ArrowRight, Quote } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 const Index = () => {
   const navigate = useNavigate();
@@ -12,12 +13,39 @@ const Index = () => {
       <Hero />
       
       {/* Quick Explainer */}
-      <section className="py-20 px-6 bg-muted/30">
+      <section className="py-12 px-6 bg-muted/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
             Helping leaders and learners <span className="italic text-primary">Debunk</span> confusion, <span className="italic text-accent">Demystify</span> AI, and <span className="italic text-primary">Design</span> systems that work.
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">An AI-guided clarity system that turns values into daily action. Think clearly. Act intentionally. Feel in control.</p>
+          <p className="text-xl text-muted-foreground leading-relaxed mb-12">An AI-guided clarity system that turns values into daily action. Think clearly. Act intentionally. Feel in control.</p>
+          
+          {/* Testimonial Quotes */}
+          <div className="grid md:grid-cols-3 gap-6 mt-12">
+            <Card className="p-6 bg-card border-border">
+              <Quote className="w-8 h-8 text-accent mb-3 mx-auto" />
+              <p className="text-sm text-muted-foreground italic leading-relaxed mb-2">
+                "She designed a simple AI setup that now pulls all our notes into one place. It's made day-to-day management so much easier."
+              </p>
+              <p className="text-xs font-medium text-foreground">— South Coast Carers</p>
+            </Card>
+            
+            <Card className="p-6 bg-card border-border">
+              <Quote className="w-8 h-8 text-accent mb-3 mx-auto" />
+              <p className="text-sm text-muted-foreground italic leading-relaxed mb-2">
+                "She quickly taught most people in the organisation the best methods for using AI while developing a robust strategy for the business."
+              </p>
+              <p className="text-xs font-medium text-foreground">— CEO, Makinex</p>
+            </Card>
+            
+            <Card className="p-6 bg-card border-border">
+              <Quote className="w-8 h-8 text-accent mb-3 mx-auto" />
+              <p className="text-sm text-muted-foreground italic leading-relaxed mb-2">
+                "Her authenticity and purpose-driven approach inspired young women to design their futures with intention and lead boldly."
+              </p>
+              <p className="text-xs font-medium text-foreground">— UNSW Business School</p>
+            </Card>
+          </div>
         </div>
       </section>
 
