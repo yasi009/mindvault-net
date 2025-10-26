@@ -33,26 +33,26 @@ export const Hero = () => {
           <div className="w-full text-left">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary animate-fade-in leading-[1.05] tracking-tight italic uppercase w-full">
               <span className="relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-accent after:animate-fade-in">
-                Think clearer.
+                Design your Life OS.
               </span>
               <br />
-              DO MORE.
+              Think clearly.
               <br />
-              Achieve more.
+              Act intentionally.
             </h1>
           </div>
 
           <div className="max-w-3xl mx-auto text-center space-y-6 sm:space-y-8">
             <p className="text-xl text-muted-foreground mb-8">
-              An AI-guided Life OS in Notion that turns your values into daily action.
+              A Notion-based, AI-guided system that turns values into habits, habits into goals, and goals into results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in justify-center">
-              <Button size="lg" onClick={() => window.location.href = '/life-os'}>
-                Get Life OS
+              <Button size="lg" onClick={() => window.location.href = '/services'}>
+                Explore the Life OS
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
-              <Button variant="outline" size="lg" onClick={() => window.location.href = '/method'}>
-                See How It Works
+              <Button variant="outline" size="lg" onClick={() => setConsultationOpen(true)}>
+                Book a Consultation
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </div>

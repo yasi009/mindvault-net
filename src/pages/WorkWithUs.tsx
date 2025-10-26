@@ -1,7 +1,8 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Search, AlertCircle, Compass, Hammer, Rocket, ArrowRight } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { Search, AlertCircle, Compass, Hammer, Rocket, ArrowRight, Target, Users } from "lucide-react";
 import { useState } from "react";
 import { ConsultationDialog } from "@/components/ConsultationDialog";
 
@@ -30,13 +31,13 @@ const WorkWithUs = () => {
     {
       icon: Hammer,
       title: "Design",
-      description: "We build a custom plan or tool tailored to your specific needs—practical, actionable, and human-centered.",
+      description: "We build your Life OS—practical, actionable, and tailored to your specific needs. Values become habits, habits become goals.",
       color: "text-primary"
     },
     {
       icon: Rocket,
       title: "Deliver",
-      description: "We integrate the solution with optional training and ongoing support to ensure lasting transformation.",
+      description: "We deploy your Life OS with optional training and support. The output: a clarity system that transforms how you work.",
       color: "text-accent"
     }
   ];
@@ -93,14 +94,50 @@ const WorkWithUs = () => {
         </div>
       </section>
 
+      {/* Pathways Section */}
+      <section className="py-20 px-6 bg-background">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Two Pathways to Your Life OS</h2>
+            <p className="text-xl text-muted-foreground">
+              Choose the engagement that fits your needs.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="p-8">
+              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+                <Target className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Clarity Consult (1–2 hrs)</h3>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Discovery and diagnosis session to understand your challenges, map your current systems, and recommend the right Life OS approach for you.
+              </p>
+              <p className="text-sm text-accent font-medium">→ Recommended Life OS setup pathway</p>
+            </Card>
+            
+            <Card className="p-8">
+              <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mb-6">
+                <Users className="w-7 h-7 text-accent" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Workshop → Life OS (Teams/Educators)</h3>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Introduction to AI literacy and clarity frameworks for teams, followed by pilot deployment of Life OS playbooks tailored to your organization.
+              </p>
+              <p className="text-sm text-accent font-medium">→ Custom Life OS for groups</p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-6 bg-gradient-card">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-            Ready to Start Your Transformation?
+            Ready to Build Your Life OS?
           </h2>
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-            Book a clarity session and discover how we can help you think clearly, work intentionally, and lead confidently.
+            Book a clarity session and discover how the Life OS can transform your workflow.
           </p>
           <Button size="lg" onClick={() => setConsultationOpen(true)}>
             Book Your Clarity Session

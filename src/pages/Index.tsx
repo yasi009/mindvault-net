@@ -86,8 +86,8 @@ const Index = () => {
             </div>
           </div>
           <div className="text-center mt-12">
-            <Button size="lg" onClick={() => window.location.href = '/life-os'}>
-              Get Life OS
+            <Button size="lg" onClick={() => navigate('/services')}>
+              Explore the Life OS
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </div>
@@ -106,12 +106,12 @@ const Index = () => {
             Join ambitious learners and professionals who've regained control with MindVault Life OS.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" onClick={() => navigate('/life-os')}>
-              Get Life OS
+            <Button size="lg" onClick={() => navigate('/services')}>
+              Explore the Life OS
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
-            <Button variant="outline" size="lg" onClick={() => navigate('/method')}>
-              See How It Works
+            <Button variant="outline" size="lg" onClick={() => navigate('/contact')}>
+              Book a Consultation
             </Button>
           </div>
         </div>

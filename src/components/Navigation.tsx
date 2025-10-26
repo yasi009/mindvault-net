@@ -7,9 +7,10 @@ export const Navigation = () => {
   
   const links = [
     { path: "/", label: "Home" },
-    { path: "/life-os", label: "Product" },
-    { path: "/method", label: "How It Works" },
+    { path: "/services", label: "Product (Life OS)" },
+    { path: "/work-with-us", label: "Work With Us" },
     { path: "/case-studies", label: "Case Studies" },
+    { path: "/library", label: "Library" },
     { path: "/about-us", label: "About" },
     { path: "/contact", label: "Contact" },
   ];
@@ -37,7 +38,7 @@ export const Navigation = () => {
                 {link.label}
               </Link>
             ))}
-            <Link to="/life-os">
+            <Link to="/services">
               <Button size="sm" className="ml-2">
                 Get Life OS
               </Button>

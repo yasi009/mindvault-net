@@ -43,16 +43,16 @@ export const AboutUs = () => {
             </div>
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-                Meet the Founder
+                Why the Life OS Exists
               </h2>
               <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-                In a world drowning in tools and advice, what's missing isn't more information—it's clarity. The ability to cut through noise, design intentional systems, and lead with confidence.
+                In a world drowning in tools and advice, what's missing isn't more information—it's clarity. The ability to cut through noise, design intentional systems, and act with purpose.
               </p>
               <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-                MindVault exists to bridge the gap between human potential and technological possibility. We don't just teach tools—we help you think clearly, work intentionally, and lead confidently.
+                MindVault Life OS was born from years of working with students, professionals, and teams who were ambitious but overwhelmed. They had goals but no system to connect values to daily action.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Through workshops, consulting, and custom solutions, we transform overwhelm into clarity—one system, one leader, one decision at a time.
+                The Life OS bridges the gap between human potential and technological possibility—turning values into habits, habits into goals, and goals into measurable progress.
               </p>
             </div>
           </div>
