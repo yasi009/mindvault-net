@@ -10,7 +10,6 @@ export const Navigation = () => {
     { path: "/services", label: "Product (Life OS)" },
     { path: "/work-with-us", label: "Work With Us" },
     { path: "/case-studies", label: "Case Studies" },
-    { path: "/library", label: "Library" },
     { path: "/about-us", label: "About" },
     { path: "/contact", label: "Contact" },
   ];

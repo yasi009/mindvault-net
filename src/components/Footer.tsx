@@ -45,7 +45,6 @@ MindVault uses AI and structure to close that gap with clarity, calm, and consis
                 <li><Link to="/services" className="hover:text-background transition-colors">Product (Life OS)</Link></li>
                 <li><Link to="/work-with-us" className="hover:text-background transition-colors">Work With Us</Link></li>
                 <li><Link to="/case-studies" className="hover:text-background transition-colors">Case Studies</Link></li>
-                <li><Link to="/library" className="hover:text-background transition-colors">Library</Link></li>
                 <li><Link to="/about-us" className="hover:text-background transition-colors">About</Link></li>
                 <li><Link to="/contact" className="hover:text-background transition-colors">Contact</Link></li>
               </ul>

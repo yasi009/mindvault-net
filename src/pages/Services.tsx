@@ -6,6 +6,7 @@ import { Users, Lightbulb, Brain, Target, Workflow, Shield, ArrowRight } from "l
 import { useState } from "react";
 import { ConsultationDialog } from "@/components/ConsultationDialog";
 import { useNavigate } from "react-router-dom";
+import lifeOsDemo from "@/assets/life-os-demo.png";
 
 const Services = () => {
   const [consultationOpen, setConsultationOpen] = useState(false);
@@ -85,6 +86,32 @@ const Services = () => {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Turn goals into actionable success systems through intelligent organization — regain control and make progress on what matters most.
           </p>
+        </div>
+      </section>
+
+      {/* Product Demo Section */}
+      <section className="py-20 px-6 bg-muted/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">See It In Action</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Your personal dashboard: values, habits, goals, and reflections—all in one place.
+            </p>
+          </div>
+          
+          <div className="relative rounded-xl overflow-hidden shadow-elegant border border-border">
+            <img 
+              src={lifeOsDemo} 
+              alt="MindVault Life OS Dashboard Interface showing navigation sidebar with Dashboard, Workspace, Identity & Values, Habits Tracker, Goals, and Daily Reflection. Main area displays Quick Access section, Today's Intention, Clarity Score of 78, and Life Pillars tracking" 
+              className="w-full h-auto"
+            />
+          </div>
+          
+          <div className="text-center mt-8">
+            <p className="text-sm text-muted-foreground mb-4">
+              Built in Notion • Powered by AI • Designed for clarity
+            </p>
+          </div>
         </div>
       </section>
 
