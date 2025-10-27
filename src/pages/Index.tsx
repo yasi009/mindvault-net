@@ -2,6 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { Footer } from "@/components/Footer";
 import { DDDProcess } from "@/components/DDDProcess";
+import { ComingSoon } from "@/components/ComingSoon";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Quote } from "lucide-react";
@@ -11,6 +12,8 @@ const Index = () => {
   return <div className="min-h-screen">
       <Navigation />
       <Hero />
+      
+      <ComingSoon />
       
       {/* Quick Explainer */}
       <section className="py-12 px-6 bg-muted/30">
@@ -127,15 +130,18 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-20 px-6 bg-gradient-card">
         <div className="max-w-3xl mx-auto text-center">
+          <div className="inline-block px-4 py-2 bg-accent/10 rounded-full mb-4">
+            <span className="text-sm font-medium text-accent">Life OS Coming Soon</span>
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground italic">
-            Ready to Transform Overwhelm into Clarity?
+            In the Meantime: Join a Workshop
           </h2>
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-            Join ambitious learners and professionals who've regained control with MindVault Life OS.
+            Experience the Debunk, Demystify, Design framework in person and start your clarity journey today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" onClick={() => navigate('/services')}>
-              Explore the Life OS
+            <Button size="lg" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+              Get Workshop Tickets
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <Button variant="outline" size="lg" onClick={() => navigate('/contact')}>
