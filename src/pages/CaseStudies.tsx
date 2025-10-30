@@ -1,7 +1,8 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
-import { Quote } from "lucide-react";
+import { Quote, CheckCircle2, Target, Lightbulb } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 const CaseStudies = () => {
   const studies = [
@@ -58,57 +59,82 @@ const CaseStudies = () => {
       </section>
 
       {/* Case Studies */}
-      <section className="py-20 px-6 bg-background">
-        <div className="max-w-5xl mx-auto space-y-12">
+      <section className="py-16 px-6 bg-background">
+        <div className="max-w-6xl mx-auto space-y-8">
           {studies.map((study, index) => (
-            <Card key={index} className="p-8 md:p-10 bg-card border-border">
-              <div className="flex items-start gap-3 mb-4">
-                <span className="text-xs font-medium text-accent uppercase tracking-wider bg-accent/10 px-3 py-1 rounded-full">
-                  {study.client}
-                </span>
-              </div>
-              
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-foreground">
-                {study.title}
-              </h2>
+            <Card key={index} className="overflow-hidden border-border hover:shadow-lg transition-all duration-300">
+              <div className="grid md:grid-cols-[300px_1fr] gap-0">
+                {/* Left Column - Client & Title */}
+                <div className="bg-gradient-soft p-8 flex flex-col justify-between border-r border-border">
+                  <div>
+                    <Badge variant="secondary" className="mb-4">
+                      {study.client}
+                    </Badge>
+                    <h2 className="text-2xl font-bold text-foreground leading-tight">
+                      {study.title.split(':')[1] || study.title}
+                    </h2>
+                  </div>
+                  <div className="mt-6 pt-6 border-t border-border/50">
+                    <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2">Workshop Focus</p>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="outline" className="text-xs">Systems Thinking</Badge>
+                      <Badge variant="outline" className="text-xs">AI Literacy</Badge>
+                    </div>
+                  </div>
+                </div>
 
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div>
-                  <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">
-                    Context
-                  </h3>
-                  <p className="text-foreground leading-relaxed">
-                    {study.challenge}
-                  </p>
-                </div>
-                
-                <div>
-                  <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">
-                    Workshop Approach
-                  </h3>
-                  <p className="text-foreground leading-relaxed">
-                    {study.solution}
-                  </p>
-                </div>
-                
-                <div>
-                  <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">
-                    Outcome
-                  </h3>
-                  <p className="text-foreground leading-relaxed">
-                    {study.result}
-                  </p>
-                </div>
-              </div>
+                {/* Right Column - Content */}
+                <div className="p-8">
+                  {/* Context, Approach, Outcome in compact grid */}
+                  <div className="grid md:grid-cols-3 gap-6 mb-6">
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2 mb-3">
+                        <Target className="w-4 h-4 text-accent" />
+                        <h3 className="text-xs font-bold text-accent uppercase tracking-wider">
+                          Context
+                        </h3>
+                      </div>
+                      <p className="text-sm text-foreground/80 leading-relaxed">
+                        {study.challenge}
+                      </p>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2 mb-3">
+                        <Lightbulb className="w-4 h-4 text-accent" />
+                        <h3 className="text-xs font-bold text-accent uppercase tracking-wider">
+                          Approach
+                        </h3>
+                      </div>
+                      <p className="text-sm text-foreground/80 leading-relaxed">
+                        {study.solution}
+                      </p>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2 mb-3">
+                        <CheckCircle2 className="w-4 h-4 text-accent" />
+                        <h3 className="text-xs font-bold text-accent uppercase tracking-wider">
+                          Outcome
+                        </h3>
+                      </div>
+                      <p className="text-sm text-foreground/80 leading-relaxed">
+                        {study.result}
+                      </p>
+                    </div>
+                  </div>
 
-              <div className="bg-muted/30 p-6 rounded-lg border-l-4 border-accent">
-                <Quote className="w-8 h-8 text-accent mb-3" />
-                <p className="text-lg text-foreground italic mb-3 leading-relaxed">
-                  "{study.testimonial}"
-                </p>
-                <p className="text-sm font-medium text-muted-foreground">
-                  — {study.author}
-                </p>
+                  {/* Testimonial */}
+                  <div className="bg-accent/5 p-5 rounded-lg border-l-2 border-accent relative">
+                    <Quote className="w-6 h-6 text-accent/30 absolute top-3 right-3" />
+                    <p className="text-base text-foreground/90 italic leading-relaxed mb-2 pr-8">
+                      "{study.testimonial}"
+                    </p>
+                    <p className="text-xs font-semibold text-muted-foreground">
+                      — {study.author}
+                    </p>
+                  </div>
+                </div>
               </div>
             </Card>
           ))}
