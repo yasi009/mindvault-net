@@ -35,7 +35,7 @@ export const AboutUs = () => {
             <img 
               src={decorativeDivider} 
               alt="Decorative divider" 
-              className="w-32 md:w-40 h-auto brightness-0 saturate-[2] opacity-90"
+              className="w-56 md:w-72 h-auto brightness-0 saturate-[2] opacity-90"
               style={{ filter: 'brightness(0) saturate(100%) invert(70%) sepia(70%) saturate(500%) hue-rotate(10deg)' }}
             />
           </div>
