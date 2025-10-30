@@ -2,6 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import yaseerahImage from "@/assets/yaseerah-unsw-teaching.jpg";
+import decorativeDivider from "@/assets/decorative-divider.png";
 
 export const AboutUs = () => {
   return (
@@ -30,6 +31,13 @@ export const AboutUs = () => {
           <p className="text-xl md:text-2xl font-heading font-bold text-yellow-500 max-w-3xl mx-auto leading-relaxed">
             Human depth meets digital intelligence.
           </p>
+          <div className="flex justify-center mt-8">
+            <img 
+              src={decorativeDivider} 
+              alt="Decorative divider" 
+              className="w-64 md:w-80 h-auto brightness-0 invert hue-rotate-[270deg] saturate-[3] opacity-80"
+            />
+          </div>
         </div>
       </section>
 
