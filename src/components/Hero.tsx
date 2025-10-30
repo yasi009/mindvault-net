@@ -8,7 +8,7 @@ export const Hero = () => {
   const [toolDialogOpen, setToolDialogOpen] = useState(false);
   return <>
       {/* Orange ribbon banner */}
-      <div className="w-1/2 mx-auto bg-accent py-1 mb-8 overflow-hidden">
+      <div className="w-[480px] mx-auto bg-accent py-1 mb-8 overflow-hidden">
         <div className="overflow-hidden">
           <div className="flex animate-scroll-right whitespace-nowrap">
             <p className="font-heading text-white italic text-base md:text-lg tracking-[0.15em] uppercase px-4">
