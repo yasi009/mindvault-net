@@ -10,7 +10,7 @@ export const AboutUs = () => {
       <Navigation />
     
       {/* Hero Section */}
-      <section className="relative py-24 px-6 bg-gradient-to-r from-primary via-purple-100 to-accent overflow-hidden">
+      <section className="relative py-16 px-6 bg-gradient-to-r from-primary via-purple-100 to-accent overflow-hidden">
         {/* Pink blob top-right */}
         <div className="absolute top-5 right-0 w-[300px] h-[300px] bg-gradient-to-bl from-pink-500/25 via-rose-500/20 to-transparent rounded-full blur-[80px]"></div>
         
@@ -28,14 +28,14 @@ export const AboutUs = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-primary tracking-tight italic uppercase">
             Why MindVault?
           </h1>
-          <p className="text-xl md:text-2xl font-heading font-bold text-yellow-500 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl font-heading font-bold text-yellow-500 max-w-3xl mx-auto leading-relaxed mb-4">
             Human depth meets digital intelligence.
           </p>
-          <div className="flex justify-center mt-8">
+          <div className="flex justify-center">
             <img 
               src={decorativeDivider} 
               alt="Decorative divider" 
-              className="w-64 md:w-80 h-auto brightness-0 invert hue-rotate-[270deg] saturate-[3] opacity-80"
+              className="w-32 md:w-40 h-auto brightness-0 invert hue-rotate-[270deg] saturate-[3] opacity-80"
             />
           </div>
         </div>
