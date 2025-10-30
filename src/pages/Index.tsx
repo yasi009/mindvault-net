@@ -67,25 +67,27 @@ const Index = () => {
               <h3 className="text-2xl md:text-3xl font-bold mb-6 text-foreground italic">The Problem</h3>
               <ul className="space-y-4 text-lg text-muted-foreground">
                 <li className="flex items-start">
-                  <span className="text-accent mr-3">•</span>
-                  Mental clutter: too many goals, tools, and tabs
+                  <span className="text-accent mr-3 font-bold text-xl">•</span>
+                  <span className="font-semibold">Mental clutter: too many goals, tools, and tabs</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent mr-3">•</span>
-                  Inconsistent habits that don't stick
+                  <span className="text-accent mr-3 font-bold text-xl">•</span>
+                  <span className="font-semibold">Inconsistent habits that don't stick</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent mr-3">•</span>
-                  No clear system connecting values to action
+                  <span className="text-accent mr-3 font-bold text-xl">•</span>
+                  <span className="font-semibold">No clear system connecting values to action</span>
                 </li>
               </ul>
             </div>
             <div>
               <h3 className="text-2xl md:text-3xl font-bold mb-6 text-foreground italic">The Promise</h3>
-              <p className="text-xl text-muted-foreground leading-relaxed mb-6">
-                Clarity that sticks: <span className="text-primary font-semibold">values → identity → habits → goals</span>
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <div className="mb-6 p-6 bg-gradient-to-br from-primary/10 via-accent/5 to-rose/5 rounded-lg border-l-4 border-accent">
+                <p className="text-2xl font-heading font-bold italic text-foreground leading-relaxed">
+                  Clarity that sticks: <span className="bg-gradient-to-r from-accent via-rose to-primary bg-clip-text text-transparent">values → identity → habits → goals</span>
+                </p>
+              </div>
+              <p className="text-xl text-foreground/90 leading-relaxed font-medium">
                 A complete Life OS that aligns what you do with who you are—powered by AI, built in Notion.
               </p>
             </div>
