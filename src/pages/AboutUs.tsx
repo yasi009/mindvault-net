@@ -25,13 +25,13 @@ export const AboutUs = () => {
         </div>
 
         <div className="relative max-w-5xl mx-auto text-center">
-          <h1 className="text-3xl md:text-5xl font-bold mb-2 text-primary tracking-tight italic uppercase">
+          <h1 className="text-4xl md:text-6xl font-bold mb-2 text-primary tracking-tight italic uppercase">
             Why MindVault?
           </h1>
-          <p className="text-lg md:text-xl font-heading font-bold text-primary max-w-3xl mx-auto leading-relaxed -mb-6">
+          <p className="text-xl md:text-3xl font-heading font-bold text-primary max-w-3xl mx-auto leading-relaxed -mb-10">
             Human depth meets digital intelligence.
           </p>
-          <div className="flex justify-center -mt-2">
+          <div className="flex justify-center">
             <img 
               src={decorativeDivider} 
               alt="Decorative divider" 
