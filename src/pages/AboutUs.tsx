@@ -2,7 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import yaseerahImage from "@/assets/yaseerah-unsw-teaching.jpg";
-import decorativeDivider from "@/assets/decorative-swirl.png";
+import decorativeDivider from "@/assets/decorative-divider.png";
 
 export const AboutUs = () => {
   return (
@@ -35,7 +35,7 @@ export const AboutUs = () => {
             <img 
               src={decorativeDivider} 
               alt="Decorative divider" 
-              className="w-40 md:w-48 h-auto"
+              className="w-32 md:w-40 h-auto brightness-0 saturate-[2] opacity-90"
               style={{ filter: 'brightness(0) saturate(100%) invert(70%) sepia(70%) saturate(500%) hue-rotate(10deg)' }}
             />
           </div>
