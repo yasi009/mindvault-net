@@ -29,7 +29,7 @@ export const Navigation = () => {
                 className={cn(
                   "text-sm font-medium transition-colors hover:text-primary",
                   location.pathname === link.path
-                    ? "text-primary"
+                    ? "text-primary font-bold"
                     : "text-muted-foreground"
                 )}
               >
