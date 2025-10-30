@@ -36,16 +36,10 @@ export const AboutUs = () => {
       {/* Founder Section */}
       <section className="py-20 px-6 bg-background relative overflow-hidden">
         {/* Pink gradient blob top-right */}
-        <div className="absolute top-10 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-pink-300/35 via-rose-300/25 to-transparent rounded-full blur-[100px] animate-pulse pointer-events-none"></div>
+        <div className="absolute top-10 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-pink-300/35 via-rose-300/25 to-transparent rounded-full blur-[100px] pointer-events-none"></div>
         
-        {/* Teal gradient blob middle-left */}
-        <div className="absolute top-1/3 left-0 w-[550px] h-[550px] bg-gradient-to-tr from-teal-300/40 via-cyan-300/30 to-transparent rounded-full blur-[110px] animate-float pointer-events-none"></div>
-        
-        {/* Pink blob bottom-right */}
-        <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-gradient-to-tl from-pink-400/30 via-rose-400/20 to-transparent rounded-full blur-[90px] pointer-events-none"></div>
-        
-        {/* Teal blob bottom-left */}
-        <div className="absolute bottom-10 left-0 w-[450px] h-[450px] bg-gradient-to-br from-teal-400/35 via-cyan-400/25 to-transparent rounded-full blur-[95px] animate-pulse pointer-events-none"></div>
+        {/* Purple blob middle-left */}
+        <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-purple-400/30 via-violet-400/20 to-transparent rounded-full blur-[110px] pointer-events-none"></div>
         
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
