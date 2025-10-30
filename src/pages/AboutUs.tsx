@@ -9,7 +9,7 @@ export const AboutUs = () => {
       <Navigation />
     
       {/* Hero Section */}
-      <section className="relative py-24 px-6 bg-accent overflow-hidden">
+      <section className="relative py-24 px-6 bg-gradient-to-br from-accent via-accent/90 to-accent/70 overflow-hidden">
         {/* Pink blob top-right */}
         <div className="absolute top-5 right-0 w-[300px] h-[300px] bg-gradient-to-bl from-pink-500/25 via-rose-500/20 to-transparent rounded-full blur-[80px]"></div>
         
