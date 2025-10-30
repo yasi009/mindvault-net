@@ -10,11 +10,11 @@ export const AboutUs = () => {
     
       {/* Hero Section */}
       <section className="relative py-24 px-6 bg-accent overflow-hidden">
-        {/* Teal blob top-left */}
-        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-teal-400/40 via-cyan-300/30 to-transparent rounded-full blur-[100px] animate-pulse"></div>
-        
         {/* Pink blob top-right */}
-        <div className="absolute top-10 right-0 w-[450px] h-[450px] bg-gradient-to-bl from-pink-400/45 via-rose-300/35 to-transparent rounded-full blur-[90px] animate-float"></div>
+        <div className="absolute top-5 right-0 w-[300px] h-[300px] bg-gradient-to-bl from-pink-500/25 via-rose-500/20 to-transparent rounded-full blur-[80px]"></div>
+        
+        {/* Pink blob bottom-left */}
+        <div className="absolute bottom-0 left-10 w-[250px] h-[250px] bg-gradient-to-tr from-rose-500/20 via-pink-500/15 to-transparent rounded-full blur-[70px]"></div>
         
         <div className="absolute inset-0 opacity-[0.02]">
           <div className="absolute inset-0" style={{
