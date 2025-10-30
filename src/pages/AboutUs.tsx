@@ -9,7 +9,7 @@ export const AboutUs = () => {
       <Navigation />
     
       {/* Hero Section */}
-      <section className="relative py-24 px-6 bg-gradient-soft overflow-hidden">
+      <section className="relative py-24 px-6 bg-accent overflow-hidden">
         <div className="absolute inset-0 opacity-[0.02]">
           <div className="absolute inset-0" style={{
             backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(220 45% 25%) 1px, transparent 0)',
@@ -18,10 +18,10 @@ export const AboutUs = () => {
         </div>
 
         <div className="relative max-w-5xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground tracking-tight italic uppercase">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white tracking-tight italic uppercase">
             Why MindVault?
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
             Human depth meets digital intelligence.
           </p>
         </div>
