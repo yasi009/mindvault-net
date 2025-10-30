@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Quote, ArrowRight, Target, Lightbulb, CheckCircle2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 export const CaseStudyTabs = () => {
-  const [expandedStudy, setExpandedStudy] = useState<string | null>(null);
+  const [selectedStudy, setSelectedStudy] = useState<string | null>(null);
 
   const studies = [
     {
@@ -44,6 +43,8 @@ export const CaseStudyTabs = () => {
     },
   ];
 
+  const currentStudy = studies.find(s => s.id === selectedStudy);
+
   return (
     <section className="py-16 px-6 bg-background">
       <div className="max-w-6xl mx-auto">
@@ -56,38 +57,50 @@ export const CaseStudyTabs = () => {
           </p>
         </div>
 
-        <Tabs defaultValue={studies[0].id} className="w-full">
-          <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 gap-3 h-auto bg-transparent p-0 mb-8">
-            {studies.map((study) => (
-              <TabsTrigger
-                key={study.id}
-                value={study.id}
-                className="group relative overflow-hidden border-2 border-primary/20 bg-card hover:bg-gradient-card hover:border-accent transition-all duration-300 data-[state=active]:bg-gradient-card data-[state=active]:border-accent data-[state=active]:shadow-elegant h-auto p-6 rounded-lg"
-              >
-                <div className="text-left space-y-2">
-                  <Badge variant="secondary" className="mb-2 bg-accent/10 text-accent border-accent/30">
-                    {study.client}
-                  </Badge>
-                  <h3 className="font-bold text-base text-foreground group-hover:text-primary transition-colors">
-                    {study.tabTitle}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {study.teaser}
-                  </p>
-                </div>
-                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <ArrowRight className="w-5 h-5 text-accent" />
-                </div>
-              </TabsTrigger>
-            ))}
-          </TabsList>
-
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {studies.map((study) => (
-            <TabsContent key={study.id} value={study.id} className="mt-0">
-              <Card className="overflow-hidden border-2 border-primary/10 bg-card shadow-elegant">
-                <div className="p-8">
+            <Card
+              key={study.id}
+              onClick={() => setSelectedStudy(study.id)}
+              className="group relative overflow-hidden border-2 border-primary/20 bg-card hover:bg-gradient-card hover:border-accent transition-all duration-300 cursor-pointer h-full p-6 hover:shadow-elegant"
+            >
+              <div className="text-center space-y-3 flex flex-col items-center justify-center h-full">
+                <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/30">
+                  {study.client}
+                </Badge>
+                <h3 className="font-heading font-bold text-lg text-accent uppercase tracking-wide leading-tight">
+                  {study.tabTitle}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {study.teaser}
+                </p>
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity pt-2">
+                  <ArrowRight className="w-5 h-5 text-accent mx-auto" />
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
+
+        {/* Dialog Popup */}
+        <Dialog open={!!selectedStudy} onOpenChange={(open) => !open && setSelectedStudy(null)}>
+          <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+            {currentStudy && (
+              <>
+                <DialogHeader>
+                  <div className="space-y-2 mb-4">
+                    <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/30">
+                      {currentStudy.client}
+                    </Badge>
+                    <DialogTitle className="text-2xl md:text-3xl font-bold text-primary">
+                      {currentStudy.tabTitle}
+                    </DialogTitle>
+                  </div>
+                </DialogHeader>
+
+                <div className="space-y-6">
                   {/* Compact Content Grid */}
-                  <div className="grid md:grid-cols-3 gap-6 mb-6">
+                  <div className="grid md:grid-cols-3 gap-6">
                     <div className="space-y-2 group">
                       <div className="flex items-center gap-2 mb-3 p-2 rounded-lg bg-rose/10 group-hover:bg-rose/20 transition-colors">
                         <div className="p-1.5 rounded-full bg-rose/20">
@@ -98,7 +111,7 @@ export const CaseStudyTabs = () => {
                         </h3>
                       </div>
                       <p className="text-sm text-foreground leading-relaxed pl-2 border-l-2 border-rose/20">
-                        {study.challenge}
+                        {currentStudy.challenge}
                       </p>
                     </div>
                     
@@ -112,7 +125,7 @@ export const CaseStudyTabs = () => {
                         </h3>
                       </div>
                       <p className="text-sm text-foreground leading-relaxed pl-2 border-l-2 border-primary/20">
-                        {study.solution}
+                        {currentStudy.solution}
                       </p>
                     </div>
                     
@@ -126,26 +139,26 @@ export const CaseStudyTabs = () => {
                         </h3>
                       </div>
                       <p className="text-sm text-foreground leading-relaxed pl-2 border-l-2 border-accent/20">
-                        {study.result}
+                        {currentStudy.result}
                       </p>
                     </div>
                   </div>
 
                   {/* Testimonial */}
-                  <div className="bg-gradient-to-br from-accent/10 to-rose/5 p-6 rounded-lg border-l-4 border-accent relative shadow-soft hover:shadow-speech transition-shadow">
+                  <div className="bg-gradient-to-br from-accent/10 to-rose/5 p-6 rounded-lg border-l-4 border-accent relative shadow-soft">
                     <Quote className="w-7 h-7 text-accent/40 absolute top-4 right-4" />
                     <p className="text-base text-foreground/90 italic leading-relaxed mb-3 pr-10">
-                      "{study.testimonial}"
+                      "{currentStudy.testimonial}"
                     </p>
                     <p className="text-xs font-bold text-primary uppercase tracking-wider">
-                      — {study.author}
+                      — {currentStudy.author}
                     </p>
                   </div>
                 </div>
-              </Card>
-            </TabsContent>
-          ))}
-        </Tabs>
+              </>
+            )}
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   );
