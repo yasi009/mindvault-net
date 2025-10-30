@@ -6,31 +6,31 @@ import { Quote } from "lucide-react";
 const CaseStudies = () => {
   const studies = [
     {
-      title: "NDIS Workflow Transformation",
+      title: "Healthcare Provider: NDIS Workflow Transformation Workshop",
       client: "Healthcare Provider",
-      challenge: "Managing case notes from multiple carers in different formats was creating major admin bottlenecks and making it hard to maintain consistency and compliance across client records.",
-      solution: "Mapped and designed an AI-assisted workflow that automatically collects and structures case notes, integrates with Xero for record-keeping, and generates real-time client summaries—simplifying documentation and compliance tracking. This systems-thinking approach mirrors the Life OS method: values (care quality) → identity (compliance standards) → habits (case note workflows) → goals (streamlined operations).",
-      result: "Streamlined data flow, reduced manual admin workload, and improved visibility across client care — enabling faster decision-making and higher-quality service delivery.",
-      testimonial: "Working with Yaseerah was a game-changer. I showed her my frustrations with a messy system of carers sending case notes in every format and within an hour she'd mapped out a solution that actually made sense. She designed a simple AI setup that now pulls all our notes into one place and gives us clean client summaries without all the manual admin. It's made day-to-day management so much easier.",
-      author: "South Coast Carers, Business Owner"
+      challenge: "The care team was overwhelmed by inconsistent case notes coming from multiple carers in different formats, causing admin delays and compliance challenges.",
+      solution: "Facilitated a hands-on workshop with key team members, guiding them through mapping their current case note processes and co-designing an AI-assisted workflow. Together, we explored integrating automation to structure notes, link records in Xero, and create client summaries in real time. This method applied the Life OS systems-thinking framework connecting values to daily habits and goals.",
+      result: "The team gained ownership of the new streamlined workflow, significantly reducing manual admin time and enhancing care consistency.",
+      testimonial: "Yaseerah's workshop was eye-opening—I didn't realize how messy our system was until we mapped it out together. The AI tools we designed together are making my workday easier and more organized.",
+      author: "Care Team Member"
     },
     {
-      title: "AI Integration Strategy",
+      title: "Makinex (Innovative Solutions): AI Strategy & Literacy Workshop",
       client: "Makinex (Innovative Solutions)",
-      challenge: "The leadership team wanted to explore AI adoption but faced overwhelming, disconnected systems, low digital confidence, and no clear data foundations. Tools and processes were fragmented across platforms, making it difficult to see where AI could add real value.",
-      solution: "Led a strategic discovery and education process — conducting AI literacy sessions, mapping current workflows, and identifying readiness gaps. Designed a phased roadmap that focused first on building solid digital systems and data flow before layering in responsible AI use cases. The DDD framework (Debunk inefficiencies → Demystify AI literacy → Design systems roadmap) guided the entire engagement.",
-      result: "Shifted the team's mindset from overwhelm to clarity, established strong digital foundations, and created a realistic, human-centred AI integration plan aligned with long-term transformation goals.",
-      testimonial: "Yasi came to Markinex to investigate AI and our digital transformation for AI. She quickly taught most people in the organisation the best methods for using AI, how it works and some basics while developing a more robust strategy for the business as a whole",
-      author: "CEO Rory Kennard"
+      challenge: "The leadership and staff were unsure how AI could fit into their fragmented digital ecosystem and lacked confidence in adopting new tech.",
+      solution: "Delivered a series of interactive AI literacy sessions where participants learned AI basics, examined existing workflows, and identified digital readiness gaps. We then collaborated to design a phased AI integration roadmap grounded in the DDD framework — Debunk inefficiencies, Demystify AI, Design a practical plan.",
+      result: "The team left with strengthened digital foundations and a clear, human-centered strategy for responsible AI adoption.",
+      testimonial: "The workshop helped us take AI from a confusing buzzword to a practical tool. We all felt more confident and ready to transform our business.",
+      author: "Workshop Participant"
     },
     {
-      title: "Debunk, Demystify & Design Workshop",
+      title: "Girls in Business (UNSW/NIDA): Empowerment & Digital Literacy Workshop",
       client: "Girls in Business (UNSW/NIDA)",
-      challenge: "High school girls navigating stereotypes, identity questions, and uncertainty about their place in an AI-powered future — needing honest conversations and practical tools to build confidence and digital literacy.",
-      solution: "Co-branded and delivered 'Debunk, Demystify & Design Your Future' workshop at the 2025 Girls in Business Camp at NIDA theatre. Used storytelling, honesty, and a powerful live exercise to challenge stereotypes and spark conversations about identity, confidence, and designing futures with intention. Participants received Life OS frameworks to continue their clarity journey beyond the workshop.",
-      result: "Created an inspiring space where hundreds of young women felt empowered to rethink what's possible, lead boldly as their true selves, and approach their futures with clarity and purpose in a digital world.",
-      testimonial: "Yasi's session, Debunk, Demystify & Design Your Future, was a standout success at the 2025 Girls in Business Camp. Through storytelling, honesty, and a powerful live exercise, she challenged stereotypes and sparked conversations about identity, confidence, and digital literacy in an AI-powered world. Her authenticity, courage, and purpose-driven approach created a space where young women felt inspired to design their futures with intention and lead boldly as their true selves. Yasi truly embodied the principles of Debunk, Demystify & Design — and in doing so, inspired a new generation to rethink what's possible.",
-      author: "Rhiannon Tout, Equity, Diversity & Inclusion Project Officer, UNSW Business School"
+      challenge: "High school girls attending were navigating social stereotypes and feeling uncertain about their futures in technology-driven fields.",
+      solution: "Co-delivered a dynamic, storytelling-based workshop including candid talks and live exercises where participants unpacked identity and confidence around AI. We introduced Life OS frameworks for intentional future planning, engaging everyone in conversations about their digital empowerment.",
+      result: "The workshop inspired hundreds of young women to rethink their potential and approach their futures with clarity and courage.",
+      testimonial: "Yasi's workshop was one of the most empowering I attended. It was honest, brave, and gave me tools to believe in myself and lead in a tech world.",
+      author: "Workshop Participant"
     },
   ];
 
@@ -52,7 +52,7 @@ const CaseStudies = () => {
             Transformation in Action
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Real results from organizations that chose clarity over complexity.
+            Real results through collaborative, systems-thinking workshops.
           </p>
         </div>
       </section>
@@ -75,7 +75,7 @@ const CaseStudies = () => {
               <div className="grid md:grid-cols-3 gap-6 mb-8">
                 <div>
                   <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">
-                    Challenge
+                    Context
                   </h3>
                   <p className="text-foreground leading-relaxed">
                     {study.challenge}
@@ -84,7 +84,7 @@ const CaseStudies = () => {
                 
                 <div>
                   <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">
-                    Solution
+                    Workshop Approach
                   </h3>
                   <p className="text-foreground leading-relaxed">
                     {study.solution}
@@ -93,7 +93,7 @@ const CaseStudies = () => {
                 
                 <div>
                   <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">
-                    Result
+                    Outcome
                   </h3>
                   <p className="text-foreground leading-relaxed">
                     {study.result}
