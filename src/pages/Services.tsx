@@ -69,11 +69,17 @@ const Services = () => {
 
       {/* Hero Section */}
       <section className="relative py-24 px-6 bg-gradient-soft overflow-hidden">
+        {/* Gradient pink color blobs */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-10 -right-20 w-[500px] h-[500px] bg-gradient-to-bl from-pink-300/35 via-pink-400/25 to-rose-300/15 rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '8s' }}></div>
+          <div className="absolute bottom-20 -left-32 w-[450px] h-[450px] bg-gradient-to-tr from-pink-200/25 via-rose-300/20 to-fuchsia-200/15 rounded-full blur-[90px] animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }}></div>
+        </div>
+        
         <div className="absolute inset-0 opacity-[0.02]">
           <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(220 45% 25%) 1px, transparent 0)',
-            backgroundSize: '48px 48px'
-          }}></div>
+          backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(220 45% 25%) 1px, transparent 0)',
+          backgroundSize: '48px 48px'
+        }}></div>
         </div>
 
         <div className="relative max-w-5xl mx-auto text-center">
