@@ -24,7 +24,7 @@ export const AboutUs = () => {
         </div>
 
         <div className="relative max-w-5xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-purple-600 tracking-tight italic uppercase">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-primary tracking-tight italic uppercase">
             Why MindVault?
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
