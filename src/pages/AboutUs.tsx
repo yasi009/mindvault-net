@@ -9,7 +9,7 @@ export const AboutUs = () => {
       <Navigation />
     
       {/* Hero Section */}
-      <section className="relative py-24 px-6 bg-gradient-to-r from-teal-400 via-teal-100 to-orange-400 overflow-hidden">
+      <section className="relative py-24 px-6 bg-gradient-to-r from-primary via-purple-100 to-accent overflow-hidden">
         {/* Pink blob top-right */}
         <div className="absolute top-5 right-0 w-[300px] h-[300px] bg-gradient-to-bl from-pink-500/25 via-rose-500/20 to-transparent rounded-full blur-[80px]"></div>
         
@@ -27,7 +27,7 @@ export const AboutUs = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-primary tracking-tight italic uppercase">
             Why MindVault?
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-accent max-w-3xl mx-auto leading-relaxed">
             Human depth meets digital intelligence.
           </p>
         </div>
