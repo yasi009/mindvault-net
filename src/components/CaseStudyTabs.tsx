@@ -46,8 +46,23 @@ export const CaseStudyTabs = () => {
   const currentStudy = studies.find(s => s.id === selectedStudy);
 
   return (
-    <section className="py-16 px-6 bg-background">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-16 px-6 bg-background relative">
+      {/* Decorative Ribbon */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+        <div className="relative">
+          {/* Main ribbon */}
+          <div className="bg-gradient-to-r from-accent via-rose to-accent px-12 py-3 shadow-elegant">
+            <h3 className="font-heading font-bold text-xl md:text-2xl text-white uppercase tracking-widest text-center">
+              Past Workshops
+            </h3>
+          </div>
+          {/* Ribbon tails */}
+          <div className="absolute -left-4 top-0 w-0 h-0 border-t-[24px] border-t-transparent border-r-[16px] border-r-accent/80 border-b-[24px] border-b-transparent"></div>
+          <div className="absolute -right-4 top-0 w-0 h-0 border-t-[24px] border-t-transparent border-l-[16px] border-l-accent/80 border-b-[24px] border-b-transparent"></div>
+        </div>
+      </div>
+
+      <div className="max-w-6xl mx-auto pt-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground italic">
             Transformation in Action
