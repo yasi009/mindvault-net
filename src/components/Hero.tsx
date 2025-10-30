@@ -8,14 +8,16 @@ export const Hero = () => {
   const [toolDialogOpen, setToolDialogOpen] = useState(false);
   return <>
       {/* Orange ribbon banner */}
-      <div className="w-full bg-accent py-4 mb-8 overflow-hidden">
-        <div className="flex animate-scroll-right whitespace-nowrap">
+      <div className="w-full flex justify-center bg-accent py-4 mb-8 overflow-hidden">
+        <div className="w-1/2 overflow-hidden">
+          <div className="flex animate-scroll-right whitespace-nowrap">
           <p className="font-heading text-white italic text-lg md:text-xl tracking-[0.3em] uppercase px-8">
             DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN.
           </p>
           <p className="font-heading text-white italic text-lg md:text-xl tracking-[0.3em] uppercase px-8">
             DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN.
           </p>
+        </div>
         </div>
       </div>
 
