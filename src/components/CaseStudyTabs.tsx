@@ -49,19 +49,27 @@ export const CaseStudyTabs = () => {
     <section className="py-16 px-6 relative">
       {/* Decorative Section Header */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-        <div className="relative animate-fade-in">
-          {/* Main badge with gradient and glow */}
-          <div className="relative bg-gradient-to-r from-accent via-rose to-primary p-[2px] rounded-full shadow-[0_0_30px_rgba(249,115,22,0.4)]">
-            <div className="bg-background/95 backdrop-blur-sm rounded-full px-10 py-4">
+        <div className="relative animate-fade-in flex items-center gap-4">
+          {/* Left line with star */}
+          <div className="flex items-center">
+            <div className="h-[2px] w-32 md:w-48 bg-gradient-to-r from-transparent via-accent/50 to-accent"></div>
+            <span className="text-accent text-xl mx-2">✦</span>
+          </div>
+          
+          {/* Main badge - rectangle with sharp edges */}
+          <div className="relative bg-gradient-to-r from-accent via-rose to-primary p-[2px] shadow-[0_0_30px_rgba(249,115,22,0.4)]">
+            <div className="bg-background/95 backdrop-blur-sm px-10 py-4">
               <h3 className="font-heading font-bold text-2xl md:text-3xl bg-gradient-to-r from-accent via-rose to-primary bg-clip-text text-transparent uppercase tracking-[0.2em] text-center whitespace-nowrap">
                 Past Workshops
               </h3>
             </div>
           </div>
           
-          {/* Decorative lines */}
-          <div className="absolute top-1/2 -left-32 w-24 h-[2px] bg-gradient-to-r from-transparent via-accent/50 to-accent"></div>
-          <div className="absolute top-1/2 -right-32 w-24 h-[2px] bg-gradient-to-l from-transparent via-accent/50 to-accent"></div>
+          {/* Right line with star */}
+          <div className="flex items-center">
+            <span className="text-accent text-xl mx-2">✦</span>
+            <div className="h-[2px] w-32 md:w-48 bg-gradient-to-l from-transparent via-accent/50 to-accent"></div>
+          </div>
         </div>
       </div>
 
