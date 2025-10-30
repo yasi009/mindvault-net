@@ -14,9 +14,12 @@ const Index = () => {
       <Navigation />
       <Hero />
       
-      <ComingSoon />
-
-      <CaseStudyTabs />
+      {/* Orange Workshop Section */}
+      <section className="bg-gradient-to-br from-accent via-rose to-accent/90 py-12">
+        <ComingSoon />
+        <CaseStudyTabs />
+      </section>
+      
       
       
       {/* Quick Explainer */}
