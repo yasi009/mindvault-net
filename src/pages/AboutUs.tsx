@@ -28,14 +28,14 @@ export const AboutUs = () => {
           <h1 className="text-3xl md:text-5xl font-bold mb-2 text-primary tracking-tight italic uppercase">
             Why MindVault?
           </h1>
-          <p className="text-lg md:text-xl font-heading font-bold text-primary max-w-3xl mx-auto leading-relaxed -mb-6">
+          <p className="text-lg md:text-xl font-heading font-bold text-primary max-w-3xl mx-auto leading-relaxed -mb-8">
             Human depth meets digital intelligence.
           </p>
-          <div className="flex justify-center -mt-2">
+          <div className="flex justify-center mt-2">
             <img 
               src={decorativeDivider} 
               alt="Decorative divider" 
-              className="w-40 md:w-56 h-auto brightness-0 saturate-[2] opacity-90"
+              className="w-56 md:w-80 h-auto brightness-0 saturate-[2] opacity-90"
               style={{ filter: 'brightness(0) saturate(100%) invert(70%) sepia(70%) saturate(500%) hue-rotate(10deg)' }}
             />
           </div>
