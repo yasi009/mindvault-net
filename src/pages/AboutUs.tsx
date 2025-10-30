@@ -28,7 +28,7 @@ export const AboutUs = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-primary tracking-tight italic uppercase">
             Why MindVault?
           </h1>
-          <p className="text-xl md:text-2xl font-heading font-bold text-yellow-500 max-w-3xl mx-auto leading-relaxed mb-4">
+          <p className="text-xl md:text-2xl font-heading font-bold text-primary max-w-3xl mx-auto leading-relaxed mb-4">
             Human depth meets digital intelligence.
           </p>
           <div className="flex justify-center">
