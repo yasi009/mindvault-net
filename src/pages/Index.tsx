@@ -80,13 +80,11 @@ const Index = () => {
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="text-center">
               <h3 className="text-2xl md:text-3xl font-bold mb-6 text-foreground italic">The Promise</h3>
-              <div className="mb-6 p-6 bg-gradient-to-br from-primary/10 via-accent/5 to-rose/5 rounded-lg border-l-4 border-accent">
-                <p className="text-2xl font-heading font-bold italic text-foreground leading-relaxed">
-                  Clarity that sticks: <span className="bg-gradient-to-r from-accent via-rose to-primary bg-clip-text text-transparent">values → identity → habits → goals</span>
-                </p>
-              </div>
+              <p className="text-2xl md:text-3xl font-heading font-bold italic text-foreground leading-relaxed mb-6">
+                Clarity that sticks: <span className="bg-gradient-to-r from-accent via-rose to-primary bg-clip-text text-transparent">values → identity → habits → goals</span>
+              </p>
               <p className="text-xl text-foreground/90 leading-relaxed font-medium">
                 A complete Life OS that aligns what you do with who you are—powered by AI, built in Notion.
               </p>
