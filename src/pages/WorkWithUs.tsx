@@ -95,7 +95,9 @@ const WorkWithUs = () => {
       </section>
 
       {/* Pathways Section */}
-      <section className="py-20 px-6 bg-background">
+      <section className="py-20 px-6 bg-background relative overflow-hidden">
+        {/* Subtle pink gradient blob */}
+        <div className="absolute -bottom-10 left-1/4 w-[400px] h-[400px] bg-gradient-to-t from-pink-200/20 via-rose-300/15 to-transparent rounded-full blur-[85px] pointer-events-none"></div>
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Two Pathways to Your Life OS</h2>

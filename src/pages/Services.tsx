@@ -119,7 +119,9 @@ const Services = () => {
       </section>
 
       {/* What You Get Section */}
-      <section className="py-20 px-6 bg-background">
+      <section className="py-20 px-6 bg-background relative overflow-hidden">
+        {/* Subtle pink gradient blob */}
+        <div className="absolute top-1/3 -right-20 w-[450px] h-[450px] bg-gradient-to-bl from-pink-300/30 via-rose-200/20 to-transparent rounded-full blur-[90px] pointer-events-none"></div>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">What You Get</h2>

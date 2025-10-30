@@ -28,7 +28,9 @@ export const AboutUs = () => {
       </section>
 
       {/* Founder Section */}
-      <section className="py-20 px-6 bg-background">
+      <section className="py-20 px-6 bg-background relative overflow-hidden">
+        {/* Subtle pink gradient blob */}
+        <div className="absolute top-10 right-0 w-[400px] h-[400px] bg-gradient-to-bl from-pink-200/20 via-rose-200/15 to-transparent rounded-full blur-[80px] pointer-events-none"></div>
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>

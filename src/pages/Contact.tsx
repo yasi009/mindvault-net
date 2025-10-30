@@ -90,7 +90,9 @@ const Contact = () => {
       </section>
 
       {/* Contact Content */}
-      <section className="py-20 px-6 bg-background">
+      <section className="py-20 px-6 bg-background relative overflow-hidden">
+        {/* Subtle pink gradient blob */}
+        <div className="absolute bottom-20 left-0 w-[350px] h-[350px] bg-gradient-to-tr from-pink-300/25 via-pink-200/15 to-transparent rounded-full blur-[70px] pointer-events-none"></div>
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div>
