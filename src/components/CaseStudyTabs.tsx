@@ -50,13 +50,6 @@ export const CaseStudyTabs = () => {
       {/* Decorative Section Header */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
         <div className="relative animate-fade-in">
-          {/* Decorative dots pattern */}
-          <div className="absolute -top-6 left-1/2 -translate-x-1/2 flex gap-2">
-            <div className="w-2 h-2 rounded-full bg-accent animate-pulse" style={{ animationDelay: '0ms' }}></div>
-            <div className="w-2 h-2 rounded-full bg-rose animate-pulse" style={{ animationDelay: '150ms' }}></div>
-            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" style={{ animationDelay: '300ms' }}></div>
-          </div>
-          
           {/* Main badge with gradient and glow */}
           <div className="relative bg-gradient-to-r from-accent via-rose to-primary p-[2px] rounded-full shadow-[0_0_30px_rgba(249,115,22,0.4)]">
             <div className="bg-background/95 backdrop-blur-sm rounded-full px-10 py-4">

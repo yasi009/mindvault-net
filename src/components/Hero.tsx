@@ -20,6 +20,18 @@ export const Hero = () => {
       </div>
 
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-soft">
+        {/* Gradient pink color blobs - decorative background */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Large pink gradient blob - top right */}
+          <div className="absolute -top-20 -right-32 w-[600px] h-[600px] bg-gradient-to-br from-pink-300/40 via-pink-400/30 to-rose-300/20 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '8s' }}></div>
+          
+          {/* Medium pink gradient blob - left side */}
+          <div className="absolute top-1/3 -left-40 w-[500px] h-[500px] bg-gradient-to-tr from-pink-200/30 via-pink-300/25 to-fuchsia-200/20 rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }}></div>
+          
+          {/* Small accent blob - bottom */}
+          <div className="absolute bottom-20 right-1/4 w-[400px] h-[400px] bg-gradient-to-tl from-rose-300/25 via-pink-300/20 to-pink-200/15 rounded-full blur-[90px] animate-pulse" style={{ animationDuration: '12s', animationDelay: '4s' }}></div>
+        </div>
+
         {/* Subtle background pattern */}
         <div className="absolute inset-0 opacity-[0.02]">
           <div className="absolute inset-0" style={{
