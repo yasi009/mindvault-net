@@ -8,16 +8,16 @@ export const Hero = () => {
   const [toolDialogOpen, setToolDialogOpen] = useState(false);
   return <>
       {/* Orange ribbon banner */}
-      <div className="w-full flex justify-center bg-accent py-4 mb-8 overflow-hidden">
+      <div className="w-full flex justify-center bg-accent py-2 mb-8 overflow-hidden">
         <div className="w-1/2 overflow-hidden">
           <div className="flex animate-scroll-right whitespace-nowrap">
-          <p className="font-heading text-white italic text-lg md:text-xl tracking-[0.3em] uppercase px-8">
-            DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN.
-          </p>
-          <p className="font-heading text-white italic text-lg md:text-xl tracking-[0.3em] uppercase px-8">
-            DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN.
-          </p>
-        </div>
+            <p className="font-heading text-white italic text-base md:text-lg tracking-[0.15em] uppercase px-4">
+              DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN.
+            </p>
+            <p className="font-heading text-white italic text-base md:text-lg tracking-[0.15em] uppercase px-4">
+              DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN.
+            </p>
+          </div>
         </div>
       </div>
 
