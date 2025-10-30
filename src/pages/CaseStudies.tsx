@@ -59,78 +59,88 @@ const CaseStudies = () => {
       </section>
 
       {/* Case Studies */}
-      <section className="py-16 px-6 bg-background">
+      <section className="py-16 px-6 bg-gradient-soft">
         <div className="max-w-6xl mx-auto space-y-8">
           {studies.map((study, index) => (
-            <Card key={index} className="overflow-hidden border-border hover:shadow-lg transition-all duration-300">
-              <div className="grid md:grid-cols-[300px_1fr] gap-0">
+            <Card key={index} className="overflow-hidden border-2 border-primary/10 hover:border-primary/20 hover:shadow-elegant transition-all duration-300 bg-card">
+              <div className="grid md:grid-cols-[320px_1fr] gap-0">
                 {/* Left Column - Client & Title */}
-                <div className="bg-gradient-soft p-8 flex flex-col justify-between border-r border-border">
-                  <div>
-                    <Badge variant="secondary" className="mb-4">
+                <div className="bg-gradient-card p-8 flex flex-col justify-between border-r-4 border-accent/30 relative overflow-hidden">
+                  {/* Decorative gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none"></div>
+                  
+                  <div className="relative z-10">
+                    <Badge variant="secondary" className="mb-4 bg-accent text-accent-foreground font-semibold shadow-soft">
                       {study.client}
                     </Badge>
-                    <h2 className="text-2xl font-bold text-foreground leading-tight">
+                    <h2 className="text-2xl font-bold text-primary leading-tight mb-2">
                       {study.title.split(':')[1] || study.title}
                     </h2>
                   </div>
-                  <div className="mt-6 pt-6 border-t border-border/50">
-                    <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2">Workshop Focus</p>
+                  
+                  <div className="mt-6 pt-6 border-t-2 border-primary/20 relative z-10">
+                    <p className="text-xs uppercase tracking-wider text-primary/70 font-bold mb-3">Workshop Focus</p>
                     <div className="flex flex-wrap gap-2">
-                      <Badge variant="outline" className="text-xs">Systems Thinking</Badge>
-                      <Badge variant="outline" className="text-xs">AI Literacy</Badge>
+                      <Badge variant="outline" className="text-xs border-primary/30 text-primary bg-primary/5">Systems Thinking</Badge>
+                      <Badge variant="outline" className="text-xs border-accent/30 text-accent bg-accent/5">AI Literacy</Badge>
                     </div>
                   </div>
                 </div>
 
                 {/* Right Column - Content */}
-                <div className="p-8">
+                <div className="p-8 bg-background/50">
                   {/* Context, Approach, Outcome in compact grid */}
                   <div className="grid md:grid-cols-3 gap-6 mb-6">
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-2 mb-3">
-                        <Target className="w-4 h-4 text-accent" />
-                        <h3 className="text-xs font-bold text-accent uppercase tracking-wider">
+                    <div className="space-y-2 group">
+                      <div className="flex items-center gap-2 mb-3 p-2 rounded-lg bg-rose/10 group-hover:bg-rose/20 transition-colors">
+                        <div className="p-1.5 rounded-full bg-rose/20">
+                          <Target className="w-4 h-4 text-rose" />
+                        </div>
+                        <h3 className="text-xs font-bold text-rose uppercase tracking-wider">
                           Context
                         </h3>
                       </div>
-                      <p className="text-sm text-foreground/80 leading-relaxed">
+                      <p className="text-sm text-foreground leading-relaxed pl-2 border-l-2 border-rose/20">
                         {study.challenge}
                       </p>
                     </div>
                     
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-2 mb-3">
-                        <Lightbulb className="w-4 h-4 text-accent" />
-                        <h3 className="text-xs font-bold text-accent uppercase tracking-wider">
+                    <div className="space-y-2 group">
+                      <div className="flex items-center gap-2 mb-3 p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                        <div className="p-1.5 rounded-full bg-primary/20">
+                          <Lightbulb className="w-4 h-4 text-primary" />
+                        </div>
+                        <h3 className="text-xs font-bold text-primary uppercase tracking-wider">
                           Approach
                         </h3>
                       </div>
-                      <p className="text-sm text-foreground/80 leading-relaxed">
+                      <p className="text-sm text-foreground leading-relaxed pl-2 border-l-2 border-primary/20">
                         {study.solution}
                       </p>
                     </div>
                     
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-2 mb-3">
-                        <CheckCircle2 className="w-4 h-4 text-accent" />
+                    <div className="space-y-2 group">
+                      <div className="flex items-center gap-2 mb-3 p-2 rounded-lg bg-accent/10 group-hover:bg-accent/20 transition-colors">
+                        <div className="p-1.5 rounded-full bg-accent/20">
+                          <CheckCircle2 className="w-4 h-4 text-accent" />
+                        </div>
                         <h3 className="text-xs font-bold text-accent uppercase tracking-wider">
                           Outcome
                         </h3>
                       </div>
-                      <p className="text-sm text-foreground/80 leading-relaxed">
+                      <p className="text-sm text-foreground leading-relaxed pl-2 border-l-2 border-accent/20">
                         {study.result}
                       </p>
                     </div>
                   </div>
 
                   {/* Testimonial */}
-                  <div className="bg-accent/5 p-5 rounded-lg border-l-2 border-accent relative">
-                    <Quote className="w-6 h-6 text-accent/30 absolute top-3 right-3" />
-                    <p className="text-base text-foreground/90 italic leading-relaxed mb-2 pr-8">
+                  <div className="bg-gradient-to-br from-accent/10 to-rose/5 p-6 rounded-lg border-l-4 border-accent relative shadow-soft hover:shadow-speech transition-shadow">
+                    <Quote className="w-7 h-7 text-accent/40 absolute top-4 right-4" />
+                    <p className="text-base text-foreground/90 italic leading-relaxed mb-3 pr-10">
                       "{study.testimonial}"
                     </p>
-                    <p className="text-xs font-semibold text-muted-foreground">
+                    <p className="text-xs font-bold text-primary uppercase tracking-wider">
                       — {study.author}
                     </p>
                   </div>
