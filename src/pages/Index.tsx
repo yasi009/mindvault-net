@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { Footer } from "@/components/Footer";
 import { DDDProcess } from "@/components/DDDProcess";
 import { ComingSoon } from "@/components/ComingSoon";
+import { CaseStudyTabs } from "@/components/CaseStudyTabs";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Quote } from "lucide-react";
@@ -14,6 +15,9 @@ const Index = () => {
       <Hero />
       
       <ComingSoon />
+
+      <CaseStudyTabs />
+      
       
       {/* Quick Explainer */}
       <section className="py-12 px-6 bg-muted/30">
