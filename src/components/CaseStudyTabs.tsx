@@ -52,8 +52,8 @@ export const CaseStudyTabs = () => {
         <div className="relative animate-fade-in flex items-center gap-4">
           {/* Left line with star */}
           <div className="flex items-center">
-            <div className="h-[2px] w-32 md:w-48 bg-gradient-to-r from-transparent via-purple-400/50 to-purple-400"></div>
-            <span className="text-purple-500 text-xl mx-2">✦</span>
+            <div className="h-[2px] w-32 md:w-48 bg-gradient-to-r from-transparent via-primary/50 to-primary"></div>
+            <span className="text-primary text-xl mx-2">✦</span>
           </div>
           
           {/* Main badge - rectangle with sharp edges */}
@@ -67,8 +67,8 @@ export const CaseStudyTabs = () => {
           
           {/* Right line with star */}
           <div className="flex items-center">
-            <span className="text-purple-500 text-xl mx-2">✦</span>
-            <div className="h-[2px] w-32 md:w-48 bg-gradient-to-l from-transparent via-purple-400/50 to-purple-400"></div>
+            <span className="text-primary text-xl mx-2">✦</span>
+            <div className="h-[2px] w-32 md:w-48 bg-gradient-to-l from-transparent via-primary/50 to-primary"></div>
           </div>
         </div>
       </div>
