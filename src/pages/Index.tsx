@@ -4,12 +4,10 @@ import { Footer } from "@/components/Footer";
 import { DDDProcess } from "@/components/DDDProcess";
 import { ComingSoon } from "@/components/ComingSoon";
 import { CaseStudyTabs } from "@/components/CaseStudyTabs";
-import { WorkshopTabs } from "@/components/WorkshopTabs";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Quote } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { AudienceProvider } from "@/contexts/AudienceContext";
 const Index = () => {
   const navigate = useNavigate();
   return <div className="min-h-screen">
@@ -20,27 +18,6 @@ const Index = () => {
       <section className="bg-gradient-to-br from-accent via-rose to-accent/90 py-12">
         <ComingSoon />
         <CaseStudyTabs />
-      </section>
-      
-      {/* Past Workshops Section */}
-      <section className="py-20 px-6 bg-background">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-              Past Workshops <span className="text-accent">✦</span>
-            </h2>
-            <p className="text-xl text-muted-foreground italic">
-              Transformation in Action
-            </p>
-            <p className="text-lg text-muted-foreground mt-2">
-              Real results through collaborative, systems-thinking workshops
-            </p>
-          </div>
-          
-          <AudienceProvider>
-            <WorkshopTabs />
-          </AudienceProvider>
-        </div>
       </section>
       
       {/* Quick Explainer */}

@@ -1,13 +1,29 @@
-import { useState } from "react";
+import { useState, ReactNode } from "react";
 import { Card } from "@/components/ui/card";
-import { Quote, ArrowRight, Target, Lightbulb, CheckCircle2 } from "lucide-react";
+import { Quote, ArrowRight, Target, Lightbulb, CheckCircle2, Users, Sparkles, GraduationCap, BookOpen, Code, Briefcase, Building2, MessageSquare, Wrench, Workflow, TrendingUp, Rocket } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+
+interface Study {
+  id: string;
+  client: string;
+  tabTitle: string;
+  teaser: string;
+  challenge: string;
+  solution: string;
+  result: string;
+  testimonial: string;
+  author: string;
+}
+
+interface Workshop extends Study {
+  icon: ReactNode;
+}
 
 export const CaseStudyTabs = () => {
   const [selectedStudy, setSelectedStudy] = useState<string | null>(null);
 
-  const studies = [
+  const studies: Study[] = [
     {
       id: "healthcare",
       client: "Healthcare Provider",
@@ -43,7 +59,168 @@ export const CaseStudyTabs = () => {
     },
   ];
 
-  const currentStudy = studies.find(s => s.id === selectedStudy);
+  const workshops: Workshop[] = [
+    {
+      id: "design-thinking-students",
+      icon: <Users className="w-6 h-6" />,
+      client: "Students",
+      tabTitle: "Design Thinking for Student Leaders",
+      teaser: "Real-world problem-solving frameworks for changemakers",
+      challenge: "Student leaders wanted practical tools to tackle complex community challenges but lacked structured problem-solving methods.",
+      solution: "Led interactive design thinking workshops where students defined problems, ideated solutions, and prototyped real initiatives using the DDD framework.",
+      result: "Participants developed actionable projects and reported increased confidence in leading community-driven change.",
+      testimonial: "This workshop gave me the tools to turn my ideas into reality. I finally feel like I can make a real impact.",
+      author: "Student Leader"
+    },
+    {
+      id: "ai-literacy-students",
+      icon: <Sparkles className="w-6 h-6" />,
+      client: "Students",
+      tabTitle: "AI Literacy for Digital Natives",
+      teaser: "Understanding AI beyond the hype",
+      challenge: "Students were using AI tools daily without understanding how they work or their implications.",
+      solution: "Designed engaging sessions demystifying AI fundamentals, ethics, and practical applications in academic and personal contexts.",
+      result: "Students gained critical AI literacy and confidence to use these tools responsibly and effectively.",
+      testimonial: "I use ChatGPT every day, but I never understood it until this workshop. Now I feel empowered, not just entertained.",
+      author: "University Student"
+    },
+    {
+      id: "life-os-students",
+      icon: <GraduationCap className="w-6 h-6" />,
+      client: "Students",
+      tabTitle: "Life OS for Students",
+      teaser: "Building systems that align values with daily habits",
+      challenge: "Students struggled with fragmented productivity systems and unclear long-term direction.",
+      solution: "Introduced the Life OS framework connecting identity, values, habits, and goals in one integrated Notion system.",
+      result: "Participants reported greater clarity, consistency, and control over their academic and personal lives.",
+      testimonial: "Life OS changed how I approach everything. I'm not just productive—I'm intentional.",
+      author: "Student Participant"
+    },
+    {
+      id: "ai-pedagogy",
+      icon: <BookOpen className="w-6 h-6" />,
+      client: "Educators",
+      tabTitle: "AI in Pedagogy",
+      teaser: "Transforming teaching with AI-assisted learning design",
+      challenge: "Educators wanted to integrate AI into their teaching but felt overwhelmed by the options and ethics.",
+      solution: "Facilitated hands-on workshops exploring AI tools for lesson planning, assessment design, and personalized learning.",
+      result: "Teachers left with practical AI integration strategies aligned with educational values.",
+      testimonial: "This workshop helped me see AI as a teaching partner, not a replacement. I feel confident experimenting now.",
+      author: "High School Teacher"
+    },
+    {
+      id: "systems-thinking-educators",
+      icon: <Code className="w-6 h-6" />,
+      client: "Educators",
+      tabTitle: "Systems Thinking for Curriculum Design",
+      teaser: "Connecting learning outcomes to real-world systems",
+      challenge: "Educators struggled to design curricula that prepared students for complex, interconnected challenges.",
+      solution: "Led collaborative sessions using systems thinking frameworks to redesign units around real-world complexity.",
+      result: "Educators created more engaging, relevant curricula that students connected with deeply.",
+      testimonial: "Systems thinking transformed my approach. My students are finally seeing the big picture.",
+      author: "Curriculum Designer"
+    },
+    {
+      id: "digital-literacy-educators",
+      icon: <Briefcase className="w-6 h-6" />,
+      client: "Educators",
+      tabTitle: "Digital Literacy Leadership",
+      teaser: "Leading the charge in digital transformation",
+      challenge: "School leaders needed to champion digital literacy but lacked clarity on where to start.",
+      solution: "Delivered strategic workshops mapping digital readiness, identifying gaps, and designing phased adoption plans.",
+      result: "Leaders gained confidence to drive whole-school digital transformation initiatives.",
+      testimonial: "This workshop gave me the roadmap I needed to lead digital change with purpose.",
+      author: "School Principal"
+    },
+    {
+      id: "demystifying-ai",
+      icon: <Lightbulb className="w-6 h-6" />,
+      client: "Executives",
+      tabTitle: "Demystifying AI for Business Leaders",
+      teaser: "Understanding the four types of AI and integration pyramid",
+      challenge: "Business leaders felt AI was confusing buzzword without clear ROI or implementation path.",
+      solution: "Flagship executive workshop introducing AI types, integration strategies, and real use cases with responsible implementation frameworks.",
+      result: "Participants left with mapped high-ROI opportunities and clearer understanding of AI implementation.",
+      testimonial: "This workshop cut through the noise. I finally understand where AI fits in our strategy.",
+      author: "Business Leader"
+    },
+    {
+      id: "scalable-intelligence",
+      icon: <Building2 className="w-6 h-6" />,
+      client: "Executives",
+      tabTitle: "Laying Foundations for Scalable Intelligence",
+      teaser: "Building architecture for AI scalability",
+      challenge: "Department heads struggled with fragmented systems preventing AI scalability.",
+      solution: "Internal transformation workshop on data readiness and system architecture using the Foundations → Systems → ROI framework.",
+      result: "Introduced strategic framework used to guide organization's digital strategy rollout.",
+      testimonial: "This workshop showed us the hidden cost of chaos and gave us a clear path forward.",
+      author: "Department Head"
+    },
+    {
+      id: "prompting-impact",
+      icon: <MessageSquare className="w-6 h-6" />,
+      client: "Executives",
+      tabTitle: "Prompting for Impact",
+      teaser: "Teaching teams to communicate effectively with AI tools",
+      challenge: "Staff lacked confidence using internal AI tools and getting quality results.",
+      solution: "Interactive training with live prompting exercises, template cards, and real use cases for business workflows.",
+      result: "Improved staff confidence and effectiveness using AI tools across departments.",
+      testimonial: "I thought I knew how to use AI. This workshop showed me I'd barely scratched the surface.",
+      author: "Operations Manager"
+    },
+    {
+      id: "toolminator",
+      icon: <Wrench className="w-6 h-6" />,
+      client: "Executives",
+      tabTitle: "Toolminator: The Internal GPT Pilot",
+      teaser: "Custom GPT trained on product data for internal enablement",
+      challenge: "Teams needed faster access to product information and spare parts data.",
+      solution: "Showcase workshop with live demo of custom GPT, Q&A, and prompting best practices for internal use.",
+      result: "Validated AI as internal enablement tool and inspired future automation across departments.",
+      testimonial: "Toolminator changed how our team accesses information. It's like having an expert on call 24/7.",
+      author: "Product Team Lead"
+    },
+    {
+      id: "ai-workflow",
+      icon: <Workflow className="w-6 h-6" />,
+      client: "Executives",
+      tabTitle: "Generative AI in the Flow of Work",
+      teaser: "Streamlining documentation and communication with AI",
+      challenge: "Teams spent too much time on documentation, reporting, and routine communications.",
+      solution: "Workshop showing how AI streamlines workflows using real examples like automated meeting summaries and proposal drafts.",
+      result: "Leaders identified low-risk automation wins and built confidence in AI adoption.",
+      testimonial: "We're saving hours every week on admin work. AI in our workflow has been transformative.",
+      author: "Business Leader"
+    },
+    {
+      id: "fixes-to-roi",
+      icon: <TrendingUp className="w-6 h-6" />,
+      client: "Executives",
+      tabTitle: "From Fixes to ROI",
+      teaser: "Turning AI experiments into measurable business value",
+      challenge: "Organizations ran AI pilots without clear metrics or path to scale.",
+      solution: "Strategic workshop mapping short-term wins to long-term ROI pillars with clear evaluation criteria.",
+      result: "Provided framework for evaluating future AI investments and transformation priorities.",
+      testimonial: "This workshop shifted our thinking from 'cool tech' to 'strategic value.' Game changer.",
+      author: "C-Suite Executive"
+    },
+    {
+      id: "human-ai-collaboration",
+      icon: <Rocket className="w-6 h-6" />,
+      client: "Executives",
+      tabTitle: "The Future of Work: Human + AI Collaboration",
+      teaser: "Exploring responsible AI in mid-sized enterprises",
+      challenge: "Leaders needed clarity on balancing human judgment with AI augmentation.",
+      solution: "Leadership-facing talk on responsible AI implementation and human-AI collaboration principles.",
+      result: "Shaped organization's internal communications on digital transformation.",
+      testimonial: "This talk helped us frame AI not as replacement, but as partnership. Perfect narrative for our team.",
+      author: "C-Suite Leader"
+    },
+  ];
+
+  const allItems: (Study | Workshop)[] = [...studies, ...workshops];
+
+  const currentStudy = allItems.find(s => s.id === selectedStudy);
 
   return (
     <section className="py-16 px-6 relative">
@@ -83,29 +260,36 @@ export const CaseStudyTabs = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {studies.map((study) => (
-            <Card
-              key={study.id}
-              onClick={() => setSelectedStudy(study.id)}
-              className="group relative overflow-hidden border-2 border-primary/20 bg-card hover:bg-gradient-card hover:border-accent transition-all duration-300 cursor-pointer h-full p-6 hover:shadow-elegant"
-            >
-              <div className="text-center space-y-3 flex flex-col items-center justify-center h-full">
-                <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/30">
-                  {study.client}
-                </Badge>
-                <h3 className="font-heading font-bold text-lg text-accent uppercase tracking-wide leading-tight">
-                  {study.tabTitle}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {study.teaser}
-                </p>
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity pt-2">
-                  <ArrowRight className="w-5 h-5 text-accent mx-auto" />
+        <div className="overflow-x-auto pb-4">
+          <div className="flex gap-4 min-w-max px-2">
+            {allItems.map((item) => (
+              <Card
+                key={item.id}
+                onClick={() => setSelectedStudy(item.id)}
+                className="group relative overflow-hidden border-2 border-primary/20 bg-card hover:bg-gradient-card hover:border-accent transition-all duration-300 cursor-pointer p-6 hover:shadow-elegant flex-shrink-0 w-80"
+              >
+                <div className="text-center space-y-3 flex flex-col items-center justify-center h-full">
+                  {'icon' in item && item.icon && (
+                    <div className="text-accent">
+                      {item.icon}
+                    </div>
+                  )}
+                  <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/30">
+                    {item.client}
+                  </Badge>
+                  <h3 className="font-heading font-bold text-lg text-accent uppercase tracking-wide leading-tight">
+                    {item.tabTitle}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {item.teaser}
+                  </p>
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity pt-2">
+                    <ArrowRight className="w-5 h-5 text-accent mx-auto" />
+                  </div>
                 </div>
-              </div>
-            </Card>
-          ))}
+              </Card>
+            ))}
+          </div>
         </div>
 
         {/* Dialog Popup */}
