@@ -1,8 +1,9 @@
-import { useState, ReactNode } from "react";
+import { useState, useRef, ReactNode } from "react";
 import { Card } from "@/components/ui/card";
-import { Quote, ArrowRight, Target, Lightbulb, CheckCircle2, Users, Sparkles, GraduationCap, BookOpen, Code, Briefcase, Building2, MessageSquare, Wrench, Workflow, TrendingUp, Rocket } from "lucide-react";
+import { Quote, ArrowRight, Target, Lightbulb, CheckCircle2, Users, Sparkles, GraduationCap, BookOpen, Code, Briefcase, Building2, MessageSquare, Wrench, Workflow, TrendingUp, Rocket, ChevronLeft, ChevronRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 
 interface Study {
   id: string;
@@ -22,6 +23,21 @@ interface Workshop extends Study {
 
 export const CaseStudyTabs = () => {
   const [selectedStudy, setSelectedStudy] = useState<string | null>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 400;
+      const newScrollLeft = direction === 'left' 
+        ? scrollContainerRef.current.scrollLeft - scrollAmount
+        : scrollContainerRef.current.scrollLeft + scrollAmount;
+      
+      scrollContainerRef.current.scrollTo({
+        left: newScrollLeft,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   const studies: Study[] = [
     {
@@ -260,35 +276,61 @@ export const CaseStudyTabs = () => {
           </p>
         </div>
 
-        <div className="overflow-x-auto pb-4">
-          <div className="flex gap-4 min-w-max px-2">
-            {allItems.map((item) => (
-              <Card
-                key={item.id}
-                onClick={() => setSelectedStudy(item.id)}
-                className="group relative overflow-hidden border-2 border-primary/20 bg-card hover:bg-gradient-card hover:border-accent transition-all duration-300 cursor-pointer p-6 hover:shadow-elegant flex-shrink-0 w-80"
-              >
-                <div className="text-center space-y-3 flex flex-col items-center justify-center h-full">
-                  {'icon' in item && item.icon && (
-                    <div className="text-accent">
-                      {item.icon}
+        <div className="relative">
+          {/* Left Arrow */}
+          <Button
+            variant="outline"
+            size="icon"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-background/95 backdrop-blur-sm border-primary/20 hover:border-accent hover:bg-accent/10 shadow-lg"
+            onClick={() => scroll('left')}
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </Button>
+
+          {/* Right Arrow */}
+          <Button
+            variant="outline"
+            size="icon"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-background/95 backdrop-blur-sm border-primary/20 hover:border-accent hover:bg-accent/10 shadow-lg"
+            onClick={() => scroll('right')}
+          >
+            <ChevronRight className="w-5 h-5" />
+          </Button>
+
+          <div 
+            ref={scrollContainerRef}
+            className="overflow-x-auto scrollbar-hide"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            <div className="flex gap-4 min-w-max px-12 py-4">
+              {allItems.map((item) => (
+                <Card
+                  key={item.id}
+                  onClick={() => setSelectedStudy(item.id)}
+                  className="group relative overflow-hidden border-2 border-primary/20 bg-card hover:bg-gradient-card hover:border-accent transition-all duration-300 cursor-pointer p-6 hover:shadow-elegant flex-shrink-0 w-80"
+                >
+                  <div className="text-center space-y-3 flex flex-col items-center justify-center h-full">
+                    {'icon' in item && item.icon && (
+                      <div className="text-accent">
+                        {item.icon}
+                      </div>
+                    )}
+                    <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/30">
+                      {item.client}
+                    </Badge>
+                    <h3 className="font-heading font-bold text-lg text-accent uppercase tracking-wide leading-tight">
+                      {item.tabTitle}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {item.teaser}
+                    </p>
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity pt-2">
+                      <ArrowRight className="w-5 h-5 text-accent mx-auto" />
                     </div>
-                  )}
-                  <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/30">
-                    {item.client}
-                  </Badge>
-                  <h3 className="font-heading font-bold text-lg text-accent uppercase tracking-wide leading-tight">
-                    {item.tabTitle}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {item.teaser}
-                  </p>
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity pt-2">
-                    <ArrowRight className="w-5 h-5 text-accent mx-auto" />
                   </div>
-                </div>
-              </Card>
-            ))}
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
 
