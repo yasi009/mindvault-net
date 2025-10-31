@@ -79,9 +79,9 @@ const Index = () => {
               </ul>
             </div>
             <div className="text-center">
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-foreground italic">The Promise</h3>
+              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-foreground italic">The Promise: Clarity that sticks:</h3>
               <p className="text-2xl md:text-3xl font-heading font-bold italic text-foreground leading-relaxed mb-6">
-                Clarity that sticks: <span className="bg-gradient-to-r from-accent via-rose to-primary bg-clip-text text-transparent whitespace-nowrap">values → identity → habits → goals</span>
+                <span className="bg-gradient-to-r from-accent via-rose to-primary bg-clip-text text-transparent whitespace-nowrap">values → identity → habits → goals</span>
               </p>
               <p className="text-xl text-foreground/90 leading-relaxed font-medium">
                 A complete Life OS that aligns what you do with who you are—powered by AI, built in Notion.
