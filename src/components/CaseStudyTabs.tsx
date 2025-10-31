@@ -1,6 +1,6 @@
 import { useState, useRef, ReactNode } from "react";
 import { Card } from "@/components/ui/card";
-import { Quote, ArrowRight, Target, Lightbulb, CheckCircle2, Users, Sparkles, GraduationCap, BookOpen, Code, Briefcase, Building2, MessageSquare, Wrench, Workflow, TrendingUp, Rocket, ChevronLeft, ChevronRight } from "lucide-react";
+import { Quote, ArrowRight, Target, Lightbulb, CheckCircle2, Users, Sparkles, GraduationCap, BookOpen, Code, Briefcase, Building2, MessageSquare, Wrench, Workflow, TrendingUp, Rocket, ChevronLeft, ChevronRight, Heart, Building } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -39,9 +39,10 @@ export const CaseStudyTabs = () => {
     }
   };
 
-  const studies: Study[] = [
+  const studies: Workshop[] = [
     {
       id: "healthcare",
+      icon: <Heart className="w-6 h-6" />,
       client: "Healthcare Provider",
       tabTitle: "NDIS Workflow Transformation",
       teaser: "From messy case notes to streamlined AI workflow in healthcare",
@@ -53,6 +54,7 @@ export const CaseStudyTabs = () => {
     },
     {
       id: "makinex",
+      icon: <Building className="w-6 h-6" />,
       client: "Makinex",
       tabTitle: "AI Strategy Workshop",
       teaser: "Transforming AI confusion into confident digital adoption",
@@ -64,6 +66,7 @@ export const CaseStudyTabs = () => {
     },
     {
       id: "girlsinbusiness",
+      icon: <Sparkles className="w-6 h-6" />,
       client: "Girls in Business (UNSW/NIDA)",
       tabTitle: "Empowerment Workshop",
       teaser: "Inspiring young women to design their futures with confidence",
@@ -234,7 +237,7 @@ export const CaseStudyTabs = () => {
     },
   ];
 
-  const allItems: (Study | Workshop)[] = [...studies, ...workshops];
+  const allItems: Workshop[] = [...studies, ...workshops];
 
   const currentStudy = allItems.find(s => s.id === selectedStudy);
 
