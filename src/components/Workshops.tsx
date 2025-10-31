@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, Sparkles, GraduationCap, BookOpen, Code, Briefcase } from "lucide-react";
+import { Users, Sparkles, GraduationCap, BookOpen, Code, Briefcase, Lightbulb, Building2, MessageSquare, Target, Wrench, Workflow, TrendingUp, Rocket } from "lucide-react";
 import { useAudience } from "@/contexts/AudienceContext";
 
 export const Workshops = () => {
@@ -67,6 +67,54 @@ export const Workshops = () => {
       title: "Pilot Design Sessions",
       description: "Hands-on workshops to design and launch AI pilots with playbooks for scaling across departments.",
       community: "Executives"
+    },
+    {
+      icon: <Lightbulb className="w-8 h-8" />,
+      title: "Demystifying AI for Business Leaders",
+      description: "Flagship executive workshop introducing the four types of AI, integration pyramid, and real use cases. Participants leave with mapped high-ROI opportunities and clearer implementation strategies.",
+      community: "Business Leaders"
+    },
+    {
+      icon: <Building2 className="w-8 h-8" />,
+      title: "Laying the Foundations for Scalable Intelligence",
+      description: "Internal transformation workshop on data readiness and system architecture. Introduces the Foundations → Systems → ROI framework for digital strategy rollout.",
+      community: "Department Heads"
+    },
+    {
+      icon: <MessageSquare className="w-8 h-8" />,
+      title: "Prompting for Impact: How to Talk to AI Tools",
+      description: "Interactive training with live prompting exercises, template cards, and real use cases for email generation, report summarization, and product lookup.",
+      community: "All Staff"
+    },
+    {
+      icon: <Target className="w-8 h-8" />,
+      title: "From Chaos to Clarity: Building AI Infrastructure",
+      description: "Visualizing the cost of disjointed systems and proposing unified architecture. Sets groundwork for AI enablement roadmap and data integration projects.",
+      community: "Leadership"
+    },
+    {
+      icon: <Wrench className="w-8 h-8" />,
+      title: "Toolminator: The Internal GPT Pilot",
+      description: "Showcase workshop with live demo of custom GPT trained on product data. Includes Q&A and prompting best practices for internal enablement.",
+      community: "Product Teams"
+    },
+    {
+      icon: <Workflow className="w-8 h-8" />,
+      title: "Generative AI in the Flow of Work",
+      description: "Streamlining documentation, reporting, and communication using live workflows. Covers automated meeting summaries and client proposal drafts.",
+      community: "Business Leaders"
+    },
+    {
+      icon: <TrendingUp className="w-8 h-8" />,
+      title: "From Fixes to ROI: Turning Experiments into Value",
+      description: "Strategic workshop mapping short-term wins to long-term ROI pillars. Provides clear lens for evaluating future AI investments and priorities.",
+      community: "Leadership"
+    },
+    {
+      icon: <Rocket className="w-8 h-8" />,
+      title: "The Future of Work: Human + AI Collaboration",
+      description: "Leadership-facing talk on responsible AI in mid-sized enterprises. Explores balance between human judgment and AI augmentation.",
+      community: "C-Suite"
     }
   ];
 
