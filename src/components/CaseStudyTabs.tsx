@@ -266,7 +266,7 @@ export const CaseStudyTabs = () => {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto pt-8">
+      <div className="max-w-[1600px] mx-auto pt-8 px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground italic">
             Transformation in Action
