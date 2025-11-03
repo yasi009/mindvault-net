@@ -135,9 +135,7 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-20 px-6 bg-gradient-card">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground italic">
-            In the Meantime: Join a Workshop
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground italic">In the Meantime: Book a Chat orWorkshop </h2>
           <div className="inline-block px-6 py-3 bg-accent/10 rounded-full mb-6">
             <span className="text-lg font-medium text-accent">Life OS Coming Soon</span>
           </div>
@@ -145,7 +143,10 @@ const Index = () => {
             Experience the Debunk, Demystify, Design framework in person and start your clarity journey today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <Button size="lg" onClick={() => window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          })}>
               Get Workshop Tickets
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
