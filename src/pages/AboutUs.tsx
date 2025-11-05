@@ -36,7 +36,7 @@ export const AboutUs = () => {
               src={decorativeDivider} 
               alt="Decorative divider" 
               className="w-40 md:w-56 h-auto brightness-0 saturate-[2] opacity-90"
-              style={{ filter: 'brightness(0) saturate(100%) invert(70%) sepia(70%) saturate(500%) hue-rotate(10deg)' }}
+              style={{ filter: 'brightness(0) saturate(100%) invert(50%) sepia(100%) saturate(1000%) hue-rotate(0deg)' }}
             />
           </div>
         </div>
