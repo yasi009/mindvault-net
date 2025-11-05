@@ -1,6 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 
 export const Navigation = () => {
   const location = useLocation();
@@ -36,11 +35,6 @@ export const Navigation = () => {
                 {link.label}
               </Link>
             ))}
-            <Link to="/services">
-              <Button size="sm" className="ml-2">
-                Get Life OS
-              </Button>
-            </Link>
           </div>
         </div>
       </div>
