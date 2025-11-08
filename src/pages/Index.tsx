@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { DDDProcess } from "@/components/DDDProcess";
 import { ComingSoon } from "@/components/ComingSoon";
 import { CaseStudyTabs } from "@/components/CaseStudyTabs";
+import { ProblemPromiseSection } from "@/components/ProblemPromiseSection";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Quote } from "lucide-react";
@@ -57,39 +58,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Problem → Promise */}
-      <section className="py-20 px-6 bg-background">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-foreground italic">The Problem</h3>
-              <ul className="space-y-4 text-lg text-muted-foreground">
-                <li className="flex items-start">
-                  <span className="text-accent mr-3 font-bold text-xl">•</span>
-                  <span className="font-semibold">Mental clutter: too many goals, tools, and tabs</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-accent mr-3 font-bold text-xl">•</span>
-                  <span className="font-semibold">Inconsistent habits that don't stick</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-accent mr-3 font-bold text-xl">•</span>
-                  <span className="font-semibold">No clear system connecting values to action</span>
-                </li>
-              </ul>
-            </div>
-            <div className="text-center">
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-foreground italic">The Promise: Clarity that sticks:</h3>
-              <p className="text-2xl md:text-3xl font-heading font-bold italic text-foreground leading-relaxed mb-6">
-                <span className="bg-gradient-to-r from-accent via-rose to-primary bg-clip-text text-transparent whitespace-nowrap">values → identity → habits → goals</span>
-              </p>
-              <p className="text-xl text-foreground/90 leading-relaxed font-medium">
-                A complete Life OS that aligns what you do with who you are—powered by AI, built in Notion.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ProblemPromiseSection />
 
       {/* Feature Teasers */}
       <section className="py-20 px-6 bg-muted/30">
