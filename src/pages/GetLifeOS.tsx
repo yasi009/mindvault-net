@@ -140,9 +140,6 @@ const GetLifeOS = () => {
         </div>
       </section>
 
-      {/* Explore the Life OS - Coming Soon Workshop */}
-      <ComingSoon />
-
       {/* How It Works - DDD */}
       <section className="py-20 px-6 bg-muted/30">
         <div className="max-w-5xl mx-auto">
@@ -234,6 +231,9 @@ const GetLifeOS = () => {
           </div>
         </div>
       </section>
+
+      {/* Explore the Life OS - Coming Soon Workshop */}
+      <ComingSoon />
 
       <ConsultationDialog open={consultationOpen} onOpenChange={setConsultationOpen} />
       <Footer />
