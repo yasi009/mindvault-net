@@ -7,7 +7,6 @@ import { useState } from "react";
 import { ConsultationDialog } from "@/components/ConsultationDialog";
 import { useNavigate } from "react-router-dom";
 import { ProblemPromiseSection } from "@/components/ProblemPromiseSection";
-import { ComingSoon } from "@/components/ComingSoon";
 import lifeOsDemo from "@/assets/life-os-demo.png";
 
 const GetLifeOS = () => {
@@ -232,8 +231,29 @@ const GetLifeOS = () => {
         </div>
       </section>
 
-      {/* Explore the Life OS - Coming Soon Workshop */}
-      <ComingSoon />
+      {/* CTA Section */}
+      <section className="py-20 px-6 bg-gradient-card">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground italic">In the Meantime: Book a Chat or Workshop</h2>
+          <div className="inline-block px-6 py-3 bg-accent/10 rounded-full mb-6">
+            <span className="text-lg font-medium text-accent">Life OS Coming Soon</span>
+          </div>
+          <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            Experience the Debunk, Demystify, Design framework in person and start your clarity journey today.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" asChild>
+              <a href="https://www.isra.org.au/events/debunk-demystify-design/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">
+                Get Workshop Tickets
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </a>
+            </Button>
+            <Button variant="outline" size="lg" onClick={() => navigate('/contact')}>
+              Book a Consultation
+            </Button>
+          </div>
+        </div>
+      </section>
 
       <ConsultationDialog open={consultationOpen} onOpenChange={setConsultationOpen} />
       <Footer />
