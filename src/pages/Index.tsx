@@ -112,12 +112,11 @@ const Index = () => {
             Experience the Debunk, Demystify, Design framework in person and start your clarity journey today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" onClick={() => window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          })}>
-              Get Workshop Tickets
-              <ArrowRight className="w-5 h-5 ml-2" />
+            <Button size="lg" asChild>
+              <a href="https://www.isra.org.au/events/debunk-demystify-design/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">
+                Get Workshop Tickets
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </a>
             </Button>
             <Button variant="outline" size="lg" onClick={() => navigate('/contact')}>
               Book a Consultation

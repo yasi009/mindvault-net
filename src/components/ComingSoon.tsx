@@ -36,8 +36,10 @@ export const ComingSoon = () => {
           Join us for a powerful 90-minute session on clarity, consciousness, and creating systems that work for your real self.
         </p>
         
-        <Button size="lg" className="shadow-lg hover:shadow-xl transition-shadow" onClick={() => setTicketDialogOpen(true)}>
-          Get Tickets
+        <Button size="lg" className="shadow-lg hover:shadow-xl transition-shadow" asChild>
+          <a href="https://www.isra.org.au/events/debunk-demystify-design/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">
+            Get Tickets
+          </a>
         </Button>
       </div>
       
