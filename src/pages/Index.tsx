@@ -1,17 +1,18 @@
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { Footer } from "@/components/Footer";
-import { DDDProcess } from "@/components/DDDProcess";
 import { ComingSoon } from "@/components/ComingSoon";
 import { CaseStudyTabs } from "@/components/CaseStudyTabs";
-import { ProblemPromiseSection } from "@/components/ProblemPromiseSection";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Quote } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+
 const Index = () => {
   const navigate = useNavigate();
-  return <div className="min-h-screen">
+  
+  return (
+    <div className="min-h-screen">
       <Navigation />
       <Hero />
       
@@ -58,53 +59,10 @@ const Index = () => {
         </div>
       </section>
 
-      <ProblemPromiseSection />
-
-      {/* Feature Teasers */}
-      <section className="py-20 px-6 bg-muted/30">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground italic">What's Inside</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="p-6 bg-card rounded-lg shadow-soft">
-              <h3 className="text-xl font-bold mb-3 text-foreground">Identity & Values</h3>
-              <p className="text-muted-foreground">Decide who you are; design how you live.</p>
-            </div>
-            <div className="p-6 bg-card rounded-lg shadow-soft">
-              <h3 className="text-xl font-bold mb-3 text-foreground">Habits ↔ Goals</h3>
-              <p className="text-muted-foreground">Actions that serve your higher-purpose goals.</p>
-            </div>
-            <div className="p-6 bg-card rounded-lg shadow-soft">
-              <h3 className="text-xl font-bold mb-3 text-foreground">Learning Map</h3>
-              <p className="text-muted-foreground">Plan skill growth like a project.</p>
-            </div>
-            <div className="p-6 bg-card rounded-lg shadow-soft">
-              <h3 className="text-xl font-bold mb-3 text-foreground">Reflections & Reviews</h3>
-              <p className="text-muted-foreground">Metacognition built-in.</p>
-            </div>
-            <div className="p-6 bg-card rounded-lg shadow-soft">
-              <h3 className="text-xl font-bold mb-3 text-foreground">AI-Guided Onboarding</h3>
-              <p className="text-muted-foreground">Set up via conversation, not data entry.</p>
-            </div>
-            <div className="p-6 bg-card rounded-lg shadow-soft">
-              <h3 className="text-xl font-bold mb-3 text-foreground">Calendar Bridge</h3>
-              <p className="text-muted-foreground">One schedule for habits, goals & reviews.</p>
-            </div>
-          </div>
-          <div className="text-center mt-12">
-            <Button size="lg" onClick={() => navigate('/services')}>
-              Explore the Life OS
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <DDDProcess />
-
       {/* CTA Section */}
       <section className="py-20 px-6 bg-gradient-card">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground italic">In the Meantime: Book a Chat orWorkshop </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground italic">In the Meantime: Book a Chat or Workshop</h2>
           <div className="inline-block px-6 py-3 bg-accent/10 rounded-full mb-6">
             <span className="text-lg font-medium text-accent">Life OS Coming Soon</span>
           </div>
@@ -126,6 +84,8 @@ const Index = () => {
       </section>
 
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
