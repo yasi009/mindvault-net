@@ -37,17 +37,17 @@ export const ProblemPromiseSection = () => {
             <h3 className="text-3xl md:text-4xl font-bold mb-8 text-foreground italic">
               The Problem
             </h3>
-            <ul className="space-y-6 text-xl md:text-2xl text-muted-foreground">
+            <ul className="space-y-6 text-base md:text-lg text-muted-foreground">
               <li className="flex items-start">
-                <span className="text-accent mr-4 font-bold text-2xl">•</span>
+                <span className="text-accent mr-4 font-bold text-xl">•</span>
                 <span className="font-semibold">Mental clutter: too many goals, tools, and tabs</span>
               </li>
               <li className="flex items-start">
-                <span className="text-accent mr-4 font-bold text-2xl">•</span>
+                <span className="text-accent mr-4 font-bold text-xl">•</span>
                 <span className="font-semibold">Inconsistent habits that don't stick</span>
               </li>
               <li className="flex items-start">
-                <span className="text-accent mr-4 font-bold text-2xl">•</span>
+                <span className="text-accent mr-4 font-bold text-xl">•</span>
                 <span className="font-semibold">No clear system connecting values to action</span>
               </li>
             </ul>
@@ -66,7 +66,7 @@ export const ProblemPromiseSection = () => {
                 values → identity → habits → goals
               </span>
             </p>
-            <p className="text-xl md:text-2xl text-foreground/90 leading-relaxed font-medium">
+            <p className="text-base md:text-lg text-foreground/90 leading-relaxed font-medium">
               A complete Life OS that aligns what you do with who you are—powered by AI, built in Notion.
             </p>
           </div>
