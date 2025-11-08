@@ -18,6 +18,18 @@ const GetLifeOS = () => {
     <div className="min-h-screen">
       <Navigation />
       
+      {/* Orange ribbon banner */}
+      <div className="w-full bg-accent py-2 overflow-hidden">
+        <div className="flex animate-scroll-right whitespace-nowrap">
+          <p className="font-heading text-white italic text-sm md:text-base tracking-[0.3em] uppercase px-8">
+            DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧
+          </p>
+          <p className="font-heading text-white italic text-sm md:text-base tracking-[0.3em] uppercase px-8">
+            DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧
+          </p>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section className="relative py-24 px-6 bg-gradient-soft overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">

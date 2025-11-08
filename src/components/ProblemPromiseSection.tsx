@@ -26,7 +26,7 @@ export const ProblemPromiseSection = () => {
   }, []);
 
   return (
-    <section className="py-20 px-6 bg-background" ref={sectionRef}>
+    <section className="py-20 px-6 bg-muted/30" ref={sectionRef}>
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div
