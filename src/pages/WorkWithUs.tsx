@@ -126,43 +126,6 @@ const WorkWithUs = () => {
         </div>
       </section>
 
-      {/* Pathways Section */}
-      <section className="py-20 px-6 bg-background relative overflow-hidden">
-        {/* Subtle pink gradient blob */}
-        <div className="absolute -bottom-10 left-1/4 w-[400px] h-[400px] bg-gradient-to-t from-pink-200/20 via-rose-300/15 to-transparent rounded-full blur-[85px] pointer-events-none"></div>
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Two Pathways to Your Life OS</h2>
-            <p className="text-xl text-muted-foreground">
-              Choose the engagement that fits your needs.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="p-8">
-              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-                <Target className="w-7 h-7 text-primary" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Clarity Consult (1–2 hrs)</h3>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Discovery and diagnosis session to understand your challenges, map your current systems, and recommend the right Life OS approach for you.
-              </p>
-              <p className="text-sm text-accent font-medium">→ Recommended Life OS setup pathway</p>
-            </Card>
-            
-            <Card className="p-8">
-              <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mb-6">
-                <Users className="w-7 h-7 text-accent" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Workshop → Life OS (Teams/Educators)</h3>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Introduction to AI literacy and clarity frameworks for teams, followed by pilot deployment of Life OS playbooks tailored to your organization.
-              </p>
-              <p className="text-sm text-accent font-medium">→ Custom Life OS for groups</p>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 px-6 bg-gradient-card">
