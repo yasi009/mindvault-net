@@ -7,7 +7,6 @@ export const Navigation = () => {
   
   const links = [
     { path: "/", label: "Home" },
-    { path: "/services", label: "Product (Life OS)" },
     { path: "/work-with-us", label: "Work With Us" },
     { path: "/about-us", label: "About" },
     { path: "/contact", label: "Contact" },
