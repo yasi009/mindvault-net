@@ -65,6 +65,38 @@ const WorkWithUs = () => {
         </div>
       </section>
 
+      {/* How We Work Section */}
+      <section className="py-20 px-6 bg-muted/30">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">How We Work</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              A proven 3-step process to transform overwhelm into intentional action.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="p-8 text-center">
+              <div className="text-4xl font-bold text-accent mb-3">1</div>
+              <h3 className="text-xl font-bold mb-2 text-foreground uppercase tracking-wide">Debunk</h3>
+              <p className="text-muted-foreground">Identify what's not working. Cut through assumptions and surface the real challenges.</p>
+            </Card>
+            
+            <Card className="p-8 text-center">
+              <div className="text-4xl font-bold text-primary mb-3">2</div>
+              <h3 className="text-xl font-bold mb-2 text-foreground uppercase tracking-wide">Demystify</h3>
+              <p className="text-muted-foreground">Understand the systems and tools. Bring clarity to complexity through practical frameworks.</p>
+            </Card>
+            
+            <Card className="p-8 text-center">
+              <div className="text-4xl font-bold text-accent mb-3">3</div>
+              <h3 className="text-xl font-bold mb-2 text-foreground uppercase tracking-wide">Design</h3>
+              <p className="text-muted-foreground">Build a practical solution. Create systems that work for you, not against you.</p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Process Section */}
       <section className="py-20 px-6 bg-background">
         <div className="max-w-4xl mx-auto">
