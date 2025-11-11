@@ -24,7 +24,7 @@ export const About = () => {
             Our Core Belief
           </h3>
           <p className="text-xl text-center text-foreground leading-relaxed">
-            Systems designed with care create lives lived with purpose.
+            Clarity begins with values and compounds through design.
           </p>
         </div>
 
