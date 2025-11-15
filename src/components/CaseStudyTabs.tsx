@@ -269,12 +269,12 @@ export const CaseStudyTabs = () => {
         </div>
       </div>
 
-      <div className="max-w-[1600px] mx-auto pt-8 px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground italic">
+      <div className="max-w-[1600px] mx-auto pt-6 sm:pt-8 px-2 sm:px-4">
+        <div className="text-center mb-8 sm:mb-10 md:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-foreground italic px-2">
             Transformation in Action
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground px-2">
             Real results through collaborative, systems-thinking workshops
           </p>
         </div>
@@ -284,20 +284,20 @@ export const CaseStudyTabs = () => {
           <Button
             variant="outline"
             size="icon"
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-background/95 backdrop-blur-sm border-primary/20 hover:border-accent hover:bg-accent/10 shadow-lg"
+            className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-background/95 backdrop-blur-sm border-primary/20 hover:border-accent hover:bg-accent/10 shadow-lg"
             onClick={() => scroll('left')}
           >
-            <ChevronLeft className="w-5 h-5" />
+            <ChevronLeft className="w-4 sm:w-5 h-4 sm:h-5" />
           </Button>
 
           {/* Right Arrow */}
           <Button
             variant="outline"
             size="icon"
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-background/95 backdrop-blur-sm border-primary/20 hover:border-accent hover:bg-accent/10 shadow-lg"
+            className="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-background/95 backdrop-blur-sm border-primary/20 hover:border-accent hover:bg-accent/10 shadow-lg"
             onClick={() => scroll('right')}
           >
-            <ChevronRight className="w-5 h-5" />
+            <ChevronRight className="w-4 sm:w-5 h-4 sm:h-5" />
           </Button>
 
           <div 
@@ -305,30 +305,30 @@ export const CaseStudyTabs = () => {
             className="overflow-x-auto scrollbar-hide"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
-            <div className="flex gap-4 min-w-max px-12 py-4">
+            <div className="flex gap-3 sm:gap-4 min-w-max px-4 sm:px-8 md:px-12 py-3 sm:py-4">
               {allItems.map((item) => (
                 <Card
                   key={item.id}
                   onClick={() => setSelectedStudy(item.id)}
-                  className="group relative overflow-hidden border-2 border-primary/20 bg-card hover:bg-gradient-card hover:border-accent transition-all duration-300 cursor-pointer p-6 hover:shadow-elegant flex-shrink-0 w-80"
+                  className="group relative overflow-hidden border-2 border-primary/20 bg-card hover:bg-gradient-card hover:border-accent transition-all duration-300 cursor-pointer p-4 sm:p-5 md:p-6 hover:shadow-elegant flex-shrink-0 w-64 sm:w-72 md:w-80"
                 >
-                  <div className="text-center space-y-3 flex flex-col items-center justify-center h-full">
+                  <div className="text-center space-y-2 sm:space-y-3 flex flex-col items-center justify-center h-full">
                     {'icon' in item && item.icon && (
                       <div className="text-accent">
                         {item.icon}
                       </div>
                     )}
-                    <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/30">
+                    <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/30 text-xs sm:text-sm">
                       {item.client}
                     </Badge>
-                    <h3 className="font-heading font-bold text-lg text-accent uppercase tracking-wide leading-tight">
+                    <h3 className="font-heading font-bold text-base sm:text-lg text-accent uppercase tracking-wide leading-tight">
                       {item.tabTitle}
                     </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                       {item.teaser}
                     </p>
-                    <div className="opacity-0 group-hover:opacity-100 transition-opacity pt-2">
-                      <ArrowRight className="w-5 h-5 text-accent mx-auto" />
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity pt-1 sm:pt-2">
+                      <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 text-accent mx-auto" />
                     </div>
                   </div>
                 </Card>
@@ -343,11 +343,11 @@ export const CaseStudyTabs = () => {
             {currentStudy && (
               <>
                 <DialogHeader>
-                  <div className="space-y-2 mb-4">
-                    <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/30">
+                  <div className="space-y-2 mb-3 sm:mb-4">
+                    <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/30 text-xs sm:text-sm">
                       {currentStudy.client}
                     </Badge>
-                    <DialogTitle className="text-2xl md:text-3xl font-bold text-primary">
+                    <DialogTitle className="text-xl sm:text-2xl md:text-3xl font-bold text-primary">
                       {currentStudy.tabTitle}
                     </DialogTitle>
                   </div>
