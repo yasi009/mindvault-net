@@ -10,12 +10,12 @@ export const AboutUs = () => {
       <Navigation />
     
       {/* Hero Section */}
-      <section className="relative pt-16 pb-6 px-6 bg-primary overflow-hidden">
+      <section className="relative pt-20 md:pt-16 pb-8 md:pb-6 px-4 md:px-6 bg-primary overflow-hidden">
         {/* Pink blob top-right */}
-        <div className="absolute top-5 right-0 w-[300px] h-[300px] bg-gradient-to-bl from-pink-500/25 via-rose-500/20 to-transparent rounded-full blur-[80px]"></div>
+        <div className="absolute top-5 right-0 w-[200px] md:w-[300px] h-[200px] md:h-[300px] bg-gradient-to-bl from-pink-500/25 via-rose-500/20 to-transparent rounded-full blur-[80px]"></div>
         
         {/* Pink blob bottom-left */}
-        <div className="absolute bottom-0 left-10 w-[250px] h-[250px] bg-gradient-to-tr from-rose-500/20 via-pink-500/15 to-transparent rounded-full blur-[70px]"></div>
+        <div className="absolute bottom-0 left-10 w-[150px] md:w-[250px] h-[150px] md:h-[250px] bg-gradient-to-tr from-rose-500/20 via-pink-500/15 to-transparent rounded-full blur-[70px]"></div>
         
         <div className="absolute inset-0 opacity-[0.02]">
           <div className="absolute inset-0" style={{
@@ -25,17 +25,17 @@ export const AboutUs = () => {
         </div>
 
         <div className="relative max-w-5xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-2 text-accent tracking-tight italic uppercase">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-3 md:mb-2 text-accent tracking-tight italic uppercase px-4">
             Why MindVault?
           </h1>
-          <p className="text-xl md:text-3xl font-heading font-bold text-accent max-w-3xl mx-auto leading-relaxed -mb-10">
+          <p className="text-lg sm:text-xl md:text-3xl font-heading font-bold text-accent max-w-3xl mx-auto leading-relaxed -mb-8 md:-mb-10 px-4">
             Human depth meets digital intelligence.
           </p>
           <div className="flex justify-center">
             <img 
               src={decorativeDivider} 
               alt="Decorative divider" 
-              className="w-40 md:w-56 h-auto opacity-90"
+              className="w-32 sm:w-40 md:w-56 h-auto opacity-90"
               style={{ filter: 'brightness(0) saturate(100%) invert(64%) sepia(45%) saturate(1468%) hue-rotate(336deg) brightness(101%) contrast(93%)' }}
             />
           </div>
@@ -43,15 +43,15 @@ export const AboutUs = () => {
       </section>
 
       {/* Founder Section */}
-      <section className="py-20 px-6 bg-background relative overflow-hidden">
+      <section className="py-12 md:py-20 px-4 md:px-6 bg-background relative overflow-hidden">
         {/* Pink gradient blob top-right */}
-        <div className="absolute top-10 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-pink-300/35 via-rose-300/25 to-transparent rounded-full blur-[100px] pointer-events-none"></div>
+        <div className="absolute top-10 right-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-gradient-to-bl from-pink-300/35 via-rose-300/25 to-transparent rounded-full blur-[100px] pointer-events-none"></div>
         
         {/* Purple blob middle-left */}
-        <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-purple-400/30 via-violet-400/20 to-transparent rounded-full blur-[110px] pointer-events-none"></div>
+        <div className="absolute top-1/2 left-0 w-[200px] md:w-[400px] h-[200px] md:h-[400px] bg-gradient-to-tr from-purple-400/30 via-violet-400/20 to-transparent rounded-full blur-[110px] pointer-events-none"></div>
         
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-16">
             <div>
               <video 
                 controls
@@ -63,27 +63,27 @@ export const AboutUs = () => {
               </video>
             </div>
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-foreground">
                 Why the Life OS Exists
               </h2>
-              <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+              <p className="text-base md:text-lg text-muted-foreground mb-3 md:mb-4 leading-relaxed">
                 In a world drowning in tools and advice, what's missing isn't more information—it's clarity. The ability to cut through noise, design intentional systems, and act with purpose.
               </p>
-              <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+              <p className="text-base md:text-lg text-muted-foreground mb-3 md:mb-4 leading-relaxed">
                 MindVault Life OS was born from years of working with students, professionals, and teams who were ambitious but overwhelmed. They had goals but no system to connect values to daily action.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                 The Life OS bridges the gap between human potential and technological possibility—turning values into habits, habits into goals, and goals into measurable progress.
               </p>
             </div>
           </div>
 
           {/* Core Belief */}
-          <Card className="bg-gradient-card p-10 mb-16 border-border shadow-elegant">
-            <h3 className="text-2xl md:text-3xl font-bold text-center mb-4 text-foreground italic uppercase">
+          <Card className="bg-gradient-card p-6 md:p-10 mb-12 md:mb-16 border-border shadow-elegant">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-3 md:mb-4 text-foreground italic uppercase">
               Our Core Belief
             </h3>
-            <p className="text-xl md:text-2xl text-center text-foreground leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-center text-foreground leading-relaxed">
               Clarity begins with values and compounds through design.
             </p>
           </Card>
