@@ -23,7 +23,7 @@ const Index = () => {
       <section className="py-10 md:py-12 px-4 md:px-6 bg-muted/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-foreground leading-tight px-2">
-            Helping leaders and learners <span className="italic text-primary">Debunk</span> confusion, <span className="italic text-accent">Demystify</span> AI, and <span className="italic text-primary">Design</span> systems that work.
+            Helping leaders and learners <span className="italic text-primary">Debunk</span> confusion, <span className="italic text-accent">Demystify</span> AI, and <span className="italic text-accent">Design</span> systems that work.
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8 md:mb-12 px-2">An AI-guided clarity system that turns values into daily action. Think clearly. Act intentionally. Feel in control.</p>
           
