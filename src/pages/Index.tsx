@@ -7,18 +7,15 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Quote } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-
 const Index = () => {
   const navigate = useNavigate();
-  
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navigation />
       <Hero />
       
       {/* Orange Workshop Section */}
       <section className="bg-gradient-to-br from-accent via-rose to-accent/90 py-12">
-        <ComingSoon />
+        
         <CaseStudyTabs />
       </section>
       
@@ -79,8 +76,6 @@ const Index = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
