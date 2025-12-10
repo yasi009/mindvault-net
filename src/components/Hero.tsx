@@ -33,8 +33,9 @@ export const Hero = () => {
     });
   };
 
-  // Calculate stroke dashoffset based on scroll (1392 is the perimeter of the rect)
-  const strokeDashoffset = 1392 - (scrollProgress * 1392);
+  // Calculate stroke dashoffset - start drawing immediately and complete by 50% scroll
+  const adjustedProgress = Math.min(1, scrollProgress * 2);
+  const strokeDashoffset = 1392 - (adjustedProgress * 1392);
 
   return (
     <>
@@ -82,21 +83,25 @@ export const Hero = () => {
                 style={{ overflow: 'visible' }}
               >
                 <defs>
+                  {/* Metallic gradient for 3D beveled look */}
                   <linearGradient id="frameGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="hsl(var(--accent))" />
-                    <stop offset="50%" stopColor="#ffb347" />
-                    <stop offset="100%" stopColor="hsl(var(--accent))" />
+                    <stop offset="0%" stopColor="#ffcc80" />
+                    <stop offset="25%" stopColor="hsl(var(--accent))" />
+                    <stop offset="50%" stopColor="#ffe0b3" />
+                    <stop offset="75%" stopColor="hsl(var(--accent))" />
+                    <stop offset="100%" stopColor="#cc8800" />
                   </linearGradient>
                 </defs>
                 
-                {/* Main animated stroke frame - draws as user scrolls */}
+                {/* Sharp-edged animated stroke frame */}
                 <rect 
                   x="2" y="2" 
                   width="396" height="296" 
-                  rx="4"
+                  rx="0"
                   fill="none"
                   stroke="url(#frameGradient)"
-                  strokeWidth="2"
+                  strokeWidth="2.5"
+                  strokeLinejoin="miter"
                   style={{
                     strokeDasharray: 1392,
                     strokeDashoffset: strokeDashoffset,
