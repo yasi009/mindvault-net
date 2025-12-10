@@ -39,11 +39,14 @@ export const Hero = () => {
   const totalProgress = baseProgress + remainingProgress;
   const strokeDashoffset = 1392 - (totalProgress * 1392);
 
+  // Calculate orange color based on scroll progress
+  const lifeOSColor = scrollProgress > 0.05 ? 'hsl(var(--accent))' : '#ffecf0';
+
   return (
     <>
-      {/* Sticky DDD Banner */}
+      {/* DDD Banner - not sticky */}
       <div 
-        className="fixed top-14 sm:top-16 left-0 right-0 z-40 w-full py-3 sm:py-4 text-center border-b"
+        className="absolute top-14 sm:top-16 left-0 right-0 z-40 w-full py-3 sm:py-4 text-center border-b"
         style={{ 
           backgroundColor: '#773260',
           borderColor: 'rgba(255, 236, 240, 0.2)'
@@ -93,9 +96,14 @@ export const Hero = () => {
                     <stop offset="75%" stopColor="hsl(var(--accent))" />
                     <stop offset="100%" stopColor="#cc8800" />
                   </linearGradient>
+                  <linearGradient id="innerFrameGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#ffe0b3" />
+                    <stop offset="50%" stopColor="hsl(var(--accent))" />
+                    <stop offset="100%" stopColor="#ffcc80" />
+                  </linearGradient>
                 </defs>
                 
-                {/* Sharp-edged animated stroke frame */}
+                {/* Outer sharp-edged animated stroke frame */}
                 <rect 
                   x="2" y="2" 
                   width="396" height="296" 
@@ -107,6 +115,22 @@ export const Hero = () => {
                   style={{
                     strokeDasharray: 1392,
                     strokeDashoffset: strokeDashoffset,
+                    transition: 'stroke-dashoffset 0.1s ease-out',
+                  }}
+                />
+                
+                {/* Inner thinner animated stroke frame */}
+                <rect 
+                  x="8" y="8" 
+                  width="384" height="284" 
+                  rx="0"
+                  fill="none"
+                  stroke="url(#innerFrameGradient)"
+                  strokeWidth="1"
+                  strokeLinejoin="miter"
+                  style={{
+                    strokeDasharray: 1336,
+                    strokeDashoffset: 1336 - (totalProgress * 1336),
                     transition: 'stroke-dashoffset 0.1s ease-out',
                   }}
                 />
@@ -123,7 +147,7 @@ export const Hero = () => {
               <br />
               your
               <br />
-              Life OS.
+              <span style={{ color: lifeOSColor, transition: 'color 0.4s ease-out' }}>Life OS.</span>
             </h1>
           </div>
 
