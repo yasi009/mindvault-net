@@ -1,79 +1,76 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download } from "lucide-react";
-import { useState } from "react";
-import { ConsultationDialog } from "./ConsultationDialog";
-import { ToolSignupDialog } from "./ToolSignupDialog";
+import { ArrowDownRight } from "lucide-react";
+
 export const Hero = () => {
-  const [consultationOpen, setConsultationOpen] = useState(false);
-  const [toolDialogOpen, setToolDialogOpen] = useState(false);
-  return <>
-      {/* Orange ribbon banner */}
-      <div className="w-full bg-accent py-3 sm:py-4 overflow-hidden">
-        <div className="flex animate-scroll-right whitespace-nowrap">
-          <p className="font-heading text-white italic text-sm sm:text-base md:text-lg lg:text-xl tracking-[0.2em] sm:tracking-[0.3em] uppercase px-4 sm:px-8">
-            DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN.
+  const scrollToContent = () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: 'smooth'
+    });
+  };
+
+  return (
+    <section 
+      className="relative min-h-screen flex flex-col justify-between overflow-hidden"
+      style={{ backgroundColor: '#773260' }}
+    >
+      {/* Main content area */}
+      <div className="flex-1 flex flex-col lg:flex-row justify-between items-start lg:items-end px-6 sm:px-10 md:px-16 lg:px-20 pt-24 sm:pt-32 pb-8 lg:pb-16">
+        {/* Left side - Main headline */}
+        <div className="flex-1">
+          <h1 
+            className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-[0.95] tracking-tight"
+            style={{ color: '#ffecf0' }}
+          >
+            Design
+            <br />
+            your
+            <br />
+            Life OS.
+          </h1>
+        </div>
+
+        {/* Right side - Subtitle and button */}
+        <div className="mt-12 lg:mt-0 lg:max-w-md lg:text-right">
+          <p 
+            className="text-base sm:text-lg md:text-xl leading-relaxed mb-6"
+            style={{ color: '#ffecf0', opacity: 0.9 }}
+          >
+            A Notion-based, AI-guided system that turns values into habits, habits into goals, and goals into results.
           </p>
-          <p className="font-heading text-white italic text-sm sm:text-base md:text-lg lg:text-xl tracking-[0.2em] sm:tracking-[0.3em] uppercase px-4 sm:px-8">
-            DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN. ✧ DEBUNK. DEMYSTIFY. DESIGN.
+          <p 
+            className="text-sm sm:text-base md:text-lg leading-relaxed mb-8"
+            style={{ color: '#ffecf0', opacity: 0.7 }}
+          >
+            Think clearly.
+            <br />
+            Act intentionally.
           </p>
+          <Button 
+            variant="outline"
+            onClick={() => window.location.href = '/get-life-os'}
+            className="border-[#ffecf0] text-[#ffecf0] hover:bg-[#ffecf0] hover:text-[#773260] transition-all duration-300 rounded-full px-6"
+          >
+            <span className="w-2 h-2 rounded-full bg-current mr-2"></span>
+            Learn more
+          </Button>
         </div>
       </div>
 
-      <section className="relative min-h-[85vh] sm:min-h-screen flex items-center justify-center overflow-hidden bg-gradient-soft">
-        {/* Gradient pink color blobs - decorative background */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {/* Large pink gradient blob - top right */}
-          <div className="absolute -top-20 -right-32 w-[300px] sm:w-[400px] md:w-[600px] h-[300px] sm:h-[400px] md:h-[600px] bg-gradient-to-br from-pink-300/40 via-pink-400/30 to-rose-300/20 rounded-full blur-[80px] sm:blur-[100px] md:blur-[120px] animate-pulse" style={{ animationDuration: '8s' }}></div>
-          
-          {/* Medium pink gradient blob - left side */}
-          <div className="absolute top-1/3 -left-40 w-[250px] sm:w-[350px] md:w-[500px] h-[250px] sm:h-[350px] md:h-[500px] bg-gradient-to-tr from-pink-200/30 via-pink-300/25 to-fuchsia-200/20 rounded-full blur-[70px] sm:blur-[85px] md:blur-[100px] animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }}></div>
-          
-          {/* Small accent blob - bottom */}
-          <div className="absolute bottom-20 right-1/4 w-[200px] sm:w-[300px] md:w-[400px] h-[200px] sm:h-[300px] md:h-[400px] bg-gradient-to-tl from-rose-300/25 via-pink-300/20 to-pink-200/15 rounded-full blur-[60px] sm:blur-[75px] md:blur-[90px] animate-pulse" style={{ animationDuration: '12s', animationDelay: '4s' }}></div>
-        </div>
-
-        {/* Subtle background pattern */}
-        <div className="absolute inset-0 opacity-[0.02]">
-          <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(220 45% 25%) 1px, transparent 0)',
-          backgroundSize: '48px 48px'
-        }}></div>
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-24 lg:py-32 space-y-6 sm:space-y-8 md:space-y-12">
-          <div className="w-full text-left px-2">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary animate-fade-in leading-[1.1] sm:leading-[1.05] tracking-tight italic uppercase w-full">
-              <span className="relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] sm:after:h-1 after:bg-accent after:animate-fade-in">
-                Design your Life OS.
-              </span>
-              <br />
-              Think clearly.
-              <br />
-              Act intentionally.
-            </h1>
-          </div>
-
-          <div className="max-w-3xl mx-auto text-center space-y-5 sm:space-y-6 md:space-y-8 px-2">
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8">
-              A Notion-based, AI-guided system that turns values into habits, habits into goals, and goals into results.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in justify-center">
-              <Button size="lg" onClick={() => window.location.href = '/services'} className="w-full sm:w-auto">
-                Explore the Life OS
-                <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 ml-2" />
-              </Button>
-              <Button variant="outline" size="lg" onClick={() => setConsultationOpen(true)} className="w-full sm:w-auto">
-                Book a Consultation
-                <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 ml-2" />
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <ConsultationDialog open={consultationOpen} onOpenChange={setConsultationOpen} />
-      
-      <ToolSignupDialog open={toolDialogOpen} onOpenChange={setToolDialogOpen} toolName="Free Resources" delayedDelivery={true} />
-    </>;
+      {/* Bottom arrow indicator */}
+      <div className="px-6 sm:px-10 md:px-16 lg:px-20 pb-8 sm:pb-12">
+        <button 
+          onClick={scrollToContent}
+          className="group cursor-pointer transition-transform duration-300 hover:translate-y-1"
+          aria-label="Scroll down"
+        >
+          <ArrowDownRight 
+            className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 transition-all duration-300 group-hover:scale-110"
+            style={{ color: '#ffecf0' }}
+            strokeWidth={1}
+          />
+        </button>
+      </div>
+    </section>
+  );
 };
