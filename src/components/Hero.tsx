@@ -1,13 +1,28 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDownRight } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!sectionRef.current) return;
+      const rect = sectionRef.current.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+      const progress = Math.min(1, Math.max(0, -rect.top / viewportHeight));
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToContent = () => {
@@ -17,8 +32,14 @@ export const Hero = () => {
     });
   };
 
+  // Parallax offset based on scroll
+  const parallaxOffset = scrollProgress * 20;
+  const glassOpacity = Math.min(0.3, scrollProgress * 0.5);
+  const metallicIntensity = Math.min(1, scrollProgress * 1.5);
+
   return (
     <section 
+      ref={sectionRef}
       className="relative min-h-screen flex flex-col overflow-hidden"
       style={{ backgroundColor: '#773260' }}
     >
@@ -42,29 +63,133 @@ export const Hero = () => {
       <div className="flex-1 flex flex-col lg:flex-row justify-between items-start lg:items-end px-6 sm:px-10 md:px-16 lg:px-20 pt-16 sm:pt-24 pb-8 lg:pb-16">
         {/* Left side - Main headline with animated frame */}
         <div className="flex-1 relative">
-          {/* Animated orange frame */}
+          {/* Animated SVG Frame */}
           <div 
-            className={`absolute -inset-4 sm:-inset-6 md:-inset-8 pointer-events-none transition-all duration-1000 ease-out ${
-              isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+            className={`absolute pointer-events-none transition-all duration-500 ${
+              isVisible ? 'opacity-100' : 'opacity-0'
             }`}
-            style={{ transitionDelay: '0.6s' }}
+            style={{ 
+              top: '-1rem',
+              left: '-1rem',
+              right: '-1rem',
+              bottom: '-1rem',
+              transform: `translateY(${parallaxOffset}px)`,
+            }}
           >
-            <div 
-              className="absolute inset-0 border-2 sm:border-3 md:border-4"
-              style={{ 
-                borderColor: 'hsl(var(--accent))',
-                boxShadow: '0 0 20px rgba(255, 165, 0, 0.3), inset 0 0 20px rgba(255, 165, 0, 0.1)',
-                background: 'linear-gradient(135deg, rgba(255, 165, 0, 0.05) 0%, transparent 50%, rgba(255, 165, 0, 0.05) 100%)'
-              }}
-            />
-            {/* Reflective shine effect */}
-            <div 
-              className="absolute inset-0 overflow-hidden"
-              style={{
-                background: 'linear-gradient(105deg, transparent 40%, rgba(255, 255, 255, 0.1) 45%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.1) 55%, transparent 60%)',
-                animation: 'shine 3s ease-in-out infinite',
-              }}
-            />
+            <svg 
+              className="w-full h-full"
+              viewBox="0 0 400 300"
+              preserveAspectRatio="none"
+              style={{ overflow: 'visible' }}
+            >
+              <defs>
+                {/* Gradient for metallic effect */}
+                <linearGradient id="metallicGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="hsl(var(--accent))" stopOpacity={0.8 + metallicIntensity * 0.2} />
+                  <stop offset="25%" stopColor="#ffb347" stopOpacity={0.6 + metallicIntensity * 0.4} />
+                  <stop offset="50%" stopColor="hsl(var(--accent))" stopOpacity={0.9} />
+                  <stop offset="75%" stopColor="#ff8c00" stopOpacity={0.7 + metallicIntensity * 0.3} />
+                  <stop offset="100%" stopColor="hsl(var(--accent))" stopOpacity={0.8 + metallicIntensity * 0.2} />
+                </linearGradient>
+                
+                {/* Noise filter for organic shimmer */}
+                <filter id="noise" x="0%" y="0%" width="100%" height="100%">
+                  <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise" />
+                  <feDisplacementMap in="SourceGraphic" in2="noise" scale={2 + metallicIntensity * 3} />
+                </filter>
+                
+                {/* Glow filter */}
+                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation={3 + metallicIntensity * 5} result="coloredBlur" />
+                  <feMerge>
+                    <feMergeNode in="coloredBlur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+
+                {/* Glassmorphism blur */}
+                <filter id="glass" x="-10%" y="-10%" width="120%" height="120%">
+                  <feGaussianBlur stdDeviation={glassOpacity * 10} />
+                </filter>
+              </defs>
+              
+              {/* Background glass effect on scroll */}
+              {scrollProgress > 0.05 && (
+                <rect 
+                  x="2" y="2" 
+                  width="396" height="296" 
+                  rx="4"
+                  fill={`rgba(255, 165, 0, ${glassOpacity * 0.1})`}
+                  style={{
+                    backdropFilter: `blur(${glassOpacity * 20}px)`,
+                  }}
+                />
+              )}
+              
+              {/* Main animated stroke frame */}
+              <rect 
+                x="2" y="2" 
+                width="396" height="296" 
+                rx="4"
+                fill="none"
+                stroke="url(#metallicGradient)"
+                strokeWidth={2 + metallicIntensity}
+                filter={scrollProgress > 0.1 ? "url(#glow)" : undefined}
+                className={isVisible ? 'frame-draw' : ''}
+                style={{
+                  strokeDasharray: 1392,
+                  strokeDashoffset: isVisible ? 0 : 1392,
+                }}
+              />
+              
+              {/* Specular highlight lines */}
+              {scrollProgress > 0.1 && (
+                <>
+                  <line 
+                    x1="2" y1="2" 
+                    x2="100" y2="2" 
+                    stroke={`rgba(255, 255, 255, ${0.3 * metallicIntensity})`}
+                    strokeWidth="1"
+                    style={{
+                      transform: `translateX(${parallaxOffset * 2}px)`,
+                    }}
+                  />
+                  <line 
+                    x1="2" y1="2" 
+                    x2="2" y2="80" 
+                    stroke={`rgba(255, 255, 255, ${0.25 * metallicIntensity})`}
+                    strokeWidth="1"
+                  />
+                  <line 
+                    x1="300" y1="298" 
+                    x2="398" y2="298" 
+                    stroke={`rgba(255, 200, 150, ${0.2 * metallicIntensity})`}
+                    strokeWidth="1"
+                    style={{
+                      transform: `translateX(${-parallaxOffset * 1.5}px)`,
+                    }}
+                  />
+                </>
+              )}
+            </svg>
+            
+            {/* Holographic reflection overlay */}
+            {scrollProgress > 0.15 && (
+              <div 
+                className="absolute inset-0 pointer-events-none rounded"
+                style={{
+                  background: `linear-gradient(
+                    ${135 + parallaxOffset * 2}deg, 
+                    transparent 0%, 
+                    rgba(255, 180, 100, ${0.05 * metallicIntensity}) 25%,
+                    rgba(255, 140, 0, ${0.08 * metallicIntensity}) 50%,
+                    rgba(255, 200, 150, ${0.05 * metallicIntensity}) 75%,
+                    transparent 100%
+                  )`,
+                  opacity: metallicIntensity,
+                }}
+              />
+            )}
           </div>
 
           <h1 
@@ -128,9 +253,18 @@ export const Hero = () => {
       </div>
 
       <style>{`
-        @keyframes shine {
-          0%, 100% { transform: translateX(-100%); }
-          50% { transform: translateX(100%); }
+        .frame-draw {
+          animation: drawFrame 1.5s ease-out forwards;
+          animation-delay: 0.4s;
+        }
+        
+        @keyframes drawFrame {
+          from {
+            stroke-dashoffset: 1392;
+          }
+          to {
+            stroke-dashoffset: 0;
+          }
         }
       `}</style>
     </section>
