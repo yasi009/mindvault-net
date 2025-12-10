@@ -103,22 +103,6 @@ export const Hero = () => {
                   </linearGradient>
                 </defs>
                 
-                {/* Outer sharp-edged animated stroke frame */}
-                <rect 
-                  x="2" y="2" 
-                  width="396" height="296" 
-                  rx="0"
-                  fill="none"
-                  stroke="url(#frameGradient)"
-                  strokeWidth="2.5"
-                  strokeLinejoin="miter"
-                  style={{
-                    strokeDasharray: 1392,
-                    strokeDashoffset: strokeDashoffset,
-                    transition: 'stroke-dashoffset 0.1s ease-out',
-                  }}
-                />
-                
                 {/* Inner thinner animated stroke frame */}
                 <rect 
                   x="8" y="8" 
