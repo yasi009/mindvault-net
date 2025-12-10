@@ -33,9 +33,11 @@ export const Hero = () => {
     });
   };
 
-  // Calculate stroke dashoffset - start drawing immediately and complete by 50% scroll
-  const adjustedProgress = Math.min(1, scrollProgress * 2);
-  const strokeDashoffset = 1392 - (adjustedProgress * 1392);
+  // Start at 75% drawn, complete with minimal scroll (by 15% scroll progress)
+  const baseProgress = 0.75;
+  const remainingProgress = Math.min(0.25, scrollProgress * 1.5);
+  const totalProgress = baseProgress + remainingProgress;
+  const strokeDashoffset = 1392 - (totalProgress * 1392);
 
   return (
     <>
