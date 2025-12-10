@@ -23,7 +23,7 @@ export const Navigation = () => {
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6">
         <div className="flex items-center justify-between h-14 sm:h-16">
           <Link to="/" className="text-base sm:text-lg md:text-xl lg:text-2xl font-heading font-semibold text-foreground tracking-tight">
-            TheMindVault
+            TheMindVault<sup className="text-[0.5em] ml-0.5 align-super">™</sup>
           </Link>
           
           {isMobile ? (
