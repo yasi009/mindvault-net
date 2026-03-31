@@ -1,81 +1,201 @@
 import { Navigation } from "@/components/Navigation";
-import { Hero } from "@/components/Hero";
-import { Footer } from "@/components/Footer";
-import { ComingSoon } from "@/components/ComingSoon";
-import { CaseStudyTabs } from "@/components/CaseStudyTabs";
+import { ArrowRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Quote } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 const Index = () => {
-  const navigate = useNavigate();
-  return <div className="min-h-screen">
+  return (
+    <div className="min-h-screen bg-background">
       <Navigation />
-      <Hero />
-      
-      {/* Orange Workshop Section */}
-      <section className="bg-gradient-to-br from-accent via-rose to-accent/90 py-12">
-        
-        <CaseStudyTabs />
-      </section>
-      
-      {/* Quick Explainer */}
-      <section className="py-10 md:py-12 px-4 md:px-6 bg-muted/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-foreground leading-tight px-2">
-            Helping leaders and learners <span className="italic text-primary">Debunk</span> confusion, <span className="italic text-accent">Demystify</span> AI, and <span className="italic text-accent">Design</span> systems that work.
-          </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8 md:mb-12 px-2">An AI-guided clarity system that turns values into daily action. Think clearly. Act intentionally. Feel in control.</p>
-          
-          {/* Testimonial Quotes */}
-          <div className="grid md:grid-cols-3 gap-4 md:gap-6 mt-8 md:mt-12">
-            <Card className="p-5 md:p-6 bg-card border-border">
-              <Quote className="w-7 md:w-8 h-7 md:h-8 text-accent mb-2 md:mb-3 mx-auto" />
-              <p className="text-sm md:text-sm text-muted-foreground italic leading-relaxed mb-2">
-                "She designed a simple AI setup that now pulls all our notes into one place. It's made day-to-day management so much easier."
-              </p>
-              <p className="text-xs font-medium text-foreground">— South Coast Carers</p>
-            </Card>
-            
-            <Card className="p-5 md:p-6 bg-card border-border">
-              <Quote className="w-7 md:w-8 h-7 md:h-8 text-accent mb-2 md:mb-3 mx-auto" />
-              <p className="text-sm md:text-sm text-muted-foreground italic leading-relaxed mb-2">
-                "She quickly taught most people in the organisation the best methods for using AI while developing a robust strategy for the business."
-              </p>
-              <p className="text-xs font-medium text-foreground">— CEO, Makinex</p>
-            </Card>
-            
-            <Card className="p-5 md:p-6 bg-card border-border">
-              <Quote className="w-7 md:w-8 h-7 md:h-8 text-accent mb-2 md:mb-3 mx-auto" />
-              <p className="text-sm md:text-sm text-muted-foreground italic leading-relaxed mb-2">
-                "Her authenticity and purpose-driven approach inspired young women to design their futures with intention and lead boldly."
-              </p>
-              <p className="text-xs font-medium text-foreground">— UNSW Business School</p>
-            </Card>
-          </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-12 md:py-20 px-4 md:px-6 bg-gradient-card">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-foreground italic px-2">In the Meantime: book a free consult</h2>
-          <div className="inline-block px-5 md:px-6 py-2 md:py-3 bg-accent/10 rounded-full mb-4 md:mb-6">
-            <span className="text-base md:text-lg font-medium text-accent">Life OS Coming Soon</span>
-          </div>
-          <p className="text-lg sm:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed px-2">
-            Experience the Debunk, Demystify, Design framework in person and start your clarity journey today.
+      {/* Hero */}
+      <section
+        className="min-h-[90vh] flex flex-col justify-center px-6 md:px-16 lg:px-20 py-24"
+        style={{ backgroundColor: '#773260' }}
+      >
+        <div className="max-w-4xl">
+          <h1
+            className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-6"
+            style={{ color: '#ffecf0' }}
+          >
+            You're doing everything.
+            <br />
+            And it's slowly breaking you.
+          </h1>
+          <p
+            className="text-lg sm:text-xl md:text-2xl leading-relaxed mb-10 max-w-2xl"
+            style={{ color: 'rgba(255, 236, 240, 0.75)' }}
+          >
+            MindVault is a personal operating system for high-functioning people who are ready to stop running on empty — and start running on purpose.
           </p>
-          <div className="flex justify-center">
-            <Button size="lg" onClick={() => navigate('/contact')}>
-              Book a Free Consultation
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
+          <Button
+            size="lg"
+            className="bg-accent text-accent-foreground hover:bg-accent/90 text-base px-8 py-6"
+            onClick={() => window.location.href = '/get-life-os'}
+          >
+            Build your OS — it's free to start
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Button>
+        </div>
+      </section>
+
+      {/* Sound Familiar */}
+      <section className="py-20 md:py-28 px-6 md:px-16 lg:px-20 bg-muted/30">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 md:mb-16 text-foreground">
+            Sound familiar?
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-6 md:gap-8">
+            {[
+              "You're productive at work and exhausted everywhere else.",
+              "Your calendar is full. Your energy isn't.",
+              "You know what to do. You just can't seem to do it consistently.",
+              "You've tried planners, apps, and routines. Nothing sticks.",
+            ].map((text, i) => (
+              <Card
+                key={i}
+                className="p-6 md:p-8 bg-card border-border hover:border-primary/30 transition-colors"
+              >
+                <p className="text-base md:text-lg text-foreground leading-relaxed font-medium">
+                  {text}
+                </p>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      <Footer />
-    </div>;
+      {/* How It Works */}
+      <section className="py-20 md:py-28 px-6 md:px-16 lg:px-20 bg-background">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 md:mb-16 text-foreground">
+            Your operating system, built around you
+          </h2>
+          <div className="space-y-12 md:space-y-16">
+            {[
+              {
+                step: "01",
+                title: "Discover your OS",
+                desc: "A 20-minute AI onboarding maps your values, identity, and the areas of your life that need the most attention.",
+              },
+              {
+                step: "02",
+                title: "Run your days with intention",
+                desc: "Your personalised dashboard, daily habits, and AI-powered reflection prompts — all connected to who you actually are.",
+              },
+              {
+                step: "03",
+                title: "Recalibrate as you grow",
+                desc: "Weekly AI check-ins surface patterns, flag burnout signals, and keep your system aligned with your life.",
+              },
+            ].map((item, i) => (
+              <div key={i} className="flex gap-6 md:gap-10 items-start">
+                <span
+                  className="font-heading text-4xl md:text-5xl font-bold shrink-0"
+                  style={{ color: 'hsl(var(--accent))' }}
+                >
+                  {item.step}
+                </span>
+                <div>
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-20 md:py-28 px-6 md:px-16 lg:px-20 bg-muted/30">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 md:mb-16 text-foreground">
+            Simple pricing
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-6 md:gap-8 max-w-3xl">
+            {/* Free */}
+            <Card className="p-8 bg-card border-border flex flex-col">
+              <h3 className="text-2xl font-bold text-foreground mb-2">Get started</h3>
+              <p className="text-3xl md:text-4xl font-bold text-foreground mb-1">Free</p>
+              <p className="text-sm text-muted-foreground mb-6">No card required</p>
+              <ul className="space-y-3 mb-8 flex-1">
+                <li className="flex items-start gap-2 text-muted-foreground">
+                  <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                  AI onboarding
+                </li>
+                <li className="flex items-start gap-2 text-muted-foreground">
+                  <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                  Personalised dashboard
+                </li>
+              </ul>
+              <Button variant="outline" className="w-full" onClick={() => window.location.href = '/get-life-os'}>
+                Get started
+              </Button>
+            </Card>
+
+            {/* Pro */}
+            <Card className="p-8 border-2 border-accent bg-card flex flex-col relative">
+              <div className="absolute -top-3 right-6 px-3 py-1 bg-accent text-accent-foreground text-xs font-semibold rounded-full">
+                Recommended
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-2">Pro</h3>
+              <p className="text-3xl md:text-4xl font-bold text-foreground mb-1">
+                AED 69<span className="text-base font-normal text-muted-foreground"> / month</span>
+              </p>
+              <p className="text-sm text-muted-foreground mb-6">Full operating system</p>
+              <ul className="space-y-3 mb-8 flex-1">
+                <li className="flex items-start gap-2 text-muted-foreground">
+                  <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                  Identity tracking
+                </li>
+                <li className="flex items-start gap-2 text-muted-foreground">
+                  <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                  Daily habits
+                </li>
+                <li className="flex items-start gap-2 text-muted-foreground">
+                  <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                  AI reflection prompts
+                </li>
+                <li className="flex items-start gap-2 text-muted-foreground">
+                  <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                  Weekly check-ins
+                </li>
+              </ul>
+              <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90" onClick={() => window.location.href = '/get-life-os'}>
+                Start your OS
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-foreground text-background py-12 md:py-16 px-6 md:px-16 lg:px-20">
+        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div>
+            <p className="text-xl font-heading font-semibold mb-2">
+              TheMindVault<sup className="text-[0.5em] ml-0.5">™</sup>
+            </p>
+            <p className="text-sm text-background/60">
+              Think clearly. Work intentionally. Live sustainably.
+            </p>
+          </div>
+          <Link
+            to="/contact"
+            className="text-sm text-background/60 hover:text-background transition-colors"
+          >
+            Login →
+          </Link>
+        </div>
+      </footer>
+    </div>
+  );
 };
+
 export default Index;
