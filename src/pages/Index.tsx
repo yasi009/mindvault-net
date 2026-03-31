@@ -119,7 +119,7 @@ const Index = () => {
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-2">Pro</h3>
               <p className="text-3xl md:text-4xl font-bold text-foreground mb-1">
-                AED 69<span className="text-base font-normal text-muted-foreground"> / month</span>
+                AUD 27.16<span className="text-base font-normal text-muted-foreground"> / month</span>
               </p>
               <p className="text-sm text-muted-foreground mb-6">Full operating system</p>
               <ul className="space-y-3 mb-8 flex-1">
