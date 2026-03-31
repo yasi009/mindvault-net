@@ -31,11 +31,9 @@ const WorkWithUs = () => {
   ];
 
   const testimonials = [
-    { quote: "This saved us hours every week. The ROI was immediate.", author: "CEO, Healthcare" },
-    { quote: "You gave me energy to see change differently.", author: "Executive coaching client" },
-    { quote: "Finally, someone who understands both strategy and implementation.", author: "Operations Director" },
-    { quote: "You made me feel like I could actually do this. I'm not scared anymore.", author: "High School Student" },
-    { quote: "This changed how I organize my entire student life.", author: "High school student" },
+    { quote: "She designed a simple AI setup that now pulls all our notes into one place. It's made day-to-day management so much easier.", author: "South Coast Carers" },
+    { quote: "She quickly taught most people in the organisation the best methods for using AI while developing a robust strategy for the business.", author: "CEO, Makinex" },
+    { quote: "Her authenticity and purpose-driven approach inspired young women to design their futures with intention and lead boldly.", author: "UNSW Business School" },
   ];
   const steps = [
     {
@@ -190,21 +188,22 @@ const WorkWithUs = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 px-6 bg-primary">
-        <div className="max-w-4xl mx-auto">
-          <div className="space-y-8">
-            {testimonials
-              .sort((a, b) => a.quote.length - b.quote.length)
-              .map((testimonial, index) => (
-                <blockquote
-                  key={index}
-                  className="text-primary-foreground/90 font-heading italic text-center"
-                  style={{ fontSize: `${1.3 + index * 0.2}rem` }}
-                >
-                  "{testimonial.quote}"
-                  <footer className="text-primary-foreground/60 text-base mt-2 not-italic font-heading">— {testimonial.author}</footer>
-                </blockquote>
-              ))}
+      <section className="py-20 px-6 bg-muted/30">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground leading-tight max-w-3xl mx-auto">
+              Helping leaders and learners <span className="text-accent">Debunk</span> confusion, <span className="text-accent">Demystify</span> AI, and <span className="text-accent">Design</span> systems that work.
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="p-8 text-center bg-card border-border">
+                <div className="text-accent text-4xl font-bold mb-4">&ldquo;&rdquo;</div>
+                <p className="text-foreground italic mb-4 leading-relaxed">"{testimonial.quote}"</p>
+                <p className="text-muted-foreground text-sm font-medium">— {testimonial.author}</p>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
