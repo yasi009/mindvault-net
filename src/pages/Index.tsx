@@ -14,9 +14,12 @@ const Index = () => {
       {/* Sound Familiar */}
       <section className="py-20 md:py-28 px-6 md:px-16 lg:px-20 bg-muted/30">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 md:mb-16 text-foreground">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-foreground">
             Sound familiar?
           </h2>
+          <p className="text-lg md:text-xl text-muted-foreground mb-12 md:mb-16 max-w-2xl">
+            You're doing everything. And it's slowly breaking you.
+          </p>
           <div className="grid sm:grid-cols-2 gap-6 md:gap-8">
             {[
               "You're productive at work and exhausted everywhere else.",
