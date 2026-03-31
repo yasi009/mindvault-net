@@ -62,11 +62,11 @@ export const Hero = () => {
 
       <section 
         ref={sectionRef}
-        className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-12 sm:pt-14"
+        className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-12 sm:pt-14"
         style={{ backgroundColor: '#773260' }}
       >
-        {/* Centered content */}
-        <div className="flex flex-col items-center text-center px-6 sm:px-10">
+        {/* Left-aligned content */}
+        <div className="flex flex-col px-6 sm:px-10 md:px-16 lg:px-20">
           {/* Headline with animated frame */}
           <div className="relative">
             {/* Animated SVG Frame */}
