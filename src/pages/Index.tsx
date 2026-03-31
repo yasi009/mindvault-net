@@ -137,7 +137,7 @@ const Index = () => {
                   Weekly check-ins
                 </li>
               </ul>
-              <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90" onClick={() => window.location.href = '/get-life-os'}>
+              <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90" onClick={() => window.location.href = 'https://mindvault-life-os.lovable.app'}>
                 Start your OS
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
