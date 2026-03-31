@@ -19,9 +19,11 @@ export const Footer = () => {
               Let's design systems that work for you, not against you.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <Button variant="secondary" size="lg" onClick={() => window.location.href = '/services'} className="w-full sm:w-auto">
-                Get Life OS
-                <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 ml-2" />
+              <Button variant="secondary" size="lg" asChild className="w-full sm:w-auto">
+                <a href="https://mindvault-life-os.lovable.app" target="_blank" rel="noopener noreferrer">
+                  Get Life OS
+                  <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 ml-2" />
+                </a>
               </Button>
               <Button variant="outline" size="lg" className="border-background/20 bg-transparent text-background hover:bg-background/10 w-full sm:w-auto" onClick={() => setConsultationOpen(true)}>
                 Book a Consultation
