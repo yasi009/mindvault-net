@@ -163,9 +163,9 @@ const WorkWithUs = () => {
       <section className="py-20 px-6 bg-muted/30">
         <div className="max-w-[1600px] mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">Past Workshops</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">Transformation in Action</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Programs delivered across industries and audiences
+              Real results through collaborative, systems-thinking workshops
             </p>
           </div>
 
@@ -177,11 +177,11 @@ const WorkWithUs = () => {
               {pastWorkshops.map((workshop, index) => (
                 <Card key={index} className="min-w-[300px] flex-shrink-0 group hover:scale-105 transition-all duration-300 bg-card border-border">
                   <CardContent className="p-8">
-                    <div className="text-primary mb-4">{workshop.icon}</div>
-                    <h3 className="text-lg font-bold mb-3 text-foreground">{workshop.title}</h3>
-                    <div className="inline-block bg-secondary/20 px-3 py-1 rounded-full">
+                    <div className="inline-block bg-secondary/20 px-3 py-1 rounded-full mb-4">
                       <span className="text-sm text-secondary-foreground font-medium">{workshop.community}</span>
                     </div>
+                    <h3 className="text-lg font-bold mb-2 text-foreground">{workshop.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{workshop.description}</p>
                   </CardContent>
                 </Card>
               ))}
