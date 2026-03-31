@@ -8,7 +8,35 @@ import { ConsultationDialog } from "@/components/ConsultationDialog";
 
 const WorkWithUs = () => {
   const [consultationOpen, setConsultationOpen] = useState(false);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = 340;
+      scrollRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    }
+  };
+
+  const pastWorkshops = [
+    { icon: <Lightbulb className="w-8 h-8" />, title: "Demystifying AI for Business Leaders", community: "Business Leaders" },
+    { icon: <Building2 className="w-8 h-8" />, title: "Laying the Foundations for Scalable Intelligence", community: "Department Heads" },
+    { icon: <MessageSquare className="w-8 h-8" />, title: "Prompting for Impact: How to Talk to AI Tools", community: "All Staff" },
+    { icon: <Target className="w-8 h-8" />, title: "From Chaos to Clarity: Building AI Infrastructure", community: "Leadership" },
+    { icon: <Wrench className="w-8 h-8" />, title: "Toolminator: The Internal GPT Pilot", community: "Product Teams" },
+    { icon: <Workflow className="w-8 h-8" />, title: "Generative AI in the Flow of Work", community: "Business Leaders" },
+    { icon: <TrendingUp className="w-8 h-8" />, title: "From Fixes to ROI: Turning Experiments into Value", community: "Leadership" },
+    { icon: <Rocket className="w-8 h-8" />, title: "The Future of Work: Human + AI Collaboration", community: "C-Suite" },
+    { icon: <Sparkles className="w-8 h-8" />, title: "Girls in STEM (NIDA Theatre)", community: "Yeah the Girls" },
+    { icon: <Code className="w-8 h-8" />, title: "Custom GPT Development for Teachers", community: "Teaching Innovators" },
+  ];
+
+  const testimonials = [
+    { quote: "This saved us hours every week. The ROI was immediate.", author: "CEO, Healthcare" },
+    { quote: "You gave me energy to see change differently.", author: "Executive coaching client" },
+    { quote: "Finally, someone who understands both strategy and implementation.", author: "Operations Director" },
+    { quote: "You made me feel like I could actually do this. I'm not scared anymore.", author: "High School Student" },
+    { quote: "This changed how I organize my entire student life.", author: "High school student" },
+  ];
   const steps = [
     {
       icon: Search,
