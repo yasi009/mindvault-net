@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -16,6 +17,7 @@ export const Hero = () => {
       if (!sectionRef.current) return;
       const rect = sectionRef.current.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
+      // Progress goes from 0 to 1 as user scrolls through hero
       const progress = Math.min(1, Math.max(0, -rect.top / (viewportHeight * 0.7)));
       setScrollProgress(progress);
     };
@@ -31,15 +33,18 @@ export const Hero = () => {
     });
   };
 
+  // Start at 75% drawn, complete with minimal scroll (by 15% scroll progress)
   const baseProgress = 0.75;
   const remainingProgress = Math.min(0.25, scrollProgress * 1.5);
   const totalProgress = baseProgress + remainingProgress;
+  const strokeDashoffset = 1392 - (totalProgress * 1392);
 
+  // Calculate orange color based on scroll progress
   const lifeOSColor = scrollProgress > 0.05 ? 'hsl(var(--accent))' : '#ffecf0';
 
   return (
     <>
-      {/* DDD Banner */}
+      {/* DDD Banner - not sticky */}
       <div 
         className="absolute top-14 sm:top-16 left-0 right-0 z-40 w-full py-3 sm:py-4 text-center border-b"
         style={{ 
@@ -60,10 +65,11 @@ export const Hero = () => {
         className="relative min-h-screen flex flex-col overflow-hidden pt-12 sm:pt-14"
         style={{ backgroundColor: '#773260' }}
       >
-        {/* Headline with square frame — centered */}
-        <div className="flex-1 flex items-center justify-center px-6 sm:px-10 md:px-16 lg:px-20 pt-20 sm:pt-28">
-          <div className="relative inline-block">
-            {/* Animated SVG Frame */}
+        {/* Main content area */}
+        <div className="flex-1 flex flex-col lg:flex-row justify-between items-start lg:items-end px-6 sm:px-10 md:px-16 lg:px-20 pt-24 sm:pt-32 pb-16 lg:pb-24 max-w-5xl mx-auto w-full">
+          {/* Left side - Main headline with animated frame */}
+          <div className="flex-1 relative">
+            {/* Animated SVG Frame - scroll-based drawing */}
             <div 
               className={`absolute pointer-events-none transition-opacity duration-500 ${
                 isVisible ? 'opacity-100' : 'opacity-0'
@@ -77,11 +83,19 @@ export const Hero = () => {
             >
               <svg 
                 className="w-full h-full"
-                viewBox="0 0 300 300"
+                viewBox="0 0 400 300"
                 preserveAspectRatio="none"
                 style={{ overflow: 'visible' }}
               >
                 <defs>
+                  {/* Metallic gradient for 3D beveled look */}
+                  <linearGradient id="frameGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#ffcc80" />
+                    <stop offset="25%" stopColor="hsl(var(--accent))" />
+                    <stop offset="50%" stopColor="#ffe0b3" />
+                    <stop offset="75%" stopColor="hsl(var(--accent))" />
+                    <stop offset="100%" stopColor="#cc8800" />
+                  </linearGradient>
                   <linearGradient id="innerFrameGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stopColor="#ffe0b3" />
                     <stop offset="50%" stopColor="hsl(var(--accent))" />
@@ -89,17 +103,18 @@ export const Hero = () => {
                   </linearGradient>
                 </defs>
                 
+                {/* Inner thinner animated stroke frame */}
                 <rect 
                   x="8" y="8" 
-                  width="284" height="284" 
+                  width="384" height="284" 
                   rx="0"
                   fill="none"
                   stroke="url(#innerFrameGradient)"
                   strokeWidth="1"
                   strokeLinejoin="miter"
                   style={{
-                    strokeDasharray: 1136,
-                    strokeDashoffset: 1136 - (totalProgress * 1136),
+                    strokeDasharray: 1336,
+                    strokeDashoffset: 1336 - (totalProgress * 1336),
                     transition: 'stroke-dashoffset 0.1s ease-out',
                   }}
                 />
@@ -119,37 +134,37 @@ export const Hero = () => {
               <span style={{ color: lifeOSColor, transition: 'color 0.4s ease-out' }}>Life OS.</span>
             </h1>
           </div>
+
+          {/* Right side - Tagline and link */}
+          <div 
+            className={`mt-16 lg:mt-0 lg:max-w-md lg:text-right transition-all duration-1000 ease-out ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+            }`}
+            style={{ transitionDelay: '0.6s' }}
+          >
+            <p 
+              className="font-heading text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed mb-8 uppercase italic font-bold tracking-wide"
+              style={{ color: '#ffecf0' }}
+            >
+              Think Clearly.
+              <br />
+              Act Intentionally.
+            </p>
+            <a 
+              href="https://mindvault-life-os.lovable.app"
+              className="group inline-flex items-center gap-2 bg-accent text-accent-foreground hover:bg-accent/90 px-6 py-3 rounded-md text-sm sm:text-base font-medium transition-all duration-300"
+            >
+              Build your Life OS
+              <ArrowRight 
+                className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+              />
+            </a>
+          </div>
         </div>
 
-        {/* Tagline + CTA below frame */}
+        {/* Bottom arrow indicator */}
         <div 
-          className={`text-center px-6 sm:px-10 md:px-16 lg:px-20 pb-6 transition-all duration-1000 ease-out ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-          }`}
-          style={{ transitionDelay: '0.6s' }}
-        >
-          <p 
-            className="font-heading text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed mb-6 uppercase italic font-bold tracking-wide"
-            style={{ color: '#ffecf0' }}
-          >
-            Think Clearly.
-            <br />
-            Act Intentionally.
-          </p>
-          <a 
-            href="https://mindvault-life-os.lovable.app"
-            className="group inline-flex items-center gap-2 bg-accent text-accent-foreground hover:bg-accent/90 px-6 py-3 rounded-md text-sm sm:text-base font-medium transition-all duration-300"
-          >
-            Build your Life OS
-            <ArrowRight 
-              className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
-            />
-          </a>
-        </div>
-
-        {/* Bottom arrow */}
-        <div 
-          className={`px-6 sm:px-10 md:px-16 lg:px-20 pb-8 sm:pb-12 flex justify-center transition-all duration-700 ease-out ${
+          className={`px-6 sm:px-10 md:px-16 lg:px-20 pb-8 sm:pb-12 transition-all duration-700 ease-out ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
           style={{ transitionDelay: '0.8s' }}
