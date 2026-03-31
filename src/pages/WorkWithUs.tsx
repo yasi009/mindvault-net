@@ -1,9 +1,9 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Search, AlertCircle, Compass, Hammer, Rocket, ArrowRight, Target, Users } from "lucide-react";
-import { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Search, AlertCircle, Compass, Hammer, Rocket, ArrowRight, Target, Users, Briefcase, Sparkles, Code, Lightbulb, Building2, MessageSquare, Wrench, Workflow, TrendingUp, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useRef } from "react";
 import { ConsultationDialog } from "@/components/ConsultationDialog";
 
 const WorkWithUs = () => {
