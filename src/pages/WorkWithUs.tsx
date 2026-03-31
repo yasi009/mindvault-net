@@ -1,14 +1,42 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Search, AlertCircle, Compass, Hammer, Rocket, ArrowRight, Target, Users } from "lucide-react";
-import { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Search, AlertCircle, Compass, Hammer, Rocket, ArrowRight, Target, Users, Briefcase, Sparkles, Code, Lightbulb, Building2, MessageSquare, Wrench, Workflow, TrendingUp, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useRef } from "react";
 import { ConsultationDialog } from "@/components/ConsultationDialog";
 
 const WorkWithUs = () => {
   const [consultationOpen, setConsultationOpen] = useState(false);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = 340;
+      scrollRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    }
+  };
+
+  const pastWorkshops = [
+    { icon: <Lightbulb className="w-8 h-8" />, title: "Demystifying AI for Business Leaders", community: "Business Leaders" },
+    { icon: <Building2 className="w-8 h-8" />, title: "Laying the Foundations for Scalable Intelligence", community: "Department Heads" },
+    { icon: <MessageSquare className="w-8 h-8" />, title: "Prompting for Impact: How to Talk to AI Tools", community: "All Staff" },
+    { icon: <Target className="w-8 h-8" />, title: "From Chaos to Clarity: Building AI Infrastructure", community: "Leadership" },
+    { icon: <Wrench className="w-8 h-8" />, title: "Toolminator: The Internal GPT Pilot", community: "Product Teams" },
+    { icon: <Workflow className="w-8 h-8" />, title: "Generative AI in the Flow of Work", community: "Business Leaders" },
+    { icon: <TrendingUp className="w-8 h-8" />, title: "From Fixes to ROI: Turning Experiments into Value", community: "Leadership" },
+    { icon: <Rocket className="w-8 h-8" />, title: "The Future of Work: Human + AI Collaboration", community: "C-Suite" },
+    { icon: <Sparkles className="w-8 h-8" />, title: "Girls in STEM (NIDA Theatre)", community: "Yeah the Girls" },
+    { icon: <Code className="w-8 h-8" />, title: "Custom GPT Development for Teachers", community: "Teaching Innovators" },
+  ];
+
+  const testimonials = [
+    { quote: "This saved us hours every week. The ROI was immediate.", author: "CEO, Healthcare" },
+    { quote: "You gave me energy to see change differently.", author: "Executive coaching client" },
+    { quote: "Finally, someone who understands both strategy and implementation.", author: "Operations Director" },
+    { quote: "You made me feel like I could actually do this. I'm not scared anymore.", author: "High School Student" },
+    { quote: "This changed how I organize my entire student life.", author: "High school student" },
+  ];
   const steps = [
     {
       icon: Search,
@@ -127,7 +155,61 @@ const WorkWithUs = () => {
       </section>
 
 
-      {/* CTA Section */}
+      {/* Past Workshops */}
+      <section className="py-20 px-6 bg-muted/30">
+        <div className="max-w-[1600px] mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">Past Workshops</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Programs delivered across industries and audiences
+            </p>
+          </div>
+
+          <div className="relative">
+            <button onClick={() => scroll('left')} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm border border-border rounded-full p-2 hover:bg-background transition-colors shadow-sm">
+              <ChevronLeft className="w-5 h-5 text-foreground" />
+            </button>
+            <div ref={scrollRef} className="flex gap-6 overflow-x-auto scrollbar-hide px-10 pb-4" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+              {pastWorkshops.map((workshop, index) => (
+                <Card key={index} className="min-w-[300px] flex-shrink-0 group hover:scale-105 transition-all duration-300 bg-card border-border">
+                  <CardContent className="p-8">
+                    <div className="text-primary mb-4">{workshop.icon}</div>
+                    <h3 className="text-lg font-bold mb-3 text-foreground">{workshop.title}</h3>
+                    <div className="inline-block bg-secondary/20 px-3 py-1 rounded-full">
+                      <span className="text-sm text-secondary-foreground font-medium">{workshop.community}</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            <button onClick={() => scroll('right')} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm border border-border rounded-full p-2 hover:bg-background transition-colors shadow-sm">
+              <ChevronRight className="w-5 h-5 text-foreground" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 px-6 bg-primary">
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-8">
+            {testimonials
+              .sort((a, b) => a.quote.length - b.quote.length)
+              .map((testimonial, index) => (
+                <blockquote
+                  key={index}
+                  className="text-primary-foreground/90 font-heading italic text-center"
+                  style={{ fontSize: `${1.3 + index * 0.2}rem` }}
+                >
+                  "{testimonial.quote}"
+                  <footer className="text-primary-foreground/60 text-base mt-2 not-italic font-heading">— {testimonial.author}</footer>
+                </blockquote>
+              ))}
+          </div>
+        </div>
+      </section>
+
+
       <section className="py-20 px-6 bg-gradient-card">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
