@@ -185,9 +185,11 @@ const GetLifeOS = () => {
             <Card className="p-8 text-center">
               <h3 className="text-2xl font-bold mb-4 text-foreground">Self-Setup + Guide</h3>
               <p className="text-muted-foreground mb-6">Get the Life OS template and AI-guided onboarding resources to set up on your own.</p>
-              <Button size="lg" onClick={() => navigate('/library')}>
-                Get Started
-                <ArrowRight className="w-5 h-5 ml-2" />
+              <Button size="lg" asChild>
+                <a href="https://mindvault-life-os.lovable.app" target="_blank" rel="noopener noreferrer">
+                  Get Started
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </a>
               </Button>
             </Card>
             
