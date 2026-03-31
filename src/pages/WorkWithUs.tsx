@@ -18,16 +18,22 @@ const WorkWithUs = () => {
   };
 
   const pastWorkshops = [
-    { icon: <Lightbulb className="w-8 h-8" />, title: "Demystifying AI for Business Leaders", community: "Business Leaders" },
-    { icon: <Building2 className="w-8 h-8" />, title: "Laying the Foundations for Scalable Intelligence", community: "Department Heads" },
-    { icon: <MessageSquare className="w-8 h-8" />, title: "Prompting for Impact: How to Talk to AI Tools", community: "All Staff" },
-    { icon: <Target className="w-8 h-8" />, title: "From Chaos to Clarity: Building AI Infrastructure", community: "Leadership" },
-    { icon: <Wrench className="w-8 h-8" />, title: "Toolminator: The Internal GPT Pilot", community: "Product Teams" },
-    { icon: <Workflow className="w-8 h-8" />, title: "Generative AI in the Flow of Work", community: "Business Leaders" },
-    { icon: <TrendingUp className="w-8 h-8" />, title: "From Fixes to ROI: Turning Experiments into Value", community: "Leadership" },
-    { icon: <Rocket className="w-8 h-8" />, title: "The Future of Work: Human + AI Collaboration", community: "C-Suite" },
-    { icon: <Sparkles className="w-8 h-8" />, title: "Girls in STEM (NIDA Theatre)", community: "Yeah the Girls" },
-    { icon: <Code className="w-8 h-8" />, title: "Custom GPT Development for Teachers", community: "Teaching Innovators" },
+    { title: "NDIS Workflow Transformation", description: "From messy case notes to streamlined AI workflow in healthcare", community: "Healthcare Provider" },
+    { title: "AI Strategy Workshop", description: "Transforming AI confusion into confident digital adoption", community: "Makinex" },
+    { title: "Empowerment Workshop", description: "Inspiring young women to design their futures with confidence", community: "Girls in Business (UNSW/NIDA)" },
+    { title: "Design Thinking for Student Leaders", description: "Real-world problem-solving frameworks for changemakers", community: "Students" },
+    { title: "AI Literacy for Digital Natives", description: "Understanding AI beyond the hype", community: "Students" },
+    { title: "Life OS for Students", description: "Building systems that align values with daily habits", community: "Students" },
+    { title: "AI in Pedagogy", description: "Transforming teaching with AI-assisted learning design", community: "Educators" },
+    { title: "Systems Thinking for Curriculum Design", description: "Connecting learning outcomes to real-world systems", community: "Educators" },
+    { title: "Digital Literacy Leadership", description: "Leading the charge in digital transformation", community: "Educators" },
+    { title: "Demystifying AI for Business Leaders", description: "Understanding the four types of AI and integration pyramid", community: "Executives" },
+    { title: "Laying Foundations for Scalable Intelligence", description: "Building architecture for AI scalability", community: "Executives" },
+    { title: "Prompting for Impact", description: "Teaching teams to communicate effectively with AI tools", community: "Executives" },
+    { title: "Toolminator: The Internal GPT Pilot", description: "Custom GPT trained on product data for internal enablement", community: "Executives" },
+    { title: "Generative AI in the Flow of Work", description: "Streamlining documentation and communication with AI", community: "Executives" },
+    { title: "From Fixes to ROI", description: "Turning AI experiments into measurable business value", community: "Executives" },
+    { title: "The Future of Work: Human + AI Collaboration", description: "Exploring responsible AI in mid-sized enterprises", community: "Executives" },
   ];
 
   const testimonials = [
