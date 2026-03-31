@@ -104,7 +104,7 @@ const Index = () => {
                   Personalised dashboard
                 </li>
               </ul>
-              <Button variant="outline" className="w-full" onClick={() => window.location.href = '/get-life-os'}>
+              <Button variant="outline" className="w-full" onClick={() => window.location.href = 'https://mindvault-life-os.lovable.app'}>
                 Get started
               </Button>
             </Card>
