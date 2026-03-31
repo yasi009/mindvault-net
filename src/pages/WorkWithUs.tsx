@@ -31,11 +31,9 @@ const WorkWithUs = () => {
   ];
 
   const testimonials = [
-    { quote: "This saved us hours every week. The ROI was immediate.", author: "CEO, Healthcare" },
-    { quote: "You gave me energy to see change differently.", author: "Executive coaching client" },
-    { quote: "Finally, someone who understands both strategy and implementation.", author: "Operations Director" },
-    { quote: "You made me feel like I could actually do this. I'm not scared anymore.", author: "High School Student" },
-    { quote: "This changed how I organize my entire student life.", author: "High school student" },
+    { quote: "She designed a simple AI setup that now pulls all our notes into one place. It's made day-to-day management so much easier.", author: "South Coast Carers" },
+    { quote: "She quickly taught most people in the organisation the best methods for using AI while developing a robust strategy for the business.", author: "CEO, Makinex" },
+    { quote: "Her authenticity and purpose-driven approach inspired young women to design their futures with intention and lead boldly.", author: "UNSW Business School" },
   ];
   const steps = [
     {
