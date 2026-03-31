@@ -150,16 +150,15 @@ export const Hero = () => {
               <br />
               Act Intentionally.
             </p>
-            <Link 
-              to="/get-life-os"
-              className="group inline-flex items-center gap-2 text-sm sm:text-base font-medium transition-colors duration-300 hover:opacity-80"
-              style={{ color: 'rgba(255, 236, 240, 0.6)' }}
+            <a 
+              href="https://mindvault-life-os.lovable.app"
+              className="group inline-flex items-center gap-2 bg-accent text-accent-foreground hover:bg-accent/90 px-6 py-3 rounded-md text-sm sm:text-base font-medium transition-all duration-300"
             >
-              Learn more
+              Build your Life OS
               <ArrowRight 
                 className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
               />
-            </Link>
+            </a>
           </div>
         </div>
 
