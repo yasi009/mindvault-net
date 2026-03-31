@@ -66,7 +66,7 @@ export const Hero = () => {
         style={{ backgroundColor: '#773260' }}
       >
         {/* Main content area */}
-        <div className="flex-1 flex flex-col lg:flex-row justify-between items-start lg:items-end px-6 sm:px-10 md:px-16 lg:px-20 pt-24 sm:pt-32 pb-16 lg:pb-24 max-w-5xl mx-auto w-full">
+        <div className="flex-1 flex flex-col justify-between items-start px-6 sm:px-10 md:px-16 lg:px-20 pt-24 sm:pt-32 pb-16 lg:pb-24 max-w-5xl mx-auto w-full">
           {/* Left side - Main headline with animated frame */}
           <div className="flex-1 relative">
             {/* Animated SVG Frame - scroll-based drawing */}
