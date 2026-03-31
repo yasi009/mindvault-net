@@ -62,14 +62,14 @@ export const Hero = () => {
 
       <section 
         ref={sectionRef}
-        className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-12 sm:pt-14"
+        className="relative min-h-screen flex flex-col overflow-hidden pt-12 sm:pt-14"
         style={{ backgroundColor: '#773260' }}
       >
-        {/* Left-aligned content */}
-        <div className="flex flex-col px-6 sm:px-10 md:px-16 lg:px-20">
-          {/* Headline with animated frame */}
-          <div className="relative">
-            {/* Animated SVG Frame */}
+        {/* Main content area */}
+        <div className="flex-1 flex flex-col lg:flex-row justify-between items-start lg:items-end px-6 sm:px-10 md:px-16 lg:px-20 pt-24 sm:pt-32 pb-16 lg:pb-24 max-w-5xl mx-auto w-full">
+          {/* Left side - Main headline with animated frame */}
+          <div className="flex-1 relative">
+            {/* Animated SVG Frame - scroll-based drawing */}
             <div 
               className={`absolute pointer-events-none transition-opacity duration-500 ${
                 isVisible ? 'opacity-100' : 'opacity-0'
@@ -88,12 +88,22 @@ export const Hero = () => {
                 style={{ overflow: 'visible' }}
               >
                 <defs>
+                  {/* Metallic gradient for 3D beveled look */}
+                  <linearGradient id="frameGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#ffcc80" />
+                    <stop offset="25%" stopColor="hsl(var(--accent))" />
+                    <stop offset="50%" stopColor="#ffe0b3" />
+                    <stop offset="75%" stopColor="hsl(var(--accent))" />
+                    <stop offset="100%" stopColor="#cc8800" />
+                  </linearGradient>
                   <linearGradient id="innerFrameGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stopColor="#ffe0b3" />
                     <stop offset="50%" stopColor="hsl(var(--accent))" />
                     <stop offset="100%" stopColor="#ffcc80" />
                   </linearGradient>
                 </defs>
+                
+                {/* Inner thinner animated stroke frame */}
                 <rect 
                   x="8" y="8" 
                   width="384" height="284" 
@@ -125,9 +135,9 @@ export const Hero = () => {
             </h1>
           </div>
 
-          {/* Tagline */}
+          {/* Right side - Tagline and link */}
           <div 
-            className={`mt-16 transition-all duration-1000 ease-out ${
+            className={`mt-16 lg:mt-0 lg:max-w-md lg:text-right transition-all duration-1000 ease-out ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}
             style={{ transitionDelay: '0.6s' }}
@@ -154,7 +164,7 @@ export const Hero = () => {
 
         {/* Bottom arrow indicator */}
         <div 
-          className={`absolute bottom-8 sm:bottom-12 left-6 sm:left-10 md:left-16 lg:left-20 transition-all duration-700 ease-out ${
+          className={`px-6 sm:px-10 md:px-16 lg:px-20 pb-8 sm:pb-12 transition-all duration-700 ease-out ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
           style={{ transitionDelay: '0.8s' }}
