@@ -137,7 +137,7 @@ export const Hero = () => {
 
           {/* Right side - Tagline and link */}
           <div 
-            className={`mt-16 lg:mt-0 lg:max-w-md lg:text-right transition-all duration-1000 ease-out ${
+            className={`mt-24 lg:mt-8 lg:max-w-md lg:text-right transition-all duration-1000 ease-out ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}
             style={{ transitionDelay: '0.6s' }}
