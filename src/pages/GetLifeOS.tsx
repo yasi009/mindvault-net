@@ -54,7 +54,7 @@ const GetLifeOS = () => {
 
         <div className="relative max-w-5xl mx-auto text-center">
           <div className="inline-block px-4 py-2 bg-accent/10 rounded-full mb-4">
-            <span className="text-sm font-medium text-accent">Finally here!</span>
+            <span className="text-sm font-medium text-accent">Now Available</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground tracking-tight italic">
             MindVault Life OS
