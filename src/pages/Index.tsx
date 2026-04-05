@@ -17,9 +17,7 @@ const Index = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-foreground">
             You're doing everything. And it's slowly breaking you.
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground mb-12 md:mb-16 max-w-2xl">
-            Sound familiar?
-          </p>
+          <p className="text-lg md:text-xl text-muted-foreground mb-12 md:mb-16 max-w-2xl">Sound familiar?</p>
           <div className="grid sm:grid-cols-2 gap-6 md:gap-8">
             {[
               "You're productive at work and exhausted everywhere else.",
@@ -27,13 +25,8 @@ const Index = () => {
               "You know what to do. You just can't seem to do it consistently.",
               "You've tried planners, apps, and routines. Nothing sticks.",
             ].map((text, i) => (
-              <Card
-                key={i}
-                className="p-6 md:p-8 bg-card border-border hover:border-primary/30 transition-colors"
-              >
-                <p className="text-base md:text-lg text-foreground leading-relaxed font-medium">
-                  {text}
-                </p>
+              <Card key={i} className="p-6 md:p-8 bg-card border-border hover:border-primary/30 transition-colors">
+                <p className="text-base md:text-lg text-foreground leading-relaxed font-medium">{text}</p>
               </Card>
             ))}
           </div>
@@ -67,17 +60,13 @@ const Index = () => {
               <div key={i} className="flex gap-6 md:gap-10 items-start">
                 <span
                   className="font-heading text-4xl md:text-5xl font-bold shrink-0"
-                  style={{ color: 'hsl(var(--accent))' }}
+                  style={{ color: "hsl(var(--accent))" }}
                 >
                   {item.step}
                 </span>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl">
-                    {item.desc}
-                  </p>
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -88,9 +77,7 @@ const Index = () => {
       {/* Pricing */}
       <section className="py-20 md:py-28 px-6 md:px-16 lg:px-20 bg-muted/30">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 md:mb-16 text-foreground">
-            Simple pricing
-          </h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 md:mb-16 text-foreground">Simple pricing</h2>
           <div className="grid sm:grid-cols-2 gap-6 md:gap-8 max-w-3xl">
             {/* Free */}
             <Card className="p-8 bg-card border-border flex flex-col">
@@ -107,7 +94,11 @@ const Index = () => {
                   Personalised dashboard
                 </li>
               </ul>
-              <Button variant="outline" className="w-full" onClick={() => window.location.href = 'https://mindvault-life-os.lovable.app'}>
+              <Button
+                variant="outline"
+                className="w-full"
+                onClick={() => (window.location.href = "https://mindvault-life-os.lovable.app")}
+              >
                 Get started
               </Button>
             </Card>
@@ -119,7 +110,7 @@ const Index = () => {
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-2">Pro</h3>
               <p className="text-3xl md:text-4xl font-bold text-foreground mb-1">
-                AUD 27.16<span className="text-base font-normal text-muted-foreground"> / month</span>
+                AUD 9.99<span className="text-base font-normal text-muted-foreground"> / month</span>
               </p>
               <p className="text-sm text-muted-foreground mb-6">Full operating system</p>
               <ul className="space-y-3 mb-8 flex-1">
@@ -140,7 +131,10 @@ const Index = () => {
                   Weekly check-ins
                 </li>
               </ul>
-              <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90" onClick={() => window.location.href = 'https://mindvault-life-os.lovable.app'}>
+              <Button
+                className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
+                onClick={() => (window.location.href = "https://the-life-os.lovable.app/")}
+              >
                 Start your OS
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
@@ -156,14 +150,9 @@ const Index = () => {
             <p className="text-xl font-heading font-semibold mb-2">
               TheMindVault<sup className="text-[0.5em] ml-0.5">™</sup>
             </p>
-            <p className="text-sm text-background/60">
-              Think clearly. Work intentionally. Live sustainably.
-            </p>
+            <p className="text-sm text-background/60">Think clearly. Work intentionally. Live sustainably.</p>
           </div>
-          <Link
-            to="/contact"
-            className="text-sm text-background/60 hover:text-background transition-colors"
-          >
+          <Link to="/contact" className="text-sm text-background/60 hover:text-background transition-colors">
             Login →
           </Link>
         </div>
