@@ -21,8 +21,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="https://the-life-os.lovable.app/" element={<GetLifeOS />} />
-          <Route path="https://the-life-os.lovable.app/" element={<GetLifeOS />} />
+          <Route path="/services" element={<GetLifeOS />} />
+          <Route path="/get-life-os" element={<GetLifeOS />} />
           <Route path="/work-with-us" element={<WorkWithUs />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/contact" element={<Contact />} />
