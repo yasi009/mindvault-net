@@ -208,14 +208,6 @@ const Index = () => {
                 Get Started <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Card>
-            <Card className="p-8 text-center border-2 border-primary">
-              <div className="text-xs uppercase tracking-wide text-primary font-semibold mb-2">Recommended</div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Setup + 1-Hour Coaching</h3>
-              <p className="text-muted-foreground mb-6">Template plus a 60-minute guided setup call to get you running fast.</p>
-              <Button size="lg" onClick={() => setConsultationOpen(true)}>
-                Book Now <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-            </Card>
             <Card className="p-8 text-center">
               <h3 className="text-2xl font-bold mb-4 text-foreground">Custom for Teams/Educators</h3>
               <p className="text-muted-foreground mb-6">Life OS adapted for teams, workshops, or educational institutions.</p>
