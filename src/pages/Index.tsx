@@ -102,7 +102,7 @@ const Index = () => {
               <Button
                 variant="outline"
                 className="w-full"
-                onClick={() => (window.location.href = "https://the-life-os.lovable.app/")}
+                onClick={() => (window.open("https://the-life-os.lovable.app/", "_blank"))}
               >
                 Get started
               </Button>
@@ -138,7 +138,7 @@ const Index = () => {
               </ul>
               <Button
                 className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
-                onClick={() => (window.location.href = "https://the-life-os.lovable.app/")}
+                onClick={() => (window.open("https://the-life-os.lovable.app/", "_blank"))}
               >
                 Start your OS
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -204,7 +204,7 @@ const Index = () => {
             <Card className="p-8 text-center">
               <h3 className="text-2xl font-bold mb-4 text-foreground">Self-Setup + Guide</h3>
               <p className="text-muted-foreground mb-6">Get the Life OS template and AI-guided onboarding resources to set up on your own.</p>
-              <Button size="lg" onClick={() => (window.location.href = "https://the-life-os.lovable.app/")}>
+              <Button size="lg" onClick={() => (window.open("https://the-life-os.lovable.app/", "_blank"))}>
                 Get Started <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Card>
@@ -222,7 +222,7 @@ const Index = () => {
             </p>
             <p className="text-sm text-muted-foreground mb-6">Typical delivery: 1–2 weeks. Includes 60-minute onboarding call for coaching options.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" onClick={() => (window.location.href = "https://the-life-os.lovable.app/")}>
+              <Button size="lg" onClick={() => (window.open("https://the-life-os.lovable.app/", "_blank"))}>
                 Get the Life OS <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button variant="outline" size="lg" onClick={() => setConsultationOpen(true)}>
@@ -244,7 +244,7 @@ const Index = () => {
             </p>
             <p className="text-sm text-background/60">Think clearly. Work intentionally. Live sustainably.</p>
           </div>
-          <a href="https://the-life-os.lovable.app/" className="text-sm text-background/60 hover:text-background transition-colors">
+          <a href="https://the-life-os.lovable.app/" target="_blank" rel="noopener noreferrer" className="text-sm text-background/60 hover:text-background transition-colors">
             Login →
           </a>
         </div>

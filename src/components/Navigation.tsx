@@ -50,7 +50,7 @@ export const Navigation = () => {
                       {link.label}
                     </Link>
                   ))}
-                  <a href="https://the-life-os.lovable.app/" onClick={() => setOpen(false)}>
+                  <a href="https://the-life-os.lovable.app/" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>
                     <Button className="w-full mt-4">
                       Get Life OS
                     </Button>
@@ -74,7 +74,7 @@ export const Navigation = () => {
                   {link.label}
                 </Link>
               ))}
-              <a href="https://the-life-os.lovable.app/">
+              <a href="https://the-life-os.lovable.app/" target="_blank" rel="noopener noreferrer">
                 <Button size="sm" className="ml-2 text-sm px-4 h-9">
                   Get Life OS
                 </Button>

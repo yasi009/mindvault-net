@@ -154,6 +154,8 @@ export const Hero = () => {
             </p>
             <a
               href="https://the-life-os.lovable.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 bg-accent text-accent-foreground hover:bg-accent/90 px-6 py-3 rounded-md text-sm sm:text-base font-medium transition-all duration-300"
             >
               Build your Life OS
