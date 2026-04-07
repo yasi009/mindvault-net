@@ -102,7 +102,7 @@ const Index = () => {
               <Button
                 variant="outline"
                 className="w-full"
-                onClick={() => (window.location.href = "https://mindvault-life-os.lovable.app")}
+                onClick={() => (window.location.href = "https://the-life-os.lovable.app/")}
               >
                 Get started
               </Button>
@@ -204,7 +204,7 @@ const Index = () => {
             <Card className="p-8 text-center">
               <h3 className="text-2xl font-bold mb-4 text-foreground">Self-Setup + Guide</h3>
               <p className="text-muted-foreground mb-6">Get the Life OS template and AI-guided onboarding resources to set up on your own.</p>
-              <Button size="lg" onClick={() => navigate("/library")}>
+              <Button size="lg" onClick={() => (window.location.href = "https://the-life-os.lovable.app/")}>
                 Get Started <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Card>
@@ -230,7 +230,7 @@ const Index = () => {
             </p>
             <p className="text-sm text-muted-foreground mb-6">Typical delivery: 1–2 weeks. Includes 60-minute onboarding call for coaching options.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" onClick={() => navigate("/library")}>
+              <Button size="lg" onClick={() => (window.location.href = "https://the-life-os.lovable.app/")}>
                 Get the Life OS <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button variant="outline" size="lg" onClick={() => setConsultationOpen(true)}>
@@ -252,9 +252,9 @@ const Index = () => {
             </p>
             <p className="text-sm text-background/60">Think clearly. Work intentionally. Live sustainably.</p>
           </div>
-          <Link to="/contact" className="text-sm text-background/60 hover:text-background transition-colors">
+          <a href="https://the-life-os.lovable.app/" className="text-sm text-background/60 hover:text-background transition-colors">
             Login →
-          </Link>
+          </a>
         </div>
       </footer>
     </div>
