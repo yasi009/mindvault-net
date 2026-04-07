@@ -199,7 +199,7 @@ const GetLifeOS = () => {
               <p className="text-muted-foreground mb-6">
                 Get the Life OS template and AI-guided onboarding resources to set up on your own.
               </p>
-              <Button size="lg" onClick={() => (window.location.href = "https://the-life-os.lovable.app/")}>
+              <Button size="lg" onClick={() => (window.open("https://the-life-os.lovable.app/", "_blank"))}>
                 Get Started
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
@@ -238,7 +238,7 @@ const GetLifeOS = () => {
               Typical delivery: 1–2 weeks. Includes 60-minute onboarding call for coaching options.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" onClick={() => (window.location.href = "https://the-life-os.lovable.app/")}>
+              <Button size="lg" onClick={() => (window.open("https://the-life-os.lovable.app/", "_blank"))}>
                 Get the Life OS
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>

@@ -147,7 +147,7 @@ const Method = () => {
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
             Get MindVault Life OS and start building your clarity system today.
           </p>
-          <Button size="lg" onClick={() => window.location.href = '/life-os'}>
+          <Button size="lg" onClick={() => window.open('https://the-life-os.lovable.app/', '_blank')}>
             Get Life OS
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>

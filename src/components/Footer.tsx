@@ -19,7 +19,7 @@ export const Footer = () => {
               Let's design systems that work for you, not against you.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <Button variant="secondary" size="lg" onClick={() => window.location.href = '/services'} className="w-full sm:w-auto">
+              <Button variant="secondary" size="lg" onClick={() => window.open('https://the-life-os.lovable.app/', '_blank')} className="w-full sm:w-auto">
                 Get Life OS
                 <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 ml-2" />
               </Button>
