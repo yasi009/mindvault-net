@@ -3,13 +3,9 @@ import { Hero } from "@/components/Hero";
 import { ArrowRight, Check, Brain, Target, Lightbulb, Workflow, Shield, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { ConsultationDialog } from "@/components/ConsultationDialog";
+import { Link } from "react-router-dom";
 
 const Index = () => {
-  const [consultationOpen, setConsultationOpen] = useState(false);
-  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-background">
