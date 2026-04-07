@@ -1,6 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
-import { ArrowRight, Check, Brain, Target, Lightbulb, Workflow, Shield, Users } from "lucide-react";
+import { ArrowRight, Check, Brain, Target, Lightbulb, Workflow, Shield, Users, Mail, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -200,9 +200,17 @@ const Index = () => {
             </p>
             <p className="text-sm text-background/60">Think clearly. Work intentionally. Live sustainably.</p>
           </div>
-          <a href="https://the-life-os.lovable.app/" target="_blank" rel="noopener noreferrer" className="text-sm text-background/60 hover:text-background transition-colors">
-            Login →
-          </a>
+          <div className="flex items-center gap-4">
+            <a href="mailto:yaseerah@themindvault.net" className="text-background/60 hover:text-background transition-colors">
+              <Mail className="w-5 h-5" />
+            </a>
+            <a href="https://www.linkedin.com/in/yaseerah-hassan-66a51b249" target="_blank" rel="noopener noreferrer" className="text-background/60 hover:text-background transition-colors">
+              <Linkedin className="w-5 h-5" />
+            </a>
+            <a href="https://the-life-os.lovable.app/" target="_blank" rel="noopener noreferrer" className="text-sm text-background/60 hover:text-background transition-colors ml-2">
+              Login →
+            </a>
+          </div>
         </div>
       </footer>
     </div>
