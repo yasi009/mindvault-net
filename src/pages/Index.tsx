@@ -193,47 +193,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Delivery Options */}
-      <section className="py-20 md:py-28 px-6 md:px-16 lg:px-20 bg-muted/30">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-foreground">Delivery Options</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Choose the path that fits your needs.</p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            <Card className="p-8 text-center">
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Self-Setup + Guide</h3>
-              <p className="text-muted-foreground mb-6">Get the Life OS template and AI-guided onboarding resources to set up on your own.</p>
-              <Button size="lg" onClick={() => (window.open("https://the-life-os.lovable.app/", "_blank"))}>
-                Get Started <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-            </Card>
-            <Card className="p-8 text-center">
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Custom for Teams/Educators</h3>
-              <p className="text-muted-foreground mb-6">Life OS adapted for teams, workshops, or educational institutions.</p>
-              <Button size="lg" variant="outline" onClick={() => navigate("/contact")}>
-                Contact Us <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-            </Card>
-          </div>
-          <div className="bg-card p-8 rounded-lg border border-border max-w-3xl mx-auto text-center">
-            <p className="text-lg text-muted-foreground mb-4">
-              <strong className="text-foreground">Pricing on request.</strong> We customize packages based on your needs and timeline.
-            </p>
-            <p className="text-sm text-muted-foreground mb-6">Typical delivery: 1–2 weeks. Includes 60-minute onboarding call for coaching options.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" onClick={() => (window.open("https://the-life-os.lovable.app/", "_blank"))}>
-                Get the Life OS <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <Button variant="outline" size="lg" onClick={() => setConsultationOpen(true)}>
-                Book a Consultation
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <ConsultationDialog open={consultationOpen} onOpenChange={setConsultationOpen} />
 
       {/* Footer */}
       <footer className="bg-foreground text-background py-12 md:py-16 px-6 md:px-16 lg:px-20">
