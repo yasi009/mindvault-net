@@ -208,7 +208,7 @@ const Index = () => {
               <Linkedin className="w-5 h-5" />
             </a>
             <a href="https://the-life-os.lovable.app/" target="_blank" rel="noopener noreferrer" className="text-sm text-background/60 hover:text-background transition-colors ml-2">
-              Login →
+              Login to your Life OS →
             </a>
           </div>
         </div>
