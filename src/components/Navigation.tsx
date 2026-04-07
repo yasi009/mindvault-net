@@ -50,11 +50,11 @@ export const Navigation = () => {
                       {link.label}
                     </Link>
                   ))}
-                  <Link to="/services" onClick={() => setOpen(false)}>
+                  <a href="https://the-life-os.lovable.app/" onClick={() => setOpen(false)}>
                     <Button className="w-full mt-4">
                       Get Life OS
                     </Button>
-                  </Link>
+                  </a>
                 </nav>
               </SheetContent>
             </Sheet>
@@ -74,11 +74,11 @@ export const Navigation = () => {
                   {link.label}
                 </Link>
               ))}
-              <Link to="/services">
+              <a href="https://the-life-os.lovable.app/">
                 <Button size="sm" className="ml-2 text-sm px-4 h-9">
                   Get Life OS
                 </Button>
-              </Link>
+              </a>
             </div>
           )}
         </div>
