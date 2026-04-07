@@ -102,7 +102,7 @@ const Index = () => {
               <Button
                 variant="outline"
                 className="w-full"
-                onClick={() => (window.location.href = "https://mindvault-life-os.lovable.app")}
+                onClick={() => (window.location.href = "https://the-life-os.lovable.app/")}
               >
                 Get started
               </Button>
@@ -252,9 +252,9 @@ const Index = () => {
             </p>
             <p className="text-sm text-background/60">Think clearly. Work intentionally. Live sustainably.</p>
           </div>
-          <Link to="/contact" className="text-sm text-background/60 hover:text-background transition-colors">
+          <a href="https://the-life-os.lovable.app/" className="text-sm text-background/60 hover:text-background transition-colors">
             Login →
-          </Link>
+          </a>
         </div>
       </footer>
     </div>
