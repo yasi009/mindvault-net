@@ -42,7 +42,7 @@ MindVault uses AI and structure to close that gap with clarity, calm, and consis
               <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Quick Links</h4>
               <ul className="space-y-2 text-sm sm:text-base text-background/70">
                 <li><Link to="/" className="hover:text-background transition-colors">Home</Link></li>
-                <li><Link to="/services" className="hover:text-background transition-colors">Product (Life OS)</Link></li>
+                <li><a href="https://the-life-os.lovable.app/" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">Product (Life OS)</a></li>
                 <li><Link to="/work-with-us" className="hover:text-background transition-colors">Work With Us</Link></li>
                 <li><Link to="/case-studies" className="hover:text-background transition-colors">Case Studies</Link></li>
                 <li><Link to="/about-us" className="hover:text-background transition-colors">About</Link></li>
