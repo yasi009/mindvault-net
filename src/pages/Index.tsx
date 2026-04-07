@@ -1,9 +1,11 @@
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, Brain, Target, Lightbulb, Workflow, Shield, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { ConsultationDialog } from "@/components/ConsultationDialog";
 
 const Index = () => {
   return (
