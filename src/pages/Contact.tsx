@@ -134,7 +134,7 @@ const Contact = () => {
                   id="message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Tell us about your Life OS interest, challenge, or question..."
+                  placeholder="Tell us about your institution, your current AI situation, and what you're trying to solve."
                   rows={6}
                   required
                 />
@@ -151,9 +151,9 @@ const Contact = () => {
           <div className="space-y-6">
             <Card className="p-8 bg-gradient-card border-border">
               <Calendar className="w-12 h-12 text-accent mb-4" />
-              <h3 className="text-2xl font-bold mb-3 text-foreground">Book a 15-min Fit Check</h3>
+              <h3 className="text-2xl font-bold mb-3 text-foreground">Book a 30-min Discovery Call</h3>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Prefer a conversation? Schedule a brief clarity session to discuss your Life OS needs.
+                Prefer a conversation? Schedule a 30-minute call to discuss your institution's AI roadmap.
               </p>
               <Button size="lg" onClick={() => setConsultationOpen(true)} className="w-full">
                 Book Now
