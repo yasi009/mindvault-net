@@ -117,7 +117,7 @@ export const Hero = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 lg:justify-end items-start lg:items-center">
             <Link
-              to="/contact"
+              to="/book"
               className="group inline-flex items-center gap-2 bg-accent text-accent-foreground hover:bg-accent/90 px-6 py-3 rounded-md text-sm sm:text-base font-medium transition-all duration-300"
             >
               Book a Discovery Call

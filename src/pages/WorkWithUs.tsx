@@ -160,7 +160,7 @@ const WorkWithUs = () => {
           <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
             Tell us where your work overlaps with ours — research, delivery, or network — and we'll take it from there.
           </p>
-          <Link to="/contact">
+          <Link to="/book">
             <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
               Get in touch
               <ArrowRight className="w-5 h-5 ml-2" />
