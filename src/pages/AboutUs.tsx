@@ -44,7 +44,7 @@ export const AboutUs = () => {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">The founder</h2>
               <p className="text-base md:text-lg text-muted-foreground mb-4 leading-relaxed">
-                MindVault is led by <strong className="text-foreground">Yaseerah Hassan</strong>, based in Dubai. Her
+                MindVault is led by <strong className="text-foreground">Yaseerah Hassan</strong>, based in UAE. Her
                 background sits at the intersection of Information Systems and Data Analytics (UNSW Sydney) and applied
                 AI delivery in the field.
               </p>
