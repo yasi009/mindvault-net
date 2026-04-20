@@ -17,12 +17,11 @@ export const Navigation = () => {
     { path: "/services", label: "Services" },
     { path: "/about-us", label: "About" },
     { path: "/work-with-us", label: "Partner With Us" },
-    { path: "/contact", label: "Contact" },
   ];
 
   const goToContact = () => {
     setOpen(false);
-    navigate("/contact");
+    navigate("/book");
   };
 
   return (

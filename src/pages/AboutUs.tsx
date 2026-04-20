@@ -80,7 +80,7 @@ export const AboutUs = () => {
           </Card>
 
           <div className="text-center">
-            <Link to="/contact">
+            <Link to="/book">
               <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                 Book a Discovery Call
                 <ArrowRight className="w-4 h-4 ml-2" />

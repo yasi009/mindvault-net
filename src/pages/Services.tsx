@@ -143,7 +143,7 @@ const Services = () => {
           <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
             A 30-minute discovery call to understand your institution and where AI sits in your roadmap.
           </p>
-          <Link to="/contact">
+          <Link to="/book">
             <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
               Book a Discovery Call
               <ArrowRight className="w-4 h-4 ml-2" />
