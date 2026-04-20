@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import yaseerahImage from "@/assets/yaseerah-unsw-teaching.jpg";
+import yaseerahImage from "@/assets/yaseerah-workshop-nida.jpg";
 
 export const AboutUs = () => {
   return (
@@ -39,32 +39,36 @@ export const AboutUs = () => {
                 alt="Yaseerah Hassan teaching at UNSW"
                 className="rounded-lg shadow-elegant w-full"
               />
-              <p className="text-sm text-muted-foreground mt-3 italic">
-                Yaseerah Hassan, Founder · MindVault
-              </p>
+              <p className="text-sm text-muted-foreground mt-3 italic">Yaseerah Hassan, Founder · MindVault</p>
             </div>
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-                The founder
-              </h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">The founder</h2>
               <p className="text-base md:text-lg text-muted-foreground mb-4 leading-relaxed">
-                MindVault is led by <strong className="text-foreground">Yaseerah Hassan</strong>, based in Dubai. Her background sits at the intersection of Information Systems and Data Analytics (UNSW Sydney) and applied AI delivery in the field.
+                MindVault is led by <strong className="text-foreground">Yaseerah Hassan</strong>, based in Dubai. Her
+                background sits at the intersection of Information Systems and Data Analytics (UNSW Sydney) and applied
+                AI delivery in the field.
               </p>
               <p className="text-base md:text-lg text-muted-foreground mb-4 leading-relaxed">
-                Over the last several years, Yaseerah has run AI literacy and implementation work for healthcare providers, educators, and executive teams across Australia — translating frontier tools into systems people can actually use safely.
+                Over the last several years, Yaseerah has run AI literacy and implementation work for healthcare
+                providers, educators, and executive teams across Australia — translating frontier tools into systems
+                people can actually use safely.
               </p>
               <p className="text-base md:text-lg text-muted-foreground mb-8 leading-relaxed">
-                MindVault is now focused on UAE educational institutions, where the pace of national AI policy has outrun the internal capacity of most providers.
+                MindVault is now focused on UAE educational institutions, where the pace of national AI policy has
+                outrun the internal capacity of most providers.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold mb-3 text-foreground">Why the UAE</h3>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8">
-                The UAE is moving faster on AI adoption than most education systems can keep up with. MindVault exists to close that gap — responsibly.
+                The UAE is moving faster on AI adoption than most education systems can keep up with. MindVault exists
+                to close that gap — responsibly.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold mb-3 text-foreground">Governance philosophy</h3>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                We believe institutions should own their AI, not rent it. Every engagement ends with capacity, not dependency — scope limits, escalation logic, and the documentation your team needs to run the system on its own.
+                We believe institutions should own their AI, not rent it. Every engagement ends with capacity, not
+                dependency — scope limits, escalation logic, and the documentation your team needs to run the system on
+                its own.
               </p>
             </div>
           </div>
@@ -80,7 +84,7 @@ export const AboutUs = () => {
           </Card>
 
           <div className="text-center">
-            <Link to="/book">
+            <Link to="/contact">
               <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                 Book a Discovery Call
                 <ArrowRight className="w-4 h-4 ml-2" />
