@@ -5,26 +5,14 @@ import { Mail, Linkedin } from "lucide-react";
 
 const Book = () => {
   useEffect(() => {
-    // Load Calendly stylesheet
     const link = document.createElement("link");
     link.href = "https://assets.calendly.com/assets/external/widget.css";
     link.rel = "stylesheet";
     document.head.appendChild(link);
 
-    // Load Calendly script
     const script = document.createElement("script");
     script.src = "https://assets.calendly.com/assets/external/widget.js";
     script.async = true;
-    script.onload = () => {
-      // @ts-ignore
-      if (window.Calendly) {
-        // @ts-ignore
-        window.Calendly.initInlineWidget({
-          url: "https://calendly.com/yaseerah-mindvault/30min?background_color=ffecf0&text_color=773260&primary_color=f28a5d",
-          parentElement: document.querySelector(".calendly-inline-widget"),
-        });
-      }
-    };
     document.body.appendChild(script);
 
     return () => {
@@ -65,7 +53,7 @@ const Book = () => {
         <div className="max-w-5xl mx-auto">
           <div
             className="calendly-inline-widget"
-            data-url="https://calendly.com/yaseerah-mindvault/30min?background_color=ffecf0&text_color=773260&primary_color=f28a5d"
+            data-url="https://calendly.com/themindvault/30min?hide_gdpr_banner=1&background_color=ffecf0&text_color=773260&primary_color=f28a5d"
             style={{ minWidth: "320px", height: "700px" }}
           ></div>
         </div>
