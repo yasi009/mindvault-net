@@ -45,6 +45,8 @@ export const Hero = () => {
       style={{ backgroundColor: "#773260" }}
     >
       <div className="flex-1 flex flex-col justify-between items-start px-6 sm:px-10 md:px-12 lg:px-16 pt-24 sm:pt-32 pb-16 lg:pb-24 w-full">
+        {/* Left-aligned headline box */}
+        <div className="flex-1 relative max-w-3xl">
           <div
             className={`absolute pointer-events-none transition-opacity duration-500 ${
               isVisible ? "opacity-100" : "opacity-0"
@@ -102,8 +104,9 @@ export const Hero = () => {
           </h1>
         </div>
 
+        {/* Subheadline and CTAs positioned under the headline box */}
         <div
-          className={`mt-16 lg:mt-8 lg:max-w-md lg:text-right transition-all duration-1000 ease-out ${
+          className={`mt-12 lg:mt-8 max-w-3xl transition-all duration-1000 ease-out ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           }`}
           style={{ transitionDelay: "0.6s" }}
@@ -114,7 +117,7 @@ export const Hero = () => {
           >
             MindVault helps UAE educational institutions deploy AI with governance, confidence, and full documentation — from pilot to policy.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 lg:justify-end items-start lg:items-center">
+          <div className="flex flex-col sm:flex-row gap-4 items-start">
             <Link
               to="/book"
               className="group inline-flex items-center gap-2 bg-accent text-accent-foreground hover:bg-accent/90 px-6 py-3 rounded-md text-sm sm:text-base font-medium transition-all duration-300"
