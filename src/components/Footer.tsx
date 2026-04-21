@@ -8,7 +8,7 @@ export const Footer = () => {
           <p className="text-xl font-heading font-semibold mb-2">
             MindVault<sup className="text-[0.5em] ml-0.5">™</sup>
           </p>
-          <p className="text-sm text-background/60">AI Advisory & Learning Design · Abu Dhabi, UAE</p>
+          <p className="text-sm text-background/60">2031 is closer than it feels. Start with governance.</p>
         </div>
         <div className="flex items-center gap-4">
           <a
