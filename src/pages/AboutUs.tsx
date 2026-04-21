@@ -79,7 +79,7 @@ export const AboutUs = () => {
               Our Core Belief
             </h3>
             <p className="text-xl sm:text-2xl md:text-3xl text-center text-foreground leading-relaxed font-heading">
-              Institutions should own their AI, not rent it.
+              Ungoverned AI in an educational institution isn't just inefficient. It's a liability.
             </p>
           </Card>
 
