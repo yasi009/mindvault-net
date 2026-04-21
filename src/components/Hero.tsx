@@ -123,20 +123,20 @@ export const Hero = () => {
           >
             MindVault helps UAE educational institutions deploy AI with governance, confidence, and full documentation — from pilot to policy.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 items-start">
+          <div className="flex flex-col sm:flex-row gap-4 sm:items-center items-start">
             <Link
               to="/book"
-              className="group inline-flex items-center gap-2 bg-accent text-accent-foreground hover:bg-accent/90 px-6 py-3 rounded-md text-sm sm:text-base font-medium transition-all duration-300"
+              className="inline-flex items-center bg-accent text-accent-foreground hover:bg-accent/90 px-6 py-3 rounded-md text-sm sm:text-base font-medium transition-all duration-300"
             >
               Book a Discovery Call
-              <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
             <Link
               to="/services"
-              className="text-sm sm:text-base font-medium underline-offset-4 hover:underline"
+              className="group inline-flex items-center gap-2 text-sm sm:text-base font-medium underline-offset-4 hover:underline"
               style={{ color: "#ffecf0" }}
             >
-              See our services →
+              See our services
+              <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </div>
         </div>
