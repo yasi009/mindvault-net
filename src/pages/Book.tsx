@@ -5,12 +5,31 @@ import { Mail, Linkedin } from "lucide-react";
 
 const Book = () => {
   useEffect(() => {
+    // Load Calendly stylesheet
+    const link = document.createElement("link");
+    link.href = "https://assets.calendly.com/assets/external/widget.css";
+    link.rel = "stylesheet";
+    document.head.appendChild(link);
+
+    // Load Calendly script
     const script = document.createElement("script");
     script.src = "https://assets.calendly.com/assets/external/widget.js";
     script.async = true;
+    script.onload = () => {
+      // @ts-ignore
+      if (window.Calendly) {
+        // @ts-ignore
+        window.Calendly.initInlineWidget({
+          url: "https://calendly.com/yaseerah-mindvault/30min?background_color=ffecf0&text_color=773260&primary_color=f28a5d",
+          parentElement: document.querySelector(".calendly-inline-widget"),
+        });
+      }
+    };
     document.body.appendChild(script);
+
     return () => {
-      document.body.removeChild(script);
+      if (document.body.contains(script)) document.body.removeChild(script);
+      if (document.head.contains(link)) document.head.removeChild(link);
     };
   }, []);
 
