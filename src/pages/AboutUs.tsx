@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import yaseerahImage from "@/assets/yaseerah-workshop-nida.jpg";
+import yaseerahSpeaking from "@/assets/yaseerah-speaking.jpg";
 
 export const AboutUs = () => {
   return (
@@ -40,6 +41,11 @@ export const AboutUs = () => {
                 className="rounded-lg shadow-elegant w-full"
               />
               <p className="text-sm text-muted-foreground mt-3 italic">Yaseerah Hassan, Founder · MindVault</p>
+              <img
+                src={yaseerahSpeaking}
+                alt="Yaseerah Hassan speaking at a workshop"
+                className="rounded-lg shadow-elegant w-full mt-6"
+              />
             </div>
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">The founder</h2>
