@@ -36,7 +36,10 @@ export const Hero = () => {
   const remainingProgress = Math.min(0.25, scrollProgress * 1.5);
   const totalProgress = baseProgress + remainingProgress;
 
-  const accentColor = scrollProgress > 0.05 ? "hsl(var(--accent))" : "#ffecf0";
+  // Surrounding text fades from light pink to deep plum (#773260) on scroll
+  const dimmedTextColor = scrollProgress > 0.05 ? "#773260" : "#ffecf0";
+  // "get ahead" lights up orange (accent) on scroll
+  const highlightColor = scrollProgress > 0.05 ? "hsl(var(--accent))" : "#ffecf0";
 
   return (
     <section
@@ -94,13 +97,16 @@ export const Hero = () => {
             className={`font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[7.5rem] font-bold leading-[0.95] tracking-tight relative z-10 transition-all duration-700 ease-out ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
-            style={{ color: "#ffecf0" }}
+            style={{ color: dimmedTextColor, transition: "color 0.4s ease-out" }}
           >
-            The window to get ahead
+            The window to{" "}
+            <span style={{ color: highlightColor, transition: "color 0.4s ease-out" }}>
+              get ahead
+            </span>
             <br />
-            <span style={{ color: accentColor, transition: "color 0.4s ease-out" }}>is open.</span>
+            <span style={{ color: dimmedTextColor, transition: "color 0.4s ease-out" }}>is open.</span>
             <br />
-            <span style={{ color: "#ffecf0" }}>It won't stay that way.</span>
+            <span style={{ color: dimmedTextColor, transition: "color 0.4s ease-out" }}>It won't stay that way.</span>
           </h1>
         </div>
 
