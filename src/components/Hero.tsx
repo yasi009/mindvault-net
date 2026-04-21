@@ -96,9 +96,9 @@ export const Hero = () => {
             }`}
             style={{ color: "#ffecf0" }}
           >
-            The window to get
+            The window to get ahead
             <br />
-            <span style={{ color: accentColor, transition: "color 0.4s ease-out" }}>ahead</span> is open.
+            <span style={{ color: accentColor, transition: "color 0.4s ease-out" }}>is open.</span>
             <br />
             <span style={{ color: "#ffecf0" }}>It won't stay that way.</span>
           </h1>
