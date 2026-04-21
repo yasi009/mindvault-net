@@ -44,8 +44,7 @@ export const Hero = () => {
       className="relative min-h-screen flex flex-col overflow-hidden"
       style={{ backgroundColor: "#773260" }}
     >
-      <div className="flex-1 flex flex-col justify-between items-start px-6 sm:px-10 md:px-16 lg:px-20 pt-24 sm:pt-32 pb-16 lg:pb-24 max-w-5xl mx-auto w-full">
-        <div className="flex-1 relative">
+      <div className="flex-1 flex flex-col justify-between items-start px-6 sm:px-10 md:px-12 lg:px-16 pt-24 sm:pt-32 pb-16 lg:pb-24 w-full">
           <div
             className={`absolute pointer-events-none transition-opacity duration-500 ${
               isVisible ? "opacity-100" : "opacity-0"
