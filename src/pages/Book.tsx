@@ -53,7 +53,7 @@ const Book = () => {
         <div className="max-w-5xl mx-auto">
           <div
             className="calendly-inline-widget"
-            data-url="https://calendly.com/yaseerah-mindvault/30min?background_color=ffecf0&text_color=773260&primary_color=f28a5d"
+            data-url="https://calendly.com/themindvault/30min?hide_gdpr_banner=1&background_color=ffecf0&text_color=773260&primary_color=f28a5d"
             style={{ minWidth: "320px", height: "700px" }}
           ></div>
         </div>
