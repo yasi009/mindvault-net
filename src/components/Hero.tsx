@@ -95,11 +95,11 @@ export const Hero = () => {
             }`}
             style={{ color: "#ffecf0" }}
           >
-            AI that your
+            The window to get
             <br />
-            institution
+            <span style={{ color: accentColor, transition: "color 0.4s ease-out" }}>ahead</span> is open.
             <br />
-            <span style={{ color: accentColor, transition: "color 0.4s ease-out" }}>owns.</span>
+            <span style={{ color: "#ffecf0" }}>It won't stay that way.</span>
           </h1>
         </div>
 
