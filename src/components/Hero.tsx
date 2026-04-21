@@ -36,7 +36,10 @@ export const Hero = () => {
   const remainingProgress = Math.min(0.25, scrollProgress * 1.5);
   const totalProgress = baseProgress + remainingProgress;
 
-  const accentColor = scrollProgress > 0.05 ? "hsl(var(--accent))" : "#ffecf0";
+  // Surrounding text fades from light pink to deep plum (#773260) on scroll
+  const dimmedTextColor = scrollProgress > 0.05 ? "#773260" : "#ffecf0";
+  // "get ahead" lights up orange (accent) on scroll
+  const highlightColor = scrollProgress > 0.05 ? "hsl(var(--accent))" : "#ffecf0";
 
   return (
     <section
