@@ -1,120 +1,101 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
-import yaseerahImage from "@/assets/yaseerah-unsw-teaching.jpg";
-import decorativeDivider from "@/assets/decorative-divider.png";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+import yaseerahImage from "@/assets/yaseerah-workshop-nida.jpg";
+import yaseerahSpeaking from "@/assets/yaseerah-speaking.jpg";
 
 export const AboutUs = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-    
-      {/* Hero Section */}
-      <section className="relative pt-20 md:pt-16 pb-8 md:pb-6 px-4 md:px-6 bg-primary overflow-hidden">
-        {/* Pink blob top-right */}
+
+      {/* Hero */}
+      <section className="relative pt-20 md:pt-24 pb-12 md:pb-16 px-6 md:px-16 lg:px-20 bg-primary overflow-hidden">
         <div className="absolute top-5 right-0 w-[200px] md:w-[300px] h-[200px] md:h-[300px] bg-gradient-to-bl from-pink-500/25 via-rose-500/20 to-transparent rounded-full blur-[80px]"></div>
-        
-        {/* Pink blob bottom-left */}
         <div className="absolute bottom-0 left-10 w-[150px] md:w-[250px] h-[150px] md:h-[250px] bg-gradient-to-tr from-rose-500/20 via-pink-500/15 to-transparent rounded-full blur-[70px]"></div>
-        
-        <div className="absolute inset-0 opacity-[0.02]">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(220 45% 25%) 1px, transparent 0)',
-            backgroundSize: '48px 48px'
-          }}></div>
-        </div>
 
         <div className="relative max-w-5xl mx-auto text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-3 md:mb-2 text-accent tracking-tight italic uppercase px-4">
-            Why MindVault?
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-accent tracking-tight">
+            Built for UAE education.
           </h1>
-          <p className="text-lg sm:text-xl md:text-3xl font-heading font-bold text-accent max-w-3xl mx-auto leading-relaxed -mb-8 md:-mb-10 px-4">
-            Human depth meets digital intelligence.
+          <p className="text-lg sm:text-xl md:text-2xl font-heading font-medium text-accent/90 max-w-3xl mx-auto leading-relaxed">
+            A practitioner-led advisory closing the gap between AI pilots and institutional policy.
           </p>
-          <div className="flex justify-center">
-            <img 
-              src={decorativeDivider} 
-              alt="Decorative divider" 
-              className="w-32 sm:w-40 md:w-56 h-auto opacity-90"
-              style={{ filter: 'brightness(0) saturate(100%) invert(64%) sepia(45%) saturate(1468%) hue-rotate(336deg) brightness(101%) contrast(93%)' }}
-            />
-          </div>
         </div>
       </section>
 
-      {/* Founder Section */}
-      <section className="py-12 md:py-20 px-4 md:px-6 bg-background relative overflow-hidden">
-        {/* Pink gradient blob top-right */}
-        <div className="absolute top-10 right-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-gradient-to-bl from-pink-300/35 via-rose-300/25 to-transparent rounded-full blur-[100px] pointer-events-none"></div>
-        
-        {/* Purple blob middle-left */}
-        <div className="absolute top-1/2 left-0 w-[200px] md:w-[400px] h-[200px] md:h-[400px] bg-gradient-to-tr from-purple-400/30 via-violet-400/20 to-transparent rounded-full blur-[110px] pointer-events-none"></div>
-        
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-16">
+      {/* Founder */}
+      <section className="py-16 md:py-24 px-6 md:px-16 lg:px-20 bg-background relative overflow-hidden">
+        <div className="absolute top-10 right-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-gradient-to-bl from-pink-300/30 via-rose-300/20 to-transparent rounded-full blur-[100px] pointer-events-none"></div>
+        <div className="absolute top-1/2 left-0 w-[200px] md:w-[400px] h-[200px] md:h-[400px] bg-gradient-to-tr from-purple-400/25 via-violet-400/15 to-transparent rounded-full blur-[110px] pointer-events-none"></div>
+
+        <div className="max-w-5xl mx-auto relative">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-start mb-16">
             <div>
-              <video 
-                controls
+              <img
+                src={yaseerahImage}
+                alt="Yaseerah Hassan teaching at UNSW"
                 className="rounded-lg shadow-elegant w-full"
-                poster={yaseerahImage}
-              >
-                <source src="/path-to-your-video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              />
+              <p className="text-sm text-muted-foreground mt-3 italic">Yaseerah Hassan, Founder · MindVault</p>
+              <img
+                src={yaseerahSpeaking}
+                alt="Yaseerah Hassan speaking at a workshop"
+                className="rounded-lg shadow-elegant w-full mt-6"
+              />
             </div>
             <div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-foreground">
-                Why the Life OS Exists
-              </h2>
-              <p className="text-base md:text-lg text-muted-foreground mb-3 md:mb-4 leading-relaxed">
-                In a world drowning in tools and advice, what's missing isn't more information—it's clarity. The ability to cut through noise, design intentional systems, and act with purpose.
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">The Founder</h2>
+              <p className="text-base md:text-lg text-muted-foreground mb-4 leading-relaxed">
+                MindVault is led by <strong className="text-foreground">Yaseerah Hassan</strong>, based in UAE. Her
+                background sits at the intersection of Information Systems and Data Analytics (UNSW Sydney) and applied
+                AI delivery in the field.
               </p>
-              <p className="text-base md:text-lg text-muted-foreground mb-3 md:mb-4 leading-relaxed">
-                MindVault Life OS was born from years of working with students, professionals, and teams who were ambitious but overwhelmed. They had goals but no system to connect values to daily action.
+              <p className="text-base md:text-lg text-muted-foreground mb-4 leading-relaxed">
+                Over the last several years, Yaseerah has run AI literacy and implementation work for healthcare
+                providers, educators, and executive teams across Australia — translating frontier tools into systems
+                people can actually use safely.
               </p>
+              <p className="text-base md:text-lg text-muted-foreground mb-8 leading-relaxed">
+                MindVault is now focused on UAE educational institutions, where the pace of national AI policy has
+                outrun the internal capacity of most providers.
+              </p>
+
+              <h3 className="text-xl md:text-2xl font-bold mb-3 text-foreground">Why the UAE</h3>
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8">
+                The UAE is moving faster on AI adoption than most education systems can keep up with. MindVault exists
+                to close that gap — responsibly.
+              </p>
+
+              <h3 className="text-xl md:text-2xl font-bold mb-3 text-foreground">Governance philosophy</h3>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                The Life OS bridges the gap between human potential and technological possibility—turning values into habits, habits into goals, and goals into measurable progress.
+                We believe institutions should own their AI, not rent it. Every engagement ends with capacity, not
+                dependency — scope limits, escalation logic, and the documentation your team needs to run the system on
+                its own.
               </p>
             </div>
           </div>
 
           {/* Core Belief */}
-          <Card className="bg-gradient-card p-6 md:p-10 mb-12 md:mb-16 border-border shadow-elegant">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-3 md:mb-4 text-foreground italic uppercase">
+          <Card className="bg-gradient-card p-8 md:p-12 mb-16 border-border shadow-elegant">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-3 md:mb-4 text-foreground italic uppercase tracking-wide">
               Our Core Belief
             </h3>
-            <p className="text-lg sm:text-xl md:text-2xl text-center text-foreground leading-relaxed">
-              Clarity begins with values and compounds through design.
+            <p className="text-xl sm:text-2xl md:text-3xl text-center text-foreground leading-relaxed font-heading">
+              Ungoverned AI in an educational institution isn't just inefficient. It's a liability.
             </p>
           </Card>
 
-          {/* Brand Framework */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <Card className="p-8 text-center">
-              <h4 className="text-2xl font-bold mb-3 text-accent uppercase tracking-wide">Debunk</h4>
-              <p className="text-muted-foreground leading-relaxed">
-                We cut through assumptions and identify what's not working. No jargon, no fluff—just honest assessment.
-              </p>
-            </Card>
-            <Card className="p-8 text-center">
-              <h4 className="text-2xl font-bold mb-3 text-accent uppercase tracking-wide">Demystify</h4>
-              <p className="text-muted-foreground leading-relaxed">
-                We bring clarity to complex systems and modern technology through practical, accessible frameworks.
-              </p>
-            </Card>
-            <Card className="p-8 text-center">
-              <h4 className="text-2xl font-bold mb-3 text-accent uppercase tracking-wide">Design</h4>
-              <p className="text-muted-foreground leading-relaxed">
-                We build practical solutions that transform how you work—human-centered, intentional, sustainable.
-              </p>
-            </Card>
-          </div>
-
-          {/* Trust Statement */}
-          <div className="bg-muted/30 p-10 rounded-xl text-center">
-            <p className="text-xl text-foreground font-medium leading-relaxed">
-              Trusted by learners, professionals, and organizations across education, healthcare, and technology sectors.
-            </p>
+          <div className="text-center">
+            <Link to="/contact">
+              <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                Book a Discovery Call
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

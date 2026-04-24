@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -8,24 +8,30 @@ import { useState } from "react";
 
 export const Navigation = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const isMobile = useIsMobile();
   const [open, setOpen] = useState(false);
-  
+
   const links = [
     { path: "/", label: "Home" },
-    { path: "/work-with-us", label: "Work With Us" },
+    { path: "/services", label: "Services" },
     { path: "/about-us", label: "About" },
-    { path: "/contact", label: "Contact" },
+    { path: "/work-with-us", label: "Partner With Us" },
   ];
+
+  const goToContact = () => {
+    setOpen(false);
+    navigate("/book");
+  };
 
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6">
         <div className="flex items-center justify-between h-14 sm:h-16">
           <Link to="/" className="text-base sm:text-lg md:text-xl lg:text-2xl font-heading font-semibold text-foreground tracking-tight">
-            TheMindVault<sup className="text-[0.5em] ml-0.5 align-super">™</sup>
+            MindVault<sup className="text-[0.5em] ml-0.5 align-super">™</sup>
           </Link>
-          
+
           {isMobile ? (
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
@@ -50,11 +56,9 @@ export const Navigation = () => {
                       {link.label}
                     </Link>
                   ))}
-                  <a href="https://the-life-os.lovable.app/" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>
-                    <Button className="w-full mt-4">
-                      Get Life OS
-                    </Button>
-                  </a>
+                  <Button className="w-full mt-4" onClick={goToContact}>
+                    Book a Discovery Call
+                  </Button>
                 </nav>
               </SheetContent>
             </Sheet>
@@ -74,11 +78,9 @@ export const Navigation = () => {
                   {link.label}
                 </Link>
               ))}
-              <a href="https://the-life-os.lovable.app/" target="_blank" rel="noopener noreferrer">
-                <Button size="sm" className="ml-2 text-sm px-4 h-9">
-                  Get Life OS
-                </Button>
-              </a>
+              <Button size="sm" className="ml-2 text-sm px-4 h-9" onClick={goToContact}>
+                Book a Discovery Call
+              </Button>
             </div>
           )}
         </div>
