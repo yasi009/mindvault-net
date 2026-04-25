@@ -120,7 +120,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why UAE Education, Why Now */}
+      {/* Why UAE Education, Why Now - temporarily hidden
       <section className="py-20 md:py-28 px-6 md:px-16 lg:px-20 bg-background relative overflow-hidden">
         <div className="absolute top-1/3 -right-20 w-[450px] h-[450px] bg-gradient-to-bl from-pink-300/30 via-rose-200/20 to-transparent rounded-full blur-[90px] pointer-events-none"></div>
         <div className="max-w-5xl mx-auto relative">
@@ -140,6 +140,7 @@ const Index = () => {
           </blockquote>
         </div>
       </section>
+      */}
 
       {/* Final CTA */}
       <section className="py-20 md:py-28 px-6 md:px-16 lg:px-20 bg-gradient-card">
