@@ -43,7 +43,7 @@ const Index = () => {
             Three things we deliver
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground mb-12 md:mb-16 max-w-2xl">
-            Focused service lines built for UAE educational institutions.
+            Focused service lines built for educational institutions.
           </p>
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {[

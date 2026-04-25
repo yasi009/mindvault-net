@@ -77,7 +77,7 @@ const Services = () => {
             What We Build
           </p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-foreground tracking-tight">
-            Three focused service lines for UAE educational institutions.
+            Three focused service lines for educational institutions.
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed">
             Each engagement is scoped to a specific outcome, delivered with governance, and handed over so your team can run it.
