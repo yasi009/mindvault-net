@@ -21,7 +21,7 @@ const WorkWithUs = () => {
       Icon: BookOpen,
       title: "Research & Writing",
       desc:
-        "Co-authored content combining practitioner implementation experience with academic rigour — on AI governance, UAE education deployment, and responsible AI in GCC contexts.",
+        "Co-authored content combining practitioner implementation experience with academic rigour — on AI governance, education deployment, and responsible AI.",
     },
     {
       Icon: Presentation,

@@ -121,7 +121,7 @@ export const Hero = () => {
             className="font-heading text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed mb-8 font-medium"
             style={{ color: "#ffecf0" }}
           >
-            MindVault helps UAE educational institutions deploy AI with governance, confidence, and full documentation — from pilot to policy.
+            MindVault helps educational institutions deploy AI with governance, confidence, and full documentation — from pilot to policy.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:items-center items-start">
             <Link

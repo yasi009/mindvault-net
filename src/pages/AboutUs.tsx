@@ -19,7 +19,7 @@ export const AboutUs = () => {
 
         <div className="relative max-w-5xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-accent tracking-tight">
-            Built for UAE education.
+            Built for education.
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl font-heading font-medium text-accent/90 max-w-3xl mx-auto leading-relaxed">
             A practitioner-led advisory closing the gap between AI pilots and institutional policy.
