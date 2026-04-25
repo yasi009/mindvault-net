@@ -50,7 +50,7 @@ export const AboutUs = () => {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">The Founder</h2>
               <p className="text-base md:text-lg text-muted-foreground mb-4 leading-relaxed">
-                MindVault is led by <strong className="text-foreground">Yaseerah Hassan</strong>, based in UAE. Her
+                MindVault is led by <strong className="text-foreground">Yaseerah Hassan</strong>. Her
                 background sits at the intersection of Information Systems and Data Analytics (UNSW Sydney) and applied
                 AI delivery in the field.
               </p>
@@ -60,14 +60,8 @@ export const AboutUs = () => {
                 people can actually use safely.
               </p>
               <p className="text-base md:text-lg text-muted-foreground mb-8 leading-relaxed">
-                MindVault is now focused on UAE educational institutions, where the pace of national AI policy has
+                MindVault is now focused on educational institutions, where the pace of national AI policy has
                 outrun the internal capacity of most providers.
-              </p>
-
-              <h3 className="text-xl md:text-2xl font-bold mb-3 text-foreground">Why the UAE</h3>
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8">
-                The UAE is moving faster on AI adoption than most education systems can keep up with. MindVault exists
-                to close that gap — responsibly.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold mb-3 text-foreground">Governance philosophy</h3>
